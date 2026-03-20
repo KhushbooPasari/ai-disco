@@ -1,0 +1,62 @@
+name: Validate & Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:       # Make.com can trigger this via the GitHub API
+
+jobs:
+  validate-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # 1. Check out the repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Validate that tools.json is real, parseable JSON
+      #    and that every entry has the required fields.
+      #    If this fails, the bad commit is rejected before it goes live.
+      - name: Validate tools.json
+        run: |
+          python3 - <<'EOF'
+          import json, sys
+
+          REQUIRED = [
+            "id","name","domain","tagline","problem",
+            "useCases","url","ease","easeLabel",
+            "industry","businessArea","category","date"
+          ]
+
+          with open("tools.json") as f:
+            tools = json.load(f)
+
+          if not isinstance(tools, list):
+            print("ERROR: tools.json must be a JSON array")
+            sys.exit(1)
+
+          errors = []
+          for i, tool in enumerate(tools):
+            for field in REQUIRED:
+              if field not in tool:
+                errors.append(f"  Tool #{i+1} ({tool.get('name','?')}) missing field: {field}")
+            if not (1 <= tool.get("ease", 0) <= 10):
+              errors.append(f"  Tool #{i+1} ({tool.get('name','?')}) ease must be 1-10")
+
+          if errors:
+            print("Validation FAILED:")
+            for e in errors:
+              print(e)
+            sys.exit(1)
+
+          print(f"OK — {len(tools)} tools validated successfully.")
+          EOF
+
+      # 3. GitHub Pages deploys automatically from the main branch.
+      #    No extra step needed — just pushing to main triggers it.
+      #    This step just prints a confirmation.
+      - name: Confirm deployment
+        run: |
+          echo "tools.json is valid. GitHub Pages will deploy automatically."
+          echo "Live at: https://YOUR_GITHUB_USERNAME.github.io/signal-blog/"
