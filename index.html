@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIGNAL — AI Tools Decoded Daily</title>
+<title>AI Disco — AI Tools Decoded Daily</title>
 <meta name="description" content="Every new AI tool reviewed, rated, and filed by industry. Updated daily. No hype.">
 
-<!-- Open Graph -->
-<meta property="og:title" content="SIGNAL — AI Tools Decoded Daily">
+<meta property="og:title" content="AI Disco — AI Tools Decoded Daily">
 <meta property="og:description" content="Every new AI tool reviewed, rated, and filed by industry. Updated daily.">
 <meta property="og:type" content="website">
 
@@ -39,7 +38,11 @@ body{background:var(--black);color:var(--white);font-family:var(--fs);font-size:
 /* ── NAV ── */
 nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--b);background:rgba(10,10,10,0.93);backdrop-filter:blur(18px)}
 .nav-w{max-width:1100px;margin:0 auto;padding:0 2rem;height:60px;display:flex;align-items:center;gap:2rem}
-.wordmark{font-family:var(--fs);font-weight:500;font-size:0.8rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--white);text-decoration:none;flex-shrink:0}
+.wordmark{
+  font-family:var(--fd);font-weight:400;font-size:1.15rem;
+  font-style:italic;letter-spacing:0.01em;
+  color:var(--white);text-decoration:none;flex-shrink:0;
+}
 .nav-search{flex:1;max-width:340px;position:relative}
 .nav-search input{width:100%;background:transparent;border:none;border-bottom:1px solid var(--b);color:var(--g6);font-family:var(--fs);font-size:0.82rem;padding:0.35rem 0 0.35rem 1.4rem;outline:none;transition:border-color 0.2s;letter-spacing:0.02em}
 .nav-search input:focus{border-color:var(--g4);color:var(--white)}
@@ -52,19 +55,12 @@ nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--b);backgroun
 .hero-kicker{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--g5);margin-bottom:1.5rem;display:block;font-weight:400}
 .hero-title{font-family:var(--fd);font-weight:400;font-size:clamp(3rem,6vw,5.5rem);line-height:1;color:var(--white);margin-bottom:1.5rem;letter-spacing:-0.01em}
 .hero-title em{font-style:italic;color:var(--g5)}
-.hero-sub{font-weight:300;font-size:1rem;color:var(--g5);max-width:400px;line-height:1.75}
+.hero-sub{font-weight:300;font-size:1rem;color:var(--g5);max-width:420px;line-height:1.75}
 
-/* ── LOADING STATE ── */
-.loading{
-  max-width:1100px;margin:0 auto;padding:5rem 2rem;
-  display:flex;flex-direction:column;gap:1rem;align-items:flex-start;
-}
+/* ── LOADING ── */
+.loading{max-width:1100px;margin:0 auto;padding:5rem 2rem;display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
 .loading-bar{height:1px;background:var(--g3);border-radius:1px;overflow:hidden;width:100%}
-.loading-bar::after{
-  content:'';display:block;height:100%;width:30%;
-  background:var(--g5);border-radius:1px;
-  animation:load 1.2s ease-in-out infinite;
-}
+.loading-bar::after{content:'';display:block;height:100%;width:30%;background:var(--g5);border-radius:1px;animation:load 1.2s ease-in-out infinite}
 @keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(400%)}}
 .loading-text{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--g4)}
 
@@ -100,7 +96,6 @@ main{max-width:1100px;margin:0 auto;padding:0 2rem 6rem}
 @media(min-width:700px){.featured{grid-template-columns:1fr 1fr}}
 .feat-logo-panel{background:var(--g1);display:flex;align-items:center;justify-content:center;min-height:220px;padding:3rem;border-right:1px solid var(--b)}
 .feat-logo-panel img{max-width:160px;max-height:64px;width:auto;height:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.88}
-.feat-logo-fb{font-family:var(--fd);font-size:2.8rem;color:var(--g4);font-style:italic;display:none}
 .feat-body{padding:2.5rem;display:flex;flex-direction:column;gap:1.15rem}
 .feat-meta{display:flex;align-items:center;gap:0.7rem;flex-wrap:wrap}
 .feat-lbl{font-size:0.63rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--g5);font-weight:400}
@@ -162,7 +157,7 @@ main{max-width:1100px;margin:0 auto;padding:0 2rem 6rem}
 
 /* ── FOOTER ── */
 .footer-w{max-width:1100px;margin:0 auto;padding:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;border-top:1px solid var(--b)}
-.footer-mark{font-size:0.7rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--g4)}
+.footer-mark{font-family:var(--fd);font-weight:400;font-size:0.95rem;font-style:italic;color:var(--g4)}
 .footer-note{font-size:0.65rem;color:var(--g3);letter-spacing:0.06em;text-transform:uppercase}
 .footer-note a{color:var(--g4);text-decoration:none;transition:color 0.15s}
 .footer-note a:hover{color:var(--white)}
@@ -174,7 +169,7 @@ main{max-width:1100px;margin:0 auto;padding:0 2rem 6rem}
 
 <nav>
   <div class="nav-w">
-    <a class="wordmark" href="#">Signal</a>
+    <a class="wordmark" href="#">AI Disco</a>
     <div class="nav-search">
       <span class="s-icon">⌕</span>
       <input id="search" type="text" placeholder="Search tools, problems, industries…" autocomplete="off">
@@ -210,13 +205,11 @@ main{max-width:1100px;margin:0 auto;padding:0 2rem 6rem}
 </div>
 
 <main>
-  <!-- Loading state — shown while tools.json fetches -->
   <div class="loading" id="loading">
     <span class="loading-text">Loading tools…</span>
     <div class="loading-bar"></div>
   </div>
 
-  <!-- Content — hidden until data loaded -->
   <div id="content" style="display:none">
     <div class="slabel">
       <span class="slabel-txt">The Tools</span>
@@ -234,7 +227,7 @@ main{max-width:1100px;margin:0 auto;padding:0 2rem 6rem}
 
 <footer>
   <div class="footer-w">
-    <span class="footer-mark">Signal</span>
+    <span class="footer-mark">AI Disco</span>
     <span class="footer-note">
       Published daily &nbsp;·&nbsp;
       <a href="#">Submit a tool</a> &nbsp;·&nbsp;
@@ -245,18 +238,18 @@ main{max-width:1100px;margin:0 auto;padding:0 2rem 6rem}
 
 <script>
 /* ══════════════════════════════════════════════════
-   SIGNAL — fetches tools.json at runtime.
-   In production this file is updated daily by
-   Make.com via the GitHub Contents API.
+   AI Disco — fetches tools.json at runtime.
+   This file is updated daily by Make.com via the
+   GitHub Contents API. Do not add tool data here.
 ══════════════════════════════════════════════════ */
 
 let ALL_TOOLS = [];
 
 const logoUrl = domain => `https://logo.clearbit.com/${domain}`;
-const fmt = d => new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
-const today = new Date().toISOString().split('T')[0];
+const fmt     = d => new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
+const today   = new Date().toISOString().split('T')[0];
 
-/* ── BOOT: fetch data ── */
+/* ── BOOT ── */
 async function boot() {
   try {
     const res = await fetch('./tools.json');
@@ -269,17 +262,16 @@ async function boot() {
     render();
   } catch (e) {
     document.getElementById('loading').innerHTML =
-      '<span class="loading-text" style="color:#555">Could not load tools. Check tools.json exists in the same folder.</span>';
+      '<span class="loading-text" style="color:#555">Could not load tools — check tools.json is in the same folder.</span>';
   }
 }
 
-/* ── BUILD FILTERS FROM DATA ── */
+/* ── BUILD FILTERS ── */
 function buildFilters() {
   const allCats  = [...new Set(ALL_TOOLS.map(t => t.category))];
   const allInds  = [...new Set(ALL_TOOLS.flatMap(t => t.industry))].sort();
   const allAreas = [...new Set(ALL_TOOLS.map(t => t.businessArea))].sort();
 
-  /* Category pills */
   const pillsEl = document.getElementById('cpills');
   ['All', ...allCats].forEach(cat => {
     const b = document.createElement('button');
@@ -294,21 +286,10 @@ function buildFilters() {
     pillsEl.appendChild(b);
   });
 
-  /* Industry dropdown */
-  const indEl = document.getElementById('f-ind');
-  allInds.forEach(i => {
-    const o = document.createElement('option');
-    o.value = i; o.textContent = i;
-    indEl.appendChild(o);
-  });
-
-  /* Business area dropdown */
+  const indEl  = document.getElementById('f-ind');
   const areaEl = document.getElementById('f-area');
-  allAreas.forEach(a => {
-    const o = document.createElement('option');
-    o.value = a; o.textContent = a;
-    areaEl.appendChild(o);
-  });
+  allInds.forEach(i  => { const o = document.createElement('option'); o.value = i; o.textContent = i; indEl.appendChild(o); });
+  allAreas.forEach(a => { const o = document.createElement('option'); o.value = a; o.textContent = a; areaEl.appendChild(o); });
 }
 
 /* ── DATE ── */
@@ -372,7 +353,7 @@ function logoTag(t, big = false) {
 
 /* ── FEATURED CARD ── */
 function buildFeat(t) {
-  const pct = (t.ease / 10) * 100;
+  const pct   = (t.ease / 10) * 100;
   const isNew = t.date === today;
   return `
 <div class="featured">
@@ -466,7 +447,6 @@ function render() {
   }
 }
 
-/* ── START ── */
 boot();
 </script>
 </body>
