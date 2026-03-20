@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGNAL — AI Tools Decoded Daily</title>
+<meta name="description" content="Every new AI tool reviewed, rated, and filed by industry. Updated daily. No hype.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="SIGNAL — AI Tools Decoded Daily">
+<meta property="og:description" content="Every new AI tool reviewed, rated, and filed by industry. Updated daily.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --black:#0a0a0a;
+  --white:#f5f5f5;
+  --g1:#1a1a1a;
+  --g2:#2a2a2a;
+  --g3:#3a3a3a;
+  --g4:#555;
+  --g5:#888;
+  --g6:#bbb;
+  --b:rgba(255,255,255,0.07);
+  --bh:rgba(255,255,255,0.14);
+  --fd:'DM Serif Display',serif;
+  --fs:'DM Sans',sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--fs);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--b);background:rgba(10,10,10,0.93);backdrop-filter:blur(18px)}
+.nav-w{max-width:1100px;margin:0 auto;padding:0 2rem;height:60px;display:flex;align-items:center;gap:2rem}
+.wordmark{font-family:var(--fs);font-weight:500;font-size:0.8rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--white);text-decoration:none;flex-shrink:0}
+.nav-search{flex:1;max-width:340px;position:relative}
+.nav-search input{width:100%;background:transparent;border:none;border-bottom:1px solid var(--b);color:var(--g6);font-family:var(--fs);font-size:0.82rem;padding:0.35rem 0 0.35rem 1.4rem;outline:none;transition:border-color 0.2s;letter-spacing:0.02em}
+.nav-search input:focus{border-color:var(--g4);color:var(--white)}
+.nav-search input::placeholder{color:var(--g4)}
+.s-icon{position:absolute;left:0;top:50%;transform:translateY(-50%);color:var(--g4);font-size:13px;pointer-events:none}
+.nav-meta{margin-left:auto;font-size:0.68rem;color:var(--g4);letter-spacing:0.06em;text-transform:uppercase;flex-shrink:0}
+
+/* ── HERO ── */
+.hero{max-width:1100px;margin:0 auto;padding:7rem 2rem 5rem;border-bottom:1px solid var(--b)}
+.hero-kicker{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--g5);margin-bottom:1.5rem;display:block;font-weight:400}
+.hero-title{font-family:var(--fd);font-weight:400;font-size:clamp(3rem,6vw,5.5rem);line-height:1;color:var(--white);margin-bottom:1.5rem;letter-spacing:-0.01em}
+.hero-title em{font-style:italic;color:var(--g5)}
+.hero-sub{font-weight:300;font-size:1rem;color:var(--g5);max-width:400px;line-height:1.75}
+
+/* ── LOADING STATE ── */
+.loading{
+  max-width:1100px;margin:0 auto;padding:5rem 2rem;
+  display:flex;flex-direction:column;gap:1rem;align-items:flex-start;
+}
+.loading-bar{height:1px;background:var(--g3);border-radius:1px;overflow:hidden;width:100%}
+.loading-bar::after{
+  content:'';display:block;height:100%;width:30%;
+  background:var(--g5);border-radius:1px;
+  animation:load 1.2s ease-in-out infinite;
+}
+@keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(400%)}}
+.loading-text{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--g4)}
+
+/* ── FILTER BAR ── */
+.fbar{border-bottom:1px solid var(--b);position:sticky;top:60px;z-index:90;background:rgba(10,10,10,0.95);backdrop-filter:blur(14px)}
+.fbar-w{max-width:1100px;margin:0 auto;padding:0.85rem 2rem;display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center}
+.pill{font-family:var(--fs);font-size:0.68rem;font-weight:400;letter-spacing:0.08em;padding:0.28rem 0.78rem;border-radius:2px;border:1px solid var(--b);background:transparent;color:var(--g5);cursor:pointer;transition:all 0.15s;text-transform:uppercase;white-space:nowrap}
+.pill:hover{border-color:var(--g4);color:var(--g6)}
+.pill.on{background:var(--white);border-color:var(--white);color:var(--black)}
+.fb-div{width:1px;height:16px;background:var(--b);flex-shrink:0}
+.fb-sel{background:transparent;border:none;border-bottom:1px solid var(--b);color:var(--g5);font-family:var(--fs);font-size:0.68rem;padding:0.22rem 0;cursor:pointer;outline:none;letter-spacing:0.06em;text-transform:uppercase}
+.fb-sel:focus{border-color:var(--g4)}
+.fb-sel option{background:var(--black);color:var(--white)}
+.ease-w{display:flex;align-items:center;gap:0.5rem;font-size:0.68rem;color:var(--g5);letter-spacing:0.08em;text-transform:uppercase}
+#eslider{-webkit-appearance:none;appearance:none;width:68px;height:1px;background:var(--g3);outline:none;cursor:pointer}
+#eslider::-webkit-slider-thumb{-webkit-appearance:none;width:10px;height:10px;border-radius:50%;background:var(--white);cursor:pointer}
+#eval{color:var(--white);font-weight:500}
+.fb-sort{margin-left:auto;background:transparent;border:none;border-bottom:1px solid var(--b);color:var(--g5);font-family:var(--fs);font-size:0.68rem;padding:0.22rem 0;cursor:pointer;outline:none;letter-spacing:0.06em;text-transform:uppercase}
+.fb-sort option{background:var(--black);color:var(--white)}
+
+/* ── MAIN ── */
+main{max-width:1100px;margin:0 auto;padding:0 2rem 6rem}
+
+/* ── SECTION LABEL ── */
+.slabel{display:flex;align-items:center;gap:1rem;padding:2.5rem 0 2rem}
+.slabel-txt{font-size:0.66rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--g4);white-space:nowrap}
+.slabel-line{flex:1;height:1px;background:var(--b)}
+.rcount{font-size:0.66rem;color:var(--g4);letter-spacing:0.12em;text-transform:uppercase}
+
+/* ── FEATURED ── */
+.featured{display:grid;grid-template-columns:1fr;border:1px solid var(--b);border-radius:3px;overflow:hidden;margin-bottom:4rem;transition:border-color 0.2s}
+.featured:hover{border-color:var(--bh)}
+@media(min-width:700px){.featured{grid-template-columns:1fr 1fr}}
+.feat-logo-panel{background:var(--g1);display:flex;align-items:center;justify-content:center;min-height:220px;padding:3rem;border-right:1px solid var(--b)}
+.feat-logo-panel img{max-width:160px;max-height:64px;width:auto;height:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.88}
+.feat-logo-fb{font-family:var(--fd);font-size:2.8rem;color:var(--g4);font-style:italic;display:none}
+.feat-body{padding:2.5rem;display:flex;flex-direction:column;gap:1.15rem}
+.feat-meta{display:flex;align-items:center;gap:0.7rem;flex-wrap:wrap}
+.feat-lbl{font-size:0.63rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--g5);font-weight:400}
+.feat-dot{color:var(--g3);font-size:0.55rem}
+.cat-tag{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--g5);border:1px solid var(--b);padding:0.14rem 0.52rem;border-radius:2px}
+.new-tag{font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--g6);border:1px solid var(--bh);padding:0.14rem 0.52rem;border-radius:2px}
+.feat-name{font-family:var(--fd);font-weight:400;font-size:2.2rem;color:var(--white);line-height:1.05;letter-spacing:-0.01em}
+.feat-tagline{font-weight:300;font-style:italic;font-size:0.95rem;color:var(--g5);line-height:1.7}
+.feat-problem{font-weight:300;font-size:0.87rem;color:var(--g6);line-height:1.8}
+.feat-uc{display:flex;flex-wrap:wrap;gap:0.38rem;margin-top:0.15rem}
+.uc-chip{font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--g4);border:1px solid var(--b);padding:0.16rem 0.58rem;border-radius:2px}
+.feat-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid var(--b);padding-top:1.2rem;margin-top:auto}
+.ease-block{display:flex;flex-direction:column;gap:0.28rem}
+.ease-lbl{font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--g4)}
+.ease-row{display:flex;align-items:center;gap:0.58rem}
+.ebar{width:80px;height:2px;background:var(--g3);border-radius:1px;overflow:hidden}
+.efill{height:100%;border-radius:1px;background:var(--white)}
+.escore{font-size:0.75rem;font-weight:500;color:var(--white)}
+.edesc{font-size:0.6rem;color:var(--g4);letter-spacing:0.05em}
+.visit-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.73rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);text-decoration:none;border:1px solid var(--b);padding:0.58rem 1.2rem;border-radius:2px;transition:all 0.15s}
+.visit-link:hover{background:var(--white);color:var(--black);border-color:var(--white)}
+.arr{display:inline-block;transition:transform 0.15s}
+.visit-link:hover .arr{transform:translateX(4px)}
+
+/* ── TOOL GRID ── */
+.tgrid{display:grid;gap:1px;background:var(--b);border:1px solid var(--b);border-radius:3px;overflow:hidden;grid-template-columns:1fr}
+@media(min-width:500px){.tgrid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.tgrid{grid-template-columns:repeat(3,1fr)}}
+
+/* ── TOOL CARD ── */
+.tcard{background:var(--black);display:flex;flex-direction:column;transition:background 0.15s;animation:fadeUp 0.3s ease both;text-decoration:none;position:relative}
+.tcard:hover{background:var(--g1)}
+.tcard-logo{height:110px;background:var(--g1);border-bottom:1px solid var(--b);display:flex;align-items:center;justify-content:center;padding:1.5rem;transition:background 0.15s}
+.tcard:hover .tcard-logo{background:var(--g2)}
+.tcard-logo img{max-width:110px;max-height:38px;width:auto;height:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.8}
+.tcard-logo-fb{font-family:var(--fd);font-size:1.5rem;color:var(--g4);font-style:italic;display:none}
+.tcard-body{padding:1.35rem;display:flex;flex-direction:column;gap:0.48rem;flex:1}
+.tcard-top{display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem}
+.tcard-name{font-family:var(--fd);font-weight:400;font-size:1.2rem;color:var(--white);line-height:1.1;letter-spacing:-0.005em}
+.ndot{width:5px;height:5px;border-radius:50%;background:var(--white);flex-shrink:0;margin-top:0.5rem}
+.tcard-tag{font-weight:300;font-style:italic;font-size:0.8rem;color:var(--g5);line-height:1.55}
+.cdiv{height:1px;background:var(--b);margin:0.15rem 0}
+.tcard-prob{font-weight:300;font-size:0.78rem;color:var(--g4);line-height:1.72;flex:1}
+.tcard-uc{display:flex;flex-wrap:wrap;gap:0.28rem;margin-top:0.15rem}
+.tcard-chip{font-size:0.57rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--g4);border:1px solid var(--b);padding:0.13rem 0.42rem;border-radius:1px}
+.tcard-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--b);padding-top:0.82rem;margin-top:auto;gap:0.5rem;flex-wrap:wrap}
+.mease-row{display:flex;align-items:center;gap:0.42rem}
+.mebar{width:38px;height:1px;background:var(--g3);border-radius:1px;overflow:hidden}
+.mefill{height:100%;background:var(--g5)}
+.mescore{font-size:0.63rem;color:var(--g5)}
+.tcard-date{font-size:0.6rem;color:var(--g3);letter-spacing:0.06em}
+.tcard-read{font-size:0.63rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--g5);transition:color 0.15s;display:inline-flex;align-items:center;gap:0.28rem}
+.tcard:hover .tcard-read{color:var(--white)}
+.rarr{transition:transform 0.15s}
+.tcard:hover .rarr{transform:translateX(3px)}
+
+/* ── EMPTY ── */
+.empty{padding:5rem 2rem;text-align:center;font-size:0.72rem;color:var(--g4);letter-spacing:0.14em;text-transform:uppercase;grid-column:1/-1}
+
+/* ── FOOTER ── */
+.footer-w{max-width:1100px;margin:0 auto;padding:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;border-top:1px solid var(--b)}
+.footer-mark{font-size:0.7rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--g4)}
+.footer-note{font-size:0.65rem;color:var(--g3);letter-spacing:0.06em;text-transform:uppercase}
+.footer-note a{color:var(--g4);text-decoration:none;transition:color 0.15s}
+.footer-note a:hover{color:var(--white)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-w">
+    <a class="wordmark" href="#">Signal</a>
+    <div class="nav-search">
+      <span class="s-icon">⌕</span>
+      <input id="search" type="text" placeholder="Search tools, problems, industries…" autocomplete="off">
+    </div>
+    <span class="nav-meta" id="hdate"></span>
+  </div>
+</nav>
+
+<div class="hero">
+  <span class="hero-kicker">AI tools · decoded daily</span>
+  <h1 class="hero-title">The tools reshaping<br>how business <em>works.</em></h1>
+  <p class="hero-sub">Every new AI tool reviewed, rated, and filed by industry. Updated daily. No hype.</p>
+</div>
+
+<div class="fbar">
+  <div class="fbar-w">
+    <div id="cpills" style="display:flex;gap:0.4rem;flex-wrap:wrap;"></div>
+    <div class="fb-div"></div>
+    <select id="f-ind" class="fb-sel"><option value="">All Industries</option></select>
+    <select id="f-area" class="fb-sel"><option value="">All Business Areas</option></select>
+    <div class="ease-w">
+      <span>Ease ≥</span>
+      <input id="eslider" type="range" min="0" max="10" value="0" step="1">
+      <span id="eval">0</span>
+    </div>
+    <select id="f-sort" class="fb-sort">
+      <option value="date">Latest</option>
+      <option value="ease-desc">Easiest first</option>
+      <option value="ease-asc">Hardest first</option>
+      <option value="az">A → Z</option>
+    </select>
+  </div>
+</div>
+
+<main>
+  <!-- Loading state — shown while tools.json fetches -->
+  <div class="loading" id="loading">
+    <span class="loading-text">Loading tools…</span>
+    <div class="loading-bar"></div>
+  </div>
+
+  <!-- Content — hidden until data loaded -->
+  <div id="content" style="display:none">
+    <div class="slabel">
+      <span class="slabel-txt">The Tools</span>
+      <div class="slabel-line"></div>
+      <span class="rcount" id="rcount"></span>
+    </div>
+    <div id="feat-wrap"></div>
+    <div class="slabel" id="grid-label" style="display:none">
+      <span class="slabel-txt">Also indexed</span>
+      <div class="slabel-line"></div>
+    </div>
+    <div class="tgrid" id="tgrid"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-w">
+    <span class="footer-mark">Signal</span>
+    <span class="footer-note">
+      Published daily &nbsp;·&nbsp;
+      <a href="#">Submit a tool</a> &nbsp;·&nbsp;
+      <span id="tool-count"></span> tools indexed
+    </span>
+  </div>
+</footer>
+
+<script>
+/* ══════════════════════════════════════════════════
+   SIGNAL — fetches tools.json at runtime.
+   In production this file is updated daily by
+   Make.com via the GitHub Contents API.
+══════════════════════════════════════════════════ */
+
+let ALL_TOOLS = [];
+
+const logoUrl = domain => `https://logo.clearbit.com/${domain}`;
+const fmt = d => new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
+const today = new Date().toISOString().split('T')[0];
+
+/* ── BOOT: fetch data ── */
+async function boot() {
+  try {
+    const res = await fetch('./tools.json');
+    if (!res.ok) throw new Error('fetch failed');
+    ALL_TOOLS = await res.json();
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    document.getElementById('tool-count').textContent = ALL_TOOLS.length;
+    buildFilters();
+    render();
+  } catch (e) {
+    document.getElementById('loading').innerHTML =
+      '<span class="loading-text" style="color:#555">Could not load tools. Check tools.json exists in the same folder.</span>';
+  }
+}
+
+/* ── BUILD FILTERS FROM DATA ── */
+function buildFilters() {
+  const allCats  = [...new Set(ALL_TOOLS.map(t => t.category))];
+  const allInds  = [...new Set(ALL_TOOLS.flatMap(t => t.industry))].sort();
+  const allAreas = [...new Set(ALL_TOOLS.map(t => t.businessArea))].sort();
+
+  /* Category pills */
+  const pillsEl = document.getElementById('cpills');
+  ['All', ...allCats].forEach(cat => {
+    const b = document.createElement('button');
+    b.className = 'pill' + (cat === 'All' ? ' on' : '');
+    b.textContent = cat;
+    b.dataset.cat = cat;
+    b.onclick = () => {
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('on'));
+      b.classList.add('on');
+      render();
+    };
+    pillsEl.appendChild(b);
+  });
+
+  /* Industry dropdown */
+  const indEl = document.getElementById('f-ind');
+  allInds.forEach(i => {
+    const o = document.createElement('option');
+    o.value = i; o.textContent = i;
+    indEl.appendChild(o);
+  });
+
+  /* Business area dropdown */
+  const areaEl = document.getElementById('f-area');
+  allAreas.forEach(a => {
+    const o = document.createElement('option');
+    o.value = a; o.textContent = a;
+    areaEl.appendChild(o);
+  });
+}
+
+/* ── DATE ── */
+document.getElementById('hdate').textContent =
+  new Date().toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+
+/* ── EVENTS ── */
+const eslider = document.getElementById('eslider');
+const evalEl  = document.getElementById('eval');
+eslider.addEventListener('input', () => { evalEl.textContent = eslider.value; render(); });
+document.getElementById('search').addEventListener('input', render);
+document.getElementById('f-ind').addEventListener('change', render);
+document.getElementById('f-area').addEventListener('change', render);
+document.getElementById('f-sort').addEventListener('change', render);
+
+/* ── FILTER + SORT ── */
+function getList() {
+  const q    = document.getElementById('search').value.toLowerCase().trim();
+  const cat  = document.querySelector('.pill.on')?.dataset.cat || 'All';
+  const ind  = document.getElementById('f-ind').value;
+  const area = document.getElementById('f-area').value;
+  const minE = parseInt(eslider.value, 10);
+  const sort = document.getElementById('f-sort').value;
+
+  let list = ALL_TOOLS.filter(t => {
+    if (cat !== 'All' && t.category !== cat) return false;
+    if (ind  && !t.industry.includes(ind))   return false;
+    if (area && t.businessArea !== area)      return false;
+    if (t.ease < minE)                        return false;
+    if (q) {
+      const blob = [t.name, t.tagline, t.problem,
+        ...t.useCases, ...t.industry, t.businessArea, t.category
+      ].join(' ').toLowerCase();
+      if (!blob.includes(q)) return false;
+    }
+    return true;
+  });
+
+  list.sort((a, b) =>
+    sort === 'date'      ? b.date.localeCompare(a.date) :
+    sort === 'ease-desc' ? b.ease - a.ease :
+    sort === 'ease-asc'  ? a.ease - b.ease :
+    a.name.localeCompare(b.name)
+  );
+  return list;
+}
+
+/* ── LOGO TAG ── */
+function logoTag(t, big = false) {
+  const mw = big ? '160px' : '110px';
+  const mh = big ? '64px'  : '38px';
+  const fb = big ? '2.8rem' : '1.5rem';
+  return `
+    <img
+      src="${logoUrl(t.domain)}"
+      alt="${t.name} logo"
+      style="max-width:${mw};max-height:${mh};width:auto;height:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+    <span style="display:none;font-family:'DM Serif Display',serif;font-style:italic;font-size:${fb};color:#555;">${t.name}</span>`;
+}
+
+/* ── FEATURED CARD ── */
+function buildFeat(t) {
+  const pct = (t.ease / 10) * 100;
+  const isNew = t.date === today;
+  return `
+<div class="featured">
+  <div class="feat-logo-panel">${logoTag(t, true)}</div>
+  <div class="feat-body">
+    <div class="feat-meta">
+      <span class="feat-lbl">Today's pick</span>
+      <span class="feat-dot">·</span>
+      <span class="cat-tag">${t.category}</span>
+      ${isNew ? `<span class="new-tag">New</span>` : ''}
+    </div>
+    <h2 class="feat-name">${t.name}</h2>
+    <p class="feat-tagline">${t.tagline}</p>
+    <p class="feat-problem">${t.problem}</p>
+    <div class="feat-uc">${t.useCases.map(u => `<span class="uc-chip">${u}</span>`).join('')}</div>
+    <div class="feat-foot">
+      <div class="ease-block">
+        <span class="ease-lbl">Ease for non-technical users</span>
+        <div class="ease-row">
+          <div class="ebar"><div class="efill" style="width:${pct}%"></div></div>
+          <span class="escore">${t.ease}/10</span>
+        </div>
+        <span class="edesc">${t.easeLabel} &nbsp;·&nbsp; ${t.businessArea} &nbsp;·&nbsp; ${t.industry.join(', ')}</span>
+      </div>
+      <a class="visit-link" href="${t.url}" target="_blank" rel="noopener">
+        Visit <span class="arr">→</span>
+      </a>
+    </div>
+  </div>
+</div>`;
+}
+
+/* ── GRID CARD ── */
+function buildCard(t, delay) {
+  const pct = (t.ease / 10) * 100;
+  return `
+<a class="tcard" href="${t.url}" target="_blank" rel="noopener" style="animation-delay:${delay}ms">
+  <div class="tcard-logo">${logoTag(t, false)}</div>
+  <div class="tcard-body">
+    <div class="tcard-top">
+      <span class="tcard-name">${t.name}</span>
+      ${t.date === today ? `<span class="ndot"></span>` : ''}
+    </div>
+    <p class="tcard-tag">${t.tagline}</p>
+    <div class="cdiv"></div>
+    <p class="tcard-prob">${t.problem}</p>
+    <div class="tcard-uc">${t.useCases.slice(0, 3).map(u => `<span class="tcard-chip">${u}</span>`).join('')}</div>
+    <div class="tcard-foot">
+      <div>
+        <div class="mease-row">
+          <div class="mebar"><div class="mefill" style="width:${pct}%"></div></div>
+          <span class="mescore">${t.ease}/10</span>
+        </div>
+        <div class="tcard-date" style="margin-top:4px">${t.easeLabel}</div>
+      </div>
+      <span class="tcard-read">Read <span class="rarr">→</span></span>
+    </div>
+  </div>
+</a>`;
+}
+
+/* ── RENDER ── */
+function render() {
+  const list = getList();
+  document.getElementById('rcount').textContent =
+    list.length ? `${list.length} tool${list.length !== 1 ? 's' : ''}` : '';
+
+  const featWrap  = document.getElementById('feat-wrap');
+  const grid      = document.getElementById('tgrid');
+  const gridLabel = document.getElementById('grid-label');
+
+  if (!list.length) {
+    featWrap.innerHTML = '';
+    gridLabel.style.display = 'none';
+    grid.style.display = 'grid';
+    grid.innerHTML = `<div class="empty">No tools match — try different filters</div>`;
+    return;
+  }
+
+  const [first, ...rest] = list;
+  featWrap.innerHTML = buildFeat(first);
+
+  if (rest.length) {
+    gridLabel.style.display = 'flex';
+    grid.style.display = 'grid';
+    grid.innerHTML = rest.map((t, i) => buildCard(t, i * 35)).join('');
+  } else {
+    gridLabel.style.display = 'none';
+    grid.style.display = 'none';
+    grid.innerHTML = '';
+  }
+}
+
+/* ── START ── */
+boot();
+</script>
+</body>
+</html>
