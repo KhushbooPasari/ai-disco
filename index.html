@@ -310,34 +310,45 @@ window.addEventListener('scroll',()=>document.getElementById('nav').classList.to
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
 function observe(){document.querySelectorAll('.rv').forEach(el=>obs.observe(el))}
 
-function logoTag(t,big){
-  const mw=big?'160px':'120px',mh=big?'60px':'42px';
-  const imgStyle=`max-width:${mw};max-height:${mh};width:auto;height:auto;object-fit:contain;display:block;`;
-  const lsz=big?'width:80px;height:80px;border-radius:16px;font-size:2.2rem':'width:50px;height:50px;border-radius:10px;font-size:1.35rem';
-  const letter=t.name.charAt(0).toUpperCase();
-  const fallbackLetter=`<div style="display:none;${lsz};background:#111;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;align-items:center;justify-content:center;margin:0 auto;" id="fb-${t.id}">${letter}</div>`;
+/* ── LOGO LOADING ──
+   Step 1: Try Clearbit (high-quality full logo)
+   Step 2: If Clearbit fails, try Google's favicon API (always works)
+   Step 3: If both fail, show styled letter initial
+   Uses a global handler so inline onerror stays simple and reliable ── */
+window._logoFail = function(img, domain, fbId) {
+  var google = 'https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://' + domain + '&size=256';
+  if (img.src !== google) {
+    img.onerror = function() { window._logoFail2(img, fbId); };
+    img.src = google;
+  } else {
+    window._logoFail2(img, fbId);
+  }
+};
+window._logoFail2 = function(img, fbId) {
+  img.style.display = 'none';
+  var fb = document.getElementById(fbId);
+  if (fb) { fb.style.display = 'flex'; }
+};
 
-  /* 4-tier fallback:
-     1. logoUrl field (explicit URL from tools.json — most reliable)
-     2. Clearbit  logo.clearbit.com
-     3. Google favicon (always works, smaller icon)
-     4. Letter placeholder */
-  const sources=[
-    t.logoUrl||`https://logo.clearbit.com/${t.domain}`,
-    `https://logo.clearbit.com/${t.domain}`,
-    `https://www.google.com/s2/favicons?domain=${t.domain}&sz=128`
-  ];
-  const unique=[...new Set(sources)];
+function logoTag(t, big) {
+  const mw  = big ? '160px' : '120px';
+  const mh  = big ? '60px'  : '42px';
+  const lsz = big
+    ? 'width:80px;height:80px;border-radius:16px;font-size:2.2rem'
+    : 'width:50px;height:50px;border-radius:10px;font-size:1.35rem';
+  const letter = t.name.charAt(0).toUpperCase();
+  const fbId   = 'fb-' + t.id;
+  const src    = 'https://logo.clearbit.com/' + t.domain;
 
-  const onerror=`
-    (function(el){
-      var srcs=${JSON.stringify(unique)};
-      var idx=(el.dataset.idx||-1)*1+1;
-      if(idx<srcs.length){el.dataset.idx=idx;el.src=srcs[idx];}
-      else{el.style.display='none';var fb=document.getElementById('fb-${t.id}');if(fb)fb.style.display='flex';}
-    })(this)`.replace(/\s+/g,' ').trim();
-
-  return `<img src="${unique[0]}" alt="${t.name} logo" data-idx="0" style="${imgStyle}" onerror="${onerror}">${fallbackLetter}`;
+  return `<img
+    src="${src}"
+    alt="${t.name} logo"
+    style="max-width:${mw};max-height:${mh};width:auto;height:auto;object-fit:contain;display:block;"
+    onerror="window._logoFail(this,'${t.domain}','${fbId}')"
+  ><div
+    id="${fbId}"
+    style="display:none;${lsz};background:#111;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;align-items:center;justify-content:center;margin:0 auto;"
+  >${letter}</div>`;
 }
 
 function buildTicker(tools){
