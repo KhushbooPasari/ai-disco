@@ -312,9 +312,32 @@ function observe(){document.querySelectorAll('.rv').forEach(el=>obs.observe(el))
 
 function logoTag(t,big){
   const mw=big?'160px':'120px',mh=big?'60px':'42px';
+  const imgStyle=`max-width:${mw};max-height:${mh};width:auto;height:auto;object-fit:contain;display:block;`;
   const lsz=big?'width:80px;height:80px;border-radius:16px;font-size:2.2rem':'width:50px;height:50px;border-radius:10px;font-size:1.35rem';
   const letter=t.name.charAt(0).toUpperCase();
-  return `<img src="https://logo.clearbit.com/${t.domain}" alt="${t.name}" style="max-width:${mw};max-height:${mh};width:auto;height:auto;object-fit:contain;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div style="display:none;${lsz};background:#111;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;align-items:center;justify-content:center;margin:0 auto;">${letter}</div>`;
+  const fallbackLetter=`<div style="display:none;${lsz};background:#111;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;align-items:center;justify-content:center;margin:0 auto;" id="fb-${t.id}">${letter}</div>`;
+
+  /* 4-tier fallback:
+     1. logoUrl field (explicit URL from tools.json — most reliable)
+     2. Clearbit  logo.clearbit.com
+     3. Google favicon (always works, smaller icon)
+     4. Letter placeholder */
+  const sources=[
+    t.logoUrl||`https://logo.clearbit.com/${t.domain}`,
+    `https://logo.clearbit.com/${t.domain}`,
+    `https://www.google.com/s2/favicons?domain=${t.domain}&sz=128`
+  ];
+  const unique=[...new Set(sources)];
+
+  const onerror=`
+    (function(el){
+      var srcs=${JSON.stringify(unique)};
+      var idx=(el.dataset.idx||-1)*1+1;
+      if(idx<srcs.length){el.dataset.idx=idx;el.src=srcs[idx];}
+      else{el.style.display='none';var fb=document.getElementById('fb-${t.id}');if(fb)fb.style.display='flex';}
+    })(this)`.replace(/\s+/g,' ').trim();
+
+  return `<img src="${unique[0]}" alt="${t.name} logo" data-idx="0" style="${imgStyle}" onerror="${onerror}">${fallbackLetter}`;
 }
 
 function buildTicker(tools){
