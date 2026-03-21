@@ -239,6 +239,125 @@ footer{border-top:1px solid var(--border);background:var(--white);position:relat
 .fc{font-family:var(--fm);font-size:.62rem;color:var(--grey);letter-spacing:.04em}
 .fct{font-weight:600;font-size:.74rem;letter-spacing:-.01em;color:var(--black);text-decoration:none;display:inline-flex;align-items:center;gap:.3rem;transition:gap .2s}
 .fct:hover{gap:.5rem}
+
+/* ═══════════════════════════════════
+   MOBILE & TABLET RESPONSIVE
+   ≤768px = mobile, 769–1024px = tablet
+═══════════════════════════════════ */
+
+/* ── TABLET (769–1024px) ── */
+@media(max-width:1024px){
+  .hw{padding:5rem 1.5rem 4rem}
+  .hh{font-size:clamp(2.5rem,5.5vw,4.5rem)}
+  main{padding:0 1.5rem 5rem}
+  .ni{padding:0 1.5rem}
+}
+
+/* ── MOBILE (≤768px) ── */
+@media(max-width:768px){
+
+  /* Nav — compact, search hidden on very small, just logo + contact */
+  .ni{height:56px;padding:0 1.25rem;gap:1rem}
+  .ln{font-size:.9rem}
+  .ns{display:none} /* hide search bar in nav — search is in filter bar */
+  .nd{display:none}
+  .nb{font-size:.7rem;padding:.38rem .9rem}
+
+  /* Hero */
+  .hw{padding:3.5rem 1.25rem 3rem}
+  .hk{font-size:.6rem;margin-bottom:1rem}
+  .hh{font-size:clamp(2.4rem,9.5vw,3.5rem);letter-spacing:-.03em;line-height:.97;margin-bottom:1.2rem}
+  .hs{font-size:.95rem;margin-bottom:2rem;max-width:100%}
+  .hst{gap:1.75rem}
+  .hst-n{font-size:1.5rem}
+  .hst-l{font-size:.55rem}
+  .sh{margin-top:2rem}
+
+  /* Filter bar — scrollable horizontally on mobile */
+  .fbar{top:56px}
+  .fbi{
+    padding:.65rem 1.25rem;
+    gap:.35rem;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .fbi::-webkit-scrollbar{display:none}
+  #cpills{flex-wrap:nowrap;flex-shrink:0}
+  .pill{font-size:.65rem;padding:.26rem .75rem;white-space:nowrap;flex-shrink:0}
+  .fdiv{display:none} /* hide dividers on mobile — save space */
+  .fsel{font-size:.65rem;white-space:nowrap;flex-shrink:0}
+  .ew{flex-shrink:0;white-space:nowrap}
+  #esl{width:54px}
+  .fsort{font-size:.65rem;flex-shrink:0}
+
+  /* Main */
+  main{padding:0 1.25rem 4rem}
+
+  /* Section labels */
+  .sl{padding:2rem 0 1.25rem}
+  .sl-t{font-size:.58rem}
+
+  /* Featured card — stack vertically */
+  .feat{grid-template-columns:1fr !important}
+  .flp{
+    min-height:160px;
+    padding:2rem 1.5rem;
+    border-right:none;
+    border-bottom:1px solid var(--border);
+  }
+  .logo-mount{width:140px;height:72px}
+  .logo-mount img{max-width:130px;max-height:52px}
+  .fln{font-size:.58rem}
+  .fb2{padding:1.5rem}
+  .fn{font-size:clamp(1.6rem,6vw,2.2rem);letter-spacing:-.03em}
+  .ft{font-size:.9rem}
+  .fp{font-size:.83rem;padding:.85rem 1rem}
+  .futag{font-size:.62rem}
+  .ff{flex-direction:column;align-items:flex-start;gap:.85rem}
+  .vb{width:100%;justify-content:center;padding:.65rem 1rem;font-size:.78rem}
+
+  /* Tool grid — single column on mobile */
+  .tg{grid-template-columns:1fr !important}
+  .tcl{height:88px;padding:1rem 1.5rem}
+  .tcl-inner img{max-width:110px;max-height:36px}
+  .tcl-inner img.is-icon{max-width:40px;max-height:40px}
+  .tcb{padding:1rem 1.25rem}
+  .tcn{font-size:.98rem}
+  .tctag{font-size:.78rem}
+  .tcp{font-size:.77rem}
+  .tcch{font-size:.58rem}
+
+  /* Footer */
+  .fi{flex-direction:column;align-items:flex-start;padding:1.5rem 1.25rem;gap:.75rem}
+  .fr{align-items:flex-start}
+  .fc{font-size:.6rem}
+  .fct{font-size:.72rem}
+
+  /* Ticker — slightly smaller text */
+  .tkitem{font-size:.56rem}
+
+  /* Hide geometric background on mobile — too distracting on small screen */
+  .geo{display:none}
+}
+
+/* ── SMALL MOBILE (≤380px) ── */
+@media(max-width:380px){
+  .hh{font-size:2.2rem}
+  .ni{padding:0 1rem}
+  .hw{padding:3rem 1rem 2.5rem}
+  main{padding:0 1rem 3rem}
+  .fbi{padding:.6rem 1rem}
+}
+
+/* ── Touch device: remove hover-only effects ── */
+@media(hover:none){
+  .tc::before{display:none} /* top border sweep not useful on touch */
+  .tcard:hover{transform:none}
+  .feat:hover{transform:none}
+  .nb:hover{transform:none}
+}
 </style>
 </head>
 <body>
@@ -310,6 +429,12 @@ footer{border-top:1px solid var(--border);background:var(--white);position:relat
 
 <div class="fb">
 <div class="fbi">
+  <!-- Mobile-only search (nav search is hidden on mobile) -->
+  <div class="mobile-search" style="display:none;position:relative;flex-shrink:0;">
+    <span style="position:absolute;left:9px;top:50%;transform:translateY(-50%);color:#b8b8b4;font-size:12px;pointer-events:none">&#9906;</span>
+    <input id="search-mobile" type="text" placeholder="Search&#8230;"
+      style="background:var(--off2);border:1px solid var(--border);border-radius:999px;color:var(--black);font-family:var(--fd);font-size:.7rem;padding:.28rem .85rem .28rem 1.85rem;outline:none;width:130px;">
+  </div>
   <div id="cpills" style="display:flex;gap:.35rem;flex-wrap:wrap;"></div>
   <div class="fdiv"></div>
   <select id="f-ind" class="fsel"><option value="">All Industries</option></select>
@@ -353,6 +478,26 @@ const today=new Date().toISOString().split('T')[0];
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',scrollY>10));
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
 function observe(){document.querySelectorAll('.rv').forEach(el=>obs.observe(el))}
+
+/* Show mobile search bar when viewport is narrow */
+function checkMobile(){
+  const ms=document.querySelector('.mobile-search');
+  if(!ms)return;
+  const isMobile=window.innerWidth<=768;
+  ms.style.display=isMobile?'block':'none';
+}
+window.addEventListener('resize',checkMobile);
+checkMobile();
+
+/* Sync mobile search with main search */
+document.addEventListener('input',function(e){
+  if(e.target.id==='search-mobile'){
+    document.getElementById('search').value=e.target.value;render();
+  } else if(e.target.id==='search'){
+    const ms=document.getElementById('search-mobile');
+    if(ms)ms.value=e.target.value;
+  }
+});
 
 /* ═══════════════════════════════════════════════
    SMART LOGO SYSTEM
