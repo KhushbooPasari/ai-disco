@@ -43,7 +43,6 @@ jobs:
           git add tools.json
           git diff --staged --quiet || git commit -m "Auto: added $(python3 -c "import json; print(json.load(open('pending.json')).get('name','new tool'))")"
           git push
-```
 
 Click **Commit new file**
 
@@ -54,27 +53,27 @@ Click **Commit new file**
 **1.** Click on **HTTP 11**
 
 **2.** Change the **URL** to:
-```
+
 https://api.github.com/repos/KhushbooPasari/ai-disco/contents/pending.json
-```
+
 
 **3.** Change the **content** field to just:
-```
+
 {{base64(12.newTool)}}
-```
+
 
 No concatenation. No substring. Just encode Claude's response directly.
 
 **4.** Change the **message** field to:
-```
+
 New tool pending: {{7.name}}
-```
+
 
 **5.** For the **sha** field — this needs the SHA of `pending.json` not `tools.json`. So change HTTP 10's URL to:
-```
+
 https://api.github.com/repos/KhushbooPasari/ai-disco/contents/pending.json
-```
+
 
 And HTTP 13's URL to:
-```
+
 https://raw.githubusercontent.com/KhushbooPasari/ai-disco/main/pending.json
