@@ -1,0 +1,80 @@
+name: Merge pending tool into tools.json
+
+on:
+  push:
+    paths:
+      - 'pending.json'
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge and prepend new tool
+        run: |
+          python3 - <<'EOF'
+          import json
+
+          with open('pending.json') as f:
+            new_tool = json.load(f)
+
+          with open('tools.json') as f:
+            tools = json.load(f)
+
+          # Avoid duplicates
+          existing_domains = [t.get('domain','') for t in tools]
+          if new_tool.get('domain','') not in existing_domains:
+            new_tool['id'] = len(tools) + 1
+            tools.insert(0, new_tool)
+            with open('tools.json', 'w') as f:
+              json.dump(tools, f, indent=2)
+            print(f"Added: {new_tool.get('name')}")
+          else:
+            print(f"Skipped duplicate: {new_tool.get('domain')}")
+          EOF
+
+      - name: Commit updated tools.json
+        run: |
+          git config user.name "AI Disco Bot"
+          git config user.email "bot@aidisco.com"
+          git add tools.json
+          git diff --staged --quiet || git commit -m "Auto: added $(python3 -c "import json; print(json.load(open('pending.json')).get('name','new tool'))")"
+          git push
+```
+
+Click **Commit new file**
+
+---
+
+### Step 2 — Fix HTTP 11 in Make.com
+
+**1.** Click on **HTTP 11**
+
+**2.** Change the **URL** to:
+```
+https://api.github.com/repos/KhushbooPasari/ai-disco/contents/pending.json
+```
+
+**3.** Change the **content** field to just:
+```
+{{base64(12.newTool)}}
+```
+
+No concatenation. No substring. Just encode Claude's response directly.
+
+**4.** Change the **message** field to:
+```
+New tool pending: {{7.name}}
+```
+
+**5.** For the **sha** field — this needs the SHA of `pending.json` not `tools.json`. So change HTTP 10's URL to:
+```
+https://api.github.com/repos/KhushbooPasari/ai-disco/contents/pending.json
+```
+
+And HTTP 13's URL to:
+```
+https://raw.githubusercontent.com/KhushbooPasari/ai-disco/main/pending.json
