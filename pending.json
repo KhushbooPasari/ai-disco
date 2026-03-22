@@ -1,0 +1,24 @@
+{"name":"placeholder","domain":"placeholder.com","tagline":"placeholder","problem":"placeholder","useCases":["placeholder"],"url":"https://placeholder.com","ease":5,"easeLabel":"placeholder","industry":["placeholder"],"businessArea":"placeholder","category":"Productivity","date":"2025-01-01"}
+```
+
+4. Click **Commit new file**
+
+---
+
+### How it works now
+```
+Make.com runs every 6 hours
+    ↓
+Claude assesses a new tool → clean JSON
+    ↓
+HTTP 11 writes it to pending.json (zero manipulation)
+    ↓
+GitHub detects pending.json changed
+    ↓
+merge-tool.yml runs Python script
+    ↓
+Python reads pending.json + tools.json properly
+    ↓
+Prepends new tool, checks for duplicates, writes back
+    ↓
+AI Disco updates automatically
