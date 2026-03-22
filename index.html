@@ -576,6 +576,7 @@ async function boot(){
     const r=await fetch('./tools.json');
     if(!r.ok)throw new Error();
     ALL=await r.json();
+    ALL=ALL.map(sanitise); /* ensure every tool has all required fields */
     document.getElementById('loading').style.display='none';
     document.getElementById('content').style.display='block';
     document.getElementById('stat-n').textContent=ALL.length;
@@ -606,6 +607,26 @@ const esl=document.getElementById('esl'),ev=document.getElementById('ev');
 esl.addEventListener('input',()=>{ev.textContent=esl.value;render()});
 ['search','f-ind','f-area','f-sort'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render));
 
+/* Sanitise a tool — fill in any missing fields so renders never crash */
+function sanitise(t) {
+  return {
+    id:           t.id           || 0,
+    name:         t.name         || 'Unknown Tool',
+    domain:       t.domain       || (t.url ? t.url.replace(/https?:\/\//,'').split('/')[0] : 'unknown.com'),
+    tagline:      t.tagline      || '',
+    problem:      t.problem      || '',
+    useCases:     Array.isArray(t.useCases)  ? t.useCases  : [],
+    url:          t.url          || '#',
+    ease:         typeof t.ease === 'number' ? t.ease : 5,
+    easeLabel:    t.easeLabel    || 'Some familiarity needed',
+    industry:     Array.isArray(t.industry)  ? t.industry  : ['Technology & Software'],
+    businessArea: t.businessArea || 'General',
+    category:     t.category     || 'Productivity',
+    date:         t.date         || new Date().toISOString().split('T')[0],
+    logoUrl:      t.logoUrl      || ''
+  };
+}
+
 function getList(){
   const q=document.getElementById('search').value.toLowerCase().trim();
   const cat=document.querySelector('.pill.on')?.dataset.cat||'All';
@@ -614,14 +635,26 @@ function getList(){
   const minE=parseInt(esl.value,10);
   const sort=document.getElementById('f-sort').value;
   let list=ALL.filter(t=>{
+    if(!t.name)return false;
     if(cat!=='All'&&t.category!==cat)return false;
-    if(ind&&!t.industry.includes(ind))return false;
+    if(ind&&!(t.industry||[]).includes(ind))return false;
     if(area&&t.businessArea!==area)return false;
-    if(t.ease<minE)return false;
-    if(q){const blob=[t.name,t.tagline,t.problem,...t.useCases,...t.industry,t.businessArea,t.category].join(' ').toLowerCase();if(!blob.includes(q))return false}
+    if((t.ease||5)<minE)return false;
+    if(q){
+      const blob=[t.name,t.tagline,t.problem,...(t.useCases||[]),...(t.industry||[]),t.businessArea,t.category].join(' ').toLowerCase();
+      if(!blob.includes(q))return false;
+    }
     return true;
   });
-  list.sort((a,b)=>sort==='date'?b.date.localeCompare(a.date):sort==='ease-desc'?b.ease-a.ease:sort==='ease-asc'?a.ease-b.ease:a.name.localeCompare(b.name));
+  list.sort((a,b)=>{
+    if(sort==='date'){
+      const da=a.date||'1970-01-01', db=b.date||'1970-01-01';
+      return db.localeCompare(da);
+    }
+    if(sort==='ease-desc')return (b.ease||5)-(a.ease||5);
+    if(sort==='ease-asc') return (a.ease||5)-(b.ease||5);
+    return (a.name||'').localeCompare(b.name||'');
+  });
   return list;
 }
 
