@@ -5,75 +5,63 @@ on:
     paths:
       - 'pending.json'
 
+permissions:
+  contents: write
+
 jobs:
   merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Merge and prepend new tool
         run: |
           python3 - <<'EOF'
-          import json
+          import json, sys
 
-          with open('pending.json') as f:
-            new_tool = json.load(f)
+          try:
+            with open('pending.json') as f:
+              new_tool = json.load(f)
+          except Exception as e:
+            print(f"Could not read pending.json: {e}")
+            sys.exit(0)
 
-          with open('tools.json') as f:
-            tools = json.load(f)
+          if new_tool.get('name') == 'placeholder':
+            print("Placeholder file — skipping")
+            sys.exit(0)
 
-          # Avoid duplicates
+          try:
+            with open('tools.json') as f:
+              tools = json.load(f)
+          except Exception as e:
+            print(f"Could not read tools.json: {e}")
+            sys.exit(1)
+
           existing_domains = [t.get('domain','') for t in tools]
-          if new_tool.get('domain','') not in existing_domains:
-            new_tool['id'] = len(tools) + 1
-            tools.insert(0, new_tool)
-            with open('tools.json', 'w') as f:
-              json.dump(tools, f, indent=2)
-            print(f"Added: {new_tool.get('name')}")
-          else:
-            print(f"Skipped duplicate: {new_tool.get('domain')}")
+          if new_tool.get('domain','') in existing_domains:
+            print(f"Duplicate — skipping: {new_tool.get('domain')}")
+            sys.exit(0)
+
+          new_tool['id'] = len(tools) + 1
+          tools.insert(0, new_tool)
+
+          with open('tools.json', 'w') as f:
+            json.dump(tools, f, indent=2)
+
+          print(f"SUCCESS — added: {new_tool.get('name')}")
           EOF
 
-      - name: Commit updated tools.json
+      - name: Commit and push
         run: |
           git config user.name "AI Disco Bot"
-          git config user.email "bot@aidisco.com"
+          git config user.email "actions@github.com"
           git add tools.json
-          git diff --staged --quiet || git commit -m "Auto: added $(python3 -c "import json; print(json.load(open('pending.json')).get('name','new tool'))")"
-          git push
-
-Click **Commit new file**
-
----
-
-### Step 2 — Fix HTTP 11 in Make.com
-
-**1.** Click on **HTTP 11**
-
-**2.** Change the **URL** to:
-
-https://api.github.com/repos/KhushbooPasari/ai-disco/contents/pending.json
-
-
-**3.** Change the **content** field to just:
-
-{{base64(12.newTool)}}
-
-
-No concatenation. No substring. Just encode Claude's response directly.
-
-**4.** Change the **message** field to:
-
-New tool pending: {{7.name}}
-
-
-**5.** For the **sha** field — this needs the SHA of `pending.json` not `tools.json`. So change HTTP 10's URL to:
-
-https://api.github.com/repos/KhushbooPasari/ai-disco/contents/pending.json
-
-
-And HTTP 13's URL to:
-
-https://raw.githubusercontent.com/KhushbooPasari/ai-disco/main/pending.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-added: $(python3 -c "import json; d=json.load(open('pending.json')); print(d.get('name','new tool'))")"
+            git push
+          fi
