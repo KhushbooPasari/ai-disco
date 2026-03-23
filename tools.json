@@ -1,5 +1,28 @@
 [
   {
+    "name": "Chronicle 2.0",
+    "domain": "chroniclehq.com",
+    "tagline": "AI-assisted presentation builder that skips the generic filler and keeps your content sharp.",
+    "problem": "Most AI presentation tools generate bloated, generic slides that require heavy editing before they look professional. Chronicle 2.0 addresses the gap between fast AI output and polished, on-brand storytelling. It gives teams a way to build compelling decks without sacrificing quality or spending hours cleaning up AI slop.",
+    "useCases": [
+      "Building investor pitch decks with clean, purposeful narratives",
+      "Creating client-facing proposals and business presentations",
+      "Producing internal strategy or roadmap presentations",
+      "Repurposing existing content into structured slide decks quickly"
+    ],
+    "url": "https://chroniclehq.com",
+    "ease": 7,
+    "easeLabel": "Some familiarity needed",
+    "industry": [
+      "Business Services",
+      "Marketing & Communications"
+    ],
+    "businessArea": "Content Production",
+    "category": "Writing & Docs",
+    "date": "2025-03-23",
+    "id": 37
+  },
+  {
     "name": "Visual Translate by Vozo",
     "domain": "vozo.ai",
     "tagline": "Translate on-screen video text without touching your original visuals",
