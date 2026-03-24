@@ -520,15 +520,16 @@ window._logoLoaded = function(img) {
 
 /* Called on load failure — try Google Social, then letter */
 window._logoFail = function(img, domain, fbId) {
-  var google = 'https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://' + domain + '&size=256';
-  if (img.getAttribute('data-tried-google') !== '1') {
-    img.setAttribute('data-tried-google', '1');
+  /* Primary (Google Social) failed — try DuckDuckGo favicon as backup */
+  var ddg = 'https://icons.duckduckgo.com/ip3/' + domain + '.ico';
+  if (img.getAttribute('data-tried-ddg') !== '1') {
+    img.setAttribute('data-tried-ddg', '1');
     img.onerror = function() {
       img.style.display = 'none';
       var fb = document.getElementById(fbId);
       if (fb) fb.style.display = 'flex';
     };
-    img.src = google;
+    img.src = ddg;
   } else {
     img.style.display = 'none';
     var fb = document.getElementById(fbId);
@@ -540,7 +541,7 @@ window._logoFail = function(img, domain, fbId) {
 function logoTag(t, big) {
   const letter = t.name.charAt(0).toUpperCase();
   const fbId   = 'fb-' + t.id;
-  const src    = 'https://logo.clearbit.com/' + t.domain;
+  const src    = 'https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://' + t.domain + '&size=256';
   const lsz    = big
     ? 'width:72px;height:72px;border-radius:14px;font-size:2rem'
     : 'width:44px;height:44px;border-radius:10px;font-size:1.3rem';
