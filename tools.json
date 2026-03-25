@@ -1,6 +1,30 @@
 [
   {
     "name": "Chronicle 2.0",
+    "domain": "chronicle.site",
+    "tagline": "AI-assisted presentation builder that produces polished decks without the generic, overdesigned look of typical AI tools.",
+    "problem": "Most AI presentation tools generate slides that look templated, cluttered, and instantly recognisable as machine-made, undermining credibility in professional settings. Teams waste time manually cleaning up AI output to meet brand and design standards. Chronicle 2.0 aims to give users AI speed while preserving visual quality and intentionality.",
+    "useCases": [
+      "Building investor pitch decks that look hand-crafted rather than AI-generated",
+      "Creating client-facing strategy presentations with clean, professional aesthetics",
+      "Producing internal team briefings and reports quickly without design overhead",
+      "Developing sales enablement decks that maintain brand consistency at scale"
+    ],
+    "url": "https://chronicle.site",
+    "ease": 7,
+    "easeLabel": "Some familiarity needed",
+    "industry": [
+      "Professional Services",
+      "Marketing",
+      "Technology"
+    ],
+    "businessArea": "Content Production",
+    "category": "Design & Visual",
+    "date": "2025-03-25",
+    "id": 40
+  },
+  {
+    "name": "Chronicle 2.0",
     "domain": "chronicle.store",
     "tagline": "AI-assisted presentation builder that produces polished decks without the generic, over-designed AI look.",
     "problem": "Most AI presentation tools generate slides that look templated, cluttered, and instantly recognisable as machine-made, undermining credibility. Chronicle 2.0 gives users AI assistance for speed while maintaining design quality and visual distinctiveness. This lets teams produce professional presentations faster without sacrificing brand integrity or aesthetic control.",
