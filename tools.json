@@ -1,996 +1,352 @@
 [
   {
-    "name": "Chronicle 2.0",
-    "domain": "chronicle.site",
-    "tagline": "AI-assisted presentation builder that produces polished decks without the generic, overdesigned look of typical AI tools.",
-    "problem": "Most AI presentation tools generate slides that look templated, cluttered, and instantly recognisable as machine-made, undermining credibility in professional settings. Teams waste time manually cleaning up AI output to meet brand and design standards. Chronicle 2.0 aims to give users AI speed while preserving visual quality and intentionality.",
-    "useCases": [
-      "Building investor pitch decks that look hand-crafted rather than AI-generated",
-      "Creating client-facing strategy presentations with clean, professional aesthetics",
-      "Producing internal team briefings and reports quickly without design overhead",
-      "Developing sales enablement decks that maintain brand consistency at scale"
-    ],
-    "url": "https://chronicle.site",
-    "ease": 7,
-    "easeLabel": "Some familiarity needed",
-    "industry": [
-      "Professional Services",
-      "Marketing",
-      "Technology"
-    ],
-    "businessArea": "Content Production",
-    "category": "Design & Visual",
-    "date": "2025-03-25",
-    "id": 40
-  },
-  {
-    "name": "Chronicle 2.0",
-    "domain": "chronicle.store",
-    "tagline": "AI-assisted presentation builder that produces polished decks without the generic, over-designed AI look.",
-    "problem": "Most AI presentation tools generate slides that look templated, cluttered, and instantly recognisable as machine-made, undermining credibility. Chronicle 2.0 gives users AI assistance for speed while maintaining design quality and visual distinctiveness. This lets teams produce professional presentations faster without sacrificing brand integrity or aesthetic control.",
-    "useCases": [
-      "Creating investor pitch decks that look hand-crafted rather than AI-generated",
-      "Building client-facing sales decks with consistent, on-brand visual design",
-      "Producing internal strategy or roadmap presentations quickly without a designer",
-      "Repurposing written reports or documents into structured slide narratives"
-    ],
-    "url": "https://chronicle.store",
-    "ease": 7,
-    "easeLabel": "Some familiarity needed",
-    "industry": [
-      "Marketing",
-      "Professional Services",
-      "Technology"
-    ],
-    "businessArea": "Content Production",
-    "category": "Design & Visual",
-    "date": "2026-03-24",
-    "id": 39
-  },
-  {
-    "name": "Chronicle 2.0",
-    "domain": "chronicle.app",
-    "tagline": "AI-powered presentation builder that produces polished decks without the generic, over-designed AI aesthetic.",
-    "problem": "Most AI presentation tools churn out visually bland, templated slides that lack originality and require heavy manual cleanup. Chronicle 2.0 addresses the gap between speed and quality by letting teams build visually distinctive presentations with AI assistance that respects design intent. This saves hours of reformatting while avoiding the homogenous look that undermines credibility.",
-    "useCases": [
-      "Creating investor pitch decks that stand out from AI-generated competition",
-      "Building client-facing sales presentations with a refined, branded look",
-      "Producing internal strategy or roadmap decks quickly without sacrificing visual quality",
-      "Enabling non-designers to author professional presentations without design tools expertise"
-    ],
-    "url": "https://chronicle.app",
-    "ease": 7,
-    "easeLabel": "Some familiarity needed",
-    "industry": [
-      "Business Services",
-      "Marketing",
-      "Technology"
-    ],
-    "businessArea": "Content Production",
-    "category": "Writing & Docs",
-    "date": "2025-07-16",
-    "id": 38
-  },
-  {
-    "name": "Chronicle 2.0",
-    "domain": "chroniclehq.com",
-    "tagline": "AI-assisted presentation builder that skips the generic filler and keeps your content sharp.",
-    "problem": "Most AI presentation tools generate bloated, generic slides that require heavy editing before they look professional. Chronicle 2.0 addresses the gap between fast AI output and polished, on-brand storytelling. It gives teams a way to build compelling decks without sacrificing quality or spending hours cleaning up AI slop.",
-    "useCases": [
-      "Building investor pitch decks with clean, purposeful narratives",
-      "Creating client-facing proposals and business presentations",
-      "Producing internal strategy or roadmap presentations",
-      "Repurposing existing content into structured slide decks quickly"
-    ],
-    "url": "https://chroniclehq.com",
-    "ease": 7,
-    "easeLabel": "Some familiarity needed",
-    "industry": [
-      "Business Services",
-      "Marketing & Communications"
-    ],
-    "businessArea": "Content Production",
-    "category": "Writing & Docs",
-    "date": "2025-03-23",
-    "id": 37
-  },
-  {
-    "name": "Visual Translate by Vozo",
-    "domain": "vozo.ai",
-    "tagline": "Translate on-screen video text without touching your original visuals",
-    "problem": "Businesses distributing video content globally face the costly, time-consuming task of recreating entire videos to swap out text overlays, titles, and captions for each target language. Rebuilding visuals for every locale strains production budgets and slows time-to-market. Visual Translate automates in-video text translation while preserving the original design and layout.",
-    "useCases": [
-      "Localise marketing video campaigns for multiple regional markets without redesigning assets",
-      "Translate product demo or tutorial videos for international onboarding",
-      "Adapt social media video content with native-language text overlays at scale",
-      "Convert training or compliance videos into multiple languages for global teams"
-    ],
-    "url": "https://www.producthunt.com/r/WDYAIZ3JF4ZRJZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Disco+%28ID%3A+278894%29",
-    "ease": 7,
-    "easeLabel": "Some familiarity needed",
-    "industry": [
-      "Media & Entertainment",
-      "Marketing",
-      "E-Learning"
-    ],
-    "businessArea": "Content Production",
-    "category": "Video & Audio",
-    "id": 36
-  },
-  {
-    "id": 1,
-    "name": "Perplexity AI",
-    "domain": "perplexity.ai",
+    "id": 1, "name": "Perplexity AI", "domain": "perplexity.ai",
     "logoUrl": "https://logo.clearbit.com/perplexity.ai",
     "tagline": "The answer engine that always shows its work",
-    "problem": "Search engines return ten blue links and leave you to read everything yourself. Perplexity reads the web, synthesises the answer, and cites every source \u2014 in one shot.",
-    "useCases": [
-      "Competitive research",
-      "Fact-checking with citations",
-      "Market landscape scans",
-      "Academic research"
-    ],
-    "url": "https://perplexity.ai",
-    "ease": 9,
-    "easeLabel": "Anyone can use it day one",
-    "industry": [
-      "Technology & Software",
-      "Finance & Banking",
-      "Consulting & Professional Services",
-      "Education & Training"
-    ],
-    "businessArea": "Knowledge Management",
-    "category": "Search & Research",
-    "date": "2025-03-19"
+    "problem": "Search engines return ten blue links and leave you to read everything yourself. Perplexity reads the web, synthesises the answer, and cites every source — in one shot.",
+    "useCases": ["Competitive research", "Fact-checking with citations", "Market landscape scans", "Academic research"],
+    "url": "https://perplexity.ai", "ease": 9, "easeLabel": "Anyone can use it day one",
+    "industry": ["Technology & Software", "Finance & Banking", "Consulting & Professional Services", "Education & Training"],
+    "businessArea": "Knowledge Management", "category": "Search & Research", "date": "2025-03-19"
   },
   {
-    "id": 2,
-    "name": "Runway ML",
-    "domain": "runwayml.com",
+    "id": 2, "name": "Runway ML", "domain": "runwayml.com",
     "logoUrl": "https://logo.clearbit.com/runwayml.com",
     "tagline": "Hollywood-grade video generation with no film school required",
     "problem": "Professional video production demands expensive equipment, skilled editors, and days of post-production. Runway compresses that entire pipeline into a text prompt.",
-    "useCases": [
-      "Marketing video production",
-      "Social media content",
-      "Product demos",
-      "Concept visualisation"
-    ],
-    "url": "https://runwayml.com",
-    "ease": 5,
-    "easeLabel": "Moderate learning curve",
-    "industry": [
-      "Marketing & Advertising",
-      "Media & Entertainment",
-      "Retail & E-commerce"
-    ],
-    "businessArea": "Content Production",
-    "category": "Video & Audio",
-    "date": "2025-03-18"
+    "useCases": ["Marketing video production", "Social media content", "Product demos", "Concept visualisation"],
+    "url": "https://runwayml.com", "ease": 5, "easeLabel": "Moderate learning curve",
+    "industry": ["Marketing & Advertising", "Media & Entertainment", "Retail & E-commerce"],
+    "businessArea": "Content Production", "category": "Video & Audio", "date": "2025-03-18"
   },
   {
-    "id": 3,
-    "name": "Gamma",
-    "domain": "gamma.app",
+    "id": 3, "name": "Gamma", "domain": "gamma.app",
     "logoUrl": "https://logo.clearbit.com/gamma.app",
     "tagline": "Presentations that write and design themselves",
     "problem": "Building a deck from scratch burns hours on layout before you get to the thinking. Gamma converts rough notes into a fully designed presentation in under two minutes.",
-    "useCases": [
-      "Investor pitches",
-      "Internal strategy decks",
-      "Client proposals",
-      "Training materials"
-    ],
-    "url": "https://gamma.app",
-    "ease": 9,
-    "easeLabel": "Anyone can use it day one",
-    "industry": [
-      "Consulting & Professional Services",
-      "Technology & Software",
-      "Finance & Banking",
-      "Education & Training"
-    ],
-    "businessArea": "Content Production",
-    "category": "Writing & Docs",
-    "date": "2025-03-17"
+    "useCases": ["Investor pitches", "Internal strategy decks", "Client proposals", "Training materials"],
+    "url": "https://gamma.app", "ease": 9, "easeLabel": "Anyone can use it day one",
+    "industry": ["Consulting & Professional Services", "Technology & Software", "Finance & Banking", "Education & Training"],
+    "businessArea": "Content Production", "category": "Writing & Docs", "date": "2025-03-17"
   },
   {
-    "id": 4,
-    "name": "Harvey AI",
-    "domain": "harvey.ai",
+    "id": 4, "name": "Harvey AI", "domain": "harvey.ai",
     "logoUrl": "https://logo.clearbit.com/harvey.ai",
     "tagline": "The AI legal associate that never sleeps",
     "problem": "Legal research, contract drafting, and due diligence are extraordinarily time-intensive and expensive. Harvey is trained on legal datasets and case law to accelerate all three.",
-    "useCases": [
-      "Contract review & drafting",
-      "Legal research",
-      "Due diligence",
-      "Regulatory compliance analysis"
-    ],
-    "url": "https://harvey.ai",
-    "ease": 4,
-    "easeLabel": "Legal background required",
-    "industry": [
-      "Legal Services",
-      "Finance & Banking",
-      "Consulting & Professional Services"
-    ],
-    "businessArea": "Legal Operations",
-    "category": "Legal & Compliance",
-    "date": "2025-03-16"
+    "useCases": ["Contract review & drafting", "Legal research", "Due diligence", "Regulatory compliance analysis"],
+    "url": "https://harvey.ai", "ease": 4, "easeLabel": "Legal background required",
+    "industry": ["Legal Services", "Finance & Banking", "Consulting & Professional Services"],
+    "businessArea": "Legal Operations", "category": "Legal & Compliance", "date": "2025-03-16"
   },
   {
-    "id": 5,
-    "name": "Cursor",
-    "domain": "cursor.com",
+    "id": 5, "name": "Cursor", "domain": "cursor.com",
     "logoUrl": "https://logo.clearbit.com/cursor.com",
     "tagline": "The code editor where AI is the co-pilot, not a plugin",
-    "problem": "Traditional AI coding assistants are bolted onto existing editors and only see one open file. Cursor rebuilds the IDE around AI \u2014 it understands your entire codebase contextually.",
-    "useCases": [
-      "Feature development",
-      "Legacy code refactoring",
-      "Bug fixing",
-      "Automated test generation"
-    ],
-    "url": "https://cursor.com",
-    "ease": 5,
-    "easeLabel": "Developer experience needed",
-    "industry": [
-      "Technology & Software"
-    ],
-    "businessArea": "Software Development",
-    "category": "Code & Dev",
-    "date": "2025-03-15"
+    "problem": "Traditional AI coding assistants are bolted onto existing editors and only see one open file. Cursor rebuilds the IDE around AI — it understands your entire codebase contextually.",
+    "useCases": ["Feature development", "Legacy code refactoring", "Bug fixing", "Automated test generation"],
+    "url": "https://cursor.com", "ease": 5, "easeLabel": "Developer experience needed",
+    "industry": ["Technology & Software"],
+    "businessArea": "Software Development", "category": "Code & Dev", "date": "2025-03-15"
   },
   {
-    "id": 6,
-    "name": "ElevenLabs",
-    "domain": "elevenlabs.io",
+    "id": 6, "name": "ElevenLabs", "domain": "elevenlabs.io",
     "logoUrl": "https://logo.clearbit.com/elevenlabs.io",
     "tagline": "Any voice, any language, one click",
     "problem": "Professional voice-overs require recording studios, voice talent scheduling, and expensive post-production. ElevenLabs generates hyper-realistic synthetic voices from typed text.",
-    "useCases": [
-      "Podcast production",
-      "eLearning narration",
-      "Marketing voice-overs",
-      "Multilingual content at scale"
-    ],
-    "url": "https://elevenlabs.io",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Media & Entertainment",
-      "Education & Training",
-      "Marketing & Advertising"
-    ],
-    "businessArea": "Content Production",
-    "category": "Video & Audio",
-    "date": "2025-03-14"
+    "useCases": ["Podcast production", "eLearning narration", "Marketing voice-overs", "Multilingual content at scale"],
+    "url": "https://elevenlabs.io", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Media & Entertainment", "Education & Training", "Marketing & Advertising"],
+    "businessArea": "Content Production", "category": "Video & Audio", "date": "2025-03-14"
   },
   {
-    "id": 7,
-    "name": "Clay",
-    "domain": "clay.com",
+    "id": 7, "name": "Clay", "domain": "clay.com",
     "logoUrl": "https://logo.clearbit.com/clay.com",
     "tagline": "Your entire sales research pipeline, automated",
     "problem": "Sales teams burn hours manually enriching lead data from LinkedIn, company websites, and databases before writing a single outreach email. Clay connects 50+ data sources and does it automatically.",
-    "useCases": [
-      "Lead enrichment at scale",
-      "Personalised outreach campaigns",
-      "CRM data hygiene",
-      "Account-based marketing"
-    ],
-    "url": "https://clay.com",
-    "ease": 4,
-    "easeLabel": "Sales ops knowledge needed",
-    "industry": [
-      "Technology & Software",
-      "Consulting & Professional Services",
-      "Retail & E-commerce"
-    ],
-    "businessArea": "Sales Enablement",
-    "category": "Sales & CRM",
-    "date": "2025-03-13"
+    "useCases": ["Lead enrichment at scale", "Personalised outreach campaigns", "CRM data hygiene", "Account-based marketing"],
+    "url": "https://clay.com", "ease": 4, "easeLabel": "Sales ops knowledge needed",
+    "industry": ["Technology & Software", "Consulting & Professional Services", "Retail & E-commerce"],
+    "businessArea": "Sales Enablement", "category": "Sales & CRM", "date": "2025-03-13"
   },
   {
-    "id": 8,
-    "name": "Granola",
-    "domain": "granola.so",
+    "id": 8, "name": "Granola", "domain": "granola.so",
     "logoUrl": "https://logo.clearbit.com/granola.so",
     "tagline": "The meeting notes app that listens so you don't have to",
-    "problem": "You cannot take great notes and be fully present in a meeting at the same time. Granola transcribes, structures, and summarises every meeting automatically \u2014 in the format you want.",
-    "useCases": [
-      "Executive meeting summaries",
-      "Action item tracking",
-      "Client call documentation",
-      "Interview notes"
-    ],
-    "url": "https://granola.so",
-    "ease": 9,
-    "easeLabel": "Anyone can use it day one",
-    "industry": [
-      "Technology & Software",
-      "Consulting & Professional Services",
-      "Finance & Banking",
-      "HR & People Operations"
-    ],
-    "businessArea": "Communication & Collaboration",
-    "category": "Productivity",
-    "date": "2025-03-12"
+    "problem": "You cannot take great notes and be fully present in a meeting at the same time. Granola transcribes, structures, and summarises every meeting automatically — in the format you want.",
+    "useCases": ["Executive meeting summaries", "Action item tracking", "Client call documentation", "Interview notes"],
+    "url": "https://granola.so", "ease": 9, "easeLabel": "Anyone can use it day one",
+    "industry": ["Technology & Software", "Consulting & Professional Services", "Finance & Banking", "HR & People Operations"],
+    "businessArea": "Communication & Collaboration", "category": "Productivity", "date": "2025-03-12"
   },
   {
-    "id": 9,
-    "name": "Midjourney",
-    "domain": "midjourney.com",
+    "id": 9, "name": "Midjourney", "domain": "midjourney.com",
     "logoUrl": "https://logo.clearbit.com/midjourney.com",
     "tagline": "Describe it, see it, own it",
     "problem": "Commissioning original visual art or photography is expensive and slow. Midjourney generates commercially usable, high-resolution images from plain-text descriptions in seconds.",
-    "useCases": [
-      "Brand visual concepts",
-      "Marketing imagery",
-      "Product mood boards",
-      "UI design exploration"
-    ],
-    "url": "https://midjourney.com",
-    "ease": 6,
-    "easeLabel": "Prompt skills improve results",
-    "industry": [
-      "Marketing & Advertising",
-      "Retail & E-commerce",
-      "Media & Entertainment"
-    ],
-    "businessArea": "Creative Production",
-    "category": "Design & Visual",
-    "date": "2025-03-11"
+    "useCases": ["Brand visual concepts", "Marketing imagery", "Product mood boards", "UI design exploration"],
+    "url": "https://midjourney.com", "ease": 6, "easeLabel": "Prompt skills improve results",
+    "industry": ["Marketing & Advertising", "Retail & E-commerce", "Media & Entertainment"],
+    "businessArea": "Creative Production", "category": "Design & Visual", "date": "2025-03-11"
   },
   {
-    "id": 10,
-    "name": "Descript",
-    "domain": "descript.com",
+    "id": 10, "name": "Descript", "domain": "descript.com",
     "logoUrl": "https://logo.clearbit.com/descript.com",
-    "tagline": "Edit video like a Word doc \u2014 because now you can",
-    "problem": "Video editing has a steep technical curve even for simple corrections. Descript lets you edit video by editing the auto-generated transcript \u2014 delete a word, the clip disappears.",
-    "useCases": [
-      "Podcast editing",
-      "Marketing video production",
-      "Webinar recordings",
-      "Online course content"
-    ],
-    "url": "https://descript.com",
-    "ease": 7,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Media & Entertainment",
-      "Education & Training",
-      "Marketing & Advertising"
-    ],
-    "businessArea": "Content Production",
-    "category": "Video & Audio",
-    "date": "2025-03-10"
+    "tagline": "Edit video like a Word doc — because now you can",
+    "problem": "Video editing has a steep technical curve even for simple corrections. Descript lets you edit video by editing the auto-generated transcript — delete a word, the clip disappears.",
+    "useCases": ["Podcast editing", "Marketing video production", "Webinar recordings", "Online course content"],
+    "url": "https://descript.com", "ease": 7, "easeLabel": "Easy to pick up",
+    "industry": ["Media & Entertainment", "Education & Training", "Marketing & Advertising"],
+    "businessArea": "Content Production", "category": "Video & Audio", "date": "2025-03-10"
   },
   {
-    "id": 11,
-    "name": "Notion AI",
-    "domain": "notion.so",
+    "id": 11, "name": "Notion AI", "domain": "notion.so",
     "logoUrl": "https://logo.clearbit.com/notion.so",
     "tagline": "Your entire workspace, now with an AI brain",
     "problem": "Teams spend enormous time searching across notes, docs, and databases to find context for their work. Notion AI answers questions, summarises pages, and drafts content directly inside your existing workspace.",
-    "useCases": [
-      "Meeting notes and summaries",
-      "Project documentation",
-      "Knowledge base search",
-      "Content drafting"
-    ],
-    "url": "https://notion.so",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Technology & Software",
-      "Consulting & Professional Services",
-      "Education & Training",
-      "Media & Entertainment"
-    ],
-    "businessArea": "Knowledge Management",
-    "category": "Productivity",
-    "date": "2025-03-09"
+    "useCases": ["Meeting notes and summaries", "Project documentation", "Knowledge base search", "Content drafting"],
+    "url": "https://notion.so", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Technology & Software", "Consulting & Professional Services", "Education & Training", "Media & Entertainment"],
+    "businessArea": "Knowledge Management", "category": "Productivity", "date": "2025-03-09"
   },
   {
-    "id": 12,
-    "name": "GitHub Copilot",
-    "domain": "github.com",
+    "id": 12, "name": "GitHub Copilot", "domain": "github.com",
     "logoUrl": "https://logo.clearbit.com/github.com",
     "tagline": "The AI pair programmer that knows your codebase",
     "problem": "Writing boilerplate code, searching documentation, and remembering syntax across languages slows developers down. Copilot suggests entire functions, explains code, and fixes bugs in real time inside your editor.",
-    "useCases": [
-      "Code autocomplete",
-      "Function generation",
-      "Code explanation",
-      "Bug detection"
-    ],
-    "url": "https://github.com/features/copilot",
-    "ease": 6,
-    "easeLabel": "Some coding experience needed",
-    "industry": [
-      "Technology & Software"
-    ],
-    "businessArea": "Software Development",
-    "category": "Code & Dev",
-    "date": "2025-03-08"
+    "useCases": ["Code autocomplete", "Function generation", "Code explanation", "Bug detection"],
+    "url": "https://github.com/features/copilot", "ease": 6, "easeLabel": "Some coding experience needed",
+    "industry": ["Technology & Software"],
+    "businessArea": "Software Development", "category": "Code & Dev", "date": "2025-03-08"
   },
   {
-    "id": 13,
-    "name": "Synthesia",
-    "domain": "synthesia.io",
+    "id": 13, "name": "Synthesia", "domain": "synthesia.io",
     "logoUrl": "https://logo.clearbit.com/synthesia.io",
-    "tagline": "AI video with a talking presenter \u2014 no camera, no crew",
+    "tagline": "AI video with a talking presenter — no camera, no crew",
     "problem": "Creating professional training or explainer videos with real presenters requires cameras, studios, scripts, and scheduling. Synthesia generates polished videos with AI avatars from a typed script.",
-    "useCases": [
-      "Corporate training videos",
-      "Product tutorials",
-      "Multilingual video content",
-      "Internal communications"
-    ],
-    "url": "https://synthesia.io",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Education & Training",
-      "Technology & Software",
-      "HR & People Operations",
-      "Marketing & Advertising"
-    ],
-    "businessArea": "Content Production",
-    "category": "Video & Audio",
-    "date": "2025-03-07"
+    "useCases": ["Corporate training videos", "Product tutorials", "Multilingual video content", "Internal communications"],
+    "url": "https://synthesia.io", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Education & Training", "Technology & Software", "HR & People Operations", "Marketing & Advertising"],
+    "businessArea": "Content Production", "category": "Video & Audio", "date": "2025-03-07"
   },
   {
-    "id": 14,
-    "name": "Jasper",
-    "domain": "jasper.ai",
+    "id": 14, "name": "Jasper", "domain": "jasper.ai",
     "logoUrl": "https://logo.clearbit.com/jasper.ai",
     "tagline": "Enterprise AI writing built for marketing teams",
-    "problem": "Marketing teams struggle to produce consistent, on-brand content at scale across blog posts, ads, emails, and social. Jasper trains on your brand voice and generates content that sounds like you \u2014 at volume.",
-    "useCases": [
-      "Blog post generation",
-      "Ad copy creation",
-      "Email marketing",
-      "Social media content"
-    ],
-    "url": "https://jasper.ai",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Marketing & Advertising",
-      "Retail & E-commerce",
-      "Technology & Software"
-    ],
-    "businessArea": "Content Production",
-    "category": "Writing & Docs",
-    "date": "2025-03-06"
+    "problem": "Marketing teams struggle to produce consistent, on-brand content at scale across blog posts, ads, emails, and social. Jasper trains on your brand voice and generates content that sounds like you — at volume.",
+    "useCases": ["Blog post generation", "Ad copy creation", "Email marketing", "Social media content"],
+    "url": "https://jasper.ai", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Marketing & Advertising", "Retail & E-commerce", "Technology & Software"],
+    "businessArea": "Content Production", "category": "Writing & Docs", "date": "2025-03-06"
   },
   {
-    "id": 15,
-    "name": "Otter.ai",
-    "domain": "otter.ai",
+    "id": 15, "name": "Otter.ai", "domain": "otter.ai",
     "logoUrl": "https://logo.clearbit.com/otter.ai",
     "tagline": "Real-time transcription and AI meeting notes for everyone",
     "problem": "Following up after meetings is time-consuming because no one captured everything accurately. Otter joins your calls automatically, transcribes in real time, identifies speakers, and generates action items.",
-    "useCases": [
-      "Sales call transcription",
-      "Interview documentation",
-      "Lecture recording",
-      "Team meeting summaries"
-    ],
-    "url": "https://otter.ai",
-    "ease": 9,
-    "easeLabel": "Anyone can use it day one",
-    "industry": [
-      "Technology & Software",
-      "Education & Training",
-      "Media & Entertainment",
-      "HR & People Operations"
-    ],
-    "businessArea": "Communication & Collaboration",
-    "category": "Productivity",
-    "date": "2025-03-05"
+    "useCases": ["Sales call transcription", "Interview documentation", "Lecture recording", "Team meeting summaries"],
+    "url": "https://otter.ai", "ease": 9, "easeLabel": "Anyone can use it day one",
+    "industry": ["Technology & Software", "Education & Training", "Media & Entertainment", "HR & People Operations"],
+    "businessArea": "Communication & Collaboration", "category": "Productivity", "date": "2025-03-05"
   },
   {
-    "id": 16,
-    "name": "Copy.ai",
-    "domain": "copy.ai",
+    "id": 16, "name": "Copy.ai", "domain": "copy.ai",
     "logoUrl": "https://logo.clearbit.com/copy.ai",
     "tagline": "Go from idea to polished copy in seconds",
-    "problem": "Blank page paralysis kills marketing momentum. Copy.ai generates first drafts for any format \u2014 ads, emails, product descriptions, LinkedIn posts \u2014 so your team edits instead of starting from scratch.",
-    "useCases": [
-      "Ad copy generation",
-      "Product descriptions",
-      "Email subject lines",
-      "Social media posts"
-    ],
-    "url": "https://copy.ai",
-    "ease": 9,
-    "easeLabel": "Anyone can use it day one",
-    "industry": [
-      "Marketing & Advertising",
-      "Retail & E-commerce",
-      "Technology & Software"
-    ],
-    "businessArea": "Content Production",
-    "category": "Writing & Docs",
-    "date": "2025-03-04"
+    "problem": "Blank page paralysis kills marketing momentum. Copy.ai generates first drafts for any format — ads, emails, product descriptions, LinkedIn posts — so your team edits instead of starting from scratch.",
+    "useCases": ["Ad copy generation", "Product descriptions", "Email subject lines", "Social media posts"],
+    "url": "https://copy.ai", "ease": 9, "easeLabel": "Anyone can use it day one",
+    "industry": ["Marketing & Advertising", "Retail & E-commerce", "Technology & Software"],
+    "businessArea": "Content Production", "category": "Writing & Docs", "date": "2025-03-04"
   },
   {
-    "id": 17,
-    "name": "HeyGen",
-    "domain": "heygen.com",
+    "id": 17, "name": "HeyGen", "domain": "heygen.com",
     "logoUrl": "https://logo.clearbit.com/heygen.com",
     "tagline": "Turn any text into a professional video with an AI avatar",
     "problem": "Recording personalised video messages at scale is impossible with a real camera. HeyGen lets you clone your appearance and voice once, then generate unlimited personalised videos from a script.",
-    "useCases": [
-      "Personalised sales outreach",
-      "Training videos",
-      "Product demonstrations",
-      "Localised marketing"
-    ],
-    "url": "https://heygen.com",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Marketing & Advertising",
-      "Education & Training",
-      "Technology & Software"
-    ],
-    "businessArea": "Content Production",
-    "category": "Video & Audio",
-    "date": "2025-03-03"
+    "useCases": ["Personalised sales outreach", "Training videos", "Product demonstrations", "Localised marketing"],
+    "url": "https://heygen.com", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Marketing & Advertising", "Education & Training", "Technology & Software"],
+    "businessArea": "Content Production", "category": "Video & Audio", "date": "2025-03-03"
   },
   {
-    "id": 18,
-    "name": "Canva AI",
-    "domain": "canva.com",
+    "id": 18, "name": "Canva AI", "domain": "canva.com",
     "logoUrl": "https://logo.clearbit.com/canva.com",
     "tagline": "Professional design for everyone, powered by AI",
     "problem": "Creating visually polished graphics, presentations, and marketing materials requires design skills most professionals do not have. Canva's AI tools generate, resize, and brand content automatically for any format.",
-    "useCases": [
-      "Social media graphics",
-      "Presentation design",
-      "Marketing materials",
-      "Brand asset creation"
-    ],
-    "url": "https://canva.com",
-    "ease": 10,
-    "easeLabel": "Instantly usable by anyone",
-    "industry": [
-      "Marketing & Advertising",
-      "Education & Training",
-      "Retail & E-commerce",
-      "Media & Entertainment"
-    ],
-    "businessArea": "Creative Production",
-    "category": "Design & Visual",
-    "date": "2025-03-02"
+    "useCases": ["Social media graphics", "Presentation design", "Marketing materials", "Brand asset creation"],
+    "url": "https://canva.com", "ease": 10, "easeLabel": "Instantly usable by anyone",
+    "industry": ["Marketing & Advertising", "Education & Training", "Retail & E-commerce", "Media & Entertainment"],
+    "businessArea": "Creative Production", "category": "Design & Visual", "date": "2025-03-02"
   },
   {
-    "id": 19,
-    "name": "Loom AI",
-    "domain": "loom.com",
+    "id": 19, "name": "Loom AI", "domain": "loom.com",
     "logoUrl": "https://logo.clearbit.com/loom.com",
     "tagline": "Record your screen, AI writes the summary and action items",
     "problem": "Async communication using video messages is only useful if recipients can quickly find the relevant moment. Loom AI auto-transcribes recordings, generates titles, and creates chapter summaries automatically.",
-    "useCases": [
-      "Async team updates",
-      "Product feedback walkthroughs",
-      "Client demos",
-      "Bug reports with context"
-    ],
-    "url": "https://loom.com",
-    "ease": 9,
-    "easeLabel": "Anyone can use it day one",
-    "industry": [
-      "Technology & Software",
-      "Consulting & Professional Services",
-      "Education & Training"
-    ],
-    "businessArea": "Communication & Collaboration",
-    "category": "Productivity",
-    "date": "2025-03-01"
+    "useCases": ["Async team updates", "Product feedback walkthroughs", "Client demos", "Bug reports with context"],
+    "url": "https://loom.com", "ease": 9, "easeLabel": "Anyone can use it day one",
+    "industry": ["Technology & Software", "Consulting & Professional Services", "Education & Training"],
+    "businessArea": "Communication & Collaboration", "category": "Productivity", "date": "2025-03-01"
   },
   {
-    "id": 20,
-    "name": "Zapier",
-    "domain": "zapier.com",
+    "id": 20, "name": "Zapier", "domain": "zapier.com",
     "logoUrl": "https://logo.clearbit.com/zapier.com",
     "tagline": "Connect your apps and automate workflows without code",
     "problem": "Businesses run on dozens of disconnected tools that do not talk to each other, forcing manual data entry and repetitive tasks. Zapier connects 6,000+ apps and automates workflows between them without any code.",
-    "useCases": [
-      "Lead routing automation",
-      "CRM data sync",
-      "Email marketing triggers",
-      "Reporting automation"
-    ],
-    "url": "https://zapier.com",
-    "ease": 7,
-    "easeLabel": "Some setup required",
-    "industry": [
-      "Technology & Software",
-      "Marketing & Advertising",
-      "Consulting & Professional Services",
-      "Retail & E-commerce"
-    ],
-    "businessArea": "Operations & Automation",
-    "category": "Productivity",
-    "date": "2025-02-28"
+    "useCases": ["Lead routing automation", "CRM data sync", "Email marketing triggers", "Reporting automation"],
+    "url": "https://zapier.com", "ease": 7, "easeLabel": "Some setup required",
+    "industry": ["Technology & Software", "Marketing & Advertising", "Consulting & Professional Services", "Retail & E-commerce"],
+    "businessArea": "Operations & Automation", "category": "Productivity", "date": "2025-02-28"
   },
   {
-    "id": 21,
-    "name": "Beautiful.ai",
-    "domain": "beautiful.ai",
+    "id": 21, "name": "Beautiful.ai", "domain": "beautiful.ai",
     "logoUrl": "https://logo.clearbit.com/beautiful.ai",
     "tagline": "Slides that design themselves as you add content",
     "problem": "Traditional presentation software forces you to spend as much time on formatting as on the message. Beautiful.ai uses smart templates that automatically reflow and redesign as you type.",
-    "useCases": [
-      "Sales presentations",
-      "Business proposals",
-      "Data storytelling",
-      "Company overviews"
-    ],
-    "url": "https://beautiful.ai",
-    "ease": 9,
-    "easeLabel": "Anyone can use it day one",
-    "industry": [
-      "Consulting & Professional Services",
-      "Finance & Banking",
-      "Technology & Software"
-    ],
-    "businessArea": "Content Production",
-    "category": "Writing & Docs",
-    "date": "2025-02-27"
+    "useCases": ["Sales presentations", "Business proposals", "Data storytelling", "Company overviews"],
+    "url": "https://beautiful.ai", "ease": 9, "easeLabel": "Anyone can use it day one",
+    "industry": ["Consulting & Professional Services", "Finance & Banking", "Technology & Software"],
+    "businessArea": "Content Production", "category": "Writing & Docs", "date": "2025-02-27"
   },
   {
-    "id": 22,
-    "name": "Grammarly",
-    "domain": "grammarly.com",
+    "id": 22, "name": "Grammarly", "domain": "grammarly.com",
     "logoUrl": "https://logo.clearbit.com/grammarly.com",
     "tagline": "AI writing assistance that works everywhere you type",
-    "problem": "Errors in written communication undermine professional credibility. Grammarly catches grammar mistakes, improves clarity, adjusts tone, and now generates full drafts \u2014 across every application and browser.",
-    "useCases": [
-      "Email writing",
-      "Report proofreading",
-      "Tone adjustment",
-      "Professional communication"
-    ],
-    "url": "https://grammarly.com",
-    "ease": 10,
-    "easeLabel": "Instantly usable by anyone",
-    "industry": [
-      "Technology & Software",
-      "Education & Training",
-      "Media & Entertainment",
-      "Consulting & Professional Services"
-    ],
-    "businessArea": "Communication & Collaboration",
-    "category": "Writing & Docs",
-    "date": "2025-02-26"
+    "problem": "Errors in written communication undermine professional credibility. Grammarly catches grammar mistakes, improves clarity, adjusts tone, and now generates full drafts — across every application and browser.",
+    "useCases": ["Email writing", "Report proofreading", "Tone adjustment", "Professional communication"],
+    "url": "https://grammarly.com", "ease": 10, "easeLabel": "Instantly usable by anyone",
+    "industry": ["Technology & Software", "Education & Training", "Media & Entertainment", "Consulting & Professional Services"],
+    "businessArea": "Communication & Collaboration", "category": "Writing & Docs", "date": "2025-02-26"
   },
   {
-    "id": 23,
-    "name": "Murf AI",
-    "domain": "murf.ai",
+    "id": 23, "name": "Murf AI", "domain": "murf.ai",
     "logoUrl": "https://logo.clearbit.com/murf.ai",
     "tagline": "Studio-quality AI voiceovers from your browser",
     "problem": "Recording professional voice-overs requires microphones, quiet rooms, editing software, and re-recording every time the script changes. Murf generates natural-sounding voices in 20+ languages that you can update instantly.",
-    "useCases": [
-      "eLearning course narration",
-      "Explainer video voice-overs",
-      "Podcast intros",
-      "Product demo narration"
-    ],
-    "url": "https://murf.ai",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Education & Training",
-      "Marketing & Advertising",
-      "Media & Entertainment"
-    ],
-    "businessArea": "Content Production",
-    "category": "Video & Audio",
-    "date": "2025-02-25"
+    "useCases": ["eLearning course narration", "Explainer video voice-overs", "Podcast intros", "Product demo narration"],
+    "url": "https://murf.ai", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Education & Training", "Marketing & Advertising", "Media & Entertainment"],
+    "businessArea": "Content Production", "category": "Video & Audio", "date": "2025-02-25"
   },
   {
-    "id": 24,
-    "name": "Pictory",
-    "domain": "pictory.ai",
+    "id": 24, "name": "Pictory", "domain": "pictory.ai",
     "logoUrl": "https://logo.clearbit.com/pictory.ai",
     "tagline": "Turn long-form content into short social videos automatically",
     "problem": "Long blog posts, webinars, and podcasts contain enormous value but most audiences never engage with them in full. Pictory extracts the best moments and turns them into short, captioned social media clips.",
-    "useCases": [
-      "Blog to video repurposing",
-      "Webinar highlight clips",
-      "Social media shorts",
-      "Podcast video clips"
-    ],
-    "url": "https://pictory.ai",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Marketing & Advertising",
-      "Media & Entertainment",
-      "Education & Training"
-    ],
-    "businessArea": "Content Production",
-    "category": "Video & Audio",
-    "date": "2025-02-24"
+    "useCases": ["Blog to video repurposing", "Webinar highlight clips", "Social media shorts", "Podcast video clips"],
+    "url": "https://pictory.ai", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Marketing & Advertising", "Media & Entertainment", "Education & Training"],
+    "businessArea": "Content Production", "category": "Video & Audio", "date": "2025-02-24"
   },
   {
-    "id": 25,
-    "name": "Writesonic",
-    "domain": "writesonic.com",
+    "id": 25, "name": "Writesonic", "domain": "writesonic.com",
     "logoUrl": "https://logo.clearbit.com/writesonic.com",
-    "tagline": "AI content that ranks \u2014 SEO-first writing at scale",
+    "tagline": "AI content that ranks — SEO-first writing at scale",
     "problem": "Writing SEO-optimised long-form content consistently requires research, keyword integration, and hours of writing. Writesonic generates factually grounded, search-engine-optimised articles in minutes.",
-    "useCases": [
-      "SEO blog posts",
-      "Landing page copy",
-      "Product descriptions",
-      "Press releases"
-    ],
-    "url": "https://writesonic.com",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Marketing & Advertising",
-      "Retail & E-commerce",
-      "Technology & Software"
-    ],
-    "businessArea": "Content Production",
-    "category": "Writing & Docs",
-    "date": "2025-02-23"
+    "useCases": ["SEO blog posts", "Landing page copy", "Product descriptions", "Press releases"],
+    "url": "https://writesonic.com", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Marketing & Advertising", "Retail & E-commerce", "Technology & Software"],
+    "businessArea": "Content Production", "category": "Writing & Docs", "date": "2025-02-23"
   },
   {
-    "id": 26,
-    "name": "Airtable",
-    "domain": "airtable.com",
+    "id": 26, "name": "Airtable", "domain": "airtable.com",
     "logoUrl": "https://logo.clearbit.com/airtable.com",
     "tagline": "The spreadsheet that thinks like a database, now with AI",
-    "problem": "Spreadsheets fall apart as businesses scale \u2014 formulas break, collaboration is clunky, and data lives everywhere. Airtable's AI layer builds interfaces, writes formulas, and automates workflows from natural language.",
-    "useCases": [
-      "Project tracking",
-      "CRM management",
-      "Content calendars",
-      "Inventory management"
-    ],
-    "url": "https://airtable.com",
-    "ease": 7,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Technology & Software",
-      "Marketing & Advertising",
-      "Consulting & Professional Services",
-      "Media & Entertainment"
-    ],
-    "businessArea": "Operations & Automation",
-    "category": "Productivity",
-    "date": "2025-02-22"
+    "problem": "Spreadsheets fall apart as businesses scale — formulas break, collaboration is clunky, and data lives everywhere. Airtable's AI layer builds interfaces, writes formulas, and automates workflows from natural language.",
+    "useCases": ["Project tracking", "CRM management", "Content calendars", "Inventory management"],
+    "url": "https://airtable.com", "ease": 7, "easeLabel": "Easy to pick up",
+    "industry": ["Technology & Software", "Marketing & Advertising", "Consulting & Professional Services", "Media & Entertainment"],
+    "businessArea": "Operations & Automation", "category": "Productivity", "date": "2025-02-22"
   },
   {
-    "id": 27,
-    "name": "Surfer SEO",
-    "domain": "surferseo.com",
+    "id": 27, "name": "Surfer SEO", "domain": "surferseo.com",
     "logoUrl": "https://logo.clearbit.com/surferseo.com",
     "tagline": "Data-driven content that Google actually wants to rank",
-    "problem": "Creating content that ranks requires deep analysis of what top-ranking pages have in common \u2014 word count, keyword density, structure, and more. Surfer analyses all of this and tells writers exactly what to include.",
-    "useCases": [
-      "SEO content briefs",
-      "On-page optimisation",
-      "Keyword research",
-      "Competitor content analysis"
-    ],
-    "url": "https://surferseo.com",
-    "ease": 6,
-    "easeLabel": "Marketing knowledge helps",
-    "industry": [
-      "Marketing & Advertising",
-      "Retail & E-commerce",
-      "Technology & Software"
-    ],
-    "businessArea": "Marketing & Growth",
-    "category": "Search & Research",
-    "date": "2025-02-21"
+    "problem": "Creating content that ranks requires deep analysis of what top-ranking pages have in common — word count, keyword density, structure, and more. Surfer analyses all of this and tells writers exactly what to include.",
+    "useCases": ["SEO content briefs", "On-page optimisation", "Keyword research", "Competitor content analysis"],
+    "url": "https://surferseo.com", "ease": 6, "easeLabel": "Marketing knowledge helps",
+    "industry": ["Marketing & Advertising", "Retail & E-commerce", "Technology & Software"],
+    "businessArea": "Marketing & Growth", "category": "Search & Research", "date": "2025-02-21"
   },
   {
-    "id": 28,
-    "name": "Linear",
-    "domain": "linear.app",
+    "id": 28, "name": "Linear", "domain": "linear.app",
     "logoUrl": "https://logo.clearbit.com/linear.app",
     "tagline": "The issue tracker built for speed with AI built in",
-    "problem": "Project management tools built for enterprises are too slow and complex for modern software teams. Linear is built for speed \u2014 keyboard-first, AI-powered, and designed around how engineering teams actually work.",
-    "useCases": [
-      "Sprint planning",
-      "Bug tracking",
-      "Product roadmapping",
-      "Engineering team coordination"
-    ],
-    "url": "https://linear.app",
-    "ease": 7,
-    "easeLabel": "Some setup required",
-    "industry": [
-      "Technology & Software"
-    ],
-    "businessArea": "Software Development",
-    "category": "Productivity",
-    "date": "2025-02-20"
+    "problem": "Project management tools built for enterprises are too slow and complex for modern software teams. Linear is built for speed — keyboard-first, AI-powered, and designed around how engineering teams actually work.",
+    "useCases": ["Sprint planning", "Bug tracking", "Product roadmapping", "Engineering team coordination"],
+    "url": "https://linear.app", "ease": 7, "easeLabel": "Some setup required",
+    "industry": ["Technology & Software"],
+    "businessArea": "Software Development", "category": "Productivity", "date": "2025-02-20"
   },
   {
-    "id": 29,
-    "name": "Adobe Firefly",
-    "domain": "adobe.com",
+    "id": 29, "name": "Adobe Firefly", "domain": "adobe.com",
     "logoUrl": "https://logo.clearbit.com/adobe.com",
     "tagline": "Commercially safe AI image generation built into Creative Cloud",
     "problem": "Most AI image generators are trained on copyrighted images, creating legal risk for commercial use. Adobe Firefly is trained only on licensed content and generates images that are commercially safe to use.",
-    "useCases": [
-      "Marketing image generation",
-      "Background replacement",
-      "Product mockups",
-      "Brand campaign visuals"
-    ],
-    "url": "https://adobe.com/products/firefly.html",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Marketing & Advertising",
-      "Media & Entertainment",
-      "Retail & E-commerce"
-    ],
-    "businessArea": "Creative Production",
-    "category": "Design & Visual",
-    "date": "2025-02-19"
+    "useCases": ["Marketing image generation", "Background replacement", "Product mockups", "Brand campaign visuals"],
+    "url": "https://adobe.com/products/firefly.html", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Marketing & Advertising", "Media & Entertainment", "Retail & E-commerce"],
+    "businessArea": "Creative Production", "category": "Design & Visual", "date": "2025-02-19"
   },
   {
-    "id": 30,
-    "name": "Semrush",
-    "domain": "semrush.com",
+    "id": 30, "name": "Semrush", "domain": "semrush.com",
     "logoUrl": "https://logo.clearbit.com/semrush.com",
     "tagline": "The all-in-one marketing intelligence platform with AI",
     "problem": "Understanding what competitors are doing online, which keywords are worth targeting, and how to improve your site's visibility requires dozens of tools and hours of analysis. Semrush consolidates all of it.",
-    "useCases": [
-      "Competitor analysis",
-      "Keyword research",
-      "SEO audits",
-      "Content strategy"
-    ],
-    "url": "https://semrush.com",
-    "ease": 6,
-    "easeLabel": "Marketing knowledge helps",
-    "industry": [
-      "Marketing & Advertising",
-      "Retail & E-commerce",
-      "Technology & Software"
-    ],
-    "businessArea": "Marketing & Growth",
-    "category": "Search & Research",
-    "date": "2025-02-18"
+    "useCases": ["Competitor analysis", "Keyword research", "SEO audits", "Content strategy"],
+    "url": "https://semrush.com", "ease": 6, "easeLabel": "Marketing knowledge helps",
+    "industry": ["Marketing & Advertising", "Retail & E-commerce", "Technology & Software"],
+    "businessArea": "Marketing & Growth", "category": "Search & Research", "date": "2025-02-18"
   },
   {
-    "id": 31,
-    "name": "Replit",
-    "domain": "replit.com",
+    "id": 31, "name": "Replit", "domain": "replit.com",
     "logoUrl": "https://logo.clearbit.com/replit.com",
     "tagline": "Build and deploy software from a browser prompt",
     "problem": "Setting up development environments, installing dependencies, and deploying applications takes hours of configuration before you write a single line of business logic. Replit removes all of that entirely.",
-    "useCases": [
-      "Rapid prototyping",
-      "Teaching coding",
-      "Internal tool development",
-      "API integration testing"
-    ],
-    "url": "https://replit.com",
-    "ease": 7,
-    "easeLabel": "Some coding exposure helps",
-    "industry": [
-      "Technology & Software",
-      "Education & Training"
-    ],
-    "businessArea": "Software Development",
-    "category": "Code & Dev",
-    "date": "2025-02-17"
+    "useCases": ["Rapid prototyping", "Teaching coding", "Internal tool development", "API integration testing"],
+    "url": "https://replit.com", "ease": 7, "easeLabel": "Some coding exposure helps",
+    "industry": ["Technology & Software", "Education & Training"],
+    "businessArea": "Software Development", "category": "Code & Dev", "date": "2025-02-17"
   },
   {
-    "id": 32,
-    "name": "Tome",
-    "domain": "tome.app",
+    "id": 32, "name": "Tome", "domain": "tome.app",
     "logoUrl": "https://logo.clearbit.com/tome.app",
     "tagline": "AI-native storytelling for modern teams",
     "problem": "Traditional slides are linear and static, while modern business storytelling needs to be flexible and visually dynamic. Tome creates narrative-first presentations from a prompt with embedded live data and interactive elements.",
-    "useCases": [
-      "Executive storytelling",
-      "Product narratives",
-      "Sales pitches",
-      "Strategy presentations"
-    ],
-    "url": "https://tome.app",
-    "ease": 9,
-    "easeLabel": "Anyone can use it day one",
-    "industry": [
-      "Consulting & Professional Services",
-      "Technology & Software",
-      "Marketing & Advertising"
-    ],
-    "businessArea": "Content Production",
-    "category": "Writing & Docs",
-    "date": "2025-02-16"
+    "useCases": ["Executive storytelling", "Product narratives", "Sales pitches", "Strategy presentations"],
+    "url": "https://tome.app", "ease": 9, "easeLabel": "Anyone can use it day one",
+    "industry": ["Consulting & Professional Services", "Technology & Software", "Marketing & Advertising"],
+    "businessArea": "Content Production", "category": "Writing & Docs", "date": "2025-02-16"
   },
   {
-    "id": 33,
-    "name": "Mem AI",
-    "domain": "mem.ai",
+    "id": 33, "name": "Mem AI", "domain": "mem.ai",
     "logoUrl": "https://logo.clearbit.com/mem.ai",
     "tagline": "The self-organising workspace that learns from you",
     "problem": "Notes and ideas are worthless if you cannot find them when needed. Mem automatically organises everything you write, surfaces related notes when relevant, and answers questions about your own knowledge base.",
-    "useCases": [
-      "Personal knowledge management",
-      "Research organisation",
-      "Meeting follow-ups",
-      "Idea capture"
-    ],
-    "url": "https://mem.ai",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Consulting & Professional Services",
-      "Technology & Software",
-      "Media & Entertainment"
-    ],
-    "businessArea": "Knowledge Management",
-    "category": "Productivity",
-    "date": "2025-02-15"
+    "useCases": ["Personal knowledge management", "Research organisation", "Meeting follow-ups", "Idea capture"],
+    "url": "https://mem.ai", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Consulting & Professional Services", "Technology & Software", "Media & Entertainment"],
+    "businessArea": "Knowledge Management", "category": "Productivity", "date": "2025-02-15"
   },
   {
-    "id": 34,
-    "name": "Codeium",
-    "domain": "codeium.com",
+    "id": 34, "name": "Codeium", "domain": "codeium.com",
     "logoUrl": "https://logo.clearbit.com/codeium.com",
     "tagline": "Free AI code completion that works in any editor",
-    "problem": "Premium AI coding tools cost $10-20 per month per developer \u2014 a significant expense for teams and individual contributors. Codeium provides comparable code autocomplete and chat in 70+ languages at no cost.",
-    "useCases": [
-      "Code autocomplete",
-      "Function generation from comments",
-      "Code refactoring",
-      "Documentation generation"
-    ],
-    "url": "https://codeium.com",
-    "ease": 7,
-    "easeLabel": "Some coding experience needed",
-    "industry": [
-      "Technology & Software"
-    ],
-    "businessArea": "Software Development",
-    "category": "Code & Dev",
-    "date": "2025-02-14"
+    "problem": "Premium AI coding tools cost $10-20 per month per developer — a significant expense for teams and individual contributors. Codeium provides comparable code autocomplete and chat in 70+ languages at no cost.",
+    "useCases": ["Code autocomplete", "Function generation from comments", "Code refactoring", "Documentation generation"],
+    "url": "https://codeium.com", "ease": 7, "easeLabel": "Some coding experience needed",
+    "industry": ["Technology & Software"],
+    "businessArea": "Software Development", "category": "Code & Dev", "date": "2025-02-14"
   },
   {
-    "id": 35,
-    "name": "Taskade",
-    "domain": "taskade.com",
+    "id": 35, "name": "Taskade", "domain": "taskade.com",
     "logoUrl": "https://logo.clearbit.com/taskade.com",
     "tagline": "AI agents that plan, research, and execute tasks for you",
     "problem": "Managing projects requires coordinating tasks, research, meetings, and documentation across multiple tools. Taskade's AI agents can autonomously research topics, draft documents, and update tasks inside a unified workspace.",
-    "useCases": [
-      "Project planning",
-      "Research automation",
-      "Team task management",
-      "Content generation"
-    ],
-    "url": "https://taskade.com",
-    "ease": 8,
-    "easeLabel": "Easy to pick up",
-    "industry": [
-      "Technology & Software",
-      "Consulting & Professional Services",
-      "Marketing & Advertising"
-    ],
-    "businessArea": "Operations & Automation",
-    "category": "Productivity",
-    "date": "2025-02-13"
+    "useCases": ["Project planning", "Research automation", "Team task management", "Content generation"],
+    "url": "https://taskade.com", "ease": 8, "easeLabel": "Easy to pick up",
+    "industry": ["Technology & Software", "Consulting & Professional Services", "Marketing & Advertising"],
+    "businessArea": "Operations & Automation", "category": "Productivity", "date": "2025-02-13"
   }
 ]
