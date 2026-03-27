@@ -40,8 +40,12 @@ jobs:
             print(f"Could not read tools.json: {e}")
             sys.exit(1)
 
-          existing_domains = [t.get('domain','') for t in tools]
-          if new_tool.get('domain','') in existing_domains:
+          existing_domains = [t.get('domain','').lower().strip() for t in tools]
+          existing_names = [t.get('name','').lower().strip() for t in tools]
+          new_domain = new_tool.get('domain','').lower().strip()
+          new_name = new_tool.get('name','').lower().strip()
+          if new_domain in existing_domains or new_name in existing_names:
+
             print(f"Duplicate — skipping: {new_tool.get('domain')}")
             sys.exit(0)
 
