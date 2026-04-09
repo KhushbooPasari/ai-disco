@@ -1,5 +1,29 @@
 [
   {
+    "name": "Visual Translate by Vozo",
+    "domain": "vozo.ai",
+    "tagline": "Localize video text overlays into any language without rebuilding your visuals.",
+    "problem": "Businesses expanding into global markets face costly, time-consuming video localization workflows that require redesigning graphics and text overlays from scratch for each language. Visual Translate automates the detection and translation of on-screen text while preserving the original visual design. This eliminates the need for motion designers to manually recreate assets for every language variant.",
+    "useCases": [
+      "Localizing product demo videos for international markets",
+      "Translating training and onboarding videos for multilingual workforces",
+      "Adapting marketing video campaigns for regional audiences",
+      "Converting subtitle and caption overlays across multiple languages at scale"
+    ],
+    "url": "https://vozo.ai",
+    "ease": 7,
+    "easeLabel": "Some familiarity needed",
+    "industry": [
+      "Marketing",
+      "Media & Entertainment",
+      "Learning & Development"
+    ],
+    "businessArea": "Content Production",
+    "category": "Video & Audio",
+    "date": "2026-04-09",
+    "id": 37
+  },
+  {
     "name": "Chronicle 2.0",
     "domain": "chronicle.cards",
     "tagline": "AI-powered presentation builder that skips the generic filler and produces polished, purposeful slides.",
