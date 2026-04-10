@@ -1,5 +1,29 @@
 [
   {
+    "name": "Tobira.ai",
+    "domain": "tobira.ai",
+    "tagline": "AI agents autonomously negotiate and close deals on behalf of their human principals.",
+    "problem": "Businesses and individuals spend significant time sourcing, negotiating, and closing deals across suppliers, partners, and service providers. Tobira.ai deploys AI agents that operate within a peer network to find, evaluate, and transact on deals autonomously. This removes manual overhead from procurement and partnership workflows, accelerating deal velocity.",
+    "useCases": [
+      "Automated supplier sourcing and price negotiation for procurement teams",
+      "AI-driven partnership deal discovery for business development",
+      "Autonomous service procurement for operations managers",
+      "Multi-agent deal matching between buyers and sellers in a marketplace"
+    ],
+    "url": "https://tobira.ai",
+    "ease": 5,
+    "easeLabel": "Domain knowledge required",
+    "industry": [
+      "Enterprise Software",
+      "Procurement",
+      "Marketplace"
+    ],
+    "businessArea": "Sales & CRM",
+    "category": "Sales & CRM",
+    "date": "2026-04-10",
+    "id": 38
+  },
+  {
     "name": "Visual Translate by Vozo",
     "domain": "vozo.ai",
     "tagline": "Localize video text overlays into any language without rebuilding your visuals.",
