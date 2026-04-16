@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Disco — Automation & AI Upskilling Hub</title>
+<title>AI Disco — Automation & Upskilling Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #f0f2f9;
   --surface: #ffffff;
-  --surface2: #f8f9fc;
+  --surface2: #f6f7fc;
   --border: #e2e5f0;
   --border-strong: #c8cde0;
   --text: #16172a;
@@ -28,1050 +28,1112 @@
   --amber-bg: #fffbeb;
   --amber-border: #fcd34d;
   --amber-text: #78350f;
+  --red: #b91c1c;
+  --red-bg: #fef2f2;
+  --red-border: #fca5a5;
   --hero-bg: #0d0d1a;
-  --shadow-sm: 0 1px 3px rgba(22,23,42,0.06), 0 1px 2px rgba(22,23,42,0.04);
-  --shadow: 0 2px 8px rgba(22,23,42,0.08), 0 4px 20px rgba(22,23,42,0.05);
-  --shadow-lg: 0 8px 24px rgba(22,23,42,0.12), 0 16px 48px rgba(22,23,42,0.08);
+  --nav-h: 60px;
+  --shadow-sm: 0 1px 3px rgba(22,23,42,0.06),0 1px 2px rgba(22,23,42,0.04);
+  --shadow: 0 2px 8px rgba(22,23,42,0.08),0 4px 20px rgba(22,23,42,0.05);
+  --shadow-lg: 0 8px 24px rgba(22,23,42,0.12),0 16px 48px rgba(22,23,42,0.08);
   --radius: 16px;
   --radius-sm: 10px;
   --radius-xs: 6px;
 }
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ═══════════════════════════════════
-   HERO
-═══════════════════════════════════ */
-.hero {
-  position: relative;
-  min-height: 88vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 100px 24px 80px;
-  overflow: hidden;
-  background: var(--hero-bg);
-}
-
-.hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
-  z-index: 0;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(13,13,26,0.5) 0%,
-    rgba(13,13,26,0.35) 45%,
-    rgba(13,13,26,0.85) 100%
-  );
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 820px;
-}
-
-.hero-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 18px;
-  border-radius: 100px;
-  border: 1px solid rgba(110,100,255,0.4);
-  background: rgba(79,70,229,0.12);
-  color: #c4c0ff;
-  font-size: 11.5px;
-  font-family: 'JetBrains Mono', monospace;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-  animation: fadeUp 0.6s ease both;
-}
-
-.hero-pill-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #a89dff;
-  animation: blink 2s ease infinite;
-}
-
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-.hero h1 {
-  font-size: clamp(38px, 6.5vw, 72px);
-  font-weight: 800;
-  line-height: 1.04;
-  letter-spacing: -0.035em;
-  color: #ffffff;
-  margin-bottom: 22px;
-  animation: fadeUp 0.6s 0.08s ease both;
-}
-
-.hero h1 em {
-  font-style: normal;
-  background: linear-gradient(125deg, #a89dff 0%, #7c6dfa 40%, #5b8cff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-sub {
-  font-size: 18px;
-  line-height: 1.65;
-  color: rgba(255,255,255,0.65);
-  font-weight: 300;
-  max-width: 560px;
-  margin: 0 auto 44px;
-  animation: fadeUp 0.6s 0.16s ease both;
-}
-
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 0;
-  animation: fadeUp 0.6s 0.24s ease both;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
-  padding: 20px 32px;
-  display: inline-flex;
-  gap: 40px;
-  backdrop-filter: blur(10px);
-}
-
-.stat { text-align: center; }
-.stat-num {
-  font-size: 26px;
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-.stat-label {
-  font-size: 10.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.stat-div {
-  width: 1px;
-  background: rgba(255,255,255,0.1);
-  align-self: stretch;
-}
-
-.hero-arrow {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  color: rgba(255,255,255,0.4);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-family: 'JetBrains Mono', monospace;
-  animation: fadeUp 0.6s 0.4s ease both;
-}
-
-.arrow-line {
-  width: 1px;
-  height: 36px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
-  animation: arrowPulse 2.2s ease infinite;
-}
-
-@keyframes arrowPulse { 0%,100%{opacity:0.3} 50%{opacity:0.9} }
-@keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
-
-/* ═══════════════════════════════════
-   FILTER BAR
-═══════════════════════════════════ */
-.filter-bar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-}
-
-.filter-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 14px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.filter-row1 {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.search-wrap {
-  position: relative;
-  flex: 1;
-  min-width: 200px;
-  max-width: 380px;
-}
-
-.search-icon {
-  position: absolute;
-  left: 13px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text3);
-  font-size: 15px;
-  pointer-events: none;
-}
-
-.search-input {
-  width: 100%;
-  padding: 9px 13px 9px 38px;
-  background: var(--surface2);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 14px;
-  color: var(--text);
-  outline: none;
-  transition: border-color 0.15s, box-shadow 0.15s;
-}
-
-.search-input::placeholder { color: var(--text3); }
-.search-input:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
-}
-
-.ease-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-.ease-lbl {
-  font-size: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text3);
-  white-space: nowrap;
-}
-
-input[type=range].ease-slider {
-  -webkit-appearance: none;
-  width: 140px;
-  height: 4px;
-  border-radius: 2px;
-  background: linear-gradient(to right, var(--accent) 0%, var(--accent) var(--pct, 100%), var(--border) var(--pct, 100%));
-  outline: none;
-  cursor: pointer;
-}
-input[type=range].ease-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid #fff;
-  box-shadow: 0 1px 4px rgba(79,70,229,0.4);
-  cursor: pointer;
-}
-
-.ease-val {
-  font-size: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--accent);
-  font-weight: 500;
-  min-width: 18px;
-}
-
-.filter-count {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11.5px;
-  color: var(--text3);
-  margin-left: auto;
-  white-space: nowrap;
-}
-
-.filter-row2 {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.cat-pill {
-  padding: 5px 12px;
-  border-radius: 100px;
-  font-size: 12px;
-  font-weight: 600;
-  border: 1.5px solid var(--border);
-  background: transparent;
-  color: var(--text3);
-  cursor: pointer;
-  transition: all 0.15s;
-  white-space: nowrap;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.cat-pill:hover {
-  border-color: var(--border-strong);
-  color: var(--text2);
-  background: var(--surface2);
-}
-
-.cat-pill.active {
-  background: var(--accent-bg);
-  border-color: var(--accent-border);
-  color: var(--accent);
-}
-
-.cat-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* ═══════════════════════════════════
-   MAIN
-═══════════════════════════════════ */
-.main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 28px 100px;
-}
-
-.grid-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-  font-size: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text3);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.grid-header::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-
-/* ═══════════════════════════════════
-   TOOL CARDS  — single column, full width
-═══════════════════════════════════ */
-.tool-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.tool-card {
-  background: var(--surface);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-  animation: cardIn 0.3s ease both;
-}
-
-@keyframes cardIn {
-  from { opacity:0; transform:translateY(10px); }
-  to   { opacity:1; transform:translateY(0); }
-}
-
-.tool-card:hover {
-  border-color: var(--accent-border);
-  box-shadow: var(--shadow);
-  transform: translateY(-1px);
-}
-
-.card-body {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  min-height: 1px;
-}
-
-/* ── LEFT: Tool Info ── */
-.card-left {
-  padding: 24px 24px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  border-right: 1px solid var(--border);
-}
-
-.card-identity {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.tool-logo {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  flex-shrink: 0;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
-  font-size: 15px;
-  color: var(--accent);
-}
-
-.tool-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 5px;
-}
-
-.tool-titles {
-  flex: 1;
-  min-width: 0;
-}
-
-.tool-name {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.2;
-  margin-bottom: 3px;
-}
-
-.tool-cat-line {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 11.5px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text3);
-}
-
-.tool-tagline {
-  font-size: 13.5px;
-  line-height: 1.55;
-  color: var(--text2);
-}
-
-.tool-uses {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.use-tag {
-  font-size: 11px;
-  padding: 3px 9px;
-  border-radius: 5px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  color: var(--text3);
-  font-family: 'JetBrains Mono', monospace;
-  white-space: nowrap;
-}
-
-.ease-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.ease-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.ease-label-text {
-  font-size: 11px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text3);
-}
-
-.ease-label-val {
-  font-size: 11px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text2);
-  font-weight: 500;
-}
-
-.ease-track {
-  height: 3px;
-  background: var(--border);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.ease-fill {
-  height: 100%;
-  border-radius: 2px;
-  background: linear-gradient(90deg, var(--accent), #818cf8);
-}
-
-.card-actions {
-  margin-top: auto;
-  padding-top: 4px;
-}
-
-.btn-explore {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  border-radius: var(--radius-xs);
-  background: var(--surface2);
-  border: 1.5px solid var(--border);
-  color: var(--text2);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 12.5px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.15s;
-  width: 100%;
-  justify-content: center;
-}
-
-.btn-explore:hover {
-  background: var(--accent-bg);
-  border-color: var(--accent-border);
-  color: var(--accent);
-}
-
-/* ── RIGHT: Certifications ── */
-.card-right {
-  padding: 22px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  min-height: 1px;
-}
-
-.certs-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 14px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
-}
-
-.certs-title {
-  font-size: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 500;
-  color: var(--text2);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.certs-icon {
-  font-size: 14px;
-}
-
-.certs-count {
-  font-size: 11px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text3);
-}
-
-.cert-tag-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 4px;
-}
-
-.last-refreshed {
-  font-size: 10px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text3);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.refresh-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--green);
-}
-
-.certs-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-/* Each cert is a full clickable row */
-.cert-row {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 12px;
-  padding: 11px 14px;
-  border-radius: var(--radius-sm);
-  border: 1.5px solid var(--border);
-  background: var(--surface2);
-  text-decoration: none;
-  transition: all 0.15s;
-  cursor: pointer;
-}
-
-.cert-row:hover {
-  border-color: var(--accent-border);
-  background: var(--accent-bg);
-  transform: translateX(3px);
-}
-
-.cert-row.free-row:hover {
-  border-color: var(--green-border);
-  background: var(--green-bg);
-}
-
-.cert-type-badge {
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 9.5px;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-.cert-type-badge.free {
-  background: var(--green-bg);
-  border: 1px solid var(--green-border);
-  color: var(--green-text);
-}
-
-.cert-type-badge.paid {
-  background: var(--amber-bg);
-  border: 1px solid var(--amber-border);
-  color: var(--amber-text);
-}
-
-.cert-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.cert-name {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  line-height: 1.3;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.cert-details {
-  font-size: 11px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text3);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
-.cert-detail-sep {
-  color: var(--border-strong);
-}
-
-.cert-level-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 10px;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.level-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.lv-beginner .level-dot { background: #10b981; }
-.lv-intermediate .level-dot { background: #f59e0b; }
-.lv-advanced .level-dot { background: #ef4444; }
-.lv-expert .level-dot { background: var(--accent); }
-.lv-beginner { color: #047857; }
-.lv-intermediate { color: #92400e; }
-.lv-advanced { color: #b91c1c; }
-.lv-expert { color: var(--accent); }
-
-.cert-arrow {
-  font-size: 14px;
-  color: var(--text3);
-  flex-shrink: 0;
-  transition: color 0.15s, transform 0.15s;
-}
-
-.cert-row:hover .cert-arrow {
-  color: var(--accent);
-  transform: translateX(2px);
-}
-
-.cert-row.free-row:hover .cert-arrow {
-  color: var(--green);
-}
-
-/* ── Empty state ── */
-.empty-state {
-  text-align: center;
-  padding: 80px 24px;
-  background: var(--surface);
-  border: 1.5px dashed var(--border);
-  border-radius: var(--radius);
-}
-
-.empty-icon { font-size: 40px; margin-bottom: 14px; }
-.empty-msg { font-size: 18px; font-weight: 700; color: var(--text2); margin-bottom: 6px; }
-.empty-sub { font-size: 14px; color: var(--text3); }
-
-/* ═══════════════════════════════════
-   FOOTER
-═══════════════════════════════════ */
-footer {
-  background: #fff;
-  border-top: 1px solid var(--border);
-  padding: 36px 28px;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.footer-brand {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.footer-sub {
-  font-size: 12.5px;
-  color: var(--text3);
-  line-height: 1.6;
-}
-
-.footer-sub a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.footer-sub a:hover { text-decoration: underline; }
-
-.footer-refresh {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text3);
-  background: var(--green-bg);
-  border: 1px solid var(--green-border);
-  padding: 6px 12px;
-  border-radius: 100px;
-}
-
-/* ═══════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════ */
-@media (max-width: 900px) {
-  .card-body {
-    grid-template-columns: 1fr;
-  }
-  .card-left {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-@media (max-width: 600px) {
-  .filter-inner { padding: 12px 16px; }
-  .main { padding: 28px 16px 80px; }
-  .hero-stats { gap: 24px; padding: 16px 20px; }
-  .stat-num { font-size: 22px; }
-  .hero h1 { font-size: 32px; }
-  .cert-row { grid-template-columns: auto 1fr; }
-  .cert-arrow { display: none; }
-  footer .footer-inner { flex-direction: column; align-items: flex-start; }
-}
-
-.hidden { display: none !important; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ══════════ UTILITIES ══════════ */
+.hidden{display:none!important}
+.page{display:none}
+.page.active{display:block}
+
+/* ══════════ NAV ══════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  height:var(--nav-h);
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 28px;
+}
+.nav-brand{
+  display:flex;align-items:center;gap:10px;
+  text-decoration:none;cursor:pointer;
+}
+.nav-logo{
+  width:32px;height:32px;border-radius:8px;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:800;color:#fff;
+  font-family:'Plus Jakarta Sans',sans-serif;
+}
+.nav-name{
+  font-size:17px;font-weight:800;color:var(--text);
+  letter-spacing:-0.02em;
+}
+.nav-name span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-user-pill{
+  display:flex;align-items:center;gap:8px;
+  padding:5px 12px 5px 6px;
+  background:var(--surface2);
+  border:1.5px solid var(--border);
+  border-radius:100px;
+  cursor:pointer;
+  transition:all .15s;
+  font-size:13px;font-weight:600;color:var(--text2);
+}
+.nav-user-pill:hover{border-color:var(--border-strong);background:#fff}
+.nav-avatar{
+  width:24px;height:24px;border-radius:50%;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:#fff;
+  flex-shrink:0;
+}
+.burger{
+  width:40px;height:40px;border-radius:var(--radius-xs);
+  background:var(--surface2);border:1.5px solid var(--border);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  cursor:pointer;transition:all .15s;
+}
+.burger:hover{background:var(--accent-bg);border-color:var(--accent-border)}
+.burger-line{width:16px;height:1.5px;background:var(--text2);border-radius:1px;transition:all .2s}
+.burger.open .burger-line:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.burger.open .burger-line:nth-child(2){opacity:0}
+.burger.open .burger-line:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+
+/* ══════════ DRAWER MENU ══════════ */
+.drawer-backdrop{
+  position:fixed;inset:0;z-index:400;
+  background:rgba(0,0,0,0.3);backdrop-filter:blur(2px);
+  opacity:0;pointer-events:none;transition:opacity .25s;
+}
+.drawer-backdrop.open{opacity:1;pointer-events:all}
+.drawer{
+  position:fixed;top:0;right:0;height:100vh;width:280px;
+  background:var(--surface);border-left:1px solid var(--border);
+  box-shadow:var(--shadow-lg);z-index:501;
+  transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+  display:flex;flex-direction:column;padding-top:var(--nav-h);
+}
+.drawer.open{transform:translateX(0)}
+.drawer-nav{
+  flex:1;overflow-y:auto;padding:16px 0;
+}
+.drawer-item{
+  display:flex;align-items:center;gap:12px;
+  padding:13px 24px;
+  cursor:pointer;transition:background .15s;
+  font-size:14px;font-weight:600;color:var(--text2);
+  border-left:2px solid transparent;
+}
+.drawer-item:hover{background:var(--surface2);color:var(--text)}
+.drawer-item.active{
+  background:var(--accent-bg);color:var(--accent);
+  border-left-color:var(--accent);
+}
+.drawer-icon{font-size:18px;width:22px;text-align:center;flex-shrink:0}
+.drawer-divider{height:1px;background:var(--border);margin:8px 24px}
+.drawer-signout{
+  padding:20px 24px;
+  border-top:1px solid var(--border);
+}
+.btn-signout{
+  width:100%;padding:10px;border-radius:var(--radius-sm);
+  background:var(--red-bg);border:1.5px solid var(--red-border);
+  color:var(--red);font-size:13px;font-weight:600;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  cursor:pointer;transition:all .15s;
+}
+.btn-signout:hover{background:#fee2e2}
+
+/* ══════════ LOGIN PAGE ══════════ */
+#loginPage{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#f0f2f9 0%,#e8eaf6 50%,#ede9fe 100%);
+  padding:24px;
+}
+.login-card{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:24px;box-shadow:var(--shadow-lg);
+  width:100%;max-width:420px;overflow:hidden;
+}
+.login-header{
+  background:var(--hero-bg);padding:36px 36px 28px;
+  text-align:center;
+}
+.login-logo{
+  width:52px;height:52px;border-radius:14px;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;font-weight:800;color:#fff;
+  margin:0 auto 14px;
+}
+.login-title{font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:6px}
+.login-sub{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.5}
+.login-body{padding:32px 36px}
+.login-tabs{
+  display:flex;background:var(--surface2);border-radius:var(--radius-sm);
+  padding:3px;margin-bottom:24px;
+  border:1.5px solid var(--border);
+}
+.login-tab{
+  flex:1;padding:8px;border-radius:8px;border:none;
+  background:transparent;font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:13px;font-weight:600;color:var(--text3);cursor:pointer;
+  transition:all .15s;
+}
+.login-tab.active{background:var(--surface);color:var(--accent);box-shadow:var(--shadow-sm)}
+.form-group{margin-bottom:16px}
+.form-label{
+  display:block;font-size:12px;font-weight:600;color:var(--text2);
+  margin-bottom:6px;letter-spacing:0.02em;
+}
+.form-input{
+  width:100%;padding:10px 14px;
+  background:var(--surface2);border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:var(--text);
+  outline:none;transition:border-color .15s,box-shadow .15s;
+}
+.form-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,70,229,0.1)}
+.form-input.error{border-color:var(--red);box-shadow:0 0 0 3px rgba(185,28,28,0.08)}
+.form-error{font-size:12px;color:var(--red);margin-top:5px;display:none}
+.form-error.show{display:block}
+.btn-primary{
+  width:100%;padding:12px;border-radius:var(--radius-sm);
+  background:var(--accent);border:none;
+  color:#fff;font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:14px;font-weight:700;cursor:pointer;
+  transition:all .15s;margin-top:4px;
+}
+.btn-primary:hover{background:var(--accent2);box-shadow:0 4px 12px rgba(79,70,229,0.35)}
+.login-note{
+  font-size:11.5px;color:var(--text3);text-align:center;
+  margin-top:16px;line-height:1.5;
+}
+
+/* ══════════ MAIN LAYOUT (logged in) ══════════ */
+.app-shell{padding-top:var(--nav-h)}
+
+/* ══════════ HERO ══════════ */
+.hero{
+  position:relative;min-height:88vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:100px 24px 80px;overflow:hidden;
+  background:var(--hero-bg);
+}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;z-index:0}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,26,.5) 0%,rgba(13,13,26,.35) 45%,rgba(13,13,26,.85) 100%);z-index:1}
+.hero-content{position:relative;z-index:2;max-width:820px}
+.hero-pill{
+  display:inline-flex;align-items:center;gap:8px;padding:7px 18px;
+  border-radius:100px;border:1px solid rgba(110,100,255,0.4);
+  background:rgba(79,70,229,0.12);color:#c4c0ff;
+  font-size:11.5px;font-family:'JetBrains Mono',monospace;
+  letter-spacing:.15em;text-transform:uppercase;margin-bottom:28px;
+  animation:fadeUp .6s ease both;
+}
+.hero-pill-dot{width:5px;height:5px;border-radius:50%;background:#a89dff;animation:blink 2s ease infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(38px,6.5vw,72px);font-weight:800;line-height:1.04;letter-spacing:-.035em;color:#fff;margin-bottom:22px;animation:fadeUp .6s .08s ease both}
+.hero h1 em{font-style:normal;background:linear-gradient(125deg,#a89dff 0%,#7c6dfa 40%,#5b8cff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:18px;line-height:1.65;color:rgba(255,255,255,.65);font-weight:300;max-width:560px;margin:0 auto 44px;animation:fadeUp .6s .16s ease both}
+.hero-stats{
+  display:inline-flex;gap:40px;align-items:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;padding:20px 32px;backdrop-filter:blur(10px);
+  animation:fadeUp .6s .24s ease both;
+}
+.stat{text-align:center}
+.stat-num{font-size:26px;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1;margin-bottom:4px}
+.stat-label{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);font-family:'JetBrains Mono',monospace}
+.stat-div{width:1px;background:rgba(255,255,255,.1);align-self:stretch}
+.hero-arrow{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.4);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;animation:fadeUp .6s .4s ease both}
+.arrow-line{width:1px;height:36px;background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent);animation:arrowPulse 2.2s ease infinite}
+@keyframes arrowPulse{0%,100%{opacity:.3}50%{opacity:.9}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+/* ══════════ FILTER BAR ══════════ */
+.filter-bar{
+  position:sticky;top:var(--nav-h);z-index:100;
+  background:rgba(255,255,255,.96);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm);
+}
+.filter-inner{max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;flex-direction:column;gap:12px}
+.filter-row1{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.search-wrap{position:relative;flex:1;min-width:200px;max-width:380px}
+.search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:15px;pointer-events:none}
+.search-input{width:100%;padding:9px 13px 9px 38px;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
+.search-input::placeholder{color:var(--text3)}
+.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,70,229,.1)}
+.ease-row{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.ease-lbl{font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--text3);white-space:nowrap}
+input[type=range].ease-slider{-webkit-appearance:none;width:140px;height:4px;border-radius:2px;background:linear-gradient(to right,var(--accent) 0%,var(--accent) var(--pct,100%),var(--border) var(--pct,100%));outline:none;cursor:pointer}
+input[type=range].ease-slider::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--accent);border:2px solid #fff;box-shadow:0 1px 4px rgba(79,70,229,.4);cursor:pointer}
+.ease-val{font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--accent);font-weight:500;min-width:18px}
+.filter-count{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--text3);margin-left:auto;white-space:nowrap}
+.filter-row2{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.cat-pill{padding:5px 12px;border-radius:100px;font-size:12px;font-weight:600;border:1.5px solid var(--border);background:transparent;color:var(--text3);cursor:pointer;transition:all .15s;white-space:nowrap;font-family:'Plus Jakarta Sans',sans-serif;display:inline-flex;align-items:center;gap:5px}
+.cat-pill:hover{border-color:var(--border-strong);color:var(--text2);background:var(--surface2)}
+.cat-pill.active{background:var(--accent-bg);border-color:var(--accent-border);color:var(--accent)}
+.cat-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
+/* ══════════ TOOLS MAIN ══════════ */
+.main{max-width:1200px;margin:0 auto;padding:40px 28px 100px}
+.grid-header{display:flex;align-items:center;gap:12px;margin-bottom:24px;font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.1em}
+.grid-header::after{content:'';flex:1;height:1px;background:var(--border)}
+.tool-list{display:flex;flex-direction:column;gap:14px}
+.tool-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .2s;animation:cardIn .3s ease both}
+@keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.tool-card:hover{border-color:var(--accent-border);box-shadow:var(--shadow);transform:translateY(-1px)}
+.card-body{display:grid;grid-template-columns:300px 1fr;min-height:1px}
+.card-left{padding:24px;display:flex;flex-direction:column;gap:12px;border-right:1px solid var(--border)}
+.card-identity{display:flex;align-items:flex-start;gap:12px}
+.tool-logo{width:42px;height:42px;border-radius:10px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:15px;color:var(--accent)}
+.tool-logo img{width:100%;height:100%;object-fit:contain;padding:5px}
+.tool-titles{flex:1;min-width:0}
+.tool-name{font-size:16px;font-weight:700;color:var(--text);line-height:1.2;margin-bottom:3px}
+.tool-cat-line{display:flex;align-items:center;gap:5px;font-size:11.5px;font-family:'JetBrains Mono',monospace;color:var(--text3)}
+.tool-tagline{font-size:13.5px;line-height:1.55;color:var(--text2)}
+.tool-uses{display:flex;flex-wrap:wrap;gap:5px}
+.use-tag{font-size:11px;padding:3px 9px;border-radius:5px;background:var(--surface2);border:1px solid var(--border);color:var(--text3);font-family:'JetBrains Mono',monospace;white-space:nowrap}
+.ease-wrap{display:flex;flex-direction:column;gap:5px}
+.ease-header{display:flex;justify-content:space-between;align-items:center}
+.ease-label-text{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text3)}
+.ease-label-val{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text2);font-weight:500}
+.ease-track{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.ease-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),#818cf8)}
+.card-actions{margin-top:auto;padding-top:4px}
+.btn-explore{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:var(--radius-xs);background:var(--surface2);border:1.5px solid var(--border);color:var(--text2);font-family:'Plus Jakarta Sans',sans-serif;font-size:12.5px;font-weight:600;text-decoration:none;transition:all .15s;width:100%;justify-content:center}
+.btn-explore:hover{background:var(--accent-bg);border-color:var(--accent-border);color:var(--accent)}
+.card-right{padding:22px 24px;display:flex;flex-direction:column;gap:0;min-height:1px}
+.certs-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.certs-title{font-size:12px;font-family:'JetBrains Mono',monospace;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.1em;display:flex;align-items:center;gap:8px}
+.certs-count{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text3)}
+.last-refreshed{font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--text3);display:flex;align-items:center;gap:4px}
+.refresh-dot{width:5px;height:5px;border-radius:50%;background:var(--green)}
+.certs-list{display:flex;flex-direction:column;gap:8px}
+.cert-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:11px 14px;border-radius:var(--radius-sm);border:1.5px solid var(--border);background:var(--surface2);text-decoration:none;transition:all .15s;cursor:pointer}
+.cert-row:hover{border-color:var(--accent-border);background:var(--accent-bg);transform:translateX(3px)}
+.cert-row.free-row:hover{border-color:var(--green-border);background:var(--green-bg)}
+.cert-type-badge{padding:2px 8px;border-radius:4px;font-size:9.5px;font-family:'JetBrains Mono',monospace;font-weight:500;letter-spacing:.06em;text-transform:uppercase;flex-shrink:0;white-space:nowrap}
+.cert-type-badge.free{background:var(--green-bg);border:1px solid var(--green-border);color:var(--green-text)}
+.cert-type-badge.paid{background:var(--amber-bg);border:1px solid var(--amber-border);color:var(--amber-text)}
+.cert-info{display:flex;flex-direction:column;gap:2px;min-width:0}
+.cert-name{font-size:13px;font-weight:600;color:var(--text);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cert-details{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text3);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.cert-detail-sep{color:var(--border-strong)}
+.cert-level-badge{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-family:'JetBrains Mono',monospace}
+.level-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.lv-beginner .level-dot{background:#10b981}.lv-beginner{color:#047857}
+.lv-intermediate .level-dot{background:#f59e0b}.lv-intermediate{color:#92400e}
+.lv-advanced .level-dot{background:#ef4444}.lv-advanced{color:#b91c1c}
+.lv-expert .level-dot{background:var(--accent)}.lv-expert{color:var(--accent)}
+.cert-arrow{font-size:14px;color:var(--text3);flex-shrink:0;transition:color .15s,transform .15s}
+.cert-row:hover .cert-arrow{color:var(--accent);transform:translateX(2px)}
+.cert-row.free-row:hover .cert-arrow{color:var(--green)}
+.empty-state{text-align:center;padding:80px 24px;background:var(--surface);border:1.5px dashed var(--border);border-radius:var(--radius)}
+.empty-icon{font-size:40px;margin-bottom:14px}
+.empty-msg{font-size:18px;font-weight:700;color:var(--text2);margin-bottom:6px}
+.empty-sub{font-size:14px;color:var(--text3)}
+
+/* ══════════ PAGE SHELL (stats, incubators, account) ══════════ */
+.page-shell{max-width:1100px;margin:0 auto;padding:48px 28px 100px}
+.page-hero{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--radius);padding:40px 44px;margin-bottom:40px;
+  box-shadow:var(--shadow-sm);
+  display:flex;align-items:center;gap:24px;
+}
+.page-hero-icon{font-size:48px;flex-shrink:0}
+.page-hero-title{font-size:28px;font-weight:800;color:var(--text);letter-spacing:-.02em;margin-bottom:6px}
+.page-hero-sub{font-size:14px;color:var(--text2);line-height:1.6;max-width:600px}
+.section-label{font-size:11px;font-family:'JetBrains Mono',monospace;font-weight:500;color:var(--text3);text-transform:uppercase;letter-spacing:.12em;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ══════════ STATS PAGE ══════════ */
+.stat-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-bottom:40px}
+.stat-card{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-sm);
+  transition:transform .2s,box-shadow .2s;
+}
+.stat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.stat-card-num{font-size:32px;font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1;margin-bottom:6px}
+.stat-card-label{font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px}
+.stat-card-source{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text3)}
+.stat-card-source a{color:var(--accent);text-decoration:none}
+.stat-card-source a:hover{text-decoration:underline}
+.region-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-bottom:40px}
+.region-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
+.region-header{padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)}
+.region-flag{font-size:24px}
+.region-name{font-size:15px;font-weight:700;color:var(--text)}
+.region-rate{
+  margin-left:auto;font-size:20px;font-weight:800;color:var(--accent);
+  font-family:'JetBrains Mono',monospace;
+}
+.region-body{padding:16px 20px;display:flex;flex-direction:column;gap:8px}
+.region-stat{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text2);line-height:1.5}
+.region-stat::before{content:'→';color:var(--accent);flex-shrink:0;font-weight:700}
+.region-source{padding:12px 20px;border-top:1px solid var(--border);font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text3)}
+.region-source a{color:var(--accent);text-decoration:none}
+.region-source a:hover{text-decoration:underline}
+.industry-table{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:40px;box-shadow:var(--shadow-sm)}
+.industry-table table{width:100%;border-collapse:collapse}
+.industry-table th{background:var(--surface2);padding:12px 20px;font-size:11px;font-family:'JetBrains Mono',monospace;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);text-align:left;border-bottom:1px solid var(--border)}
+.industry-table td{padding:13px 20px;font-size:13.5px;color:var(--text2);border-bottom:1px solid var(--border)}
+.industry-table tr:last-child td{border-bottom:none}
+.industry-table tr:hover td{background:var(--surface2)}
+.industry-table td:first-child{font-weight:600;color:var(--text)}
+.pct-bar-wrap{display:flex;align-items:center;gap:10px}
+.pct-bar{height:6px;border-radius:3px;background:var(--accent-bg);flex:1;overflow:hidden;max-width:120px}
+.pct-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent),#818cf8)}
+.pct-num{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent);white-space:nowrap}
+
+/* ══════════ INCUBATION PAGE ══════════ */
+.country-section{margin-bottom:40px}
+.country-header{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:2px solid var(--border);
+}
+.country-flag{font-size:28px}
+.country-name{font-size:18px;font-weight:800;color:var(--text);letter-spacing:-.01em}
+.country-count{font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--text3)}
+.incubator-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.incubator-card{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm);
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+  display:flex;flex-direction:column;gap:10px;
+}
+.incubator-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--accent-border)}
+.incubator-name{font-size:15px;font-weight:700;color:var(--text);line-height:1.2}
+.incubator-focus{display:inline-flex;align-items:center;padding:2px 9px;border-radius:4px;font-size:10.5px;font-family:'JetBrains Mono',monospace;background:var(--accent-bg);border:1px solid var(--accent-border);color:var(--accent);font-weight:500}
+.incubator-desc{font-size:13px;color:var(--text2);line-height:1.55}
+.incubator-link{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:12.5px;font-weight:600;color:var(--accent);
+  text-decoration:none;margin-top:auto;
+  transition:gap .15s;
+}
+.incubator-link:hover{gap:8px;text-decoration:underline}
+
+/* ══════════ ACCOUNT PAGE ══════════ */
+.account-grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+.account-sidebar{display:flex;flex-direction:column;gap:14px}
+.account-profile-card{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:var(--radius);padding:28px;text-align:center;box-shadow:var(--shadow-sm);
+}
+.account-avatar{
+  width:72px;height:72px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),#818cf8);
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;font-weight:800;color:#fff;
+  margin:0 auto 14px;
+}
+.account-name-display{font-size:18px;font-weight:700;color:var(--text);margin-bottom:4px}
+.account-email-display{font-size:13px;color:var(--text3);margin-bottom:16px}
+.account-badge{
+  display:inline-flex;align-items:center;gap:5px;padding:4px 12px;
+  border-radius:100px;background:var(--green-bg);
+  border:1px solid var(--green-border);color:var(--green-text);
+  font-size:11px;font-family:'JetBrains Mono',monospace;
+}
+.account-main{display:flex;flex-direction:column;gap:14px}
+.account-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm)}
+.account-card-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.account-field{margin-bottom:16px}
+.account-field:last-child{margin-bottom:0}
+.account-field label{display:block;font-size:12px;font-weight:600;color:var(--text3);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em}
+.account-field .value{font-size:14px;color:var(--text2);padding:10px 14px;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--radius-sm)}
+.account-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+.account-stat-box{text-align:center;padding:16px;background:var(--surface2);border-radius:var(--radius-sm);border:1px solid var(--border)}
+.account-stat-n{font-size:24px;font-weight:800;color:var(--accent);letter-spacing:-.02em}
+.account-stat-l{font-size:11px;color:var(--text3);font-family:'JetBrains Mono',monospace;margin-top:2px}
+.btn-danger{padding:10px 20px;border-radius:var(--radius-sm);background:var(--red-bg);border:1.5px solid var(--red-border);color:var(--red);font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-danger:hover{background:#fee2e2}
+
+/* ══════════ FOOTER ══════════ */
+footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.footer-brand{font-size:15px;font-weight:700;color:var(--text)}
+.footer-sub{font-size:12.5px;color:var(--text3);line-height:1.6}
+.footer-sub a{color:var(--accent);text-decoration:none}
+.footer-refresh{display:flex;align-items:center;gap:6px;font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text3);background:var(--green-bg);border:1px solid var(--green-border);padding:6px 12px;border-radius:100px}
+
+/* ══════════ RESPONSIVE ══════════ */
+@media(max-width:900px){.card-body{grid-template-columns:1fr}.card-left{border-right:none;border-bottom:1px solid var(--border)}.account-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.filter-inner{padding:12px 16px}.main{padding:28px 16px 80px}.page-shell{padding:32px 16px 80px}.page-hero{flex-direction:column;padding:28px}.hero-stats{gap:20px;padding:16px}.stat-num{font-size:22px}.hero h1{font-size:32px}.cert-row{grid-template-columns:auto 1fr}.cert-arrow{display:none}.region-grid{grid-template-columns:1fr}.incubator-grid{grid-template-columns:1fr}.stat-cards-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 
-<!-- ═════ HERO ═════ -->
-<section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="My_final_animation.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-pill">
-      <span class="hero-pill-dot"></span>
-      Discover · Learn · Automate
+<!-- ══════ LOGIN PAGE ══════ -->
+<div id="loginPage">
+  <div class="login-card">
+    <div class="login-header">
+      <div class="login-logo">⚡</div>
+      <div class="login-title">AI Disco</div>
+      <div class="login-sub">Automation & AI Upskilling Hub<br>80 tools · 175+ learning paths · Always free</div>
     </div>
-    <h1>The only AI directory built for<br><em>operations &amp; automation</em></h1>
-    <p class="hero-sub">80 curated tools for workflow automation, process intelligence, and operational efficiency — each with direct access to official certifications and learning paths.</p>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-num" id="statTools">80</div><div class="stat-label">Tools</div></div>
-      <div class="stat-div"></div>
-      <div class="stat"><div class="stat-num" id="statPaths">200+</div><div class="stat-label">Learning Paths</div></div>
-      <div class="stat-div"></div>
-      <div class="stat"><div class="stat-num">11</div><div class="stat-label">Categories</div></div>
-      <div class="stat-div"></div>
-      <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Always</div></div>
-    </div>
-  </div>
-  <div class="hero-arrow">
-    <span>Explore</span>
-    <div class="arrow-line"></div>
-  </div>
-</section>
-
-<!-- ═════ FILTER BAR ═════ -->
-<div class="filter-bar">
-  <div class="filter-inner">
-    <div class="filter-row1">
-      <div class="search-wrap">
-        <span class="search-icon">⌕</span>
-        <input class="search-input" id="searchInput" type="text" placeholder="Search tools, problems, use cases…">
+    <div class="login-body">
+      <div class="login-tabs">
+        <button class="login-tab active" id="tabLogin" onclick="switchTab('login')">Sign In</button>
+        <button class="login-tab" id="tabReg" onclick="switchTab('register')">Create Account</button>
       </div>
-      <div class="ease-row">
-        <span class="ease-lbl">Ease ≤</span>
-        <input class="ease-slider" id="easeSlider" type="range" min="1" max="10" value="10">
-        <span class="ease-val" id="easeVal">10</span>
+      <!-- LOGIN FORM -->
+      <div id="loginForm">
+        <div class="form-group">
+          <label class="form-label">Email address</label>
+          <input class="form-input" id="loginEmail" type="email" placeholder="you@example.com">
+          <div class="form-error" id="loginEmailErr">Please enter a valid email</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input class="form-input" id="loginPass" type="password" placeholder="••••••••">
+          <div class="form-error" id="loginPassErr">Incorrect password</div>
+        </div>
+        <button class="btn-primary" onclick="doLogin()">Sign In →</button>
+        <div class="login-note">New to AI Disco? <a href="#" onclick="switchTab('register');return false;" style="color:var(--accent)">Create a free account</a></div>
       </div>
-      <span class="filter-count" id="filterCount">80 tools</span>
+      <!-- REGISTER FORM -->
+      <div id="regForm" class="hidden">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input class="form-input" id="regName" type="text" placeholder="Your name">
+          <div class="form-error" id="regNameErr">Please enter your name</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email address</label>
+          <input class="form-input" id="regEmail" type="email" placeholder="you@example.com">
+          <div class="form-error" id="regEmailErr">Please enter a valid email</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input class="form-input" id="regPass" type="password" placeholder="Minimum 6 characters">
+          <div class="form-error" id="regPassErr">Minimum 6 characters</div>
+        </div>
+        <button class="btn-primary" onclick="doRegister()">Create Account →</button>
+        <div class="login-note">Your data is stored locally on this device only.</div>
+      </div>
     </div>
-    <div class="filter-row2" id="catPills"></div>
   </div>
 </div>
 
-<!-- ═════ MAIN ═════ -->
-<main class="main">
-  <div class="grid-header" id="gridHeader">All Tools</div>
-  <div class="tool-list" id="toolList"></div>
-</main>
+<!-- ══════ APP SHELL (shown after login) ══════ -->
+<div id="appShell" class="app-shell hidden">
 
-<!-- ═════ FOOTER ═════ -->
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">AI Disco v2</div>
-      <div class="footer-sub">
-        Curated by <a href="https://khushboopasari.github.io" target="_blank">Khushboo Pasari</a> ·
-        Senior Programme Manager · Amazon &amp; UKAEA<br>
-        Powered by Make.com + Claude API · Learning modules refresh every 15 days
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand" onclick="showPage('tools')">
+      <div class="nav-logo">⚡</div>
+      <div class="nav-name">AI <span>Disco</span></div>
+    </div>
+    <div class="nav-right">
+      <div class="nav-user-pill" onclick="showPage('account')">
+        <div class="nav-avatar" id="navAvatar">?</div>
+        <span id="navName">Account</span>
+      </div>
+      <div class="burger" id="burgerBtn" onclick="toggleDrawer()">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
       </div>
     </div>
-    <div class="footer-refresh">
-      <span class="refresh-dot"></span>
-      <span id="lastRefreshLabel">Certifications live</span>
+  </nav>
+
+  <!-- DRAWER BACKDROP -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeDrawer()"></div>
+
+  <!-- DRAWER -->
+  <div class="drawer" id="drawer">
+    <div class="drawer-nav">
+      <div class="drawer-item" data-page="tools" onclick="showPage('tools');closeDrawer()">
+        <span class="drawer-icon">🔍</span>Tool Directory
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-page="account" onclick="showPage('account');closeDrawer()">
+        <span class="drawer-icon">👤</span>Your Account
+      </div>
+      <div class="drawer-item" data-page="stats" onclick="showPage('stats');closeDrawer()">
+        <span class="drawer-icon">📊</span>AI Adoption Statistics 2026
+      </div>
+      <div class="drawer-item" data-page="incubators" onclick="showPage('incubators');closeDrawer()">
+        <span class="drawer-icon">🚀</span>Start-up Incubation Centres
+      </div>
+    </div>
+    <div class="drawer-signout">
+      <button class="btn-signout" onclick="signOut()">Sign out</button>
     </div>
   </div>
-</footer>
+
+  <!-- ══════ TOOLS PAGE ══════ -->
+  <div id="page-tools" class="page active">
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline><source src="My_final_animation.mp4" type="video/mp4"></video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-pill"><span class="hero-pill-dot"></span>Discover · Learn · Automate</div>
+        <h1>The only AI directory built for<br><em>operations &amp; automation</em></h1>
+        <p class="hero-sub">80 curated tools for workflow automation, process intelligence, and operational efficiency — each with direct access to official certifications and learning paths.</p>
+        <div class="hero-stats">
+          <div class="stat"><div class="stat-num" id="statTools">80</div><div class="stat-label">Tools</div></div>
+          <div class="stat-div"></div>
+          <div class="stat"><div class="stat-num" id="statPaths">175+</div><div class="stat-label">Learning Paths</div></div>
+          <div class="stat-div"></div>
+          <div class="stat"><div class="stat-num">11</div><div class="stat-label">Categories</div></div>
+          <div class="stat-div"></div>
+          <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Always</div></div>
+        </div>
+      </div>
+      <div class="hero-arrow"><span>Explore</span><div class="arrow-line"></div></div>
+    </section>
+    <div class="filter-bar">
+      <div class="filter-inner">
+        <div class="filter-row1">
+          <div class="search-wrap">
+            <span class="search-icon">⌕</span>
+            <input class="search-input" id="searchInput" type="text" placeholder="Search tools, problems, use cases…">
+          </div>
+          <div class="ease-row">
+            <span class="ease-lbl">Ease ≤</span>
+            <input class="ease-slider" id="easeSlider" type="range" min="1" max="10" value="10">
+            <span class="ease-val" id="easeVal">10</span>
+          </div>
+          <span class="filter-count" id="filterCount">80 tools</span>
+        </div>
+        <div class="filter-row2" id="catPills"></div>
+      </div>
+    </div>
+    <main class="main">
+      <div class="grid-header" id="gridHeader">All Tools</div>
+      <div class="tool-list" id="toolList"></div>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">AI Disco v2</div>
+          <div class="footer-sub">Curated by <a href="https://khushboopasari.github.io" target="_blank">Khushboo Pasari</a> · Senior Programme Manager · Amazon &amp; UKAEA<br>Powered by Make.com + Claude API · Certifications refresh every 15 days</div>
+        </div>
+        <div class="footer-refresh"><span class="refresh-dot"></span><span id="lastRefreshLabel">Certifications live</span></div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ══════ STATS PAGE ══════ -->
+  <div id="page-stats" class="page">
+    <div class="page-shell">
+      <div class="page-hero">
+        <div class="page-hero-icon">📊</div>
+        <div>
+          <div class="page-hero-title">AI Adoption Statistics 2026</div>
+          <div class="page-hero-sub">Month-on-month intelligence from McKinsey, BCG, Accenture, Stanford AI Index, Microsoft, and PwC — covering enterprise adoption, industry penetration, and regional dynamics worldwide.</div>
+        </div>
+      </div>
+
+      <div class="section-label">Global Headline Numbers · 2026</div>
+      <div class="stat-cards-grid">
+        <div class="stat-card"><div class="stat-card-num">88%</div><div class="stat-card-label">Enterprises using AI in ≥1 function</div><div class="stat-card-source">McKinsey Global AI Survey 2026 · <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank">mckinsey.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">65%</div><div class="stat-card-label">Organisations using Generative AI — doubled in 10 months</div><div class="stat-card-source">McKinsey Q1 2026 · <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank">mckinsey.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">$7,800</div><div class="stat-card-label">Avg. annual productivity value per knowledge worker from GenAI</div><div class="stat-card-source">Accenture 2026 · <a href="https://www.accenture.com" target="_blank">accenture.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">$67B</div><div class="stat-card-label">Generative AI market size in 2026, forecast $1.3T by 2032</div><div class="stat-card-source">Bloomberg Intelligence · <a href="https://www.bloomberg.com" target="_blank">bloomberg.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">16.3%</div><div class="stat-card-label">Global working-age population actively using AI tools</div><div class="stat-card-source">Microsoft AI Diffusion Report H2 2025 · <a href="https://www.microsoft.com/en-us/corporate-responsibility/topics/ai-economy-institute/reports/global-ai-adoption-2025/" target="_blank">microsoft.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">92%</div><div class="stat-card-label">Firms planning to increase AI budgets in next 3 years</div><div class="stat-card-source">McKinsey State of AI 2025 · <a href="https://www.mckinsey.com" target="_blank">mckinsey.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">62%</div><div class="stat-card-label">Organisations experimenting with agentic AI systems</div><div class="stat-card-source">McKinsey Global Survey · <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank">mckinsey.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">74%</div><div class="stat-card-label">Companies struggle to achieve and scale AI value</div><div class="stat-card-source">BCG AI Adoption Report 2024 · <a href="https://www.bcg.com/press/24october2024-ai-adoption-in-2024-74-of-companies-struggle-to-achieve-and-scale-value" target="_blank">bcg.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">40%</div><div class="stat-card-label">Of working hours across all occupations affected by LLMs</div><div class="stat-card-source">Accenture Workforce Research · <a href="https://www.accenture.com" target="_blank">accenture.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">38%</div><div class="stat-card-label">Knowledge workers using GenAI tools daily — up from 11% in 2024</div><div class="stat-card-source">Enterprise AI Index 2026 · <a href="https://medhacloud.com/blog/ai-adoption-statistics-2026" target="_blank">medhacloud.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">69%</div><div class="stat-card-label">Leaders say AI demands full rethink of systems and processes</div><div class="stat-card-source">Accenture 2026 · <a href="https://www.accenture.com" target="_blank">accenture.com ↗</a></div></div>
+        <div class="stat-card"><div class="stat-card-num">4.8×</div><div class="stat-card-label">Faster labour productivity growth in AI-embracing industries</div><div class="stat-card-source">IBM Research / Stanford AI Index 2025 · <a href="https://hai.stanford.edu/ai-index" target="_blank">stanford.edu ↗</a></div></div>
+      </div>
+
+      <div class="section-label">Industry Adoption Rates · 2026</div>
+      <div class="industry-table" style="margin-bottom:40px">
+        <table>
+          <thead><tr><th>Industry</th><th>Adoption Rate</th><th>Primary Use Cases</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>Technology &amp; Software</td><td><div class="pct-bar-wrap"><div class="pct-bar"><div class="pct-fill" style="width:88%"></div></div><span class="pct-num">88%</span></div></td><td>Code generation, automation, testing</td><td>McKinsey 2026</td></tr>
+            <tr><td>Financial Services</td><td><div class="pct-bar-wrap"><div class="pct-bar"><div class="pct-fill" style="width:79%"></div></div><span class="pct-num">79%</span></div></td><td>Fraud detection, risk scoring, trading</td><td>McKinsey 2026</td></tr>
+            <tr><td>Healthcare</td><td><div class="pct-bar-wrap"><div class="pct-bar"><div class="pct-fill" style="width:62%"></div></div><span class="pct-num">62%</span></div></td><td>Clinical decision support, imaging, admin</td><td>McKinsey 2026</td></tr>
+            <tr><td>Retail &amp; E-commerce</td><td><div class="pct-bar-wrap"><div class="pct-bar"><div class="pct-fill" style="width:58%"></div></div><span class="pct-num">58%</span></div></td><td>Personalisation, supply chain, forecasting</td><td>BCG 2025</td></tr>
+            <tr><td>Manufacturing</td><td><div class="pct-bar-wrap"><div class="pct-bar"><div class="pct-fill" style="width:54%"></div></div><span class="pct-num">54%</span></div></td><td>Predictive maintenance, quality control</td><td>Accenture 2025</td></tr>
+            <tr><td>Marketing &amp; Advertising</td><td><div class="pct-bar-wrap"><div class="pct-bar"><div class="pct-fill" style="width:71%"></div></div><span class="pct-num">71%</span></div></td><td>Content creation, campaign optimisation</td><td>Statista 2026</td></tr>
+            <tr><td>HR &amp; People Operations</td><td><div class="pct-bar-wrap"><div class="pct-bar"><div class="pct-fill" style="width:58%"></div></div><span class="pct-num">58%</span></div></td><td>Resume screening, engagement, onboarding</td><td>PwC Workforce 2026</td></tr>
+            <tr><td>Legal Services</td><td><div class="pct-bar-wrap"><div class="pct-bar"><div class="pct-fill" style="width:41%"></div></div><span class="pct-num">41%</span></div></td><td>Contract review, research, compliance</td><td>BCG 2025</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-label">Regional Breakdown · 2025–2026</div>
+      <div class="region-grid">
+        <div class="region-card">
+          <div class="region-header"><span class="region-flag">🌎</span><span class="region-name">North America</span><span class="region-rate">62%</span></div>
+          <div class="region-body">
+            <div class="region-stat">North America leads global enterprise AI adoption at 62%, seven percentage points ahead of Asia (BytePlus 2025)</div>
+            <div class="region-stat">US private AI investment reached $109.1B in 2024 — nearly 12× China's $9.3B</div>
+            <div class="region-stat">Canada ranks #5 globally for startup ecosystem strength; US hosts 32 of global top-100 startup cities</div>
+            <div class="region-stat">Microsoft Copilot adoption among M365 enterprise customers reached 41% by Q1 2026</div>
+            <div class="region-stat">US ranks #28 for population-level AI usage (41%) despite housing most major AI firms</div>
+          </div>
+          <div class="region-source">Sources: <a href="https://www.aiprm.com/ai-adoption-statistics/" target="_blank">AIPRM ↗</a> · <a href="https://hai.stanford.edu/ai-index" target="_blank">Stanford AI Index ↗</a></div>
+        </div>
+        <div class="region-card">
+          <div class="region-header"><span class="region-flag">🌍</span><span class="region-name">Europe</span><span class="region-rate">55%</span></div>
+          <div class="region-body">
+            <div class="region-stat">UK leads Western economies with 55% AI adoption, ranking #6 globally; 9 of top 20 countries for AI adoption are European</div>
+            <div class="region-stat">Baltic nations lead: Latvia #4 (55%), Lithuania #7 (52%), Estonia #8 (51%)</div>
+            <div class="region-stat">70% of top-10 most AI-prepared countries globally are European</div>
+            <div class="region-stat">EU AI Act came into force 2024 — driving governance policies; 52% of EU enterprises now have formal AI governance</div>
+            <div class="region-stat">UK private AI investment: $4.5B in 2024; France's Station F hosts 1,000+ startups across 30 programmes</div>
+          </div>
+          <div class="region-source">Sources: <a href="https://cybernews.com/ai-news/ai-adoption-index-2025-which-countries-use-ai-tools-the-most/" target="_blank">Cybernews AI Index ↗</a> · <a href="https://www.aiprm.com/ai-adoption-statistics/" target="_blank">AIPRM ↗</a></div>
+        </div>
+        <div class="region-card">
+          <div class="region-header"><span class="region-flag">🌏</span><span class="region-name">Asia-Pacific</span><span class="region-rate">55%</span></div>
+          <div class="region-body">
+            <div class="region-stat">Singapore leads globally with 66% adoption (#1); UAE 56% (#3); China 58% enterprise deployment; India 57%</div>
+            <div class="region-stat">Asia-Pacific expected to grow at highest CAGR of 19.8% through 2034 — fastest-growing AI region</div>
+            <div class="region-stat">South Korea made the biggest jump of any country in H2 2025, rising 7 places to #18 globally</div>
+            <div class="region-stat">India home to 100,000+ recognised startups; Bangalore ranks #10 globally for startup ecosystems</div>
+            <div class="region-stat">Japan surprisingly low at 17% — despite being a technology leader; cultural and language barriers cited</div>
+          </div>
+          <div class="region-source">Sources: <a href="https://www.allaboutai.com/resources/ai-statistics/global-ai-adoption/" target="_blank">AllAboutAI ↗</a> · <a href="https://restofworld.org/2026/countries-generative-ai-adoption/" target="_blank">Rest of World ↗</a></div>
+        </div>
+        <div class="region-card">
+          <div class="region-header"><span class="region-flag">🌍</span><span class="region-name">Africa</span><span class="region-rate">~12%</span></div>
+          <div class="region-body">
+            <div class="region-stat">Africa dominates list of least AI-prepared countries — 11 of 12 lowest-scoring nations are African (AIPRM 2025)</div>
+            <div class="region-stat">DeepSeek usage in Africa is estimated 2–4× higher than other regions due to free access removing cost barriers</div>
+            <div class="region-stat">Nigeria and Kenya lead African AI adoption; iHub (Nairobi) and CcHub (Lagos) are continent-leading innovation hubs</div>
+            <div class="region-stat">Huawei and Chinese tech firms actively promoting AI infrastructure across African markets</div>
+            <div class="region-stat">Growing mobile-first AI adoption driven by smartphone penetration rather than enterprise deployment</div>
+          </div>
+          <div class="region-source">Sources: <a href="https://www.microsoft.com/en-us/corporate-responsibility/topics/ai-economy-institute/reports/global-ai-adoption-2025/" target="_blank">Microsoft AI Diffusion Report ↗</a></div>
+        </div>
+        <div class="region-card">
+          <div class="region-header"><span class="region-flag">🌎</span><span class="region-name">South America</span><span class="region-rate">~28%</span></div>
+          <div class="region-body">
+            <div class="region-stat">Chile ranks #2 globally for population-level AI adoption at 60% — the only South American country in the global top 20</div>
+            <div class="region-stat">Brazil has the region's largest startup ecosystem, led by São Paulo; active government AI investment programmes</div>
+            <div class="region-stat">Venezuela has one of the world's lowest AI adoption rates at 7%, alongside Nigeria and Poland</div>
+            <div class="region-stat">Latin America adoption growth is hampered by digital infrastructure gaps and limited local-language AI models</div>
+            <div class="region-stat">Argentina and Colombia emerging as secondary startup hubs, particularly in fintech AI</div>
+          </div>
+          <div class="region-source">Sources: <a href="https://cybernews.com/ai-news/ai-adoption-index-2025-which-countries-use-ai-tools-the-most/" target="_blank">Cybernews AI Index ↗</a></div>
+        </div>
+        <div class="region-card">
+          <div class="region-header"><span class="region-flag">🌏</span><span class="region-name">Oceania</span><span class="region-rate">~35%</span></div>
+          <div class="region-body">
+            <div class="region-stat">Australia and New Zealand both rank in global top 20 for AI adoption; Australia is #8 globally for startup ecosystems</div>
+            <div class="region-stat">Australia ranks in top 10 AI-prepared nations; government invested AU$2B in national AI strategy 2024</div>
+            <div class="region-stat">New Zealand is the only non-European, non-Asian country in the global top 10 for AI preparedness</div>
+            <div class="region-stat">Sydney and Melbourne lead Pacific AI adoption; Stone &amp; Chalk and Cicada Innovations are flagship hubs</div>
+            <div class="region-stat">Strong growth in AI for agriculture, mining and resource management — unique regional use cases</div>
+          </div>
+          <div class="region-source">Sources: <a href="https://www.aiprm.com/ai-adoption-statistics/" target="_blank">AIPRM ↗</a> · <a href="https://www.visualcapitalist.com/worlds-top-startup-cities-in-2025/" target="_blank">Visual Capitalist ↗</a></div>
+        </div>
+        <div class="region-card">
+          <div class="region-header"><span class="region-flag">🌐</span><span class="region-name">Middle East &amp; Central Asia</span><span class="region-rate">56%</span></div>
+          <div class="region-body">
+            <div class="region-stat">UAE leads at 56% AI adoption (#3 globally) and 64% in some measurements; government has national AI strategy targeting 2031</div>
+            <div class="region-stat">Saudi Arabia's NEOM and Vision 2030 are among the world's largest AI infrastructure investment programmes</div>
+            <div class="region-stat">Dubai's DIFC and Abu Dhabi's Hub71 are top-ranked Middle East incubation ecosystems</div>
+            <div class="region-stat">AI investment in the Gulf reaching $100B+ through sovereign wealth fund commitments</div>
+          </div>
+          <div class="region-source">Sources: <a href="https://www.allaboutai.com/resources/ai-statistics/global-ai-adoption/" target="_blank">AllAboutAI ↗</a> · PwC AI Research 2025</div>
+        </div>
+        <div class="region-card">
+          <div class="region-header"><span class="region-flag">🧊</span><span class="region-name">Antarctica</span><span class="region-rate">N/A</span></div>
+          <div class="region-body">
+            <div class="region-stat">No permanent civilian population — AI adoption metrics not applicable in the traditional sense</div>
+            <div class="region-stat">AI is actively used in Antarctic research: climate modelling, satellite image analysis for ice sheet monitoring</div>
+            <div class="region-stat">British Antarctic Survey, NASA, and ESA deploy AI for environmental data processing from the continent</div>
+            <div class="region-stat">Remote sensing AI helps track ice loss, wildlife populations, and atmospheric changes in real time</div>
+          </div>
+          <div class="region-source">Sources: British Antarctic Survey · NASA Earth Observatory</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ INCUBATORS PAGE ══════ -->
+  <div id="page-incubators" class="page">
+    <div class="page-shell">
+      <div class="page-hero">
+        <div class="page-hero-icon">🚀</div>
+        <div>
+          <div class="page-hero-title">Start-up Incubation Centres</div>
+          <div class="page-hero-sub">Leading incubators, accelerators and innovation hubs by country — with direct links to apply. Includes AI, automation, deep tech and general technology programmes worldwide.</div>
+        </div>
+      </div>
+
+      <!-- USA -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇺🇸</span><span class="country-name">United States</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">Y Combinator</div><div class="incubator-focus">All sectors · Seed</div><div class="incubator-desc">The world's most influential startup accelerator. $500K investment, 3-month intensive programme, access to the YC network. Alumni include Airbnb, Stripe, OpenAI and Dropbox.</div><a class="incubator-link" href="https://www.ycombinator.com/apply" target="_blank">Apply at ycombinator.com →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Techstars</div><div class="incubator-focus">All sectors · Global</div><div class="incubator-desc">90-day accelerator with $120K investment and access to a global network of 10,000+ mentors. Programmes across 40+ cities worldwide, including AI-focused cohorts.</div><a class="incubator-link" href="https://www.techstars.com/accelerators" target="_blank">Apply at techstars.com →</a></div>
+          <div class="incubator-card"><div class="incubator-name">500 Global</div><div class="incubator-focus">Global · Seed</div><div class="incubator-desc">VC firm with 150 staff across 20 countries investing in 74 countries. Four-month seed programme with bootcamps. Alumni: Canva, Twilio, Udemy.</div><a class="incubator-link" href="https://500.co/accelerators" target="_blank">Apply at 500.co →</a></div>
+          <div class="incubator-card"><div class="incubator-name">MIT delta v</div><div class="incubator-focus">Deep Tech · Research</div><div class="incubator-desc">MIT's flagship accelerator for student and alumni founders. Access to MIT labs, faculty and the Cambridge innovation ecosystem. Deep tech and AI focus.</div><a class="incubator-link" href="https://entrepreneurship.mit.edu/accelerator/" target="_blank">Apply at mit.edu →</a></div>
+        </div>
+      </div>
+
+      <!-- UK -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇬🇧</span><span class="country-name">United Kingdom</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">Entrepreneur First</div><div class="incubator-focus">Deep Tech · Pre-team</div><div class="incubator-desc">Unique pre-team programme — helps talented individuals find co-founders and build companies from scratch. Strong AI and deep tech focus. London, Singapore, Paris.</div><a class="incubator-link" href="https://www.joinef.com" target="_blank">Apply at joinef.com →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Wayra UK (Telefónica)</div><div class="incubator-focus">AI · Telecoms Tech</div><div class="incubator-desc">Telefónica's global innovation hub backing early-stage AI and telecoms startups. Offers commercial pilots, investment and access to Telefónica's global customer base.</div><a class="incubator-link" href="https://wayra.com/uk" target="_blank">Apply at wayra.com/uk →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Level39 (Canary Wharf)</div><div class="incubator-focus">Fintech · AI · Cybersecurity</div><div class="incubator-desc">Europe's largest technology accelerator for fintech, retail tech, cyber and smart city companies. Located in Canary Wharf, London, with access to major financial institutions.</div><a class="incubator-link" href="https://www.level39.co" target="_blank">Apply at level39.co →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Founders Factory</div><div class="incubator-focus">All sectors · London</div><div class="incubator-desc">Partners with corporates (Aviva, L'Oréal, EDF) to launch and scale startups. Two programmes: Accelerator (existing startups) and Studio (building from scratch).</div><a class="incubator-link" href="https://foundersfactory.com" target="_blank">Apply at foundersfactory.com →</a></div>
+        </div>
+      </div>
+
+      <!-- France -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇫🇷</span><span class="country-name">France</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">Station F</div><div class="incubator-focus">All sectors · World's largest</div><div class="incubator-desc">The world's largest startup campus — 1,000+ startups, 30+ programmes, 600+ events annually. Partners include Facebook, Microsoft, Ubisoft. 35 public services on-site.</div><a class="incubator-link" href="https://stationf.co/programs" target="_blank">Apply at stationf.co →</a></div>
+          <div class="incubator-card"><div class="incubator-name">AGORANOV</div><div class="incubator-focus">Deep Tech · Scientific</div><div class="incubator-desc">Paris-based deep tech incubator for science and technology startups from universities including Sorbonne, ENS and Paris-Saclay. Strong AI and biotech track record.</div><a class="incubator-link" href="https://www.agoranov.com" target="_blank">Apply at agoranov.com →</a></div>
+        </div>
+      </div>
+
+      <!-- Germany -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇩🇪</span><span class="country-name">Germany</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">APX (Axel Springer + Porsche)</div><div class="incubator-focus">All sectors · Berlin</div><div class="incubator-desc">Joint venture by Axel Springer and Porsche. Pre-seed accelerator offering €50K investment, Berlin workspace and access to both corporate ecosystems.</div><a class="incubator-link" href="https://apx.ac" target="_blank">Apply at apx.ac →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Startupbootcamp</div><div class="incubator-focus">Industry-specific · Global</div><div class="incubator-desc">Vertical accelerators across AI, fintech, healthcare, energy and smart cities. European headquarters in Berlin and Amsterdam with programmes across 20+ cities.</div><a class="incubator-link" href="https://www.startupbootcamp.org/apply" target="_blank">Apply at startupbootcamp.org →</a></div>
+          <div class="incubator-card"><div class="incubator-name">UnternehmerTUM</div><div class="incubator-focus">Deep Tech · TU Munich</div><div class="incubator-desc">Europe's largest entrepreneurship centre, based at Technical University Munich. Supports 50+ startups annually with €3M+ in funding available and access to BMW and Siemens networks.</div><a class="incubator-link" href="https://www.unternehmertum.de/en" target="_blank">Apply at unternehmertum.de →</a></div>
+        </div>
+      </div>
+
+      <!-- India -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇮🇳</span><span class="country-name">India</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">T-Hub (Hyderabad)</div><div class="incubator-focus">All sectors · Gov-backed</div><div class="incubator-desc">India's largest and most active startup incubator, backed by Telangana state government. 2,400+ startups supported. Strong focus on AI, deep tech and industry partnerships.</div><a class="incubator-link" href="https://t-hub.co/apply" target="_blank">Apply at t-hub.co →</a></div>
+          <div class="incubator-card"><div class="incubator-name">NSRCEL (IIM Bangalore)</div><div class="incubator-focus">All sectors · IIM</div><div class="incubator-desc">India's premier business school incubator at IIM Bangalore. Supports 200+ ventures annually across technology, social enterprise and manufacturing sectors.</div><a class="incubator-link" href="https://nsrcel.org/apply" target="_blank">Apply at nsrcel.org →</a></div>
+          <div class="incubator-card"><div class="incubator-name">iCreate (Ahmedabad)</div><div class="incubator-focus">Hardware · Innovation</div><div class="incubator-desc">International Centre for Entrepreneurship and Technology. Gujarat government-backed with world-class hardware prototyping, manufacturing support and global market access.</div><a class="incubator-link" href="https://icreate.org.in" target="_blank">Apply at icreate.org.in →</a></div>
+          <div class="incubator-card"><div class="incubator-name">CIIE.CO (IIM Ahmedabad)</div><div class="incubator-focus">Sustainability · AI</div><div class="incubator-desc">Centre for Innovation, Incubation and Entrepreneurship at IIM Ahmedabad. Specialises in climate tech, health tech and AI. Has invested in 800+ ventures since 2002.</div><a class="incubator-link" href="https://ciie.co" target="_blank">Apply at ciie.co →</a></div>
+        </div>
+      </div>
+
+      <!-- Singapore -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇸🇬</span><span class="country-name">Singapore</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">BLOCK71</div><div class="incubator-focus">Technology · NUS</div><div class="incubator-desc">NUS Enterprise's flagship innovation space. Part of a global network with nodes in San Francisco, Jakarta, Yogyakarta and Suzhou. 1,000+ startups housed since 2011.</div><a class="incubator-link" href="https://nus.edu.sg/enterprise/block71" target="_blank">Apply at nus.edu.sg →</a></div>
+          <div class="incubator-card"><div class="incubator-name">SGInnovate</div><div class="incubator-focus">Deep Tech · AI</div><div class="incubator-desc">Singapore government-owned deep tech investor and incubator. Focuses on AI, quantum computing, biotech and space tech. Co-invests with global VCs and connects founders to research institutions.</div><a class="incubator-link" href="https://www.sginnovate.com/programmes" target="_blank">Apply at sginnovate.com →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Plug and Play Singapore</div><div class="incubator-focus">All sectors · Corporate</div><div class="incubator-desc">Global innovation platform connecting startups to Fortune 500 corporations. Singapore hub focuses on fintech, supply chain, health and sustainability tech.</div><a class="incubator-link" href="https://www.plugandplaytechcenter.com/singapore/" target="_blank">Apply at plugandplaytechcenter.com →</a></div>
+        </div>
+      </div>
+
+      <!-- UAE -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇦🇪</span><span class="country-name">United Arab Emirates</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">Hub71 (Abu Dhabi)</div><div class="incubator-focus">All sectors · Gov-backed</div><div class="incubator-desc">Abu Dhabi's global tech ecosystem backed by Mubadala, SoftBank and Abu Dhabi Global Market. Provides subsidised housing, offices, health insurance and access to capital.</div><a class="incubator-link" href="https://hub71.com/apply/" target="_blank">Apply at hub71.com →</a></div>
+          <div class="incubator-card"><div class="incubator-name">In5 (Dubai)</div><div class="incubator-focus">Tech · Media · Design</div><div class="incubator-desc">Dubai's government-backed innovation centre with three specialised hubs: Tech, Media and Design. Supports 400+ companies and provides funding, workspace and market access.</div><a class="incubator-link" href="https://infive.ae" target="_blank">Apply at infive.ae →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Flat6Labs Abu Dhabi</div><div class="incubator-focus">Seed · MENA</div><div class="incubator-desc">MENA's leading seed programme backing early-stage startups across technology, fintech, health and sustainability. Active across 8 cities in the Arab world.</div><a class="incubator-link" href="https://www.flat6labs.com/apply/" target="_blank">Apply at flat6labs.com →</a></div>
+        </div>
+      </div>
+
+      <!-- Israel -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇮🇱</span><span class="country-name">Israel</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">8200 EISP</div><div class="incubator-focus">Cybersecurity · AI</div><div class="incubator-desc">Alumni entrepreneurship programme of Israel's elite Unit 8200 intelligence corps. Produces some of the world's leading cybersecurity and AI entrepreneurs. Global alumni network.</div><a class="incubator-link" href="https://www.8200eisp.com" target="_blank">Apply at 8200eisp.com →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Microsoft for Startups</div><div class="incubator-focus">AI · SaaS · Cloud</div><div class="incubator-desc">Israel is Microsoft's primary global innovation hub outside the US. Access to Azure credits ($350K), co-selling with Microsoft, and mentorship from Satya Nadella's engineering teams.</div><a class="incubator-link" href="https://startups.microsoft.com" target="_blank">Apply at startups.microsoft.com →</a></div>
+        </div>
+      </div>
+
+      <!-- Kenya & Nigeria -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🌍</span><span class="country-name">Africa (Kenya · Nigeria · South Africa)</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">iHub (Nairobi, Kenya)</div><div class="incubator-focus">Tech · Africa</div><div class="incubator-desc">Africa's most iconic tech innovation hub, founded 2010. Launched 200+ startups and served 20,000+ members. Focus on tech for African markets including agritech, fintech and healthtech.</div><a class="incubator-link" href="https://ihub.co.ke" target="_blank">Apply at ihub.co.ke →</a></div>
+          <div class="incubator-card"><div class="incubator-name">CcHub (Lagos, Nigeria)</div><div class="incubator-focus">Social Tech · All sectors</div><div class="incubator-desc">Nigeria's leading innovation centre with hubs in Lagos, Abuja, Nairobi and Kigali. Backed by Google and Omidyar Network. Strong focus on education tech and fintech for African contexts.</div><a class="incubator-link" href="https://cchubnigeria.com/apply" target="_blank">Apply at cchubnigeria.com →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Cape Innovation & Technology Initiative (Cape Town)</div><div class="incubator-focus">Tech · South Africa</div><div class="incubator-desc">South Africa's leading tech incubator, operating Silicon Cape initiative. Connects startups to government, investors and corporate partners across sub-Saharan Africa.</div><a class="incubator-link" href="https://citi.org.za" target="_blank">Apply at citi.org.za →</a></div>
+        </div>
+      </div>
+
+      <!-- Brazil -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇧🇷</span><span class="country-name">Brazil</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">ACE (São Paulo)</div><div class="incubator-focus">B2B SaaS · AI</div><div class="incubator-desc">Brazil's top early-stage accelerator for B2B startups, especially SaaS and AI. Has backed 500+ startups with $300M+ raised. Strong corporate partnership network.</div><a class="incubator-link" href="https://ace.ac/en/apply" target="_blank">Apply at ace.ac →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Cubo Itaú (São Paulo)</div><div class="incubator-focus">Fintech · Enterprise</div><div class="incubator-desc">Brazil's largest startup hub, backed by Itaú Unibanco. 250+ resident startups with direct access to one of Latin America's largest banks and its 50M+ customer base.</div><a class="incubator-link" href="https://cubo.network" target="_blank">Apply at cubo.network →</a></div>
+        </div>
+      </div>
+
+      <!-- Australia -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇦🇺</span><span class="country-name">Australia</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">Cicada Innovations (Sydney)</div><div class="incubator-focus">Deep Tech · Science</div><div class="incubator-desc">Australia's leading deep tech incubator housing 50+ companies across medtech, cleantech and advanced manufacturing. Backed by University of Sydney, UNSW, ANU and UTS.</div><a class="incubator-link" href="https://cicadainnovations.com/apply" target="_blank">Apply at cicadainnovations.com →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Stone &amp; Chalk (Sydney · Melbourne)</div><div class="incubator-focus">Fintech · AI · Gov Tech</div><div class="incubator-desc">Australia's largest startup hub with 800+ resident startups. Specialises in fintech, AI, cyber and govtech. Partners include ANZ Bank, KPMG and Australian government agencies.</div><a class="incubator-link" href="https://stoneandchalk.com.au/apply/" target="_blank">Apply at stoneandchalk.com.au →</a></div>
+        </div>
+      </div>
+
+      <!-- Canada -->
+      <div class="country-section">
+        <div class="country-header"><span class="country-flag">🇨🇦</span><span class="country-name">Canada</span><span class="country-count">Top incubators</span></div>
+        <div class="incubator-grid">
+          <div class="incubator-card"><div class="incubator-name">MaRS Discovery District (Toronto)</div><div class="incubator-focus">All sectors · Largest NA hub</div><div class="incubator-desc">One of the world's largest urban innovation hubs. 1,200+ client companies, $2B+ in annual revenue generated. Strong AI, healthtech and cleantech focus with federal government backing.</div><a class="incubator-link" href="https://www.marsdd.com/entrepreneurs/" target="_blank">Apply at marsdd.com →</a></div>
+          <div class="incubator-card"><div class="incubator-name">Communitech (Waterloo)</div><div class="incubator-focus">Tech · AI</div><div class="incubator-desc">Waterloo Region's innovation hub supporting 1,400+ companies. Backed by Google, Microsoft and Shopify. One of the strongest AI talent ecosystems globally, adjacent to University of Waterloo.</div><a class="incubator-link" href="https://www.communitech.ca/how-we-help/startups/" target="_blank">Apply at communitech.ca →</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════ ACCOUNT PAGE ══════ -->
+  <div id="page-account" class="page">
+    <div class="page-shell">
+      <div class="page-hero">
+        <div class="page-hero-icon">👤</div>
+        <div>
+          <div class="page-hero-title">Your Account</div>
+          <div class="page-hero-sub">Manage your AI Disco profile and track your learning progress across 80 automation and AI tools.</div>
+        </div>
+      </div>
+      <div class="account-grid">
+        <div class="account-sidebar">
+          <div class="account-profile-card">
+            <div class="account-avatar" id="acctAvatar">?</div>
+            <div class="account-name-display" id="acctName">—</div>
+            <div class="account-email-display" id="acctEmail">—</div>
+            <div class="account-badge">✦ AI Disco Member</div>
+          </div>
+        </div>
+        <div class="account-main">
+          <div class="account-card">
+            <div class="account-card-title">📋 Profile Details</div>
+            <div class="account-field"><label>Full Name</label><div class="value" id="acctNameField">—</div></div>
+            <div class="account-field"><label>Email Address</label><div class="value" id="acctEmailField">—</div></div>
+            <div class="account-field"><label>Member Since</label><div class="value" id="acctJoined">—</div></div>
+          </div>
+          <div class="account-card">
+            <div class="account-card-title">📊 Platform Stats</div>
+            <div class="account-stat-row">
+              <div class="account-stat-box"><div class="account-stat-n">80</div><div class="account-stat-l">Tools Available</div></div>
+              <div class="account-stat-box"><div class="account-stat-n">175+</div><div class="account-stat-l">Learning Paths</div></div>
+              <div class="account-stat-box"><div class="account-stat-n">11</div><div class="account-stat-l">Categories</div></div>
+            </div>
+          </div>
+          <div class="account-card">
+            <div class="account-card-title">⚙️ Account Actions</div>
+            <button class="btn-danger" onclick="signOut()">Sign out of AI Disco</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end appShell -->
 
 <script>
-// ═════ CONFIG ═════
-const CAT_COLORS = {
-  'Workflow Automation':              '#4f46e5',
-  'RPA & Intelligent Automation':    '#dc2626',
-  'Project & Programme Management':  '#2563eb',
-  'Data & Analytics':                '#0891b2',
-  'Knowledge & Document Management': '#7c3aed',
-  'Meeting & Communication Intelligence': '#d97706',
-  'Sales & CRM Automation':          '#059669',
-  'HR & People Operations':          '#db2777',
-  'Customer Operations':             '#0284c7',
-  'Process Intelligence':            '#65a30d',
-  'AI Research & Intelligence':      '#9333ea'
+// ══════════════════════════════════
+// AUTH
+// ══════════════════════════════════
+const USERS_KEY = 'aidisco_users';
+const SESSION_KEY = 'aidisco_session';
+
+function getUsers(){try{return JSON.parse(localStorage.getItem(USERS_KEY)||'[]')}catch{return[]}}
+function saveUsers(u){localStorage.setItem(USERS_KEY,JSON.stringify(u))}
+function getSession(){try{return JSON.parse(localStorage.getItem(SESSION_KEY)||'null')}catch{return null}}
+function saveSession(s){localStorage.setItem(SESSION_KEY,JSON.stringify(s))}
+
+function hashPass(p){
+  let h=0;for(let i=0;i<p.length;i++){h=((h<<5)-h)+p.charCodeAt(i);h|=0}
+  return h.toString(36);
+}
+
+function switchTab(t){
+  document.getElementById('tabLogin').classList.toggle('active',t==='login');
+  document.getElementById('tabReg').classList.toggle('active',t==='register');
+  document.getElementById('loginForm').classList.toggle('hidden',t!=='login');
+  document.getElementById('regForm').classList.toggle('hidden',t!=='register');
+}
+
+function showErr(id,msg){
+  const el=document.getElementById(id);
+  el.textContent=msg||el.textContent;
+  el.classList.add('show');
+  document.getElementById(id.replace('Err',''))?.classList.add('error');
+}
+function clearErr(id){
+  document.getElementById(id)?.classList.remove('show');
+  document.getElementById(id.replace('Err',''))?.classList.remove('error');
+}
+
+function doLogin(){
+  const email=document.getElementById('loginEmail').value.trim();
+  const pass=document.getElementById('loginPass').value;
+  clearErr('loginEmailErr');clearErr('loginPassErr');
+  if(!email||!email.includes('@')){showErr('loginEmailErr');return}
+  const users=getUsers();
+  const user=users.find(u=>u.email===email);
+  if(!user||user.pass!==hashPass(pass)){
+    showErr('loginPassErr','Email or password incorrect');return;
+  }
+  saveSession({name:user.name,email:user.email,joined:user.joined});
+  bootApp();
+}
+
+function doRegister(){
+  const name=document.getElementById('regName').value.trim();
+  const email=document.getElementById('regEmail').value.trim();
+  const pass=document.getElementById('regPass').value;
+  clearErr('regNameErr');clearErr('regEmailErr');clearErr('regPassErr');
+  if(!name){showErr('regNameErr','Please enter your name');return}
+  if(!email||!email.includes('@')){showErr('regEmailErr','Please enter a valid email');return}
+  if(pass.length<6){showErr('regPassErr','Minimum 6 characters');return}
+  const users=getUsers();
+  if(users.find(u=>u.email===email)){showErr('regEmailErr','This email is already registered');return}
+  const joined=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  users.push({name,email,pass:hashPass(pass),joined});
+  saveUsers(users);
+  saveSession({name,email,joined});
+  bootApp();
+}
+
+function signOut(){
+  localStorage.removeItem(SESSION_KEY);
+  location.reload();
+}
+
+function bootApp(){
+  const s=getSession();
+  if(!s)return;
+  document.getElementById('loginPage').classList.add('hidden');
+  document.getElementById('appShell').classList.remove('hidden');
+  // Set nav
+  document.getElementById('navAvatar').textContent=s.name.charAt(0).toUpperCase();
+  document.getElementById('navName').textContent=s.name.split(' ')[0];
+  // Set account page
+  const initial=s.name.charAt(0).toUpperCase();
+  document.getElementById('acctAvatar').textContent=initial;
+  document.getElementById('acctName').textContent=s.name;
+  document.getElementById('acctEmail').textContent=s.email;
+  document.getElementById('acctNameField').textContent=s.name;
+  document.getElementById('acctEmailField').textContent=s.email;
+  document.getElementById('acctJoined').textContent=s.joined||'—';
+  initTools();
+}
+
+// ══════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const pg=document.getElementById('page-'+id);
+  if(pg){pg.classList.add('active');window.scrollTo(0,0)}
+  document.querySelectorAll('.drawer-item').forEach(i=>{
+    i.classList.toggle('active',i.dataset.page===id);
+  });
+}
+
+function toggleDrawer(){
+  const open=document.getElementById('drawer').classList.toggle('open');
+  document.getElementById('drawerBackdrop').classList.toggle('open',open);
+  document.getElementById('burgerBtn').classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+function closeDrawer(){
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('drawerBackdrop').classList.remove('open');
+  document.getElementById('burgerBtn').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
+
+// ══════════════════════════════════
+// TOOLS
+// ══════════════════════════════════
+const CAT_COLORS={
+  'Workflow Automation':'#4f46e5',
+  'RPA & Intelligent Automation':'#dc2626',
+  'Project & Programme Management':'#2563eb',
+  'Data & Analytics':'#0891b2',
+  'Knowledge & Document Management':'#7c3aed',
+  'Meeting & Communication Intelligence':'#d97706',
+  'Sales & CRM Automation':'#059669',
+  'HR & People Operations':'#db2777',
+  'Customer Operations':'#0284c7',
+  'Process Intelligence':'#65a30d',
+  'AI Research & Intelligence':'#9333ea'
 };
+const LEVEL_CLASS={beginner:'lv-beginner',intermediate:'lv-intermediate',advanced:'lv-advanced',expert:'lv-expert','all levels':'lv-intermediate'};
 
-const LEVEL_CLASS = {
-  beginner: 'lv-beginner',
-  intermediate: 'lv-intermediate',
-  advanced: 'lv-advanced',
-  expert: 'lv-expert',
-  'all levels': 'lv-intermediate'
-};
+let tools=[];
+let activeCategory='All';
+let searchQuery='';
+let easeMax=10;
 
-// ═════ STATE ═════
-let tools = [];
-let activeCategory = 'All';
-let searchQuery = '';
-let easeMax = 10;
-
-// ═════ LOGO SYSTEM ═════
-function getLogo(domain, el) {
-  el.textContent = domain.charAt(0).toUpperCase();
-  let i = 0;
-  const srcs = [
+function getLogo(domain,el){
+  el.textContent=domain.charAt(0).toUpperCase();
+  let i=0;
+  const srcs=[
     `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${domain}&size=256`,
     `https://icons.duckduckgo.com/ip3/${domain}.ico`
   ];
-  function next() {
-    if (i >= srcs.length) return;
-    const img = new Image();
-    img.onload = () => {
-      el.textContent = '';
-      const im = document.createElement('img');
-      im.src = img.src;
-      im.alt = domain;
-      el.appendChild(im);
-    };
-    img.onerror = () => { i++; next(); };
-    img.src = srcs[i++];
+  function next(){
+    if(i>=srcs.length)return;
+    const img=new Image();
+    img.onload=()=>{el.textContent='';const im=document.createElement('img');im.src=img.src;im.alt=domain;el.appendChild(im)};
+    img.onerror=()=>{i++;next()};
+    img.src=srcs[i++];
   }
   next();
 }
 
-// ═════ SANITISE ═════
-function s(v) {
-  if (!v) return '';
-  return String(v)
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
+function s(v){if(!v)return'';return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function lclass(l=''){return LEVEL_CLASS[l.toLowerCase().split(' ')[0]]||'lv-intermediate'}
+function isOfficial(c){const p=(c.provider||'').toLowerCase();return!p.includes('youtube')&&!p.includes('linkedin learning')&&!p.includes('community')&&!p.includes('coursera')}
+function hasOfficialCerts(t){return(t.certifications||[]).some(isOfficial)}
 
-// ═════ LEVEL ═════
-function lclass(l = '') {
-  const k = l.toLowerCase().split(' ')[0];
-  return LEVEL_CLASS[k] || 'lv-intermediate';
-}
-
-// ═════ OFFICIAL CERT CHECK ═════
-function isOfficial(cert) {
-  const p = (cert.provider || '').toLowerCase();
-  return !p.includes('youtube') && !p.includes('linkedin learning') &&
-         !p.includes('community') && !p.includes('coursera');
-}
-
-function hasOfficialCerts(tool) {
-  return (tool.certifications || []).some(isOfficial);
-}
-
-// ═════ INIT ═════
-async function init() {
-  try {
-    const r = await fetch('tools.json?v=' + Date.now());
-    tools = await r.json();
-  } catch(e) {
-    document.getElementById('toolList').innerHTML = `
-      <div class="empty-state">
-        <div class="empty-icon">⚠️</div>
-        <div class="empty-msg">Could not load tools.json</div>
-        <div class="empty-sub">Make sure tools.json is deployed in the same directory as index.html</div>
-      </div>`;
+async function initTools(){
+  try{
+    const r=await fetch('tools.json?v='+Date.now());
+    tools=await r.json();
+  }catch(e){
+    document.getElementById('toolList').innerHTML='<div class="empty-state"><div class="empty-icon">⚠️</div><div class="empty-msg">Could not load tools.json</div><div class="empty-sub">Make sure tools.json is deployed in the same directory as index.html</div></div>';
     return;
   }
-
-  // Update hero stats
-  const totalPaths = tools.reduce((n, t) => n + (t.certifications || []).length, 0);
-  document.getElementById('statTools').textContent = tools.length;
-  document.getElementById('statPaths').textContent = totalPaths + '+';
-
-  // Last refresh label
-  const lr = tools.reduce((d, t) => {
-    const td = t.certLastRefreshed || t.date || '2025-01-01';
-    return td > d ? td : d;
-  }, '');
-  if (lr) {
-    const d = new Date(lr);
-    document.getElementById('lastRefreshLabel').textContent =
-      'Refreshed ' + d.toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'});
-  }
-
+  const totalPaths=tools.reduce((n,t)=>n+(t.certifications||[]).length,0);
+  document.getElementById('statTools').textContent=tools.length;
+  document.getElementById('statPaths').textContent=totalPaths+'+';
+  const lr=tools.reduce((d,t)=>{const td=t.certLastRefreshed||t.date||'';return td>d?td:d},'');
+  if(lr){const d=new Date(lr);document.getElementById('lastRefreshLabel').textContent='Refreshed '+d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}
   buildCatPills();
   setupFilters();
   renderList();
 }
 
-// ═════ CATEGORY PILLS ═════
-function buildCatPills() {
-  const el = document.getElementById('catPills');
-  const cats = ['All', ...Object.keys(CAT_COLORS)];
-  cats.forEach(c => {
-    const btn = document.createElement('button');
-    btn.className = 'cat-pill' + (c === 'All' ? ' active' : '');
-    btn.dataset.cat = c;
-    if (c === 'All') {
-      btn.textContent = 'All';
-    } else {
-      btn.innerHTML = `<span class="cat-dot" style="background:${CAT_COLORS[c]}"></span>${c}`;
-    }
-    btn.addEventListener('click', () => {
-      activeCategory = c;
-      document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+function buildCatPills(){
+  const el=document.getElementById('catPills');
+  el.innerHTML='';
+  const cats=['All',...Object.keys(CAT_COLORS)];
+  cats.forEach(c=>{
+    const btn=document.createElement('button');
+    btn.className='cat-pill'+(c==='All'?' active':'');
+    btn.dataset.cat=c;
+    if(c==='All')btn.textContent='All';
+    else btn.innerHTML=`<span class="cat-dot" style="background:${CAT_COLORS[c]}"></span>${c}`;
+    btn.addEventListener('click',()=>{
+      activeCategory=c;
+      document.querySelectorAll('.cat-pill').forEach(p=>p.classList.remove('active'));
       btn.classList.add('active');
       renderList();
     });
@@ -1079,186 +1141,95 @@ function buildCatPills() {
   });
 }
 
-// ═════ FILTER ═════
-function getFiltered() {
-  const q = searchQuery.toLowerCase();
-  return tools.filter(t => {
-    if (activeCategory !== 'All' && t.category !== activeCategory) return false;
-    if (t.ease > easeMax) return false;
-    if (q) {
-      const hay = [
-        t.name, t.tagline, t.problem, t.category, t.businessArea,
-        ...(t.useCases || []), ...(t.industry || []),
-        ...(t.certifications || []).map(c => c.title + ' ' + c.provider)
-      ].join(' ').toLowerCase();
-      if (!hay.includes(q)) return false;
-    }
+function getFiltered(){
+  const q=searchQuery.toLowerCase();
+  return tools.filter(t=>{
+    if(activeCategory!=='All'&&t.category!==activeCategory)return false;
+    if(t.ease>easeMax)return false;
+    if(q){const hay=[t.name,t.tagline,t.problem,t.category,t.businessArea,...(t.useCases||[]),...(t.industry||[]),...(t.certifications||[]).map(c=>c.title+' '+c.provider)].join(' ').toLowerCase();if(!hay.includes(q))return false}
     return true;
   });
 }
 
-// ═════ RENDER LIST ═════
-function renderList() {
-  const filtered = getFiltered();
-  document.getElementById('filterCount').textContent = filtered.length + ' tool' + (filtered.length !== 1 ? 's' : '');
-  document.getElementById('gridHeader').textContent =
-    activeCategory === 'All' ? 'All Tools' : activeCategory;
-
-  const list = document.getElementById('toolList');
-
-  if (filtered.length === 0) {
-    list.innerHTML = `<div class="empty-state">
-      <div class="empty-icon">🔍</div>
-      <div class="empty-msg">No tools match</div>
-      <div class="empty-sub">Try adjusting your search or category filter</div>
-    </div>`;
-    return;
-  }
-
-  list.innerHTML = '';
-  filtered.forEach((t, i) => {
-    const card = buildCard(t);
-    card.style.animationDelay = Math.min(i * 0.025, 0.35) + 's';
-    list.appendChild(card);
-  });
+function renderList(){
+  const filtered=getFiltered();
+  document.getElementById('filterCount').textContent=filtered.length+' tool'+(filtered.length!==1?'s':'');
+  document.getElementById('gridHeader').textContent=activeCategory==='All'?'All Tools':activeCategory;
+  const list=document.getElementById('toolList');
+  if(filtered.length===0){list.innerHTML='<div class="empty-state"><div class="empty-icon">🔍</div><div class="empty-msg">No tools match</div><div class="empty-sub">Try adjusting your search or category filter</div></div>';return}
+  list.innerHTML='';
+  filtered.forEach((t,i)=>{const card=buildCard(t);card.style.animationDelay=Math.min(i*.025,.35)+'s';list.appendChild(card)});
 }
 
-// ═════ BUILD CARD ═════
-function buildCard(t) {
-  const certs = t.certifications || [];
-  const official = hasOfficialCerts(t);
-  const easeW = Math.round((t.ease / 10) * 100);
-  const catColor = CAT_COLORS[t.category] || '#4f46e5';
-
-  const card = document.createElement('div');
-  card.className = 'tool-card';
-
-  // Build cert rows HTML
-  const certRowsHtml = certs.length > 0
-    ? certs.map(c => {
-        const isFree = (c.type || '').toLowerCase() === 'free';
-        const lc = lclass(c.level);
-        const isOff = isOfficial(c);
-        return `
-          <a class="cert-row ${isFree ? 'free-row' : 'paid-row'}"
-             href="${s(c.url)}" target="_blank" rel="noopener">
-            <span class="cert-type-badge ${isFree ? 'free' : 'paid'}">${s(c.type)}</span>
-            <div class="cert-info">
-              <span class="cert-name">${s(c.title)}</span>
-              <span class="cert-details">
-                <span>${s(c.provider)}</span>
-                <span class="cert-detail-sep">·</span>
-                <span class="cert-level-badge ${lc}">
-                  <span class="level-dot"></span>${s(c.level)}
-                </span>
-                <span class="cert-detail-sep">·</span>
-                <span>${s(c.duration)}</span>
-              </span>
-            </div>
-            <span class="cert-arrow">→</span>
-          </a>`;
-      }).join('')
-    : `<div style="font-size:13px;color:var(--text3);padding:8px 0;">No learning paths catalogued yet.</div>`;
-
-  const lastRefresh = t.certLastRefreshed
-    ? `<span class="last-refreshed">
-         <span class="refresh-dot"></span>
-         Updated ${new Date(t.certLastRefreshed).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}
-       </span>`
-    : '';
-
-  card.innerHTML = `
-    <div class="card-body">
-
-      <!-- LEFT: Tool Info -->
-      <div class="card-left">
-        <div class="card-identity">
-          <div class="tool-logo" id="logo-${t.id}"></div>
-          <div class="tool-titles">
-            <div class="tool-name">${s(t.name)}</div>
-            <div class="tool-cat-line">
-              <span class="cat-dot" style="background:${catColor}"></span>
-              ${s(t.category)}
-            </div>
-          </div>
-        </div>
-
-        <div class="tool-tagline">${s(t.tagline)}</div>
-
-        <div class="tool-uses">
-          ${(t.useCases || []).slice(0,4).map(u => `<span class="use-tag">${s(u)}</span>`).join('')}
-        </div>
-
-        <div class="ease-wrap">
-          <div class="ease-header">
-            <span class="ease-label-text">Ease of adoption</span>
-            <span class="ease-label-val">${s(t.easeLabel || '')}</span>
-          </div>
-          <div class="ease-track">
-            <div class="ease-fill" style="width:${easeW}%"></div>
-          </div>
-        </div>
-
-        <div class="card-actions">
-          <a class="btn-explore" href="${s(t.url)}" target="_blank" rel="noopener">
-            ↗ Explore ${s(t.name)}
-          </a>
-        </div>
+function buildCard(t){
+  const certs=t.certifications||[];
+  const official=hasOfficialCerts(t);
+  const easeW=Math.round((t.ease/10)*100);
+  const catColor=CAT_COLORS[t.category]||'#4f46e5';
+  const certRowsHtml=certs.length>0?certs.map(c=>{
+    const isFree=(c.type||'').toLowerCase()==='free';
+    const lc=lclass(c.level);
+    return`<a class="cert-row ${isFree?'free-row':'paid-row'}" href="${s(c.url)}" target="_blank" rel="noopener">
+      <span class="cert-type-badge ${isFree?'free':'paid'}">${s(c.type)}</span>
+      <div class="cert-info"><span class="cert-name">${s(c.title)}</span>
+      <span class="cert-details"><span>${s(c.provider)}</span><span class="cert-detail-sep">·</span>
+      <span class="cert-level-badge ${lc}"><span class="level-dot"></span>${s(c.level)}</span>
+      <span class="cert-detail-sep">·</span><span>${s(c.duration)}</span></span></div>
+      <span class="cert-arrow">→</span></a>`;
+  }).join(''):'<div style="font-size:13px;color:var(--text3);padding:8px 0">No learning paths catalogued yet.</div>';
+  const lastRefresh=t.certLastRefreshed?`<span class="last-refreshed"><span class="refresh-dot"></span>Updated ${new Date(t.certLastRefreshed).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}</span>`:'';
+  const card=document.createElement('div');
+  card.className='tool-card';
+  card.innerHTML=`<div class="card-body">
+    <div class="card-left">
+      <div class="card-identity">
+        <div class="tool-logo" id="logo-${t.id}"></div>
+        <div class="tool-titles"><div class="tool-name">${s(t.name)}</div>
+        <div class="tool-cat-line"><span class="cat-dot" style="background:${catColor}"></span>${s(t.category)}</div></div>
       </div>
-
-      <!-- RIGHT: Certifications directly visible -->
-      <div class="card-right">
-        <div class="certs-header">
-          <span class="certs-title">
-            <span class="certs-icon">📚</span>
-            Learning Paths
-          </span>
-          <div style="display:flex;align-items:center;gap:10px">
-            ${lastRefresh}
-            <span class="certs-count">
-              ${certs.length} path${certs.length !== 1 ? 's' : ''}
-              ${official ? ' · official' : ' · community'}
-            </span>
-          </div>
-        </div>
-        <div class="certs-list">
-          ${certRowsHtml}
-        </div>
+      <div class="tool-tagline">${s(t.tagline)}</div>
+      <div class="tool-uses">${(t.useCases||[]).slice(0,4).map(u=>`<span class="use-tag">${s(u)}</span>`).join('')}</div>
+      <div class="ease-wrap">
+        <div class="ease-header"><span class="ease-label-text">Ease of adoption</span><span class="ease-label-val">${s(t.easeLabel||'')}</span></div>
+        <div class="ease-track"><div class="ease-fill" style="width:${easeW}%"></div></div>
       </div>
+      <div class="card-actions"><a class="btn-explore" href="${s(t.url)}" target="_blank" rel="noopener">↗ Explore ${s(t.name)}</a></div>
     </div>
-  `;
-
-  // Load logo after DOM attach
-  requestAnimationFrame(() => {
-    const el = document.getElementById('logo-' + t.id);
-    if (el) getLogo(t.domain, el);
-  });
-
+    <div class="card-right">
+      <div class="certs-header">
+        <span class="certs-title"><span>📚</span>Learning Paths</span>
+        <div style="display:flex;align-items:center;gap:10px">${lastRefresh}<span class="certs-count">${certs.length} path${certs.length!==1?'s':''}${official?' · official':' · community'}</span></div>
+      </div>
+      <div class="certs-list">${certRowsHtml}</div>
+    </div>
+  </div>`;
+  requestAnimationFrame(()=>{const el=document.getElementById('logo-'+t.id);if(el)getLogo(t.domain,el)});
   return card;
 }
 
-// ═════ FILTERS SETUP ═════
-function setupFilters() {
-  document.getElementById('searchInput').addEventListener('input', e => {
-    searchQuery = e.target.value.trim();
-    renderList();
-  });
-
-  const slider = document.getElementById('easeSlider');
-  const valEl = document.getElementById('easeVal');
-  function syncSlider() {
-    easeMax = parseInt(slider.value);
-    valEl.textContent = easeMax;
-    const pct = ((easeMax - 1) / 9 * 100) + '%';
-    slider.style.setProperty('--pct', pct);
-    renderList();
-  }
-  slider.addEventListener('input', syncSlider);
+function setupFilters(){
+  document.getElementById('searchInput').addEventListener('input',e=>{searchQuery=e.target.value.trim();renderList()});
+  const slider=document.getElementById('easeSlider');
+  const valEl=document.getElementById('easeVal');
+  function syncSlider(){easeMax=parseInt(slider.value);valEl.textContent=easeMax;slider.style.setProperty('--pct',((easeMax-1)/9*100)+'%');renderList()}
+  slider.addEventListener('input',syncSlider);
   syncSlider();
 }
 
-// ═════ START ═════
-init();
+// ══════════════════════════════════
+// BOOT
+// ══════════════════════════════════
+const session=getSession();
+if(session){bootApp()}
+else{
+  // Allow enter key on login
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Enter'){
+      if(!document.getElementById('loginForm').classList.contains('hidden'))doLogin();
+      else if(!document.getElementById('regForm').classList.contains('hidden'))doRegister();
+    }
+  });
+}
 </script>
 </body>
 </html>
