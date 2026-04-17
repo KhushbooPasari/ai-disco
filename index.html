@@ -24,12 +24,21 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:
-    linear-gradient(rgba(240,242,249,0.87),rgba(240,242,249,0.87)),
-    url('robot-bg.jpg') center/cover fixed;
+  background:var(--bg);
   color:var(--text);
   font-family:'Plus Jakarta Sans',sans-serif;
   min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+
+/* Robot background — only on active bg pages, 35% visible */
+.page.active.page-has-bg::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:url('robot-bg.jpg') center/cover no-repeat;
+  opacity:0.35;
+  z-index:-1;
+  pointer-events:none;
 }
 .hidden{display:none!important}
 .page{display:none}
@@ -202,7 +211,7 @@ nav{
   top:var(--nav-h);
   height:calc(100vh - var(--nav-h));
   overflow-y:auto;
-  background:rgba(255,255,255,0.96);
+  background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);
   border-right:1px solid var(--border);
   box-shadow:2px 0 16px rgba(30,15,107,0.06);
   display:flex;flex-direction:column;
@@ -273,30 +282,12 @@ input[type=range].ease-slider::-webkit-slider-thumb{-webkit-appearance:none;widt
 .tools-content{
   position:relative;
   min-height:calc(100vh - var(--nav-h));
-  overflow:hidden;
+  z-index:1;
 }
 
 /* ROBOT IMAGE BACKGROUND */
-.tools-bg{
-  position:absolute;inset:0;
-  background:url('robot-bg.jpg') center/cover no-repeat;
-  z-index:0;
-  will-change:transform;
-}
-.tools-bg::after{
-  content:'';position:absolute;inset:0;
-  background:
-    linear-gradient(180deg,
-      rgba(240,242,249,0.92) 0%,
-      rgba(240,242,249,0.82) 30%,
-      rgba(240,242,249,0.88) 70%,
-      rgba(240,242,249,0.95) 100%
-    ),
-    linear-gradient(135deg,
-      rgba(79,70,229,0.06) 0%,
-      rgba(30,15,107,0.04) 100%
-    );
-}
+.tools-bg{display:none}/* bg now handled by page-has-bg on body */
+
 
 /* ROBOTIC BACKGROUND CANVAS */
 .main{max-width:none;margin:0;padding:32px 28px 80px;position:relative;z-index:2}
@@ -458,8 +449,8 @@ input[type=range].ease-slider::-webkit-slider-thumb{-webkit-appearance:none;widt
 .empty-sub{font-size:14px;color:var(--text3)}
 
 /* PAGE SHELLS */
-.page-shell{max-width:1100px;margin:0 auto;padding:48px 28px 100px}
-.page-hero{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:44px;margin-bottom:48px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:24px;position:relative;overflow:hidden}
+.page-shell{max-width:1100px;margin:0 auto;padding:48px 28px 100px;position:relative;z-index:1}
+.page-hero{background:rgba(255,255,255,0.82);border:1.5px solid rgba(148,210,230,0.5);border-radius:var(--radius);padding:44px;margin-bottom:48px;box-shadow:var(--shadow-sm);backdrop-filter:blur(8px);display:flex;align-items:center;gap:24px;position:relative;overflow:hidden}
 .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 90% 50%,var(--accent-bg) 0%,transparent 70%);pointer-events:none}
 .page-hero-icon{font-size:52px;flex-shrink:0;animation:iconBounce 2.5s ease-in-out infinite}
 @keyframes iconBounce{0%,100%{transform:translateY(0) rotate(0deg)}25%{transform:translateY(-8px) rotate(-3deg)}75%{transform:translateY(-4px) rotate(2deg)}}
@@ -560,7 +551,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
 
 /* ── INDUSTRY CASE STUDIES CSS ── */
 .cases-layout{display:grid;grid-template-columns:264px 1fr;min-height:calc(100vh - var(--nav-h));align-items:start}
-.cases-content{padding:40px 32px 80px;min-height:calc(100vh - var(--nav-h))}
+.cases-content{padding:40px 32px 80px;min-height:calc(100vh - var(--nav-h));position:relative;z-index:1}
 .cases-header{margin-bottom:32px}
 .cases-hero-title{font-size:28px;font-weight:800;color:var(--text);letter-spacing:-.025em;margin-bottom:8px}
 .cases-hero-sub{font-size:14px;color:var(--text2);line-height:1.65;max-width:700px}
@@ -590,7 +581,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
 .case-source a:hover{text-decoration:underline}
 .case-date{font-size:10.5px;font-family:'JetBrains Mono',monospace;color:var(--text3);display:flex;align-items:center;gap:4px}
 .refresh-dot-case{width:5px;height:5px;border-radius:50%;background:var(--green);animation:blink 2s ease infinite;flex-shrink:0}
-.cases-sidebar{position:sticky;top:var(--nav-h);height:calc(100vh - var(--nav-h));overflow-y:auto;background:rgba(255,255,255,0.96);border-right:1px solid var(--border);box-shadow:2px 0 16px rgba(30,15,107,0.06);display:flex;flex-direction:column;z-index:90;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.cases-sidebar{position:sticky;top:var(--nav-h);height:calc(100vh - var(--nav-h));overflow-y:auto;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border-right:1px solid var(--border);box-shadow:2px 0 16px rgba(30,15,107,0.06);display:flex;flex-direction:column;z-index:90;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
 .cases-sidebar::-webkit-scrollbar{width:4px}
 .cases-sidebar::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
 .cases-empty{grid-column:1/-1;text-align:center;padding:60px 24px;background:var(--surface);border:1.5px dashed var(--border);border-radius:var(--radius)}
@@ -609,9 +600,11 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
 }
 .mobile-filter-bar{
   display:none;
-  position:sticky;top:var(--nav-h);z-index:200;
-  box-shadow:0 2px 8px rgba(0,0,0,0.15);
-  grid-column:1/-1;
+  position:sticky;
+  top:var(--nav-h);
+  z-index:200;
+  box-shadow:0 2px 12px rgba(30,15,107,0.2);
+  /* No grid-column needed — now sits outside the grid */
 }
 .mobile-filter-overlay{
   display:none;position:fixed;inset:0;z-index:200;
@@ -812,7 +805,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
   </div>
 
   <!-- TOOLS PAGE -->
-  <div id="page-tools" class="page active">
+  <div id="page-tools" class="page active page-has-bg">
     <section class="hero">
       <canvas id="heroCanvas"></canvas>
       <video class="hero-video" autoplay muted loop playsinline><source src="My_final_animation.mp4" type="video/mp4"></video>
@@ -838,15 +831,15 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
       <div class="ticker-fade-right"></div>
     </div>
 
+    <!-- MOBILE FILTER OVERLAY -->
+    <div class="mobile-filter-overlay" id="mobileFilterOverlay" onclick="closeMobileFilter()"></div>
+    <!-- MOBILE STICKY FILTER BAR — outside grid, sticky below nav -->
+    <div class="mobile-filter-bar" id="toolsMobileBar">
+      <button class="mobile-filter-btn" onclick="openMobileFilter()">
+        ☰ &nbsp;Filters &amp; Categories
+      </button>
+    </div>
     <div class="tools-layout">
-      <!-- MOBILE FILTER OVERLAY -->
-      <div class="mobile-filter-overlay" id="mobileFilterOverlay" onclick="closeMobileFilter()"></div>
-      <!-- MOBILE STICKY FILTER BAR — shown at top on small screens -->
-      <div class="mobile-filter-bar">
-        <button class="mobile-filter-btn" onclick="openMobileFilter()">
-          ☰ &nbsp;Filters &amp; Categories
-        </button>
-      </div>
       <!-- LEFT SIDEBAR FILTER -->
       <aside class="left-sidebar">
         <div class="sidebar-section">
@@ -899,7 +892,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
   </div>
 
   <!-- STATS PAGE -->
-  <div id="page-stats" class="page">
+  <div id="page-stats" class="page page-has-bg">
     <div class="page-shell">
       <div class="page-hero"><div class="page-hero-icon">📊</div><div><div class="page-hero-title">AI Adoption Statistics 2026</div><div class="page-hero-sub">Intelligence from McKinsey, BCG, Accenture, Stanford AI Index, Microsoft &amp; PwC — covering enterprise adoption, industry penetration, and regional dynamics worldwide.</div></div></div>
       <div class="section-label">Global Headline Numbers · 2026</div>
@@ -946,15 +939,15 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
   </div>
 
   <!-- INDUSTRY CASE STUDIES PAGE -->
-  <div id="page-cases" class="page">
+  <div id="page-cases" class="page page-has-bg">
+    <!-- MOBILE CONTROLS FOR CASES -->
+    <div class="mobile-filter-overlay" id="casesMobileOverlay" onclick="closeCasesMobileFilter()"></div>
+    <div class="mobile-filter-bar" id="casesMobileBar">
+      <button class="mobile-filter-btn" onclick="openCasesMobileFilter()">
+        ☰ &nbsp;Filter Case Studies
+      </button>
+    </div>
     <div class="cases-layout">
-      <!-- MOBILE CONTROLS FOR CASES -->
-      <div class="mobile-filter-overlay" id="casesMobileOverlay" onclick="closeCasesMobileFilter()"></div>
-      <div class="mobile-filter-bar">
-        <button class="mobile-filter-btn" onclick="openCasesMobileFilter()">
-          ☰ &nbsp;Filter Case Studies
-        </button>
-      </div>
       <!-- LEFT SIDEBAR -->
       <aside class="cases-sidebar">
         <div class="sidebar-section">
