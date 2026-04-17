@@ -23,7 +23,14 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{
+  background:
+    linear-gradient(rgba(240,242,249,0.87),rgba(240,242,249,0.87)),
+    url('robot-bg.jpg') center/cover fixed;
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
 .hidden{display:none!important}
 .page{display:none}
 .page.active{display:block;animation:pgIn .3s ease both}
@@ -376,7 +383,7 @@ input[type=range].ease-slider::-webkit-slider-thumb{-webkit-appearance:none;widt
 }
 
 .card-body{display:grid;grid-template-columns:300px 1fr}
-.card-left{padding:24px;display:flex;flex-direction:column;gap:12px;border-right:1px solid rgba(148,210,230,0.35)}
+.card-left{padding:24px;display:flex;flex-direction:column;gap:12px;border-right:1px solid rgba(148,210,230,0.35);position:relative;z-index:12}
 .card-identity{display:flex;align-items:flex-start;gap:12px}
 .tool-logo{width:44px;height:44px;border-radius:11px;background:linear-gradient(135deg,#f6f7ff,#eef0ff);border:1px solid rgba(200,205,230,0.6);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:16px;color:var(--accent);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 4px rgba(79,70,229,.08)}
 .tool-logo img{width:100%;height:100%;object-fit:contain;padding:5px}
@@ -409,14 +416,24 @@ input[type=range].ease-slider::-webkit-slider-thumb{-webkit-appearance:none;widt
 .btn-explore:hover{background:var(--accent-bg);border-color:var(--accent-border);color:var(--accent)}
 
 /* CERT PANEL */
-.card-right{padding:22px 24px;display:flex;flex-direction:column}
+.card-right{padding:22px 24px;display:flex;flex-direction:column;position:relative;z-index:12}
 .certs-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(226,229,240,0.6)}
 .certs-title{font-size:12px;font-family:'JetBrains Mono',monospace;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.1em;display:flex;align-items:center;gap:7px}
 .certs-count{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text3)}
 .last-refreshed{font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--text3);display:flex;align-items:center;gap:4px}
 .refresh-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:blink 2s ease infinite}
 .certs-list{display:flex;flex-direction:column;gap:7px}
-.cert-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;padding:10px 13px;border-radius:var(--radius-sm);border:1.5px solid rgba(148,210,230,0.3);background:rgba(220,245,252,0.45);text-decoration:none;transition:all .2s;cursor:pointer;backdrop-filter:blur(4px)}
+.cert-row{
+  display:grid;grid-template-columns:auto 1fr auto;
+  align-items:center;gap:11px;padding:10px 13px;
+  border-radius:var(--radius-sm);
+  border:1.5px solid rgba(148,210,230,0.3);
+  background:rgba(220,245,252,0.5);
+  text-decoration:none;transition:all .2s;cursor:pointer;
+  position:relative;z-index:5;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:rgba(79,70,229,0.1);
+}
 .cert-row:hover{border-color:var(--accent-border);background:rgba(238,238,255,0.9);transform:translateX(3px)}
 .cert-row.free-row:hover{border-color:var(--green-border);background:rgba(236,253,245,0.9)}
 .cert-type-badge{padding:2px 8px;border-radius:4px;font-size:9.5px;font-family:'JetBrains Mono',monospace;font-weight:500;letter-spacing:.06em;text-transform:uppercase;flex-shrink:0;white-space:nowrap}
@@ -581,16 +598,21 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
 /* ── MOBILE FILTER TOGGLE ── */
 .mobile-filter-btn{
   display:none;
-  position:fixed;bottom:20px;left:20px;z-index:300;
-  padding:11px 18px;border-radius:100px;
-  background:linear-gradient(135deg,var(--accent),#0891b2);
+  width:100%;padding:12px 20px;
+  background:linear-gradient(125deg,#1e0f6b,#3730a3,#2563eb,#0891b2);
   border:none;color:#fff;
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;
-  cursor:pointer;box-shadow:0 4px 16px rgba(79,70,229,0.35);
-  align-items:center;gap:7px;
-  transition:transform .2s,box-shadow .2s;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700;
+  cursor:pointer;
+  align-items:center;justify-content:center;gap:8px;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
 }
-.mobile-filter-btn:active{transform:scale(.96)}
+.mobile-filter-bar{
+  display:none;
+  position:sticky;top:var(--nav-h);z-index:200;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  grid-column:1/-1;
+}
 .mobile-filter-overlay{
   display:none;position:fixed;inset:0;z-index:200;
   background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);
@@ -598,18 +620,20 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
 }
 .mobile-filter-overlay.open{opacity:1}
 .left-sidebar.mobile-open{transform:translateX(0)!important}
+.cases-sidebar.mobile-open{transform:translateX(0)!important}
 
 @media(max-width:960px){
   /* ── TOOL LAYOUT ── */
   .tools-layout{grid-template-columns:1fr}
   .left-sidebar{
     position:fixed;top:var(--nav-h);left:0;bottom:0;
-    width:min(280px,85vw);z-index:250;
+    width:min(300px,88vw);z-index:250;
     transform:translateX(-100%);
     transition:transform .3s cubic-bezier(.4,0,.2,1);
-    box-shadow:4px 0 24px rgba(0,0,0,.15);
+    box-shadow:4px 0 24px rgba(0,0,0,.2);
     height:calc(100vh - var(--nav-h));
   }
+  .mobile-filter-bar{display:block}
   .mobile-filter-btn{display:flex}
   .mobile-filter-overlay{display:block}
 
@@ -617,10 +641,10 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
   .cases-layout{grid-template-columns:1fr}
   .cases-sidebar{
     position:fixed;top:var(--nav-h);left:0;bottom:0;
-    width:min(280px,85vw);z-index:250;
+    width:min(300px,88vw);z-index:250;
     transform:translateX(-100%);
     transition:transform .3s cubic-bezier(.4,0,.2,1);
-    box-shadow:4px 0 24px rgba(0,0,0,.15);
+    box-shadow:4px 0 24px rgba(0,0,0,.2);
     height:calc(100vh - var(--nav-h));
   }
   .cases-sidebar.mobile-open{transform:translateX(0)}
@@ -815,11 +839,14 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
     </div>
 
     <div class="tools-layout">
-      <!-- MOBILE FILTER CONTROLS -->
+      <!-- MOBILE FILTER OVERLAY -->
       <div class="mobile-filter-overlay" id="mobileFilterOverlay" onclick="closeMobileFilter()"></div>
-      <button class="mobile-filter-btn" id="mobileFilterBtn" onclick="openMobileFilter()">
-        ☰ Filters
-      </button>
+      <!-- MOBILE STICKY FILTER BAR — shown at top on small screens -->
+      <div class="mobile-filter-bar">
+        <button class="mobile-filter-btn" onclick="openMobileFilter()">
+          ☰ &nbsp;Filters &amp; Categories
+        </button>
+      </div>
       <!-- LEFT SIDEBAR FILTER -->
       <aside class="left-sidebar">
         <div class="sidebar-section">
@@ -923,9 +950,11 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
     <div class="cases-layout">
       <!-- MOBILE CONTROLS FOR CASES -->
       <div class="mobile-filter-overlay" id="casesMobileOverlay" onclick="closeCasesMobileFilter()"></div>
-      <button class="mobile-filter-btn" id="casesMobileFilterBtn" onclick="openCasesMobileFilter()">
-        ☰ Filter Cases
-      </button>
+      <div class="mobile-filter-bar">
+        <button class="mobile-filter-btn" onclick="openCasesMobileFilter()">
+          ☰ &nbsp;Filter Case Studies
+        </button>
+      </div>
       <!-- LEFT SIDEBAR -->
       <aside class="cases-sidebar">
         <div class="sidebar-section">
@@ -1019,7 +1048,7 @@ const EMBEDDED_TOOLS=[{"id":1,"name":"Make.com","domain":"make.com","tagline":"V
 // supabase.com → Project Settings → API
 // ══════════════════════════════════════════
 const SUPABASE_URL  = 'https://vxlhqjnqrdtpjpoyrrdf.supabase.co';
-const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ4bGhxam5xcmR0cGpwb3lycmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0MTQ1ODEsImV4cCI6MjA5MTk5MDU4MX0.FPEtakoPSy5z2XYsBjO58ZGfxa57qLpXIr-5AoHzXBM';
+const SUPABASE_ANON = 'REPLACE_WITH_YOUR_ANON_KEYeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ4bGhxam5xcmR0cGpwb3lycmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0MTQ1ODEsImV4cCI6MjA5MTk5MDU4MX0.FPEtakoPSy5z2XYsBjO58ZGfxa57qLpXIr-5AoHzXBM';
 
 // ── AUTH STATE ──
 let sb = null;
