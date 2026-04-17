@@ -1,0 +1,340 @@
+{
+  "name": "AI Disco \u2014 Cases via RSS \u2014 15 day",
+  "description": "Every 15 days: reads 6 vendor case study RSS feeds, Claude extracts and paraphrases structured case studies, writes cases.json to GitHub.",
+  "flow": [
+    {
+      "id": 1,
+      "module": "builtin:BasicTrigger",
+      "version": 1,
+      "parameters": {
+        "interval": 1296000
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 0
+        },
+        "__NOTE__": "Every 15 days. Day 1 of cycle."
+      }
+    },
+    {
+      "id": 2,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://www.uipath.com/blog/rss.xml",
+        "method": "get",
+        "headers": [
+          {
+            "key": "User-Agent",
+            "value": "AI-Disco-Bot"
+          }
+        ],
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 200,
+          "y": 0
+        },
+        "__NOTE__": "UiPath blog RSS \u2014 customer stories. Plain HTTP GET, response is XML text."
+      }
+    },
+    {
+      "id": 3,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://www.celonis.com/blog/feed/",
+        "method": "get",
+        "headers": [
+          {
+            "key": "User-Agent",
+            "value": "AI-Disco-Bot"
+          }
+        ],
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 400,
+          "y": 0
+        },
+        "__NOTE__": "Celonis process mining case studies"
+      }
+    },
+    {
+      "id": 4,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://www.servicenow.com/blogs/feed.html",
+        "method": "get",
+        "headers": [
+          {
+            "key": "User-Agent",
+            "value": "AI-Disco-Bot"
+          }
+        ],
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 600,
+          "y": 0
+        },
+        "__NOTE__": "ServiceNow blog"
+      }
+    },
+    {
+      "id": 5,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://blogs.microsoft.com/blog/feed/",
+        "method": "get",
+        "headers": [
+          {
+            "key": "User-Agent",
+            "value": "AI-Disco-Bot"
+          }
+        ],
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 800,
+          "y": 0
+        },
+        "__NOTE__": "Microsoft blog \u2014 Copilot + Power Platform customer stories"
+      }
+    },
+    {
+      "id": 6,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://www.automationanywhere.com/blog/rss.xml",
+        "method": "get",
+        "headers": [
+          {
+            "key": "User-Agent",
+            "value": "AI-Disco-Bot"
+          }
+        ],
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1000,
+          "y": 0
+        },
+        "__NOTE__": "Automation Anywhere blog"
+      }
+    },
+    {
+      "id": 7,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://www.gong.io/blog/feed/",
+        "method": "get",
+        "headers": [
+          {
+            "key": "User-Agent",
+            "value": "AI-Disco-Bot"
+          }
+        ],
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1200,
+          "y": 0
+        },
+        "__NOTE__": "Gong blog \u2014 revenue intelligence case studies"
+      }
+    },
+    {
+      "id": 8,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://api.anthropic.com/v1/messages",
+        "method": "post",
+        "headers": [
+          {
+            "key": "x-api-key",
+            "value": "REPLACE_WITH_YOUR_ANTHROPIC_API_KEY"
+          },
+          {
+            "key": "anthropic-version",
+            "value": "2023-06-01"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "bodyType": "raw",
+        "contentType": "application/json",
+        "body": "{\"model\":\"claude-sonnet-4-20250514\",\"max_tokens\":14000,\"system\":\"You extract enterprise automation and AI case studies from RSS feed XML. Return ONLY valid JSON array \u2014 no markdown, no backticks. Skip product announcements, opinion pieces, and general news. Only include items describing real customer deployments with measurable outcomes. PARAPHRASE everything in your own words \u2014 do NOT copy verbatim text from the feeds (copyright).\",\"messages\":[{\"role\":\"user\",\"content\":\"Below are 6 RSS feeds from automation vendors. Identify up to 20 items that describe genuine enterprise case studies. For each, produce a JSON object with these exact fields:\\n\\n- id: integer 1-20\\n- title: max 80 chars \u2014 company + outcome\\n- company: actual customer name\\n- category: one of [Workflow Automation, RPA & Intelligent Automation, Project & Programme Management, Data & Analytics, Knowledge & Document Management, Meeting & Communication Intelligence, Sales & CRM Automation, HR & People Operations, Customer Operations, Process Intelligence, AI Research & Intelligence]\\n- tool: vendor tool\\n- stat: headline metric (47%, \u00a312M, 3hrs)\\n- statDesc: max 80 chars \u2014 what metric measures\\n- insight: 2-3 sentences PARAPHRASED in your own words\\n- tags: array of 3 strings (industry, use case, function)\\n- source: vendor name\\n- sourceUrl: article URL from RSS item link field\\n- published: YYYY-MM\\n- refreshed: today YYYY-MM-DD\\n\\nIf you cannot extract 20 real case studies from the feeds, produce fewer \u2014 quality over quantity. CRITICAL: paraphrase all text; do not reproduce sentences verbatim from the RSS content.\\n\\nUIPATH FEED:\\n{{2.data}}\\n\\nCELONIS FEED:\\n{{3.data}}\\n\\nSERVICENOW FEED:\\n{{4.data}}\\n\\nMICROSOFT FEED:\\n{{5.data}}\\n\\nAUTOMATION ANYWHERE FEED:\\n{{6.data}}\\n\\nGONG FEED:\\n{{7.data}}\"}]}",
+        "parseResponse": true,
+        "timeout": "180"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1400,
+          "y": 0
+        },
+        "__NOTE__": "REPLACE API KEY. Timeout = 180. This module is most likely to be slow \u2014 Claude processes ~6 XML blocks."
+      }
+    },
+    {
+      "id": 9,
+      "module": "tools:SetVariable",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "name": "cleanCases",
+        "scope": "roundtrip",
+        "type": "text",
+        "value": "{{trim(replace(replace(8.data.content[1].text; \"```json\"; \"\"); \"```\"; \"\"))}}"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1600,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": 10,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://api.github.com/repos/KhushbooPasari/ai-disco/contents/cases.json",
+        "method": "get",
+        "headers": [
+          {
+            "key": "Authorization",
+            "value": "Bearer REPLACE_WITH_YOUR_GITHUB_TOKEN"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github+json"
+          },
+          {
+            "key": "X-GitHub-Api-Version",
+            "value": "2022-11-28"
+          },
+          {
+            "key": "User-Agent",
+            "value": "AI-Disco-Bot"
+          }
+        ],
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1800,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": 11,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://api.github.com/repos/KhushbooPasari/ai-disco/contents/cases.json",
+        "method": "put",
+        "headers": [
+          {
+            "key": "Authorization",
+            "value": "Bearer REPLACE_WITH_YOUR_GITHUB_TOKEN"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github+json"
+          },
+          {
+            "key": "X-GitHub-Api-Version",
+            "value": "2022-11-28"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "AI-Disco-Bot"
+          }
+        ],
+        "bodyType": "raw",
+        "contentType": "application/json",
+        "body": "{\"message\":\"[AI Disco Bot] Cases RSS refresh {{formatDate(now; \\\"YYYY-MM-DD\\\")}}\",\"content\":\"{{base64(9.cleanCases)}}\",\"sha\":\"{{10.data.sha}}\",\"committer\":{\"name\":\"AI Disco Bot\",\"email\":\"aidisco@noreply.github.com\"}}",
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 2000,
+          "y": 0
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "SETUP": {
+      "1": "Import as NEW scenario. Delete or pause your old Claude-memory cases scenario.",
+      "2": "Replace REPLACE_WITH_YOUR_ANTHROPIC_API_KEY and REPLACE_WITH_YOUR_GITHUB_TOKEN",
+      "3": "Type header Name fields: x-api-key, anthropic-version, content-type, Authorization, Accept, X-GitHub-Api-Version, User-Agent, Content-Type",
+      "4": "CRITICAL: Module 8 (Claude) > Advanced Settings > Timeout = 180 seconds",
+      "5": "Test each RSS URL in a browser first \u2014 if any return 404, replace with an alternative feed. The scenario tolerates some feeds being empty.",
+      "6": "Schedule: every 15 days, day 1 of cycle",
+      "7": "Operations per run: 11 modules = ~11 ops. Monthly cost: 22 ops of your 1000/month free tier."
+    },
+    "ALTERNATIVE_FEEDS_IF_ABOVE_FAIL": [
+      "https://www.salesforce.com/news/feed/",
+      "https://www.blueprism.com/resources/rss.xml",
+      "https://www.hubspot.com/customer-stories/rss.xml",
+      "https://www.tableau.com/blog/feed"
+    ]
+  }
+}
