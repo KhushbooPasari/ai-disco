@@ -1044,12 +1044,12 @@ function initSupabase(){
 
 // ── LOGIN STEP SWITCHER ──
 function showLoginStep(step){
-  ['stepEmail','stepOTP','stepLoading','stepConfig'].forEach(id=>{
+  const map = { email:'stepEmail', otp:'stepOTP', loading:'stepLoading', config:'stepConfig' };
+  Object.values(map).forEach(id=>{
     const el=document.getElementById(id);
-    if(el) el.classList.toggle('hidden', id!=='step'+cap(step));
+    if(el) el.classList.toggle('hidden', id !== map[step]);
   });
 }
-function cap(s){return s.charAt(0).toUpperCase()+s.slice(1)}
 
 // ── SEND OTP ──
 async function sendOTP(){
