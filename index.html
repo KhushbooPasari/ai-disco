@@ -30,16 +30,23 @@ body{
   min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;
 }
 
-/* Robot background — only on active bg pages, 35% visible */
-.page.active.page-has-bg::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  background:url('robot-bg.jpg') center/cover no-repeat;
-  opacity:0.35;
-  z-index:-1;
+/* Video background on Tools / Stats / Cases pages — 30% visibility */
+.page-has-bg{position:relative}
+.bg-video{
+  position:fixed;inset:0;width:100vw;height:100vh;
+  object-fit:cover;z-index:-2;
+  opacity:0;transition:opacity .8s ease;
   pointer-events:none;
 }
+.bg-video.visible{opacity:0.3}
+.bg-video-overlay{
+  position:fixed;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(240,242,249,0.55) 0%,rgba(240,242,249,0.45) 100%);
+  pointer-events:none;
+  display:none;
+}
+.page.active.page-has-bg ~ .bg-video,
+body:has(.page.active.page-has-bg) .bg-video{display:block}
 .hidden{display:none!important}
 .page{display:none}
 .page.active{display:block;animation:pgIn .3s ease both}
@@ -158,26 +165,8 @@ nav{
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 80px;overflow:hidden;background:var(--hero-bg)}
 #heroCanvas{position:absolute;inset:0;z-index:0;opacity:.35}
-.sound-toggle{
-  position:absolute;top:24px;right:24px;z-index:5;
-  display:flex;align-items:center;gap:8px;
-  padding:8px 14px;border-radius:100px;
-  background:rgba(255,255,255,0.12);
-  border:1px solid rgba(255,255,255,0.22);
-  color:#fff;font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:12px;font-weight:600;
-  cursor:pointer;backdrop-filter:blur(10px);
-  transition:all .2s;
-  animation:fadeUp .8s .4s ease both;
-}
-.sound-toggle:hover{background:rgba(255,255,255,0.22);border-color:rgba(255,255,255,0.4);transform:scale(1.03)}
-.sound-toggle #soundIcon{font-size:14px}
-@media(max-width:600px){
-  .sound-toggle{top:auto;bottom:20px;right:16px;padding:7px 12px;font-size:11px}
-  .sound-toggle #soundLabel{display:none}
-}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;z-index:1}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,26,.3) 0%,rgba(7,7,26,.15) 45%,rgba(7,7,26,.85) 100%);z-index:2}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;z-index:1}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 60%,rgba(7,7,26,.55) 100%);z-index:2}
 .hero-content{position:relative;z-index:3;max-width:860px}
 .hero-pill{display:inline-flex;align-items:center;gap:8px;padding:7px 18px;border-radius:100px;border:1px solid rgba(110,100,255,.5);background:rgba(79,70,229,.15);color:#c4c0ff;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;margin-bottom:28px;animation:fadeUp .8s ease both;backdrop-filter:blur(8px)}
 .hero-pill-dot{width:6px;height:6px;border-radius:50%;background:#a89dff;animation:blink 1.8s ease infinite}
@@ -638,11 +627,12 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
   .tools-layout{grid-template-columns:1fr}
   .left-sidebar{
     position:fixed;top:var(--nav-h);left:0;bottom:0;
-    width:min(300px,88vw);z-index:250;
+    width:min(300px,88vw);z-index:260;
     transform:translateX(-100%);
     transition:transform .3s cubic-bezier(.4,0,.2,1);
     box-shadow:4px 0 24px rgba(0,0,0,.2);
     height:calc(100vh - var(--nav-h));
+    background:rgba(255,255,255,0.98)!important;
   }
   .mobile-filter-bar{display:block}
   .mobile-filter-btn{display:flex}
@@ -652,11 +642,12 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
   .cases-layout{grid-template-columns:1fr}
   .cases-sidebar{
     position:fixed;top:var(--nav-h);left:0;bottom:0;
-    width:min(300px,88vw);z-index:250;
+    width:min(300px,88vw);z-index:260;
     transform:translateX(-100%);
     transition:transform .3s cubic-bezier(.4,0,.2,1);
     box-shadow:4px 0 24px rgba(0,0,0,.2);
     height:calc(100vh - var(--nav-h));
+    background:rgba(255,255,255,0.98)!important;
   }
   .cases-sidebar.mobile-open{transform:translateX(0)}
 
@@ -694,16 +685,26 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
   .stat-cards-grid{grid-template-columns:1fr 1fr;gap:10px}
   .region-grid{grid-template-columns:1fr}
   .cases-grid{grid-template-columns:1fr}
-  .cert-arrow{display:none}
   .card-left{padding:18px}
-  .card-right{padding:16px}
+  .card-right{padding:16px 18px 18px}
   .case-stat-num{font-size:22px;min-width:52px}
   .stat-card-num{font-size:26px}
 
+  /* ── CERT ROWS — EXTRA MOBILE TAPPABILITY ── */
+  .cert-row{
+    grid-template-columns:auto 1fr;
+    padding:12px 14px;min-height:52px;
+    position:relative;z-index:20;
+  }
+  .cert-arrow{display:none}
+  .cert-name{white-space:normal;line-height:1.35}
+  .cert-details{font-size:10.5px}
+  .card-right,.card-left{position:relative;z-index:20}
+  .tool-card::before,.tool-card::after{pointer-events:none}
+
   /* ── SIDEBAR ── */
-  .left-sidebar, .cases-sidebar{width:88vw}
+  .left-sidebar, .cases-sidebar{width:88vw;max-width:320px}
   .sidebar-section{padding:16px 14px}
-  .mobile-filter-btn{bottom:16px;left:16px;padding:10px 16px;font-size:12px}
 
   /* ── EASE PARAMS ── */
   .ease-params{padding:6px 8px}
@@ -795,6 +796,11 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
 
 <!-- APP SHELL -->
 <div id="appShell" class="app-shell hidden">
+  <!-- Background video for Tools / Stats / Cases pages -->
+  <video class="bg-video" id="bgVideo" autoplay muted loop playsinline>
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="bg-video-overlay"></div>
   <nav>
     <div class="nav-brand" onclick="showPage('tools')">
       <div class="nav-logo">⚡</div>
@@ -827,10 +833,6 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
     <section class="hero">
       <canvas id="heroCanvas"></canvas>
       <video class="hero-video" id="heroVideo" autoplay muted loop playsinline><source src="hero-video.mp4" type="video/mp4"></video>
-      <button class="sound-toggle" id="soundToggle" onclick="toggleHeroSound()" aria-label="Toggle sound">
-        <span id="soundIcon">🔇</span>
-        <span id="soundLabel">Unmute</span>
-      </button>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <div class="hero-pill"><span class="hero-pill-dot"></span>Discover · Learn · Automate</div>
@@ -1219,6 +1221,15 @@ function showPage(id){
   const pg=document.getElementById('page-'+id);
   if(pg){pg.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
   document.querySelectorAll('.drawer-item').forEach(i=>i.classList.toggle('active',i.dataset.page===id));
+  // Toggle bg video visibility — shown on tools, stats, cases pages
+  const bgVid = document.getElementById('bgVideo');
+  const bgOverlay = document.querySelector('.bg-video-overlay');
+  const showBg = ['tools','stats','cases'].includes(id);
+  if(bgVid){
+    bgVid.classList.toggle('visible', showBg);
+    bgVid.style.display = showBg ? 'block' : 'none';
+  }
+  if(bgOverlay) bgOverlay.style.display = showBg ? 'block' : 'none';
   logEvent('page_view',{page:id});
   if(id==='stats')setTimeout(animateStats,150);
   if(id==='cases')setTimeout(()=>{if(!caseData.length)initCases();else renderCases();revealAll('.case-card')},100);
@@ -1234,36 +1245,6 @@ function closeDrawer(){
   document.body.style.overflow='';
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
-
-// ── HERO VIDEO SOUND ──
-function toggleHeroSound(){
-  const v = document.getElementById('heroVideo');
-  if(!v) return;
-  v.muted = !v.muted;
-  if(!v.muted){
-    v.play().catch(()=>{});
-    document.getElementById('soundIcon').textContent = '🔊';
-    document.getElementById('soundLabel').textContent = 'Mute';
-  } else {
-    document.getElementById('soundIcon').textContent = '🔇';
-    document.getElementById('soundLabel').textContent = 'Unmute';
-  }
-}
-// Auto-unmute on first user interaction (browser autoplay policy)
-function unmuteOnFirstInteraction(){
-  const v = document.getElementById('heroVideo');
-  if(!v || !v.muted) return;
-  v.muted = false;
-  v.play().then(()=>{
-    const icon = document.getElementById('soundIcon');
-    const label = document.getElementById('soundLabel');
-    if(icon) icon.textContent = '🔊';
-    if(label) label.textContent = 'Mute';
-  }).catch(()=>{v.muted = true;});
-}
-document.addEventListener('click', unmuteOnFirstInteraction, { once: true });
-document.addEventListener('keydown', unmuteOnFirstInteraction, { once: true });
-document.addEventListener('touchstart', unmuteOnFirstInteraction, { once: true });
 
 // ── HERO CANVAS ──
 function initCanvas(){
@@ -1900,6 +1881,15 @@ function bootApp(){
   initRobotCanvas();
   initTools();
   setupCasesSearch();
+  // Show bg video initially (tools is default page)
+  const bgVid = document.getElementById('bgVideo');
+  if(bgVid){
+    bgVid.classList.add('visible');
+    bgVid.style.display = 'block';
+    bgVid.play().catch(()=>{});
+  }
+  const bgOv = document.querySelector('.bg-video-overlay');
+  if(bgOv) bgOv.style.display = 'block';
   setTimeout(()=>revealAll('.incubator-card'), 400);
 }
 
