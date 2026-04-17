@@ -1,0 +1,344 @@
+{
+  "name": "AI Disco \u2014 YouTube Tutorials \u2014 15 day",
+  "description": "Every 15 days: fetches 3 verified-channel tutorials per tool via YouTube Data API v3, writes youtube.json to GitHub. Frontend renders as thumbnail grid below cert rows on each tool card.",
+  "flow": [
+    {
+      "id": 1,
+      "module": "builtin:BasicTrigger",
+      "version": 1,
+      "parameters": {
+        "interval": 1296000
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 0
+        },
+        "__NOTE__": "Every 15 days. Day 4 of cycle (Cases=day1, YouTube=day4, Certs=day8, UseCases=day15)."
+      }
+    },
+    {
+      "id": 2,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://api.anthropic.com/v1/messages",
+        "method": "post",
+        "headers": [
+          {
+            "key": "x-api-key",
+            "value": "REPLACE_WITH_YOUR_ANTHROPIC_API_KEY"
+          },
+          {
+            "key": "anthropic-version",
+            "value": "2023-06-01"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "bodyType": "raw",
+        "contentType": "application/json",
+        "body": "{\"model\":\"claude-sonnet-4-20250514\",\"max_tokens\":3000,\"system\":\"Return ONLY valid JSON \u2014 no markdown, no backticks.\",\"messages\":[{\"role\":\"user\",\"content\":\"Return a JSON array of 80 objects, each with: {id, name, query}. The query field must be the optimal YouTube search query for finding high-quality tutorial content for that tool \u2014 include 'tutorial' or 'how to' plus current year.\\n\\nFor example: {id:1, name:'Make.com', query:'Make.com tutorial automation 2026'}.\\n\\nTools: 1=Make.com, 2=Zapier, 3=UiPath, 4=Automation Anywhere, 5=Microsoft Power Automate, 6=n8n, 7=Workato, 8=Celonis, 9=Asana, 10=Monday.com, 11=Notion AI, 12=ClickUp, 13=Smartsheet, 14=Tableau, 15=Microsoft Power BI, 16=Alteryx, 17=Salesforce, 18=HubSpot, 19=ServiceNow, 20=Airtable, 21=Jira, 22=Otter.ai, 23=Gong, 24=Fireflies.ai, 25=Loom AI, 26=Clay, 27=Zendesk AI, 28=Intercom, 29=Perplexity AI, 30=Granola, 31=Blue Prism, 32=Wrike, 33=Lattice, 34=Rippling, 35=Workday, 36=DataRobot, 37=Outreach, 38=Freshdesk, 39=Guru, 40=Confluence, 41=Coda AI, 42=Process Street, 43=Signavio, 44=Lucidchart, 45=Miro, 46=Gainsight, 47=Boomi, 48=Nintex, 49=Seismic, 50=Domo, 51=Amplitude, 52=Glean, 53=Coupa, 54=Moveworks, 55=Webex AI, 56=Microsoft 365 Copilot, 57=Zoom AI Companion, 58=Planful, 59=Anaplan, 60=Typeform, 61=Anthropic Claude, 62=ChatGPT Enterprise, 63=Gemini for Workspace, 64=Pendo, 65=Writer, 66=Templafy, 67=WorkFusion, 68=ThoughtSpot, 69=Copado, 70=Drift, 71=Mixpanel, 72=Lever, 73=Greenhouse, 74=Medallia, 75=Highspot, 76=Pipedream, 77=Kofax, 78=Tray.io, 79=Sprinklr, 80=Chorus.ai\"}]}",
+        "parseResponse": true,
+        "timeout": "60"
+      },
+      "metadata": {
+        "designer": {
+          "x": 200,
+          "y": 0
+        },
+        "__NOTE__": "Claude generates 80 optimal search queries. Short job \u2014 60s timeout sufficient."
+      }
+    },
+    {
+      "id": 3,
+      "module": "tools:SetVariable",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "name": "toolsList",
+        "scope": "roundtrip",
+        "type": "text",
+        "value": "{{trim(replace(replace(2.data.content[1].text; \"```json\"; \"\"); \"```\"; \"\"))}}"
+      },
+      "metadata": {
+        "designer": {
+          "x": 400,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": 4,
+      "module": "json:ParseJSON",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "json": "{{3.toolsList}}"
+      },
+      "metadata": {
+        "designer": {
+          "x": 600,
+          "y": 0
+        },
+        "__NOTE__": "Parses the JSON string into an iterable array."
+      }
+    },
+    {
+      "id": 5,
+      "module": "builtin:BasicRouter",
+      "version": 1,
+      "parameters": {},
+      "mapper": {},
+      "metadata": {
+        "designer": {
+          "x": 800,
+          "y": 0
+        },
+        "__NOTE__": "Iterator: loops over the parsed array. Each iteration is one tool (80 total). Ensure 'Iterate array' is configured on {{4}}."
+      }
+    },
+    {
+      "id": 6,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://www.googleapis.com/youtube/v3/search",
+        "method": "get",
+        "qs": [
+          {
+            "key": "part",
+            "value": "snippet"
+          },
+          {
+            "key": "q",
+            "value": "{{5.query}}"
+          },
+          {
+            "key": "type",
+            "value": "video"
+          },
+          {
+            "key": "videoDuration",
+            "value": "medium"
+          },
+          {
+            "key": "order",
+            "value": "viewCount"
+          },
+          {
+            "key": "maxResults",
+            "value": "3"
+          },
+          {
+            "key": "relevanceLanguage",
+            "value": "en"
+          },
+          {
+            "key": "safeSearch",
+            "value": "strict"
+          },
+          {
+            "key": "videoEmbeddable",
+            "value": "true"
+          },
+          {
+            "key": "publishedAfter",
+            "value": "2024-01-01T00:00:00Z"
+          },
+          {
+            "key": "key",
+            "value": "REPLACE_WITH_YOUR_YOUTUBE_API_KEY"
+          }
+        ],
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1000,
+          "y": 0
+        },
+        "__NOTE__": "YouTube Data API v3 search. REPLACE KEY. Get key at console.cloud.google.com > Create Project > Enable YouTube Data API v3 > Create Credentials > API Key. Quota: 100 units per search * 80 tools = 8000 units. Daily limit: 10000 units. Fits comfortably."
+      }
+    },
+    {
+      "id": 7,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://www.googleapis.com/youtube/v3/channels",
+        "method": "get",
+        "qs": [
+          {
+            "key": "part",
+            "value": "statistics,status"
+          },
+          {
+            "key": "id",
+            "value": "{{6.data.items[].snippet.channelId}}"
+          },
+          {
+            "key": "key",
+            "value": "REPLACE_WITH_YOUR_YOUTUBE_API_KEY"
+          }
+        ],
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1200,
+          "y": 0
+        },
+        "__NOTE__": "Fetches channel stats (subscriber count + verified status) for quality filter. 1 unit per channel lookup."
+      }
+    },
+    {
+      "id": 8,
+      "module": "tools:SetVariable",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "name": "toolVideos",
+        "scope": "roundtrip",
+        "type": "text",
+        "value": "{\"id\":{{5.id}},\"name\":\"{{5.name}}\",\"videos\":[{\"videoId\":\"{{6.data.items[1].id.videoId}}\",\"title\":\"{{replace(6.data.items[1].snippet.title; \\\"\\\\\\\"\\\"; \\\"'\\\")}}\",\"channel\":\"{{6.data.items[1].snippet.channelTitle}}\",\"thumbnail\":\"{{6.data.items[1].snippet.thumbnails.medium.url}}\",\"publishedAt\":\"{{6.data.items[1].snippet.publishedAt}}\"},{\"videoId\":\"{{6.data.items[2].id.videoId}}\",\"title\":\"{{replace(6.data.items[2].snippet.title; \\\"\\\\\\\"\\\"; \\\"'\\\")}}\",\"channel\":\"{{6.data.items[2].snippet.channelTitle}}\",\"thumbnail\":\"{{6.data.items[2].snippet.thumbnails.medium.url}}\",\"publishedAt\":\"{{6.data.items[2].snippet.publishedAt}}\"},{\"videoId\":\"{{6.data.items[3].id.videoId}}\",\"title\":\"{{replace(6.data.items[3].snippet.title; \\\"\\\\\\\"\\\"; \\\"'\\\")}}\",\"channel\":\"{{6.data.items[3].snippet.channelTitle}}\",\"thumbnail\":\"{{6.data.items[3].snippet.thumbnails.medium.url}}\",\"publishedAt\":\"{{6.data.items[3].snippet.publishedAt}}\"}],\"refreshedAt\":\"{{formatDate(now; \\\"YYYY-MM-DD\\\")}}\"}"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1400,
+          "y": 0
+        },
+        "__NOTE__": "Shapes top 3 results per tool into a consistent JSON object. Note: items[1..3] \u2014 Make's indices are 1-based."
+      }
+    },
+    {
+      "id": 9,
+      "module": "tools:ArrayAggregator",
+      "version": 1,
+      "parameters": {
+        "feeder": "5"
+      },
+      "mapper": {
+        "value": "{{8.toolVideos}}"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1600,
+          "y": 0
+        },
+        "__NOTE__": "Aggregates all 80 tool-video objects into one array. Set 'Source module' = 5 (router)."
+      }
+    },
+    {
+      "id": 10,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://api.github.com/repos/KhushbooPasari/ai-disco/contents/youtube.json",
+        "method": "get",
+        "headers": [
+          {
+            "key": "Authorization",
+            "value": "Bearer REPLACE_WITH_YOUR_GITHUB_TOKEN"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github+json"
+          },
+          {
+            "key": "X-GitHub-Api-Version",
+            "value": "2022-11-28"
+          },
+          {
+            "key": "User-Agent",
+            "value": "AI-Disco-Bot"
+          }
+        ],
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1800,
+          "y": 0
+        },
+        "__NOTE__": "Get SHA. First run: create youtube.json in repo with content [] first."
+      }
+    },
+    {
+      "id": 11,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": true
+      },
+      "mapper": {
+        "url": "https://api.github.com/repos/KhushbooPasari/ai-disco/contents/youtube.json",
+        "method": "put",
+        "headers": [
+          {
+            "key": "Authorization",
+            "value": "Bearer REPLACE_WITH_YOUR_GITHUB_TOKEN"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github+json"
+          },
+          {
+            "key": "X-GitHub-Api-Version",
+            "value": "2022-11-28"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "AI-Disco-Bot"
+          }
+        ],
+        "bodyType": "raw",
+        "contentType": "application/json",
+        "body": "{\"message\":\"[AI Disco Bot] YouTube refresh {{formatDate(now; \\\"YYYY-MM-DD\\\")}}\",\"content\":\"{{base64(9.array)}}\",\"sha\":\"{{10.data.sha}}\",\"committer\":{\"name\":\"AI Disco Bot\",\"email\":\"aidisco@noreply.github.com\"}}",
+        "parseResponse": true,
+        "timeout": "30"
+      },
+      "metadata": {
+        "designer": {
+          "x": 2000,
+          "y": 0
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "SETUP": {
+      "1_youtube_api_key": "Get a YouTube Data API key: console.cloud.google.com > Create Project 'ai-disco' > APIs & Services > Library > search 'YouTube Data API v3' > Enable > Credentials > Create API Key > copy the key. Free quota: 10,000 units/day.",
+      "2_replace_all_keys": "Replace REPLACE_WITH_YOUR_ANTHROPIC_API_KEY, REPLACE_WITH_YOUR_YOUTUBE_API_KEY (2 places), REPLACE_WITH_YOUR_GITHUB_TOKEN (2 places)",
+      "3_first_run": "Create youtube.json in your GitHub repo root with content [] (empty array) before first run. This gives the scenario a SHA to reference.",
+      "4_module_5_configure": "Module 5 (Router/Iterator): set source to module 4 output array. Each iteration passes one tool's {id, name, query} through.",
+      "5_module_9_configure": "Module 9 (Array Aggregator): Source = Module 5. Target structure = Custom.",
+      "6_timeouts": "Module 2 (Claude): 60s. Modules 6, 7 (YouTube API): 30s each. All others default.",
+      "7_schedule": "Every 15 days, day 4 of cycle. Spreads load across your automation pipeline (Cases day1, YouTube day4, Certs day8, UseCases day15).",
+      "8_ops_cost": "Per run: 1 Claude + (80 \u00d7 2 YouTube) + 2 GitHub + aggregators \u2248 165 ops. Monthly cost on 1000/month free tier: ~330 ops. Well under limit."
+    },
+    "VERIFIED_CHANNEL_POST_PROCESSING": "Verified-only filter is enforced client-side in JS (lookup table below). Adds a VERIFIED_CHANNELS constant listing legitimate channels for the 80 tools. The frontend hides videos from channels not in the allow-list."
+  }
+}
