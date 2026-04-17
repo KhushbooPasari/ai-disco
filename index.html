@@ -593,6 +593,104 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
 .cases-sidebar::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
 .cases-empty{grid-column:1/-1;text-align:center;padding:60px 24px;background:var(--surface);border:1.5px dashed var(--border);border-radius:var(--radius)}
 
+/* ── YOUTUBE TUTORIALS SECTION ── */
+.yt-section{
+  margin-top:16px;
+  padding-top:14px;
+  border-top:1px solid rgba(148,210,230,0.3);
+}
+.yt-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:10px;
+}
+.yt-header-title{
+  font-size:12px;font-weight:700;
+  color:var(--text2);
+  display:flex;align-items:center;gap:6px;
+}
+.yt-header-tag{
+  font-size:9.5px;font-family:'JetBrains Mono',monospace;
+  padding:2px 7px;border-radius:5px;
+  background:rgba(220,38,38,0.08);
+  border:1px solid rgba(220,38,38,0.2);
+  color:#dc2626;
+  letter-spacing:.04em;
+}
+.yt-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+}
+.yt-thumb{
+  position:relative;
+  display:block;
+  aspect-ratio:16/9;
+  border-radius:8px;
+  overflow:hidden;
+  text-decoration:none;
+  border:1.5px solid rgba(148,210,230,0.35);
+  background:rgba(220,245,252,0.4);
+  transition:all .25s;
+  cursor:pointer;
+  z-index:20;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:rgba(220,38,38,0.15);
+}
+.yt-thumb:hover{
+  border-color:#dc2626;
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(220,38,38,0.2);
+}
+.yt-thumb img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+}
+.yt-play{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:32px;height:32px;
+  border-radius:50%;
+  background:rgba(220,38,38,0.95);
+  color:#fff;font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.35);
+  pointer-events:none;
+  transition:transform .2s;
+}
+.yt-thumb:hover .yt-play{transform:translate(-50%,-50%) scale(1.1)}
+.yt-meta{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:22px 8px 6px;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,0.82));
+  color:#fff;
+  pointer-events:none;
+}
+.yt-title{
+  font-size:10.5px;font-weight:600;
+  line-height:1.25;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+  margin-bottom:2px;
+}
+.yt-channel{
+  font-size:9px;
+  opacity:0.8;
+  font-family:'JetBrains Mono',monospace;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+/* Mobile responsive — stack vertically */
+@media(max-width:600px){
+  .yt-grid{grid-template-columns:1fr;gap:10px}
+  .yt-thumb{aspect-ratio:16/8}
+  .yt-title{font-size:12px;-webkit-line-clamp:2}
+  .yt-channel{font-size:10px}
+  .yt-play{width:44px;height:44px;font-size:16px}
+}
+
 /* ── MOBILE FILTER TOGGLE ── */
 .mobile-filter-btn{
   display:none;
@@ -1513,6 +1611,81 @@ function s(v){if(!v)return'';return String(v).replace(/&/g,'&amp;').replace(/</g
 function lc(l=''){return LV[l.toLowerCase().split(' ')[0]]||'lv-intermediate'}
 function isOff(c){const p=(c.provider||'').toLowerCase();return!p.includes('youtube')&&!p.includes('linkedin learning')&&!p.includes('community')&&!p.includes('coursera')}
 
+let youtubeData = {}; // { toolId: { videos: [...], refreshedAt: '...' } }
+
+// Whitelist of verified/official channels per tool — filters out low-quality content
+const VERIFIED_CHANNELS = {
+  all: [
+    // Tool vendors (official)
+    'Make', 'Zapier', 'UiPath', 'Automation Anywhere', 'Microsoft Power Platform', 'n8n', 'Workato', 'Celonis',
+    'Asana', 'monday.com', 'Notion', 'ClickUp', 'Smartsheet', 'Tableau Software', 'Microsoft Power BI',
+    'Alteryx', 'Salesforce', 'HubSpot', 'ServiceNow', 'Airtable', 'Atlassian', 'Otter.ai', 'Gong',
+    'Fireflies.ai', 'Loom', 'Clay', 'Zendesk', 'Intercom', 'Perplexity', 'Blue Prism', 'Wrike',
+    'Lattice', 'Rippling', 'Workday', 'DataRobot', 'Outreach', 'Freshworks', 'Guru', 'Coda',
+    'Lucid Software', 'Miro', 'Gainsight', 'Boomi', 'Nintex', 'Seismic', 'Domo', 'Amplitude',
+    'Glean', 'Coupa', 'Webex', 'Microsoft 365', 'Zoom', 'Planful', 'Anaplan', 'Typeform',
+    'Anthropic', 'OpenAI', 'Google Workspace', 'Google Cloud', 'Pendo', 'Writer', 'ThoughtSpot',
+    'Copado', 'Drift', 'Mixpanel', 'Lever', 'Greenhouse', 'Medallia', 'Highspot', 'Tray.io',
+    'Sprinklr', 'Chorus.ai', 'Process Street', 'Signavio', 'SAP',
+    // Trusted education channels covering these tools
+    'Simon Høiberg', 'No-Code MBA', 'Ben Meyers', 'Keep Productive', 'Leila Gharani',
+    'Kevin Stratvert', 'Tech With Lucy', 'Latenode', 'Lifetime Learning with ZapChef',
+    'Cassidy AI', 'BornToLearn', 'Linda Raynier', 'Solutions Review',
+    'Guy in a Cube', 'Enterprise DNA', 'Khan Academy', 'CampaignCreators',
+  ]
+};
+
+function isVerifiedChannel(channelName) {
+  if (!channelName) return false;
+  const lower = channelName.toLowerCase();
+  return VERIFIED_CHANNELS.all.some(v => lower.includes(v.toLowerCase()) || v.toLowerCase().includes(lower));
+}
+
+async function loadYouTubeData() {
+  try {
+    const r = await fetch('youtube.json?v=' + Date.now());
+    if (!r.ok) return;
+    const arr = await r.json();
+    const map = {};
+    arr.forEach(t => { map[t.id] = t; });
+    youtubeData = map;
+    // Re-render cards once data is in so YouTube section appears
+    if (typeof renderList === 'function') renderList();
+  } catch { /* no youtube.json yet — silently skip */ }
+}
+
+function renderYouTubeSection(toolId, toolName) {
+  const data = youtubeData[toolId];
+  if (!data || !data.videos || !data.videos.length) return '';
+  // Filter to verified channels only
+  const verified = data.videos.filter(v => v && v.videoId && isVerifiedChannel(v.channel));
+  if (!verified.length) return '';
+  const shown = verified.slice(0, 3);
+  const thumbs = shown.map(v => `
+    <a class="yt-thumb"
+       href="https://www.youtube.com/watch?v=${s(v.videoId)}"
+       target="_blank" rel="noopener"
+       onclick="logEvent('youtube_click',{tool:'${s(toolName)}',video:'${s(v.title)}'})"
+       title="${s(v.title)} — ${s(v.channel)}">
+      <img src="${s(v.thumbnail)}" alt="" loading="lazy">
+      <div class="yt-play">▶</div>
+      <div class="yt-meta">
+        <div class="yt-title">${s(v.title)}</div>
+        <div class="yt-channel">${s(v.channel)}</div>
+      </div>
+    </a>
+  `).join('');
+  return `
+    <div class="yt-section">
+      <div class="yt-header">
+        <span class="yt-header-title">🎬 Tutorial Videos</span>
+        <span class="yt-header-tag">Verified channels</span>
+      </div>
+      <div class="yt-grid">${thumbs}</div>
+    </div>
+  `;
+}
+
 async function initTools(){
   try{const r=await fetch('tools.json?v='+Date.now());if(!r.ok)throw 0;tools=await r.json()}
   catch{tools=EMBEDDED_TOOLS}
@@ -1532,6 +1705,8 @@ async function initTools(){
   if(lr)document.getElementById('lastRefreshLabel').textContent='Refreshed '+new Date(lr).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
   buildCatPills();buildUcFilter();setupFilters();renderList();buildTicker(tools);
   setTimeout(()=>revealAll('.tool-card'),200);
+  // Fetch YouTube data in the background — will re-render cards once loaded
+  loadYouTubeData();
 }
 
 function buildCatPills(){
@@ -1680,6 +1855,7 @@ function buildCard(t){
         <div style="display:flex;align-items:center;gap:10px">${lr}<span class="certs-count">${certs.length} path${certs.length!==1?'s':''}${hasOff?' · official':' · community'}</span></div>
       </div>
       <div class="certs-list">${certRows}</div>
+      ${renderYouTubeSection(t.id, t.name)}
     </div>
   </div>`;
   requestAnimationFrame(()=>{const el=document.getElementById('lg-'+t.id);if(el)getLogo(t.domain,el)});
