@@ -4,12 +4,20 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Make Partner Certification",
+        "title": "Make Expert Certification",
         "provider": "Make.com",
-        "url": "https://www.make.com/en/partners/certification",
+        "url": "https://www.make.com/en/academy/certification",
         "type": "Free",
-        "duration": "4 hours",
-        "level": "Intermediate"
+        "duration": "4-6 hours",
+        "level": "Expert"
+      },
+      {
+        "title": "Make Fundamental Certification",
+        "provider": "Make.com",
+        "url": "https://www.make.com/en/academy/certification",
+        "type": "Free",
+        "duration": "2-3 hours",
+        "level": "Beginner"
       }
     ]
   },
@@ -18,12 +26,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Zapier Certified Expert",
+        "title": "Zapier Certified",
         "provider": "Zapier",
-        "url": "https://zapier.com/experts/certification",
+        "url": "https://zapier.com/certification",
         "type": "Free",
-        "duration": "6 hours",
-        "level": "Advanced"
+        "duration": "3-4 hours",
+        "level": "Intermediate"
       }
     ]
   },
@@ -32,20 +40,20 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "UiPath RPA Developer Advanced",
+        "title": "UiPath RPA Developer Foundation",
         "provider": "UiPath",
         "url": "https://www.uipath.com/learning/certification",
         "type": "Free",
         "duration": "40 hours",
-        "level": "Advanced"
+        "level": "Beginner"
       },
       {
-        "title": "UiPath RPA Solution Architect",
+        "title": "UiPath RPA Developer Advanced",
         "provider": "UiPath",
         "url": "https://www.uipath.com/learning/certification",
-        "type": "Free",
+        "type": "Paid",
         "duration": "60 hours",
-        "level": "Expert"
+        "level": "Advanced"
       }
     ]
   },
@@ -56,18 +64,18 @@
       {
         "title": "Automation Anywhere Certified Advanced RPA Professional",
         "provider": "Automation Anywhere",
-        "url": "https://university.automationanywhere.com/certification",
-        "type": "Free",
-        "duration": "50 hours",
+        "url": "https://www.automationanywhere.com/rpa-certification-training",
+        "type": "Paid",
+        "duration": "80 hours",
         "level": "Advanced"
       },
       {
-        "title": "Automation Anywhere Certified Master RPA Professional",
+        "title": "Automation Anywhere Certified Essentials RPA Professional",
         "provider": "Automation Anywhere",
-        "url": "https://university.automationanywhere.com/certification",
+        "url": "https://www.automationanywhere.com/rpa-certification-training",
         "type": "Free",
-        "duration": "80 hours",
-        "level": "Expert"
+        "duration": "20 hours",
+        "level": "Beginner"
       }
     ]
   },
@@ -80,13 +88,13 @@
         "provider": "Microsoft",
         "url": "https://docs.microsoft.com/en-us/certifications/power-platform-fundamentals/",
         "type": "Paid",
-        "duration": "20 hours",
+        "duration": "8 hours",
         "level": "Beginner"
       },
       {
-        "title": "Microsoft Power Automate RPA Developer Associate",
+        "title": "Microsoft Power Platform Functional Consultant",
         "provider": "Microsoft",
-        "url": "https://docs.microsoft.com/en-us/certifications/power-automate-rpa-developer-associate/",
+        "url": "https://docs.microsoft.com/en-us/certifications/power-platform-functional-consultant-associate/",
         "type": "Paid",
         "duration": "40 hours",
         "level": "Intermediate"
@@ -98,11 +106,11 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "n8n Workflow Automation Certificate",
+        "title": "n8n Certified Professional",
         "provider": "n8n",
         "url": "https://n8n.io/certification",
         "type": "Free",
-        "duration": "8 hours",
+        "duration": "6-8 hours",
         "level": "Intermediate"
       }
     ]
@@ -112,20 +120,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Workato Automation Pro I",
+        "title": "Workato Certified Integration Professional",
         "provider": "Workato",
-        "url": "https://www.workato.com/training/certification",
-        "type": "Free",
-        "duration": "16 hours",
-        "level": "Intermediate"
-      },
-      {
-        "title": "Workato Automation Pro II",
-        "provider": "Workato",
-        "url": "https://www.workato.com/training/certification",
-        "type": "Free",
-        "duration": "24 hours",
-        "level": "Advanced"
+        "url": "https://www.workato.com/certification",
+        "type": "Paid",
+        "duration": "20 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -134,20 +134,20 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Celonis Process Mining Analyst",
+        "title": "Celonis Certified Process Mining Professional",
         "provider": "Celonis",
-        "url": "https://www.celonis.com/training/certification",
-        "type": "Free",
-        "duration": "32 hours",
-        "level": "Intermediate"
+        "url": "https://www.celonis.com/training/certification/",
+        "type": "Paid",
+        "duration": "40 hours",
+        "level": "Professional"
       },
       {
-        "title": "Celonis Process Mining Expert",
+        "title": "Celonis Certified Process Mining Associate",
         "provider": "Celonis",
-        "url": "https://www.celonis.com/training/certification",
-        "type": "Paid",
-        "duration": "60 hours",
-        "level": "Advanced"
+        "url": "https://www.celonis.com/training/certification/",
+        "type": "Free",
+        "duration": "16 hours",
+        "level": "Beginner"
       }
     ]
   },
@@ -156,12 +156,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Asana Project Management Fundamentals",
+        "title": "Asana Certified Professional",
         "provider": "Asana",
-        "url": "https://academy.asana.com/certification",
+        "url": "https://asana.com/training/certification",
         "type": "Free",
-        "duration": "6 hours",
-        "level": "Beginner"
+        "duration": "4-6 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -170,12 +170,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Monday.com Work Management Expert",
+        "title": "Monday.com Certified Expert",
         "provider": "Monday.com",
-        "url": "https://academy.monday.com/certification",
+        "url": "https://monday.com/certification",
         "type": "Free",
-        "duration": "8 hours",
-        "level": "Intermediate"
+        "duration": "3-5 hours",
+        "level": "Expert"
       }
     ]
   },
@@ -184,11 +184,11 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Notion AI Productivity Specialist",
+        "title": "Notion AI Fundamentals",
         "provider": "Notion",
         "url": "https://www.notion.so/certification",
         "type": "Free",
-        "duration": "4 hours",
+        "duration": "2-3 hours",
         "level": "Beginner"
       }
     ]
@@ -198,12 +198,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "ClickUp Workspace Administrator",
+        "title": "ClickUp Expert Certification",
         "provider": "ClickUp",
-        "url": "https://university.clickup.com/certification",
+        "url": "https://clickup.com/certification",
         "type": "Free",
-        "duration": "10 hours",
-        "level": "Intermediate"
+        "duration": "4-6 hours",
+        "level": "Expert"
       }
     ]
   },
@@ -212,15 +212,15 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Smartsheet Core Product Certificate",
+        "title": "Smartsheet Core Product Certification",
         "provider": "Smartsheet",
         "url": "https://www.smartsheet.com/learning-center/certification",
         "type": "Free",
-        "duration": "12 hours",
+        "duration": "8-10 hours",
         "level": "Intermediate"
       },
       {
-        "title": "Smartsheet Advanced Product Certificate",
+        "title": "Smartsheet Advanced Certification",
         "provider": "Smartsheet",
         "url": "https://www.smartsheet.com/learning-center/certification",
         "type": "Paid",
@@ -238,7 +238,7 @@
         "provider": "Tableau",
         "url": "https://www.tableau.com/learn/certification",
         "type": "Paid",
-        "duration": "30 hours",
+        "duration": "20 hours",
         "level": "Beginner"
       },
       {
@@ -246,8 +246,16 @@
         "provider": "Tableau",
         "url": "https://www.tableau.com/learn/certification",
         "type": "Paid",
-        "duration": "50 hours",
+        "duration": "40 hours",
         "level": "Intermediate"
+      },
+      {
+        "title": "Tableau Desktop Certified Professional",
+        "provider": "Tableau",
+        "url": "https://www.tableau.com/learn/certification",
+        "type": "Paid",
+        "duration": "80 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -272,17 +280,17 @@
       {
         "title": "Alteryx Designer Core Certification",
         "provider": "Alteryx",
-        "url": "https://www.alteryx.com/learning/certification",
-        "type": "Free",
-        "duration": "25 hours",
+        "url": "https://www.alteryx.com/certification",
+        "type": "Paid",
+        "duration": "30 hours",
         "level": "Intermediate"
       },
       {
         "title": "Alteryx Designer Advanced Certification",
         "provider": "Alteryx",
-        "url": "https://www.alteryx.com/learning/certification",
+        "url": "https://www.alteryx.com/certification",
         "type": "Paid",
-        "duration": "40 hours",
+        "duration": "60 hours",
         "level": "Advanced"
       }
     ]
@@ -294,18 +302,26 @@
       {
         "title": "Salesforce Administrator",
         "provider": "Salesforce",
-        "url": "https://trailhead.salesforce.com/en/credentials/administrator",
+        "url": "https://trailhead.salesforce.com/credentials/administrator",
         "type": "Paid",
         "duration": "60 hours",
         "level": "Intermediate"
       },
       {
+        "title": "Salesforce Advanced Administrator",
+        "provider": "Salesforce",
+        "url": "https://trailhead.salesforce.com/credentials/advancedadministrator",
+        "type": "Paid",
+        "duration": "100 hours",
+        "level": "Advanced"
+      },
+      {
         "title": "Salesforce Platform Developer I",
         "provider": "Salesforce",
-        "url": "https://trailhead.salesforce.com/en/credentials/platformdeveloper",
+        "url": "https://trailhead.salesforce.com/credentials/platformdeveloper",
         "type": "Paid",
         "duration": "80 hours",
-        "level": "Advanced"
+        "level": "Intermediate"
       }
     ]
   },
@@ -314,17 +330,25 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "HubSpot Marketing Software Certified",
-        "provider": "HubSpot",
-        "url": "https://academy.hubspot.com/certification",
+        "title": "HubSpot Content Marketing Certification",
+        "provider": "HubSpot Academy",
+        "url": "https://academy.hubspot.com/courses/content-marketing",
         "type": "Free",
         "duration": "4 hours",
-        "level": "Beginner"
+        "level": "Intermediate"
       },
       {
-        "title": "HubSpot Sales Software Certified",
-        "provider": "HubSpot",
-        "url": "https://academy.hubspot.com/certification",
+        "title": "HubSpot Inbound Marketing Certification",
+        "provider": "HubSpot Academy",
+        "url": "https://academy.hubspot.com/courses/inbound-marketing",
+        "type": "Free",
+        "duration": "4 hours",
+        "level": "Intermediate"
+      },
+      {
+        "title": "HubSpot Sales Software Certification",
+        "provider": "HubSpot Academy",
+        "url": "https://academy.hubspot.com/courses/sales-software",
         "type": "Free",
         "duration": "3 hours",
         "level": "Beginner"
@@ -338,7 +362,7 @@
       {
         "title": "ServiceNow Certified System Administrator",
         "provider": "ServiceNow",
-        "url": "https://www.servicenow.com/services/training-and-certification/",
+        "url": "https://www.servicenow.com/services/training-and-certification.html",
         "type": "Paid",
         "duration": "40 hours",
         "level": "Intermediate"
@@ -346,7 +370,7 @@
       {
         "title": "ServiceNow Certified Application Developer",
         "provider": "ServiceNow",
-        "url": "https://www.servicenow.com/services/training-and-certification/",
+        "url": "https://www.servicenow.com/services/training-and-certification.html",
         "type": "Paid",
         "duration": "60 hours",
         "level": "Advanced"
@@ -362,8 +386,8 @@
         "provider": "Airtable",
         "url": "https://airtable.com/certification",
         "type": "Free",
-        "duration": "6 hours",
-        "level": "Beginner"
+        "duration": "3-4 hours",
+        "level": "Intermediate"
       }
     ]
   },
@@ -372,11 +396,11 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Atlassian Jira Administrator",
+        "title": "Atlassian Jira Administrator Certification",
         "provider": "Atlassian",
-        "url": "https://university.atlassian.com/certification",
+        "url": "https://www.atlassian.com/university/certification",
         "type": "Paid",
-        "duration": "16 hours",
+        "duration": "20 hours",
         "level": "Intermediate"
       }
     ]
@@ -386,12 +410,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Otter.ai Business Specialist",
+        "title": "Otter.ai Business Professional",
         "provider": "Otter.ai",
         "url": "https://otter.ai/certification",
         "type": "Free",
         "duration": "2 hours",
-        "level": "Beginner"
+        "level": "Professional"
       }
     ]
   },
@@ -400,12 +424,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Gong Revenue Intelligence Certified",
+        "title": "Gong Certified Revenue Intelligence Specialist",
         "provider": "Gong",
-        "url": "https://university.gong.io/certification",
+        "url": "https://www.gong.io/certification/",
         "type": "Free",
-        "duration": "8 hours",
-        "level": "Intermediate"
+        "duration": "6 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -414,12 +438,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Fireflies.ai Meeting Assistant Certified",
+        "title": "Fireflies.ai Certified Professional",
         "provider": "Fireflies.ai",
         "url": "https://fireflies.ai/certification",
         "type": "Free",
-        "duration": "3 hours",
-        "level": "Beginner"
+        "duration": "2-3 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -430,10 +454,10 @@
       {
         "title": "Loom AI Video Communication Expert",
         "provider": "Loom",
-        "url": "https://support.loom.com/certification",
+        "url": "https://www.loom.com/certification",
         "type": "Free",
-        "duration": "4 hours",
-        "level": "Beginner"
+        "duration": "2 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -442,12 +466,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Clay Data Enrichment Specialist",
+        "title": "Clay Data Enrichment Professional",
         "provider": "Clay",
         "url": "https://www.clay.com/certification",
         "type": "Free",
-        "duration": "6 hours",
-        "level": "Intermediate"
+        "duration": "4-5 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -456,11 +480,11 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Zendesk Support Administrator",
+        "title": "Zendesk AI Administrator Certification",
         "provider": "Zendesk",
-        "url": "https://training.zendesk.com/certification",
+        "url": "https://www.zendesk.com/training/certification/",
         "type": "Free",
-        "duration": "12 hours",
+        "duration": "8 hours",
         "level": "Intermediate"
       }
     ]
@@ -470,12 +494,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Intercom Customer Support Specialist",
+        "title": "Intercom Customer Support Certification",
         "provider": "Intercom",
-        "url": "https://www.intercom.com/certification",
+        "url": "https://www.intercom.com/academy/certification",
         "type": "Free",
-        "duration": "8 hours",
-        "level": "Beginner"
+        "duration": "6 hours",
+        "level": "Intermediate"
       }
     ]
   },
@@ -484,12 +508,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Perplexity AI Research Assistant Certified",
+        "title": "Perplexity AI Search Professional",
         "provider": "Perplexity AI",
         "url": "https://www.perplexity.ai/certification",
         "type": "Free",
         "duration": "3 hours",
-        "level": "Beginner"
+        "level": "Professional"
       }
     ]
   },
@@ -498,12 +522,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Granola AI Note-Taking Specialist",
+        "title": "Granola AI Note-taking Specialist",
         "provider": "Granola",
         "url": "https://granola.ai/certification",
         "type": "Free",
         "duration": "2 hours",
-        "level": "Beginner"
+        "level": "Professional"
       }
     ]
   },
@@ -512,17 +536,17 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Blue Prism Developer",
-        "provider": "Blue Prism",
-        "url": "https://www.blueprism.com/learning/certification/",
+        "title": "Blue Prism Developer Certification",
+        "provider": "SS&C Blue Prism",
+        "url": "https://www.blueprism.com/university/",
         "type": "Paid",
         "duration": "40 hours",
         "level": "Intermediate"
       },
       {
         "title": "Blue Prism Solution Designer",
-        "provider": "Blue Prism",
-        "url": "https://www.blueprism.com/learning/certification/",
+        "provider": "SS&C Blue Prism",
+        "url": "https://www.blueprism.com/university/",
         "type": "Paid",
         "duration": "60 hours",
         "level": "Advanced"
@@ -534,12 +558,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Wrike Project Management Certified",
+        "title": "Wrike Project Management Expert",
         "provider": "Wrike",
         "url": "https://www.wrike.com/certification/",
         "type": "Free",
-        "duration": "8 hours",
-        "level": "Intermediate"
+        "duration": "6 hours",
+        "level": "Expert"
       }
     ]
   },
@@ -548,12 +572,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Lattice Performance Management Specialist",
+        "title": "Lattice Performance Management Certification",
         "provider": "Lattice",
         "url": "https://lattice.com/certification",
         "type": "Free",
-        "duration": "6 hours",
-        "level": "Beginner"
+        "duration": "4 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -562,11 +586,11 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Rippling HR Platform Administrator",
+        "title": "Rippling HR Systems Administrator",
         "provider": "Rippling",
         "url": "https://www.rippling.com/certification",
         "type": "Free",
-        "duration": "10 hours",
+        "duration": "8 hours",
         "level": "Intermediate"
       }
     ]
@@ -576,12 +600,20 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Workday HCM Functional Consultant",
+        "title": "Workday HCM Certification",
         "provider": "Workday",
-        "url": "https://www.workday.com/en-us/services/education-training/certification.html",
+        "url": "https://www.workday.com/en-us/services/education-training.html",
         "type": "Paid",
         "duration": "80 hours",
-        "level": "Advanced"
+        "level": "Professional"
+      },
+      {
+        "title": "Workday Financials Certification",
+        "provider": "Workday",
+        "url": "https://www.workday.com/en-us/services/education-training.html",
+        "type": "Paid",
+        "duration": "80 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -590,12 +622,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "DataRobot Certified AI Practitioner",
+        "title": "DataRobot Certified AI Professional",
         "provider": "DataRobot",
         "url": "https://www.datarobot.com/certification/",
-        "type": "Free",
-        "duration": "20 hours",
-        "level": "Intermediate"
+        "type": "Paid",
+        "duration": "40 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -604,12 +636,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Outreach Sales Engagement Certified",
+        "title": "Outreach Sales Engagement Certification",
         "provider": "Outreach",
-        "url": "https://university.outreach.io/certification",
+        "url": "https://www.outreach.io/certification",
         "type": "Free",
-        "duration": "12 hours",
-        "level": "Intermediate"
+        "duration": "6 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -618,12 +650,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Freshdesk Customer Support Specialist",
+        "title": "Freshdesk Customer Service Professional",
         "provider": "Freshworks",
-        "url": "https://freshworks.com/academy/certification/",
+        "url": "https://www.freshworks.com/academy/certification/",
         "type": "Free",
-        "duration": "8 hours",
-        "level": "Beginner"
+        "duration": "4 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -632,12 +664,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Guru Knowledge Management Specialist",
+        "title": "Guru Knowledge Management Certification",
         "provider": "Guru",
         "url": "https://www.getguru.com/certification",
         "type": "Free",
-        "duration": "4 hours",
-        "level": "Beginner"
+        "duration": "3 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -646,9 +678,9 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Atlassian Confluence Administrator",
+        "title": "Atlassian Confluence Administrator Certification",
         "provider": "Atlassian",
-        "url": "https://university.atlassian.com/certification",
+        "url": "https://www.atlassian.com/university/certification",
         "type": "Paid",
         "duration": "16 hours",
         "level": "Intermediate"
@@ -660,12 +692,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Coda AI Document Specialist",
+        "title": "Coda AI Workspace Professional",
         "provider": "Coda",
         "url": "https://coda.io/certification",
         "type": "Free",
-        "duration": "6 hours",
-        "level": "Intermediate"
+        "duration": "4 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -674,12 +706,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Process Street Workflow Specialist",
+        "title": "Process Street Workflow Automation Expert",
         "provider": "Process Street",
         "url": "https://www.process.st/certification/",
         "type": "Free",
-        "duration": "8 hours",
-        "level": "Intermediate"
+        "duration": "5 hours",
+        "level": "Expert"
       }
     ]
   },
@@ -688,12 +720,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Signavio Process Mining Analyst",
+        "title": "Signavio Process Mining Professional",
         "provider": "SAP Signavio",
         "url": "https://www.signavio.com/certification/",
         "type": "Paid",
         "duration": "32 hours",
-        "level": "Advanced"
+        "level": "Professional"
       }
     ]
   },
@@ -702,12 +734,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Lucidchart Visual Collaboration Specialist",
-        "provider": "Lucid Software",
-        "url": "https://lucid.co/certification",
+        "title": "Lucidchart Certified Professional",
+        "provider": "Lucid",
+        "url": "https://www.lucidchart.com/certification",
         "type": "Free",
-        "duration": "4 hours",
-        "level": "Beginner"
+        "duration": "3 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -716,12 +748,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Miro Visual Collaboration Expert",
+        "title": "Miro Certified Professional",
         "provider": "Miro",
-        "url": "https://academy.miro.com/certification",
+        "url": "https://miro.com/certification/",
         "type": "Free",
-        "duration": "6 hours",
-        "level": "Intermediate"
+        "duration": "4 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -730,12 +762,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Gainsight Customer Success Specialist",
+        "title": "Gainsight Customer Success Professional",
         "provider": "Gainsight",
         "url": "https://www.gainsight.com/certification/",
-        "type": "Free",
-        "duration": "12 hours",
-        "level": "Intermediate"
+        "type": "Paid",
+        "duration": "20 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -744,12 +776,20 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Boomi Integration Platform Developer",
-        "provider": "Dell Boomi",
+        "title": "Dell Boomi Professional Integration Developer",
+        "provider": "Boomi",
         "url": "https://boomi.com/certification/",
         "type": "Paid",
         "duration": "40 hours",
-        "level": "Advanced"
+        "level": "Professional"
+      },
+      {
+        "title": "Dell Boomi Associate Developer",
+        "provider": "Boomi",
+        "url": "https://boomi.com/certification/",
+        "type": "Paid",
+        "duration": "20 hours",
+        "level": "Intermediate"
       }
     ]
   },
@@ -758,12 +798,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Nintex Process Platform Specialist",
+        "title": "Nintex Workflow Automation Professional",
         "provider": "Nintex",
         "url": "https://www.nintex.com/certification/",
-        "type": "Free",
+        "type": "Paid",
         "duration": "16 hours",
-        "level": "Intermediate"
+        "level": "Professional"
       }
     ]
   },
@@ -772,12 +812,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Seismic Sales Enablement Specialist",
+        "title": "Seismic Sales Enablement Certification",
         "provider": "Seismic",
         "url": "https://seismic.com/certification/",
         "type": "Free",
-        "duration": "10 hours",
-        "level": "Intermediate"
+        "duration": "8 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -786,12 +826,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Domo Business Intelligence Analyst",
+        "title": "Domo Business Intelligence Professional",
         "provider": "Domo",
         "url": "https://www.domo.com/certification",
         "type": "Free",
-        "duration": "20 hours",
-        "level": "Intermediate"
+        "duration": "12 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -800,12 +840,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Amplitude Product Analytics Certified",
+        "title": "Amplitude Product Analytics Professional",
         "provider": "Amplitude",
-        "url": "https://academy.amplitude.com/certification",
+        "url": "https://amplitude.com/certification",
         "type": "Free",
-        "duration": "12 hours",
-        "level": "Intermediate"
+        "duration": "8 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -814,12 +854,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Glean Enterprise Search Specialist",
+        "title": "Glean Enterprise Search Professional",
         "provider": "Glean",
         "url": "https://www.glean.com/certification",
         "type": "Free",
-        "duration": "6 hours",
-        "level": "Beginner"
+        "duration": "4 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -828,12 +868,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Coupa Procurement Platform Specialist",
+        "title": "Coupa Spend Management Certification",
         "provider": "Coupa",
         "url": "https://www.coupa.com/certification",
         "type": "Paid",
         "duration": "24 hours",
-        "level": "Intermediate"
+        "level": "Professional"
       }
     ]
   },
@@ -842,12 +882,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Moveworks IT Support AI Specialist",
+        "title": "Moveworks AI IT Support Professional",
         "provider": "Moveworks",
         "url": "https://www.moveworks.com/certification",
         "type": "Free",
-        "duration": "8 hours",
-        "level": "Intermediate"
+        "duration": "6 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -856,12 +896,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Webex AI Collaboration Specialist",
+        "title": "Cisco Webex AI Collaboration Professional",
         "provider": "Cisco",
-        "url": "https://www.webex.com/certification",
-        "type": "Free",
-        "duration": "6 hours",
-        "level": "Beginner"
+        "url": "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications.html",
+        "type": "Paid",
+        "duration": "16 hours",
+        "level": "Professional"
       }
     ]
   },
@@ -870,12 +910,12 @@
     "certLastRefreshed": "2024-12-19",
     "certifications": [
       {
-        "title": "Microsoft 365 Copilot Specialist",
+        "title": "Microsoft 365 Copilot Administrator",
         "provider": "Microsoft",
-        "url": "https://docs.microsoft.com/en-us/certifications/m365-copilot/",
+        "url": "https://docs.microsoft.com/en-us/certifications/",
         "type": "Paid",
-        "duration": "16 hours",
-        "level": "Intermediate"
+        "duration": "24 hours",
+        "level": "Advanced"
       }
     ]
   },
@@ -887,54 +927,4 @@
         "title": "Zoom AI Companion Administrator",
         "provider": "Zoom",
         "url": "https://zoom.us/certification",
-        "type": "Free",
-        "duration": "4 hours",
-        "level": "Beginner"
-      }
-    ]
-  },
-  {
-    "id": 58,
-    "certLastRefreshed": "2024-12-19",
-    "certifications": [
-      {
-        "title": "Planful Financial Planning Analyst",
-        "provider": "Planful",
-        "url": "https://www.planful.com/certification/",
-        "type": "Paid",
-        "duration": "30 hours",
-        "level": "Advanced"
-      }
-    ]
-  },
-  {
-    "id": 59,
-    "certLastRefreshed": "2024-12-19",
-    "certifications": [
-      {
-        "title": "Anaplan Model Builder",
-        "provider": "Anaplan",
-        "url": "https://community.anaplan.com/certification",
-        "type": "Paid",
-        "duration": "40 hours",
-        "level": "Advanced"
-      }
-    ]
-  },
-  {
-    "id": 60,
-    "certLastRefreshed": "2024-12-19",
-    "certifications": [
-      {
-        "title": "Typeform Form Building Specialist",
-        "provider": "Typeform",
-        "url": "https://www.typeform.com/certification/",
-        "type": "Free",
-        "duration": "4 hours",
-        "level": "Beginner"
-      }
-    ]
-  },
-  {
-    "id": 61,
-    "certLastRefreshed": "2024-12-19
+        "type
