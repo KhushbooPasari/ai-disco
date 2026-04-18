@@ -1,1 +1,109 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Make.com",
+    "certLastChecked": "__LAST_CHECKED__",
+    "certifications": [
+      {
+        "title": "Make Academy \u2014 Basic",
+        "provider": "Make",
+        "url": "https://academy.make.com/",
+        "type": "Free",
+        "duration": "4 hours",
+        "level": "Beginner"
+      },
+      {
+        "title": "Make Expert Certification",
+        "provider": "Make",
+        "url": "https://www.make.com/en/make-experts",
+        "type": "Paid",
+        "duration": "Self-paced",
+        "level": "Advanced"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Zapier",
+    "certLastChecked": "__LAST_CHECKED__",
+    "certifications": [
+      {
+        "title": "Zapier Learn \u2014 Fundamentals",
+        "provider": "Zapier",
+        "url": "https://learn.zapier.com/",
+        "type": "Free",
+        "duration": "3 hours",
+        "level": "Beginner"
+      },
+      {
+        "title": "Zapier Certified Expert",
+        "provider": "Zapier",
+        "url": "https://zapier.com/experts",
+        "type": "Paid",
+        "duration": "Self-paced",
+        "level": "Advanced"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "UiPath",
+    "certLastChecked": "__LAST_CHECKED__",
+    "certifications": [
+      {
+        "title": "UiPath Academy",
+        "provider": "UiPath",
+        "url": "https://academy.uipath.com/",
+        "type": "Free",
+        "duration": "Self-paced",
+        "level": "Beginner"
+      },
+      {
+        "title": "UiPath Certified Professional Automation Developer (UiRPA)",
+        "provider": "UiPath",
+        "url": "https://www.uipath.com/learning/certification",
+        "type": "Paid",
+        "duration": "Self-paced",
+        "level": "Intermediate"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Automation Anywhere",
+    "certLastChecked": "__LAST_CHECKED__",
+    "certifications": [
+      {
+        "title": "Automation Anywhere University",
+        "provider": "Automation Anywhere",
+        "url": "https://university.automationanywhere.com/",
+        "type": "Free",
+        "duration": "Self-paced",
+        "level": "Beginner"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Microsoft Power Automate",
+    "certLastChecked": "__LAST_CHECKED__",
+    "certifications": [
+      {
+        "title": "Microsoft Learn \u2014 Power Automate",
+        "provider": "Microsoft",
+        "url": "https://learn.microsoft.com/training/powerplatform/power-automate",
+        "type": "Free",
+        "duration": "Self-paced",
+        "level": "Beginner"
+      },
+      {
+        "title": "PL-500: Microsoft Power Automate RPA Developer",
+        "provider": "Microsoft",
+        "url": "https://learn.microsoft.com/credentials/certifications/exams/pl-500/",
+        "type": "Paid",
+        "duration": "Exam",
+        "level": "Advanced"
+      }
+    ]
+  }
+]
