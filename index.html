@@ -935,7 +935,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
       <div class="hero-content">
         <div class="hero-pill"><span class="hero-pill-dot"></span>Discover · Learn · Automate</div>
         <h1>The only AI directory built for<br><em>operations &amp; automation</em></h1>
-        <p class="hero-sub">80 curated tools for workflow automation, process intelligence, and operational efficiency; each with direct access to official certifications and learning paths</p>
+        <p class="hero-sub">80 curated tools for workflow automation, process intelligence, and operational efficiency — each with direct access to official certifications and learning paths.</p>
         <div class="hero-stats">
           <div class="stat"><div class="stat-num" id="statTools">80</div><div class="stat-label">Tools</div></div>
           <div class="stat"><div class="stat-num" id="statPaths">207+</div><div class="stat-label">Learning Paths</div></div>
@@ -1689,7 +1689,7 @@ function renderYouTubeSection(toolId, toolName) {
 async function initTools(){
   try{const r=await fetch('tools.json?v='+Date.now());if(!r.ok)throw 0;tools=await r.json()}
   catch{tools=EMBEDDED_TOOLS}
-  // Overlay hand-curated certifications from certs.json (maintained via timestamp-only scenario)
+  // Overlay hand-curated certifications from certs.json (maintained via GitHub Action timestamp refresh)
   try{
     const r=await fetch('certs.json?v='+Date.now());
     if(r.ok){
@@ -1705,13 +1705,26 @@ async function initTools(){
       }
     }
   }catch{}
-  // Try to overlay use cases from usecases.json
+  // Overlay use cases — try ai-data.json first (combined file), fall back to usecases.json
   try{
-    const r=await fetch('usecases.json?v='+Date.now());
+    const r=await fetch('ai-data.json?v='+Date.now());
     if(r.ok){
-      const uc=await r.json();
-      const ucMap={};uc.forEach(u=>{ucMap[u.id]=u});
-      tools.forEach(t=>{if(ucMap[t.id]){t.liveUseCases=ucMap[t.id].useCases;t.useCaseRefreshed=ucMap[t.id].refreshedAt}});
+      const raw=await r.text();
+      // Claude sometimes returns text wrapped in ```json fences — strip them
+      const clean=raw.trim().replace(/^```json\s*/,'').replace(/```\s*$/,'');
+      const aiData=JSON.parse(clean);
+      if(aiData.usecases && Array.isArray(aiData.usecases)){
+        const ucMap={};aiData.usecases.forEach(u=>{ucMap[u.id]=u});
+        tools.forEach(t=>{if(ucMap[t.id]){t.liveUseCases=ucMap[t.id].useCases;t.useCaseRefreshed=ucMap[t.id].refreshedAt}});
+      }
+    } else {
+      // Fall back to legacy usecases.json
+      const r2=await fetch('usecases.json?v='+Date.now());
+      if(r2.ok){
+        const uc=await r2.json();
+        const ucMap={};uc.forEach(u=>{ucMap[u.id]=u});
+        tools.forEach(t=>{if(ucMap[t.id]){t.liveUseCases=ucMap[t.id].useCases;t.useCaseRefreshed=ucMap[t.id].refreshedAt}});
+      }
     }
   }catch{}
   const tp=tools.reduce((n,t)=>n+(t.certifications||[]).length,0);
@@ -1919,13 +1932,28 @@ const EMBEDDED_CASES=[
 
 async function initCases(){
   const today=new Date().toISOString().split('T')[0];
+  // Try ai-data.json first (combined Make scenario output)
   try{
-    const r=await fetch('cases.json?v='+Date.now());
-    if(!r.ok)throw 0;
-    caseData=await r.json();
-  }catch{
-    // Use embedded data but stamp today's date so refresh label is accurate
-    caseData=EMBEDDED_CASES.map(c=>({...c,refreshed:today}));
+    const r=await fetch('ai-data.json?v='+Date.now());
+    if(r.ok){
+      const raw=await r.text();
+      const clean=raw.trim().replace(/^```json\s*/,'').replace(/```\s*$/,'');
+      const aiData=JSON.parse(clean);
+      if(aiData.cases && Array.isArray(aiData.cases) && aiData.cases.length){
+        caseData=aiData.cases;
+      }
+    }
+  }catch{}
+  // Fall back to standalone cases.json if ai-data didn't provide cases
+  if(!caseData || !caseData.length){
+    try{
+      const r=await fetch('cases.json?v='+Date.now());
+      if(!r.ok)throw 0;
+      caseData=await r.json();
+    }catch{
+      // Last resort: use embedded fallback stamped with today's date
+      caseData=EMBEDDED_CASES.map(c=>({...c,refreshed:today}));
+    }
   }
   buildCasesCatFilters();
   renderCases();
