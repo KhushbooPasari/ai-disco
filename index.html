@@ -935,7 +935,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
       <div class="hero-content">
         <div class="hero-pill"><span class="hero-pill-dot"></span>Discover · Learn · Automate</div>
         <h1>The only AI directory built for<br><em>operations &amp; automation</em></h1>
-        <p class="hero-sub">80 curated tools for workflow automation, process intelligence, and operational efficiency, each with direct access to official certifications and learning paths</p>
+        <p class="hero-sub">80 curated tools for workflow automation, process intelligence, and operational efficiency — each with direct access to official certifications and learning paths.</p>
         <div class="hero-stats">
           <div class="stat"><div class="stat-num" id="statTools">80</div><div class="stat-label">Tools</div></div>
           <div class="stat"><div class="stat-num" id="statPaths">207+</div><div class="stat-label">Learning Paths</div></div>
@@ -1689,6 +1689,22 @@ function renderYouTubeSection(toolId, toolName) {
 async function initTools(){
   try{const r=await fetch('tools.json?v='+Date.now());if(!r.ok)throw 0;tools=await r.json()}
   catch{tools=EMBEDDED_TOOLS}
+  // Overlay hand-curated certifications from certs.json (maintained via timestamp-only scenario)
+  try{
+    const r=await fetch('certs.json?v='+Date.now());
+    if(r.ok){
+      const ct=await r.json();
+      if(Array.isArray(ct) && ct.length){
+        const ctMap={};ct.forEach(c=>{ctMap[c.id]=c});
+        tools.forEach(t=>{
+          if(ctMap[t.id]){
+            if(ctMap[t.id].certifications) t.certifications=ctMap[t.id].certifications;
+            if(ctMap[t.id].certLastChecked) t.certLastRefreshed=ctMap[t.id].certLastChecked;
+          }
+        });
+      }
+    }
+  }catch{}
   // Try to overlay use cases from usecases.json
   try{
     const r=await fetch('usecases.json?v='+Date.now());
