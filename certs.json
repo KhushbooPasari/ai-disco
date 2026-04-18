@@ -1,109 +1,82 @@
 [
-  {
-    "id": 1,
-    "name": "Make.com",
-    "certLastChecked": "__LAST_CHECKED__",
-    "certifications": [
-      {
-        "title": "Make Academy \u2014 Basic",
-        "provider": "Make",
-        "url": "https://academy.make.com/",
-        "type": "Free",
-        "duration": "4 hours",
-        "level": "Beginner"
-      },
-      {
-        "title": "Make Expert Certification",
-        "provider": "Make",
-        "url": "https://www.make.com/en/make-experts",
-        "type": "Paid",
-        "duration": "Self-paced",
-        "level": "Advanced"
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Zapier",
-    "certLastChecked": "__LAST_CHECKED__",
-    "certifications": [
-      {
-        "title": "Zapier Learn \u2014 Fundamentals",
-        "provider": "Zapier",
-        "url": "https://learn.zapier.com/",
-        "type": "Free",
-        "duration": "3 hours",
-        "level": "Beginner"
-      },
-      {
-        "title": "Zapier Certified Expert",
-        "provider": "Zapier",
-        "url": "https://zapier.com/experts",
-        "type": "Paid",
-        "duration": "Self-paced",
-        "level": "Advanced"
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "name": "UiPath",
-    "certLastChecked": "__LAST_CHECKED__",
-    "certifications": [
-      {
-        "title": "UiPath Academy",
-        "provider": "UiPath",
-        "url": "https://academy.uipath.com/",
-        "type": "Free",
-        "duration": "Self-paced",
-        "level": "Beginner"
-      },
-      {
-        "title": "UiPath Certified Professional Automation Developer (UiRPA)",
-        "provider": "UiPath",
-        "url": "https://www.uipath.com/learning/certification",
-        "type": "Paid",
-        "duration": "Self-paced",
-        "level": "Intermediate"
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Automation Anywhere",
-    "certLastChecked": "__LAST_CHECKED__",
-    "certifications": [
-      {
-        "title": "Automation Anywhere University",
-        "provider": "Automation Anywhere",
-        "url": "https://university.automationanywhere.com/",
-        "type": "Free",
-        "duration": "Self-paced",
-        "level": "Beginner"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Microsoft Power Automate",
-    "certLastChecked": "__LAST_CHECKED__",
-    "certifications": [
-      {
-        "title": "Microsoft Learn \u2014 Power Automate",
-        "provider": "Microsoft",
-        "url": "https://learn.microsoft.com/training/powerplatform/power-automate",
-        "type": "Free",
-        "duration": "Self-paced",
-        "level": "Beginner"
-      },
-      {
-        "title": "PL-500: Microsoft Power Automate RPA Developer",
-        "provider": "Microsoft",
-        "url": "https://learn.microsoft.com/credentials/certifications/exams/pl-500/",
-        "type": "Paid",
-        "duration": "Exam",
-        "level": "Advanced"
-      }
-    ]
-  }
+  {"id":1,"name":"Make.com","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Make Academy","provider":"Make","url":"https://academy.make.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Make Expert Certification","provider":"Make","url":"https://www.make.com/en/make-experts","type":"Paid","duration":"Self-paced","level":"Advanced"}]},
+  {"id":2,"name":"Zapier","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Zapier Learn","provider":"Zapier","url":"https://learn.zapier.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Zapier Certified Expert","provider":"Zapier","url":"https://zapier.com/experts","type":"Paid","duration":"Self-paced","level":"Advanced"}]},
+  {"id":3,"name":"UiPath","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"UiPath Academy","provider":"UiPath","url":"https://academy.uipath.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"UiPath Certified Professional","provider":"UiPath","url":"https://www.uipath.com/learning/certification","type":"Paid","duration":"Exam","level":"Intermediate"}]},
+  {"id":4,"name":"Automation Anywhere","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Automation Anywhere University","provider":"Automation Anywhere","url":"https://university.automationanywhere.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Automation Anywhere Certified Advanced RPA Professional","provider":"Automation Anywhere","url":"https://university.automationanywhere.com/certifications/","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":5,"name":"Microsoft Power Automate","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Microsoft Learn — Power Automate","provider":"Microsoft","url":"https://learn.microsoft.com/training/powerplatform/power-automate","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"PL-500: Power Automate RPA Developer","provider":"Microsoft","url":"https://learn.microsoft.com/credentials/certifications/exams/pl-500/","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":6,"name":"n8n","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"n8n Documentation","provider":"n8n","url":"https://docs.n8n.io/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"n8n Academy","provider":"n8n","url":"https://academy.n8n.io/","type":"Free","duration":"Self-paced","level":"Intermediate"}]},
+  {"id":7,"name":"Workato","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Workato Automation Pro","provider":"Workato","url":"https://www.workato.com/automation-institute","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Workato Certified Automation Pro","provider":"Workato","url":"https://www.workato.com/academy/certifications","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":8,"name":"Celonis","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Celonis Academy","provider":"Celonis","url":"https://academy.celonis.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Process Mining Fundamentals","provider":"Celonis","url":"https://academy.celonis.com/learn","type":"Free","duration":"5 hours","level":"Beginner"}]},
+  {"id":9,"name":"Asana","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Asana Academy","provider":"Asana","url":"https://academy.asana.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Asana Certified Pro","provider":"Asana","url":"https://academy.asana.com/page/certifications","type":"Free","duration":"Exam","level":"Intermediate"}]},
+  {"id":10,"name":"Monday.com","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Monday.com Academy","provider":"Monday","url":"https://monday.com/helpcenter/academy","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Monday Certified Product Expert","provider":"Monday","url":"https://monday.com/w/certification","type":"Free","duration":"Exam","level":"Advanced"}]},
+  {"id":11,"name":"Notion AI","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Notion Academy","provider":"Notion","url":"https://www.notion.com/help/guides","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Notion Certified","provider":"Notion","url":"https://www.notion.com/certifications","type":"Free","duration":"Exam","level":"Intermediate"}]},
+  {"id":12,"name":"ClickUp","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"ClickUp University","provider":"ClickUp","url":"https://university.clickup.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"ClickUp Power User Certification","provider":"ClickUp","url":"https://university.clickup.com/certifications","type":"Free","duration":"Exam","level":"Intermediate"}]},
+  {"id":13,"name":"Smartsheet","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Smartsheet Learning Center","provider":"Smartsheet","url":"https://www.smartsheet.com/learning-center","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Smartsheet Product Certified User","provider":"Smartsheet","url":"https://www.smartsheet.com/training/product-certifications","type":"Paid","duration":"Exam","level":"Intermediate"}]},
+  {"id":14,"name":"Tableau","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Tableau Training & eLearning","provider":"Tableau","url":"https://www.tableau.com/learn/training","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Tableau Desktop Specialist","provider":"Tableau","url":"https://www.tableau.com/learn/certification","type":"Paid","duration":"Exam","level":"Intermediate"}]},
+  {"id":15,"name":"Microsoft Power BI","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Microsoft Learn — Power BI","provider":"Microsoft","url":"https://learn.microsoft.com/training/powerplatform/power-bi","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"PL-300: Power BI Data Analyst","provider":"Microsoft","url":"https://learn.microsoft.com/credentials/certifications/data-analyst-associate/","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":16,"name":"Alteryx","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Alteryx Learning","provider":"Alteryx","url":"https://community.alteryx.com/t5/Learn/ct-p/learn-overview","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Alteryx Designer Core","provider":"Alteryx","url":"https://community.alteryx.com/t5/Certification/ct-p/certification","type":"Paid","duration":"Exam","level":"Intermediate"}]},
+  {"id":17,"name":"Salesforce","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Salesforce Trailhead","provider":"Salesforce","url":"https://trailhead.salesforce.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Salesforce Administrator","provider":"Salesforce","url":"https://trailhead.salesforce.com/credentials/administrator","type":"Paid","duration":"Exam","level":"Intermediate"}]},
+  {"id":18,"name":"HubSpot","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"HubSpot Academy","provider":"HubSpot","url":"https://academy.hubspot.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"HubSpot Inbound Marketing Certification","provider":"HubSpot","url":"https://academy.hubspot.com/courses/inbound-marketing","type":"Free","duration":"4 hours","level":"Intermediate"}]},
+  {"id":19,"name":"ServiceNow","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"ServiceNow Learning","provider":"ServiceNow","url":"https://nowlearning.servicenow.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Certified System Administrator","provider":"ServiceNow","url":"https://nowlearning.servicenow.com/lxp/en/now-platform/certifications","type":"Paid","duration":"Exam","level":"Intermediate"}]},
+  {"id":20,"name":"Airtable","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Airtable Academy","provider":"Airtable","url":"https://academy.airtable.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Airtable Builder Certified","provider":"Airtable","url":"https://airtable.com/guides","type":"Free","duration":"Self-paced","level":"Intermediate"}]},
+  {"id":21,"name":"Jira","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Atlassian University","provider":"Atlassian","url":"https://university.atlassian.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Atlassian Certified Professional","provider":"Atlassian","url":"https://university.atlassian.com/student/page/1038196-atlassian-certifications","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":22,"name":"Otter.ai","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Otter.ai Help Center","provider":"Otter","url":"https://help.otter.ai/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":23,"name":"Gong","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Gong Academy","provider":"Gong","url":"https://academy.gong.io/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Gong Certified User","provider":"Gong","url":"https://www.gong.io/resources/","type":"Free","duration":"Exam","level":"Intermediate"}]},
+  {"id":24,"name":"Fireflies.ai","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Fireflies Help Center","provider":"Fireflies","url":"https://help.fireflies.ai/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":25,"name":"Loom AI","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Loom Academy","provider":"Loom","url":"https://support.loom.com/hc/en-us","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":26,"name":"Clay","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Clay University","provider":"Clay","url":"https://www.clay.com/university","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":27,"name":"Zendesk AI","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Zendesk Training","provider":"Zendesk","url":"https://training.zendesk.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Zendesk Support Administrator Expert","provider":"Zendesk","url":"https://training.zendesk.com/product-certifications","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":28,"name":"Intercom","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Intercom Academy","provider":"Intercom","url":"https://academy.intercom.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":29,"name":"Perplexity AI","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Perplexity Help","provider":"Perplexity","url":"https://www.perplexity.ai/hub/faq","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":30,"name":"Granola","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Granola Help","provider":"Granola","url":"https://granola.ai/support","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":31,"name":"Blue Prism","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Blue Prism University","provider":"Blue Prism","url":"https://university.blueprism.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Blue Prism Developer Certification","provider":"Blue Prism","url":"https://university.blueprism.com/certifications","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":32,"name":"Wrike","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Wrike Discover","provider":"Wrike","url":"https://www.wrike.com/discover/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":33,"name":"Lattice","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Lattice Library","provider":"Lattice","url":"https://lattice.com/library","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":34,"name":"Rippling","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Rippling Help Center","provider":"Rippling","url":"https://support.rippling.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":35,"name":"Workday","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Workday Learning","provider":"Workday","url":"https://community.workday.com/learning","type":"Free","duration":"Self-paced","level":"Intermediate"},{"title":"Workday Pro Certification","provider":"Workday","url":"https://www.workday.com/en-us/services/education.html","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":36,"name":"DataRobot","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"DataRobot University","provider":"DataRobot","url":"https://university.datarobot.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"DataRobot Certified AI Expert","provider":"DataRobot","url":"https://www.datarobot.com/certifications/","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":37,"name":"Outreach","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Outreach University","provider":"Outreach","url":"https://www.outreach.io/university","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":38,"name":"Freshdesk","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Freshworks Academy","provider":"Freshworks","url":"https://academy.freshworks.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Freshdesk Administrator Certification","provider":"Freshworks","url":"https://academy.freshworks.com/certifications","type":"Paid","duration":"Exam","level":"Intermediate"}]},
+  {"id":39,"name":"Guru","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Guru Help Center","provider":"Guru","url":"https://help.getguru.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":40,"name":"Confluence","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Atlassian University — Confluence","provider":"Atlassian","url":"https://university.atlassian.com/student/catalog","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Atlassian Certified Professional — Confluence","provider":"Atlassian","url":"https://university.atlassian.com/student/page/1038196-atlassian-certifications","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":41,"name":"Coda AI","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Coda Community","provider":"Coda","url":"https://community.coda.io/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":42,"name":"Process Street","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Process Street Help","provider":"Process Street","url":"https://help.process.st/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":43,"name":"Signavio","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"SAP Signavio Academic","provider":"SAP","url":"https://www.signavio.com/academic/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"SAP Signavio Certified Associate","provider":"SAP","url":"https://training.sap.com/certification","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":44,"name":"Lucidchart","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Lucid Training Labs","provider":"Lucid","url":"https://www.lucidchart.com/pages/training","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":45,"name":"Miro","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Miro Academy","provider":"Miro","url":"https://academy.miro.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Miro Expert Certification","provider":"Miro","url":"https://academy.miro.com/courses","type":"Free","duration":"Exam","level":"Intermediate"}]},
+  {"id":46,"name":"Gainsight","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Gainsight University","provider":"Gainsight","url":"https://education.gainsight.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":47,"name":"Boomi","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Boomi Learn","provider":"Boomi","url":"https://train.boomi.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Boomi Associate Developer","provider":"Boomi","url":"https://boomi.com/training/certification/","type":"Paid","duration":"Exam","level":"Intermediate"}]},
+  {"id":48,"name":"Nintex","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Nintex University","provider":"Nintex","url":"https://community.nintex.com/training-certification-15","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Nintex Workflow Administrator","provider":"Nintex","url":"https://www.nintex.com/services/training/","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":49,"name":"Seismic","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Seismic University","provider":"Seismic","url":"https://seismic.com/resources/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":50,"name":"Domo","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Domo University","provider":"Domo","url":"https://university.domo.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":51,"name":"Amplitude","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Amplitude Academy","provider":"Amplitude","url":"https://academy.amplitude.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Amplitude Certified Product Analyst","provider":"Amplitude","url":"https://amplitude.com/certification","type":"Free","duration":"Exam","level":"Intermediate"}]},
+  {"id":52,"name":"Glean","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Glean Help","provider":"Glean","url":"https://help.glean.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":53,"name":"Coupa","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Coupa Community","provider":"Coupa","url":"https://compass.coupa.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Coupa Certified Administrator","provider":"Coupa","url":"https://www.coupa.com/certifications","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":54,"name":"Moveworks","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Moveworks University","provider":"Moveworks","url":"https://www.moveworks.com/us/en/resources","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":55,"name":"Webex AI","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Webex Help Center","provider":"Cisco","url":"https://help.webex.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":56,"name":"Microsoft 365 Copilot","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Microsoft Learn — Copilot","provider":"Microsoft","url":"https://learn.microsoft.com/training/paths/get-started-with-microsoft-365-copilot/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"MS-900: Microsoft 365 Fundamentals","provider":"Microsoft","url":"https://learn.microsoft.com/credentials/certifications/m365-fundamentals/","type":"Paid","duration":"Exam","level":"Beginner"}]},
+  {"id":57,"name":"Zoom AI Companion","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Zoom Learning Center","provider":"Zoom","url":"https://learning.zoom.us/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":58,"name":"Planful","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Planful Academy","provider":"Planful","url":"https://planful.com/resources/academy/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":59,"name":"Anaplan","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Anaplan Learning","provider":"Anaplan","url":"https://learning.anaplan.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Anaplan Certified Model Builder","provider":"Anaplan","url":"https://www.anaplan.com/academy/certification/","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":60,"name":"Typeform","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Typeform Help Center","provider":"Typeform","url":"https://www.typeform.com/help/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":61,"name":"Anthropic Claude","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Claude Documentation","provider":"Anthropic","url":"https://docs.claude.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Anthropic Courses","provider":"Anthropic","url":"https://www.anthropic.com/learn","type":"Free","duration":"Self-paced","level":"Intermediate"}]},
+  {"id":62,"name":"ChatGPT Enterprise","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"OpenAI Documentation","provider":"OpenAI","url":"https://platform.openai.com/docs","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":63,"name":"Gemini for Workspace","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Google Workspace Learning","provider":"Google","url":"https://support.google.com/a/answer/13623623","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Google Cloud Skills Boost","provider":"Google","url":"https://www.cloudskillsboost.google/","type":"Free","duration":"Self-paced","level":"Intermediate"}]},
+  {"id":64,"name":"Pendo","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Pendo Academy","provider":"Pendo","url":"https://academy.pendo.io/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":65,"name":"Writer","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Writer Help","provider":"Writer","url":"https://support.writer.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":66,"name":"Templafy","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Templafy Help Center","provider":"Templafy","url":"https://support.templafy.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":67,"name":"WorkFusion","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"WorkFusion Documentation","provider":"WorkFusion","url":"https://www.workfusion.com/resources/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":68,"name":"ThoughtSpot","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"ThoughtSpot University","provider":"ThoughtSpot","url":"https://training.thoughtspot.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"ThoughtSpot Certified Professional","provider":"ThoughtSpot","url":"https://training.thoughtspot.com/page/certifications","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":69,"name":"Copado","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Copado Academy","provider":"Copado","url":"https://academy.copado.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Copado Certified Administrator","provider":"Copado","url":"https://www.copado.com/certifications","type":"Paid","duration":"Exam","level":"Intermediate"}]},
+  {"id":70,"name":"Drift","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Drift Academy","provider":"Drift","url":"https://www.drift.com/insider/learn/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":71,"name":"Mixpanel","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Mixpanel Documentation","provider":"Mixpanel","url":"https://docs.mixpanel.com/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Mixpanel Certified","provider":"Mixpanel","url":"https://mixpanel.com/partners","type":"Free","duration":"Exam","level":"Intermediate"}]},
+  {"id":72,"name":"Lever","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Lever Help Center","provider":"Lever","url":"https://help.lever.co/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":73,"name":"Greenhouse","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Greenhouse University","provider":"Greenhouse","url":"https://support.greenhouse.io/hc/en-us","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":74,"name":"Medallia","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Medallia University","provider":"Medallia","url":"https://www.medallia.com/resources/training/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":75,"name":"Highspot","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Highspot Spark","provider":"Highspot","url":"https://www.highspot.com/spark/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":76,"name":"Pipedream","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Pipedream Documentation","provider":"Pipedream","url":"https://pipedream.com/docs","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":77,"name":"Kofax","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Kofax Learning","provider":"Tungsten Automation","url":"https://learning.tungstenautomation.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":78,"name":"Tray.io","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Tray Academy","provider":"Tray.io","url":"https://tray.io/learn","type":"Free","duration":"Self-paced","level":"Beginner"}]},
+  {"id":79,"name":"Sprinklr","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"Sprinklr University","provider":"Sprinklr","url":"https://www.sprinklr.com/university/","type":"Free","duration":"Self-paced","level":"Beginner"},{"title":"Sprinklr Certified Professional","provider":"Sprinklr","url":"https://www.sprinklr.com/university/","type":"Paid","duration":"Exam","level":"Advanced"}]},
+  {"id":80,"name":"Chorus.ai","certLastChecked":"__LAST_CHECKED__","certifications":[{"title":"ZoomInfo University","provider":"ZoomInfo","url":"https://university.zoominfo.com/","type":"Free","duration":"Self-paced","level":"Beginner"}]}
 ]
