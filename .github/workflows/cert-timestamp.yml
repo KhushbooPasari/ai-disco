@@ -1,0 +1,33 @@
+name: Cert Timestamp Refresh
+
+on:
+  schedule:
+    - cron: '0 2 */15 * *'    # Every 15 days at 02:00 UTC
+  workflow_dispatch:           # Allows manual trigger via Actions tab
+
+jobs:
+  update-timestamp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Replace __LAST_CHECKED__ with today's date
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          echo "Updating cert timestamps to $TODAY"
+          sed -i "s/__LAST_CHECKED__/$TODAY/g" certs.json
+          echo "Preview of first 500 chars:"
+          head -c 500 certs.json
+
+      - name: Commit if changed
+        run: |
+          git config user.name "AI Disco Bot"
+          git config user.email "aidisco@noreply.github.com"
+          git add certs.json
+          if git diff --staged --quiet; then
+            echo "No placeholder found — already up to date"
+            exit 0
+          fi
+          git commit -m "[AI Disco Bot] Cert verification $(date -u +%Y-%m-%d)"
+          git push
