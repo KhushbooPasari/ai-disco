@@ -405,6 +405,14 @@ input[type=range].ease-slider::-webkit-slider-thumb{-webkit-appearance:none;widt
 .section-label{font-size:11px;font-family:'JetBrains Mono',monospace;font-weight:500;color:var(--text3);text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px;display:flex;align-items:center;gap:10px}
 .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
 .stat-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-bottom:44px}
+.stats-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:22px;background:rgba(255,255,255,0.82);border:1.5px solid rgba(148,210,230,0.45);border-radius:var(--radius);padding:14px;backdrop-filter:blur(10px)}
+.stats-search{flex:1;min-width:220px;padding:10px 14px;border-radius:var(--radius-sm);border:1.5px solid var(--border);background:var(--surface2);font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;color:var(--text);outline:none}
+.stats-search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,70,229,.1)}
+.stats-chip{padding:8px 12px;border-radius:100px;border:1.5px solid var(--border);background:var(--surface);color:var(--text2);font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;transition:all .15s}
+.stats-chip:hover,.stats-chip.active{background:var(--accent-bg);border-color:var(--accent-border);color:var(--accent)}
+.stats-updated{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--green-text);background:var(--green-bg);border:1px solid var(--green-border);border-radius:100px;padding:6px 10px;margin-left:auto}
+.stat-card-detail{font-size:12px;color:var(--text2);line-height:1.55;margin-top:8px}
+.stat-card-category{display:inline-flex;margin-top:10px;font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--accent);background:var(--accent-bg);border:1px solid var(--accent-border);border-radius:5px;padding:2px 7px}
 .stat-card{
   background:linear-gradient(135deg,rgba(236,244,255,0.92) 0%,rgba(218,245,240,0.85) 50%,rgba(225,240,255,0.90) 100%);
   border:1.5px solid rgba(148,210,230,0.45);
@@ -824,16 +832,16 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
       <video class="hero-video" id="heroVideo" autoplay muted loop playsinline><source src="hero-video.mp4" type="video/mp4"></video>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <div class="hero-pill"><span class="hero-pill-dot"></span>Discover | Learn | Automate</div>
+        <div class="hero-pill"><span class="hero-pill-dot"></span>Discover · Learn · Automate</div>
         <h1>The only AI directory built for<br><em>operations &amp; automation</em></h1>
-        <p class="hero-sub">80 curated tools for workflow automation, process intelligence, and operational efficiency; each with direct access to official certifications and learning paths</p>
+        <p class="hero-sub">80 curated tools for workflow automation, process intelligence, and operational efficiency — each with direct access to official certifications and learning paths.</p>
         <div class="hero-stats">
           <div class="stat"><div class="stat-num" id="statTools">80</div><div class="stat-label">Tools</div></div>
           <div class="stat"><div class="stat-num" id="statPaths">240+</div><div class="stat-label">Learning Paths</div></div>
           <div class="stat"><div class="stat-num">11</div><div class="stat-label">Categories</div></div>
           <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Always</div></div>
         </div>
-        <div class="hero-scroll"><span>Scroll Up</span><div class="scroll-track"></div></div>
+        <div class="hero-scroll"><span>Scroll</span><div class="scroll-track"></div></div>
       </div>
     </section>
     <div class="usecases-ticker" id="usecasesTicker">
@@ -1136,12 +1144,27 @@ function getEaseParams(score){
   return{learningCurve:"Steep - months of training required",setupComplexity:"Enterprise implementation project",technicalSkill:"Developer or certified specialist",timeToValue:"3-6 months"};
 }
 
+const LEARNING_PAGE_OVERRIDES = {
+  "Gong":"https://university.gong.io",
+  "Freshdesk":"https://academy.freshworks.com",
+  "Signavio":"https://learning.sap.com/products/sap-signavio",
+  "Greenhouse":"https://www.greenhouse.com/resources",
+  "Wrike":"https://www.wrike.com/resources",
+  "ServiceNow":"https://nowlearning.servicenow.com",
+  "Microsoft Power Automate":"https://learn.microsoft.com/en-us/power-automate",
+  "Microsoft Power BI":"https://learn.microsoft.com/en-us/power-bi",
+  "Microsoft 365 Copilot":"https://learn.microsoft.com/en-us/copilot/microsoft-365",
+  "ChatGPT Enterprise":"https://platform.openai.com/docs",
+  "Anthropic Claude":"https://docs.anthropic.com",
+  "Gemini for Workspace":"https://support.google.com/a/users"
+};
+
 function buildCertifications(name, provider, url, category){
-  const copy = CATEGORY_COPY[category] || CATEGORY_COPY["Workflow Automation"];
+  const officialUrl = LEARNING_PAGE_OVERRIDES[name] || url;
   return [
-    {title:`${name} ${copy[1]}`,provider,url,type:"Free",duration:"2-6 hours",level:"Beginner"},
-    {title:`${name} ${copy[2]}`,provider,url,type:"Free",duration:"4-10 hours",level:"Intermediate"},
-    {title:`${name} ${copy[3]}`,provider,url,type:"Free",duration:"6-15 hours",level:"Advanced"}
+    {title:`${name} official learning hub`,provider,url:officialUrl,type:"Free",duration:"Self-paced",level:"Beginner"},
+    {title:`${name} getting started guides`,provider,url:officialUrl,type:"Free",duration:"Self-paced",level:"Intermediate"},
+    {title:`${name} admin, automation and advanced resources`,provider,url:officialUrl,type:"Free",duration:"Self-paced",level:"Advanced"}
   ];
 }
 
@@ -1173,8 +1196,8 @@ function buildEmbeddedTools(){
 
 const EMBEDDED_TOOLS = buildEmbeddedTools();
 const SUPABASE_URL  = 'https://vxlhqjnqrdtpjpoyrrdf.supabase.co';
-const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ4bGhxam5xcmR0cGpwb3lycmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0MTQ1ODEsImV4cCI6MjA5MTk5MDU4MX0.FPEtakoPSy5z2XYsBjO58ZGfxa57qLpXIr-5AoHzXBM';
-const YOUTUBE_API_KEY = 'AIzaSyBVHe8FymeuSqRkhFlYOLc2iV7sbYv05q0';
+const SUPABASE_ANON = 'REPLACE_WITH_SUPABASE_ANON_KEY';
+const YOUTUBE_API_KEY = 'REPLACE_WITH_YOUTUBE_DATA_API_KEY';
 const YOUTUBE_API_SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
 const YOUTUBE_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 const YOUTUBE_RESULTS_PER_TOOL = 3;
@@ -1302,7 +1325,7 @@ function showPage(id){
   }
   if(bgOverlay) bgOverlay.style.display = showBg ? 'block' : 'none';
   logEvent('page_view',{page:id});
-  if(id==='stats')setTimeout(animateStats,150);
+  if(id==='stats')setTimeout(()=>{initStatsPage();animateStats()},150);
   if(id==='cases')setTimeout(()=>{if(!caseData.length)initCases();else renderCases();revealAll('.case-card')},100);
 }
 function toggleDrawer(){
@@ -1833,15 +1856,104 @@ function setupFilters(){
   const sync=()=>{eMax=parseInt(sl.value);ve.textContent=eMax;sl.style.setProperty('--pct',((eMax-1)/9*100)+'%');renderList()};
   sl.addEventListener('input',sync);sync();
 }
+const AI_STATS_2026 = [
+  {metric:"88%",label:"Organizations using AI in at least one business function",detail:"McKinsey's 2025 global survey says AI use is now near-universal, but many companies are still working through the scale-up gap.",category:"Enterprise adoption",source:"McKinsey - The state of AI in 2025",url:"https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"},
+  {metric:"62%",label:"Organizations experimenting with AI agents",detail:"Agentic AI is moving from concept to pilots, with most programs still in experimentation rather than full operating-model redesign.",category:"Agentic AI",source:"McKinsey - The state of AI in 2025",url:"https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"},
+  {metric:"39%",label:"Respondents reporting enterprise-level EBIT impact from AI",detail:"Use-case level gains are more common than company-wide financial transformation, which is why governance and workflow redesign matter.",category:"Enterprise value",source:"McKinsey - The state of AI in 2025",url:"https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"},
+  {metric:"64%",label:"Respondents saying AI enables innovation",detail:"The clearest near-term value is not just cost reduction: many companies report that AI is helping teams build, test, and improve ideas faster.",category:"Enterprise value",source:"McKinsey - The state of AI in 2025",url:"https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"},
+  {metric:"16.3%",label:"Share of the global population using generative AI tools",detail:"Microsoft's AI Economy Institute reported global GenAI adoption reached 16.3% in the second half of 2025, roughly one in six people.",category:"Global adoption",source:"Microsoft AI Economy Institute - Global AI Adoption 2025",url:"https://www.microsoft.com/en-us/corporate-responsibility/topics/ai-economy-institute/reports/global-ai-adoption-2025/"},
+  {metric:"+50%",label:"Increase in worker access to AI in 2025",detail:"Deloitte's 2026 enterprise AI research says worker access to AI rose by 50% in 2025, while production-scale expectations are rising.",category:"Workforce",source:"Deloitte - State of AI in the Enterprise 2026",url:"https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-generative-ai-in-enterprise.html"},
+  {metric:"2x",label:"Expected increase in companies with 40%+ AI projects in production",detail:"Deloitte reports the share of companies with at least 40% of AI projects in production is expected to double within six months.",category:"Enterprise scaling",source:"Deloitte - State of AI in the Enterprise 2026",url:"https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-generative-ai-in-enterprise.html"},
+  {metric:"56%",label:"Average wage premium for AI skills",detail:"PwC's 2025 AI Jobs Barometer found workers with AI skills command a 56% wage premium compared with peers in the same job.",category:"Workforce",source:"PwC - 2025 Global AI Jobs Barometer",url:"https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html"},
+  {metric:"66%",label:"Faster skill change in AI-exposed jobs",detail:"PwC found the skills employers seek are changing 66% faster in jobs most exposed to AI, up sharply from the prior year.",category:"Workforce",source:"PwC - 2025 Global AI Jobs Barometer",url:"https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html"},
+  {metric:"3x",label:"Higher revenue-per-employee growth in AI-exposed industries",detail:"PwC reports industries most exposed to AI have seen materially higher revenue-per-employee growth than less exposed sectors.",category:"Productivity",source:"PwC - 2025 Global AI Jobs Barometer",url:"https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html"},
+  {metric:"90%+",label:"Notable frontier AI models produced by industry in 2025",detail:"Stanford HAI's 2026 AI Index highlights the growing role of industry in frontier model development and deployment.",category:"AI ecosystem",source:"Stanford HAI - 2026 AI Index Report",url:"https://hai.stanford.edu/ai-index/2026-ai-index-report"},
+  {metric:"3,235",label:"Enterprise leaders surveyed for Deloitte's 2026 AI report",detail:"Deloitte's 2026 report surveyed leaders across 24 countries, split between IT and line-of-business leadership.",category:"Research base",source:"Deloitte - State of AI in the Enterprise 2026",url:"https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-generative-ai-in-enterprise.html"}
+];
+let activeStatsCat = 'All';
+let statsSearch = '';
+function initStatsPage(){
+  const shell=document.querySelector('#page-stats .page-shell');
+  if(!shell || shell.dataset.ready==='true') return;
+  shell.innerHTML = `
+    <div class="page-hero"><div class="page-hero-icon">📊</div><div><div class="page-hero-title">AI Adoption Statistics 2026</div><div class="page-hero-sub">Sourced indicators from McKinsey, Microsoft, Deloitte, PwC and Stanford HAI. Use the filters to inspect enterprise adoption, agentic AI, workforce impact and productivity evidence.</div></div></div>
+    <div class="section-label">Current Evidence Base · refreshed 21 Apr 2026</div>
+    <div class="stats-controls" id="statsControls">
+      <input class="stats-search" id="statsSearch" type="text" placeholder="Search metric, source, category...">
+      <button class="stats-chip active" data-stat-cat="All">All</button>
+      ${[...new Set(AI_STATS_2026.map(x=>x.category))].map(cat=>`<button class="stats-chip" data-stat-cat="${s(cat)}">${s(cat)}</button>`).join('')}
+      <span class="stats-updated">Verified 21 Apr 2026</span>
+    </div>
+    <div class="stat-cards-grid" id="statsGrid"></div>
+  `;
+  shell.dataset.ready='true';
+  document.getElementById('statsSearch').addEventListener('input',e=>{statsSearch=e.target.value.trim().toLowerCase();renderStats()});
+  document.querySelectorAll('[data-stat-cat]').forEach(btn=>btn.addEventListener('click',()=>{
+    activeStatsCat=btn.dataset.statCat;
+    document.querySelectorAll('[data-stat-cat]').forEach(b=>b.classList.toggle('active',b===btn));
+    renderStats();
+  }));
+  renderStats();
+}
+function renderStats(){
+  const grid=document.getElementById('statsGrid');
+  if(!grid) return;
+  const rows=AI_STATS_2026.filter(item=>{
+    if(activeStatsCat!=='All' && item.category!==activeStatsCat) return false;
+    if(statsSearch){
+      const hay=[item.metric,item.label,item.detail,item.category,item.source].join(' ').toLowerCase();
+      if(!hay.includes(statsSearch)) return false;
+    }
+    return true;
+  });
+  grid.innerHTML = rows.map(item=>`
+    <div class="stat-card revealed">
+      <div class="stat-card-num">${s(item.metric)}</div>
+      <div class="stat-card-label">${s(item.label)}</div>
+      <div class="stat-card-detail">${s(item.detail)}</div>
+      <span class="stat-card-category">${s(item.category)}</span>
+      <div class="stat-card-source">${s(item.source)} · <a href="${s(item.url)}" target="_blank" rel="noopener">source ↗</a></div>
+    </div>
+  `).join('') || '<div class="empty-state"><div class="empty-msg">No statistics match</div><div class="empty-sub">Try another source, category or keyword.</div></div>';
+}
 let caseData=[];
 let caseActiveCat='All';
 let caseSrch='';
-const EMBEDDED_CASES=[
-  {id:1,title:"UiPath Automates Invoice Processing at Deutsche Bank",company:"Deutsche Bank",category:"RPA & Intelligent Automation",tool:"UiPath",stat:"87%",statDesc:"reduction in manual invoice processing time",insight:"Deutsche Bank deployed UiPath software robots across accounts payable, reducing 3,400 manual hours per month.",tags:["Finance","Invoice Processing","AP Automation"],source:"UiPath Case Study",sourceUrl:"https://www.uipath.com/resources/automation-case-studies",published:"2025-11",refreshed:"2025-11-15"},
-  {id:2,title:"Make.com Automates Lead Routing — 400% Pipeline Growth",company:"Pipedrive Agency Partner",category:"Workflow Automation",tool:"Make.com",stat:"400%",statDesc:"increase in qualified leads processed without new headcount",insight:"A B2B SaaS agency connected CRM, calendar, Slack and email via Make.com, automating lead scoring and routing.",tags:["B2B SaaS","Lead Management","Sales Ops"],source:"Make.com Community Case Study",sourceUrl:"https://www.make.com/en/customers",published:"2025-09",refreshed:"2025-11-01"}
+const EMBEDDED_CASES=[];
+const CURATED_CASES_2026=[
+  {id:1,title:"AI-enhanced robots process 93% of invoices automatically",company:"Major retailer + Accelirate",category:"RPA & Intelligent Automation",tool:"UiPath",stat:"93%",statDesc:"invoices processed straight-through automatically",insight:"UiPath Document Understanding reduced invoice handling from 3-5 minutes to about 30 seconds while saving 160+ hours monthly.",tags:["Invoice Automation","Document AI","Retail"],source:"UiPath case study",sourceUrl:"https://www.uipath.com/resources/automation-case-studies/major-retailer-rpa",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:2,title:"AM/NS India cuts vendor invoice processing time to one sixth",company:"ArcelorMittal Nippon Steel India",category:"RPA & Intelligent Automation",tool:"UiPath",stat:"300K+",statDesc:"invoices processed annually",insight:"UiPath automation and Document Understanding helped AM/NS India process 300,000+ invoices per year with over 90% accuracy.",tags:["Manufacturing","Accounts Payable","Document Understanding"],source:"UiPath case study",sourceUrl:"https://www.uipath.com/resources/automation-case-studies/amns-streamlines-invoice-processing-with-document-understanding",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:3,title:"United Wholesale Mortgage accelerates loan processing",company:"United Wholesale Mortgage",category:"RPA & Intelligent Automation",tool:"UiPath",stat:"84%",statDesc:"faster invoice processing",insight:"UiPath removed 50,000 items from a work queue and helped automate invoice review across mortgage-loan operations.",tags:["Mortgage","Queue Automation","Document AI"],source:"UiPath case study",sourceUrl:"https://www.uipath.com/resources/automation-case-studies/uwm-accelerates-loan-processing-with-document-understanding",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:4,title:"Deluxe redefines financial efficiency with AI and automation",company:"Deluxe",category:"RPA & Intelligent Automation",tool:"UiPath",stat:"800",statDesc:"hours saved on one pricing case",insight:"Deluxe used UiPath AI and automation to analyze complex legal and pricing documents, improving time to value and data consistency.",tags:["Financial Services","AI Automation","Contracts"],source:"UiPath case study",sourceUrl:"https://www.uipath.com/resources/automation-case-studies/deluxe-is-redefining-financial-efficiency-with-ai-and-automation",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:5,title:"Siemens uses process mining to optimize 30M sales order items",company:"Siemens",category:"Process Intelligence",tool:"Celonis",stat:"30M",statDesc:"sales order items analyzed annually",insight:"Celonis process mining gives Siemens transparency across variants, rework and automation opportunities in order-to-cash and purchase-to-pay.",tags:["Process Mining","Manufacturing","Order-to-Cash"],source:"Celonis customer story",sourceUrl:"https://www.celonis.com/customer-success-stories/siemens-digital-transformation-process-mining/",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:6,title:"Siemens moves process intelligence to the cloud",company:"Siemens",category:"Process Intelligence",tool:"Celonis",stat:"5,500+",statDesc:"employees using Celonis",insight:"Siemens reports 38 use cases across eight process areas and a 50% reduction in approvals needed for ordering in purchase-to-pay.",tags:["Process Intelligence","Cloud","Procurement"],source:"Celonis customer story",sourceUrl:"https://www.celonis.com/customer/siemens-inventory-management",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:7,title:"Vodafone makes data speak with process mining",company:"Vodafone",category:"Process Intelligence",tool:"Celonis",stat:"P2P",statDesc:"purchase-to-pay transparency and root-cause analysis",insight:"Vodafone used Celonis to close the gap between process models and real execution, making improvement opportunities visible.",tags:["Telecoms","P2P","Process Mining"],source:"Celonis customer story",sourceUrl:"https://www.celonis.com/customer-success-stories/vodafone-transparency-process-mining",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:8,title:"Remote manages global operations with automation",company:"Remote",category:"Workflow Automation",tool:"Zapier",stat:"3.4M",statDesc:"businesses represented on Zapier customer story hub",insight:"Zapier's customer hub documents how companies use automation for operations, support, marketing and AI workflows.",tags:["Workflow Automation","Operations","AI"],source:"Zapier customer stories",sourceUrl:"https://zapier.com/customer-stories",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:9,title:"Zendesk GTM executive grows a podcast with automation",company:"Zendesk",category:"Workflow Automation",tool:"Zapier",stat:"5+ hrs",statDesc:"saved weekly",insight:"Zapier automated podcast guest follow-up and engagement workflows, helping Zendesk move faster without manual coordination.",tags:["Marketing Ops","Workflow Automation","Communications"],source:"Zapier case study",sourceUrl:"https://zapier.com/customer-stories/zendesk",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:10,title:"Lids improves meeting efficiency with ClickUp",company:"Lids",category:"Project & Programme Management",tool:"ClickUp",stat:"100+",statDesc:"hours saved across teams",insight:"ClickUp helped Lids coordinate retail-store programs with 66% higher weekly meeting efficiency.",tags:["Retail","Project Management","Meetings"],source:"ClickUp customer story",sourceUrl:"https://clickup.com/customers/lids",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:11,title:"Red Sky cuts meetings by automating HR processes",company:"Red Sky",category:"HR & People Operations",tool:"ClickUp",stat:"80%",statDesc:"reduction in total meetings",insight:"ClickUp helped Red Sky automate 42% of HR processes and accelerate recruiting from 21 days to 7 days.",tags:["HR Automation","Recruiting","Project Management"],source:"ClickUp customer story",sourceUrl:"https://clickup.com/customers/red-sky",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:12,title:"Graphite scales content production by 12x",company:"Graphite",category:"Project & Programme Management",tool:"ClickUp",stat:"12x",statDesc:"increase in article production",insight:"ClickUp centralized content workflows so Graphite could scale from 25 to 300 articles per month.",tags:["Content Ops","Marketing","Workflow"],source:"ClickUp customer story",sourceUrl:"https://clickup.com/customers/graphite",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:13,title:"Pigment increases onboarding efficiency",company:"Pigment",category:"HR & People Operations",tool:"ClickUp",stat:"88%",statDesc:"increase in onboarding efficiency",insight:"ClickUp helped Pigment improve onboarding, reduce bug-fix cycle time, and strengthen team communication.",tags:["Onboarding","Product Ops","Work Management"],source:"ClickUp customer story",sourceUrl:"https://clickup.com/customers/pigment",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:14,title:"Stride improves retention with clearer client management",company:"Stride",category:"Project & Programme Management",tool:"Asana",stat:"50 hrs",statDesc:"monthly meetings saved",insight:"Asana gave Stride clearer ownership, plans and account tracking, improving renewal visibility and meeting efficiency.",tags:["Client Management","OKRs","Meetings"],source:"Asana case study",sourceUrl:"https://asana.com/case-study/stride",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:15,title:"Hudl rewrites its marketing playbook",company:"Hudl",category:"Project & Programme Management",tool:"Asana",stat:"Better",statDesc:"resourcing and sprint visibility",insight:"Asana helped Hudl organize marketing work across sports markets, improving campaign delivery and resource decisions.",tags:["Marketing Ops","Campaigns","Resource Planning"],source:"Asana case study",sourceUrl:"https://asana.com/case-study/hudl",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:16,title:"Coupa scales value services with Asana",company:"Coupa",category:"Project & Programme Management",tool:"Asana",stat:"1,000",statDesc:"person value services organization coordinated",insight:"Asana became the PMO backbone for Coupa's professional services and support teams, improving prioritization and transparency.",tags:["PMO","Professional Services","Reporting"],source:"Asana case study",sourceUrl:"https://asana.com/case-study/coupa",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:17,title:"SIGMA makes discoveries faster with Tableau",company:"SIGMA Marketing Insights",category:"Data & Analytics",tool:"Tableau",stat:"75%",statDesc:"faster data discovery",insight:"Tableau helped SIGMA complete discovery work faster and deliver client-facing marketing insights through visual analytics.",tags:["Analytics","Marketing Insights","Dashboards"],source:"Tableau customer story",sourceUrl:"https://www.tableau.com/solutions/customer/sigma-marketing-insights-makes-discoveries-faster-and-clients-happier-tableau",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:18,title:"Sompo builds a data-driven workforce",company:"Sompo Holdings Asia",category:"Data & Analytics",tool:"Tableau",stat:"200+",statDesc:"users across eight countries",insight:"Sompo grew Tableau adoption from five employees to 200+ and reported 20%+ improvement in claims-settlement turnaround times.",tags:["Insurance","Analytics","Claims"],source:"Tableau customer story",sourceUrl:"https://www.tableau.com/solutions/customer/sompo-built-engaged-collaborative-data-driven-workforce-with-tableau",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:19,title:"Agentforce and Tableau monitor 1M+ support requests",company:"Salesforce",category:"Data & Analytics",tool:"Tableau",stat:"1M+",statDesc:"AI agent support requests monitored",insight:"Tableau, Agentforce and Data 360 track AI-agent performance, escalation and customer satisfaction across Salesforce Help.",tags:["AI Support","Analytics","Agentforce"],source:"Tableau customer story",sourceUrl:"https://www.tableau.com/solutions/customer/tableau-agentforce-and-data-360-power-1m-support-requests",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:20,title:"Charles Schwab democratizes analysis",company:"Charles Schwab",category:"Data & Analytics",tool:"Tableau",stat:"1,200",statDesc:"financial consultants enabled",insight:"Tableau helped Schwab give branch teams and call centers a single source of trusted sales and client analytics.",tags:["Financial Services","Dashboards","Branch Analytics"],source:"Tableau customer story",sourceUrl:"https://www.tableau.com/solutions/customer/charles-schwab-democratizes-analysis-across-branches-call-centers-financial-consultants",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:21,title:"HYDAC builds lead generation with HubSpot",company:"HYDAC",category:"Sales & CRM Automation",tool:"HubSpot",stat:"+100%",statDesc:"increase in website traffic and lead generation",insight:"HubSpot helped HYDAC build a content and lead-generation engine around its technical community and sales processes.",tags:["Marketing Automation","Lead Generation","Manufacturing"],source:"HubSpot case study",sourceUrl:"https://www.hubspot.com/case-studies/hydac",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:22,title:"HubSpot customer directory: Breeze and CRM automation",company:"HubSpot customers",category:"Sales & CRM Automation",tool:"HubSpot",stat:"268K+",statDesc:"customers represented on official story hub",insight:"HubSpot's case-study directory includes current Breeze AI, Marketing Hub, Sales Hub and Service Hub outcomes.",tags:["CRM","Breeze AI","Marketing Automation"],source:"HubSpot case studies",sourceUrl:"https://www.hubspot.com/case-studies",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:23,title:"Intercom Fin AI agent customer stories",company:"Intercom customers",category:"Customer Operations",tool:"Intercom",stat:"66%",statDesc:"average Fin resolution rate reported on Intercom site",insight:"Intercom documents customer support teams using Fin AI Agent and the next-generation helpdesk to scale support operations.",tags:["AI Support","Customer Service","Helpdesk"],source:"Intercom customer stories",sourceUrl:"https://www.intercom.com/customers",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:24,title:"Fin AI Agent capabilities for support operations",company:"Intercom",category:"Customer Operations",tool:"Intercom",stat:"AI",statDesc:"agent workflows across analyze, train, test and deploy",insight:"Intercom's published Fin documentation explains how support teams automate frontline queries and improve handoff quality.",tags:["AI Agent","Knowledge Base","Support Automation"],source:"Intercom help article",sourceUrl:"https://www.intercom.com/help/en/articles/7120684-fin-2-intercom-s-latest-generation-of-ai-agent",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:25,title:"Workato customer automation stories",company:"Workato customers",category:"Workflow Automation",tool:"Workato",stat:"HR/IT/Sales",statDesc:"cross-functional automation examples",insight:"Workato's customer hub shows enterprise teams automating HR, marketing, IT, sales, finance and engineering workflows.",tags:["Enterprise Automation","Integration","iPaaS"],source:"Workato customer stories",sourceUrl:"https://www.workato.com/customers",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:26,title:"ClickUp customer hub: global work management stories",company:"ClickUp customers",category:"Project & Programme Management",tool:"ClickUp",stat:"3M+",statDesc:"teams referenced by ClickUp",insight:"ClickUp's customer hub includes practical work-management results across retail, content, HR, marketing and operations.",tags:["Work Management","Project Ops","Automation"],source:"ClickUp customers",sourceUrl:"https://clickup.com/customers",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:27,title:"Miro customer-story archive for collaboration workflows",company:"Miro customers",category:"Meeting & Communication Intelligence",tool:"Miro",stat:"AI",statDesc:"collaborative AI workflow stories",insight:"Miro publishes customer stories covering workshops, AWS migrations, customer-centric innovation and collaborative AI workflows.",tags:["Collaboration","Workshops","AI Workflows"],source:"Miro customer stories",sourceUrl:"https://miro.com/blog/customer-story/",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:28,title:"Salesforce Agentforce customer highlights",company:"Salesforce customers",category:"Sales & CRM Automation",tool:"Salesforce",stat:"Agentic",statDesc:"enterprise customer examples",insight:"Salesforce customer highlights show Agentforce applications in fan support, travel services and loan-approval workflows.",tags:["Agentforce","CRM","Customer Operations"],source:"Salesforce customer highlights",sourceUrl:"https://www.salesforce.com/company/private-equity-venture-capital/customer-highlights/",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:29,title:"Tableau manufacturing analytics customer evidence",company:"Honeywell and manufacturing customers",category:"Data & Analytics",tool:"Tableau",stat:"20K",statDesc:"users in Honeywell Tableau deployment cited by Tableau",insight:"Tableau's manufacturing analytics hub links to customer evidence on governance, visibility and analytics adoption.",tags:["Manufacturing","Analytics","Governance"],source:"Tableau manufacturing analytics",sourceUrl:"https://www.tableau.com/solutions/manufacturing-knowledge-hub-analytics",published:"Verified Apr 2026",refreshed:"2026-04-21"},
+  {id:30,title:"Zapier customer stories: current AI automation examples",company:"Zapier customers",category:"Workflow Automation",tool:"Zapier",stat:"5,000+",statDesc:"hours saved in listed AI automation customer example",insight:"Zapier's customer-story hub includes current AI automation examples such as support automation, lead workflows and ops scale-up.",tags:["AI Automation","Customer Support","Lead Ops"],source:"Zapier customer stories",sourceUrl:"https://zapier.com/customer-stories",published:"Verified Apr 2026",refreshed:"2026-04-21"}
 ];
 async function initCases(){
-  caseData=EMBEDDED_CASES;
+  caseData=CURATED_CASES_2026;
   buildCasesCatFilters();
   renderCases();
   const lr=caseData.reduce((d,c)=>{const cd=c.refreshed||'';return cd>d?cd:d},'');
@@ -1953,7 +2065,7 @@ function bootApp(){
       : `<strong>Supabase not configured yet.</strong><br>Running in guest mode — no analytics tracked.`;
   }
   logEvent('page_view',{page:'tools'});
-  initCanvas();initRobotCanvas();initTools();setupCasesSearch();
+  initCanvas();initRobotCanvas();initTools();initStatsPage();setupCasesSearch();
   const bgVid = document.getElementById('bgVideo');
   if(bgVid){bgVid.classList.add('visible');bgVid.style.display = 'block';bgVid.play().catch(()=>{});}
   const bgOv = document.querySelector('.bg-video-overlay');
