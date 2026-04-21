@@ -744,7 +744,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
     <div class="login-header">
       <div class="login-logo">⚡</div>
       <div class="login-title">AI Disco</div>
-      <div class="login-sub">Automation &amp; AI Upskilling Hub · 80 tools · 207+ learning paths</div>
+      <div class="login-sub">Automation &amp; AI Upskilling Hub · 80 tools · 240+ official learning paths</div>
     </div>
     <div class="login-body">
       <div id="stepEmail">
@@ -829,7 +829,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
         <p class="hero-sub">80 curated tools for workflow automation, process intelligence, and operational efficiency — each with direct access to official certifications and learning paths.</p>
         <div class="hero-stats">
           <div class="stat"><div class="stat-num" id="statTools">80</div><div class="stat-label">Tools</div></div>
-          <div class="stat"><div class="stat-num" id="statPaths">207+</div><div class="stat-label">Learning Paths</div></div>
+          <div class="stat"><div class="stat-num" id="statPaths">240+</div><div class="stat-label">Learning Paths</div></div>
           <div class="stat"><div class="stat-num">11</div><div class="stat-label">Categories</div></div>
           <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Always</div></div>
         </div>
@@ -1007,7 +1007,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
             <div class="account-card-title">📊 Platform Stats</div>
             <div class="account-stat-row">
               <div class="account-stat-box"><div class="account-stat-n">80</div><div class="account-stat-l">Tools</div></div>
-              <div class="account-stat-box"><div class="account-stat-n">207+</div><div class="account-stat-l">Learning Paths</div></div>
+              <div class="account-stat-box"><div class="account-stat-n">240+</div><div class="account-stat-l">Learning Paths</div></div>
               <div class="account-stat-box"><div class="account-stat-n">11</div><div class="account-stat-l">Categories</div></div>
             </div>
           </div>
@@ -1021,140 +1021,157 @@ footer{background:#fff;border-top:1px solid var(--border);padding:32px 28px}
   </div>
 </div>
 <script>
-const EMBEDDED_TOOLS = [
-  {
-    id:1,
-    name:"Make.com",
-    domain:"make.com",
-    tagline:"Visual automation that connects anything to everything",
-    problem:"Business teams waste hours on repetitive manual tasks that move data between disconnected apps.",
-    useCases:["CRM to spreadsheet sync","Lead routing automation","Invoice processing","Cross-platform notifications"],
-    url:"https://make.com",
-    ease:7,
-    easeLabel:"Some setup required",
-    industry:["Technology & Software","Marketing & Advertising","Consulting & Professional Services"],
-    businessArea:"Workflow Automation",
-    category:"Workflow Automation",
-    date:"2025-04-01",
-    logoUrl:"https://logo.clearbit.com/make.com",
-    certifications:[
-      {title:"Make Foundations",provider:"Make Academy",url:"https://academy.make.com",type:"Free",duration:"6 hours",level:"Beginner"},
-      {title:"Make Advanced Automation",provider:"Make Academy",url:"https://academy.make.com",type:"Free",duration:"10 hours",level:"Advanced"},
-      {title:"Make Expert Partner",provider:"Make Academy",url:"https://academy.make.com",type:"Free",duration:"15 hours",level:"Expert"}
-    ],
-    easeParams:{learningCurve:"Accessible — days to basic competency",setupComplexity:"Self-service with some configuration",technicalSkill:"Business user with digital literacy",timeToValue:"1–2 weeks"}
-  },
-  {
-    id:2,
-    name:"Zapier",
-    domain:"zapier.com",
-    tagline:"Connect 6000+ apps and automate your work in minutes",
-    problem:"Teams lose productivity switching between tools and manually copying data.",
-    useCases:["Email to task creation","Form submission routing","Social media scheduling","E-commerce order processing"],
-    url:"https://zapier.com",
-    ease:8,
-    easeLabel:"Easy to pick up",
-    industry:["Technology & Software","Marketing & Advertising","Retail & E-commerce"],
-    businessArea:"Workflow Automation",
-    category:"Workflow Automation",
-    date:"2025-04-01",
-    logoUrl:"https://logo.clearbit.com/zapier.com",
-    certifications:[
-      {title:"Zapier Certified Expert",provider:"Zapier",url:"https://zapier.com/learn",type:"Free",duration:"8 hours",level:"Intermediate"},
-      {title:"Zapier for Beginners",provider:"Zapier",url:"https://zapier.com/learn",type:"Free",duration:"3 hours",level:"Beginner"},
-      {title:"Zapier Tables & Interfaces",provider:"Zapier",url:"https://zapier.com/learn",type:"Free",duration:"4 hours",level:"Intermediate"}
-    ],
-    easeParams:{learningCurve:"Easy — hours to get started",setupComplexity:"Quick setup, minimal config",technicalSkill:"Any business user",timeToValue:"1–3 days"}
-  },
-  {
-    id:3,
-    name:"UiPath",
-    domain:"uipath.com",
-    tagline:"Enterprise RPA that automates any repetitive digital task",
-    problem:"Large organisations spend millions on repetitive rule-based tasks performed by humans across legacy systems.",
-    useCases:["Invoice data extraction","HR onboarding automation","Compliance reporting","Customer data migration"],
-    url:"https://uipath.com",
-    ease:4,
-    easeLabel:"Technical training required",
-    industry:["Finance & Banking","Healthcare","Manufacturing","Consulting & Professional Services"],
-    businessArea:"Robotic Process Automation",
-    category:"RPA & Intelligent Automation",
-    date:"2025-04-01",
-    logoUrl:"https://logo.clearbit.com/uipath.com",
-    certifications:[
-      {title:"UiPath RPA Associate",provider:"UiPath Academy",url:"https://academy.uipath.com",type:"Free",duration:"20 hours",level:"Beginner"},
-      {title:"UiPath RPA Developer",provider:"UiPath Academy",url:"https://academy.uipath.com",type:"Free",duration:"40 hours",level:"Advanced"},
-      {title:"UiPath Business Analyst",provider:"UiPath Academy",url:"https://academy.uipath.com",type:"Free",duration:"15 hours",level:"Intermediate"}
-    ],
-    easeParams:{learningCurve:"Moderate — weeks to proficiency",setupComplexity:"Significant configuration needed",technicalSkill:"Technical business analyst or IT",timeToValue:"2–8 weeks"}
-  },
-  {
-    id:4,
-    name:"Microsoft Power Automate",
-    domain:"powerautomate.microsoft.com",
-    tagline:"Low-code automation built into the Microsoft ecosystem",
-    problem:"Microsoft 365 users waste hours on repetitive tasks across Teams, SharePoint, Outlook and Excel.",
-    useCases:["Approval workflows","SharePoint document routing","Teams notification automation","Excel data processing"],
-    url:"https://powerautomate.microsoft.com",
-    ease:6,
-    easeLabel:"Microsoft 365 familiarity helps",
-    industry:["Technology & Software","Finance & Banking","Healthcare","Education & Training"],
-    businessArea:"Workflow Automation",
-    category:"Workflow Automation",
-    date:"2025-04-01",
-    logoUrl:"https://logo.clearbit.com/microsoft.com",
-    certifications:[
-      {title:"PL-500: Power Automate RPA Developer",provider:"Microsoft Learn",url:"https://learn.microsoft.com/en-us/credentials/certifications/power-automate-rpa-developer-associate/",type:"Paid",duration:"40 hours",level:"Advanced"},
-      {title:"PL-900: Power Platform Fundamentals",provider:"Microsoft Learn",url:"https://learn.microsoft.com/en-us/credentials/certifications/power-platform-fundamentals/",type:"Paid",duration:"20 hours",level:"Beginner"},
-      {title:"Power Automate Learning Path",provider:"Microsoft Learn",url:"https://learn.microsoft.com/en-us/training/paths/automate-process-power-automate/",type:"Free",duration:"8 hours",level:"Beginner"}
-    ],
-    easeParams:{learningCurve:"Accessible — days to basic competency",setupComplexity:"Self-service with some configuration",technicalSkill:"Business user with digital literacy",timeToValue:"1–2 weeks"}
-  },
-  {
-    id:5,
-    name:"n8n",
-    domain:"n8n.io",
-    tagline:"Open-source workflow automation you can self-host and own",
-    problem:"Businesses needing automation with full data control face a dilemma.",
-    useCases:["API integration workflows","Data pipeline automation","Internal tool building","Security-sensitive automations"],
-    url:"https://n8n.io",
-    ease:5,
-    easeLabel:"Technical background helps",
-    industry:["Technology & Software","Finance & Banking","Healthcare"],
-    businessArea:"Workflow Automation",
-    category:"Workflow Automation",
-    date:"2025-04-01",
-    logoUrl:"https://logo.clearbit.com/n8n.io",
-    certifications:[
-      {title:"n8n Course: Level 1",provider:"n8n",url:"https://courses.n8n.io",type:"Free",duration:"5 hours",level:"Beginner"},
-      {title:"n8n Course: Level 2",provider:"n8n",url:"https://courses.n8n.io",type:"Free",duration:"8 hours",level:"Intermediate"},
-      {title:"n8n Community Tutorials",provider:"n8n Community",url:"https://community.n8n.io",type:"Free",duration:"Self-paced",level:"All levels"}
-    ],
-    easeParams:{learningCurve:"Moderate — weeks to proficiency",setupComplexity:"Significant configuration needed",technicalSkill:"Technical business analyst or IT",timeToValue:"2–8 weeks"}
-  },
-  {
-    id:6,
-    name:"Airtable",
-    domain:"airtable.com",
-    tagline:"The no-code database with built-in AI and automation",
-    problem:"Teams outgrow spreadsheets but do not want the complexity of enterprise databases.",
-    useCases:["Content calendar management","Product roadmap tracking","Inventory management","Client project databases"],
-    url:"https://airtable.com",
-    ease:7,
-    easeLabel:"Easy to pick up",
-    industry:["Marketing & Advertising","Technology & Software","Media & Entertainment","Retail & E-commerce"],
-    businessArea:"Workflow Automation",
-    category:"Workflow Automation",
-    date:"2025-04-01",
-    logoUrl:"https://logo.clearbit.com/airtable.com",
-    certifications:[
-      {title:"Airtable Builder Certification",provider:"Airtable",url:"https://www.airtable.com/lp/resources/learn",type:"Free",duration:"6 hours",level:"Intermediate"},
-      {title:"Airtable Consultant Certification",provider:"Airtable",url:"https://www.airtable.com/lp/resources/learn",type:"Free",duration:"10 hours",level:"Advanced"},
-      {title:"Airtable Foundations",provider:"Airtable",url:"https://www.airtable.com/lp/resources/learn",type:"Free",duration:"3 hours",level:"Beginner"}
-    ],
-    easeParams:{learningCurve:"Accessible — days to basic competency",setupComplexity:"Self-service with some configuration",technicalSkill:"Business user with digital literacy",timeToValue:"1–2 weeks"}
-  }
+const TOOL_ROWS = [
+  ["Make.com","make.com","Workflow Automation",7,"https://make.com","Make Academy","https://academy.make.com",["CRM to spreadsheet sync","Lead routing automation","Invoice processing","Cross-platform notifications"],["Technology & Software","Marketing & Advertising","Consulting & Professional Services"]],
+  ["Zapier","zapier.com","Workflow Automation",8,"https://zapier.com","Zapier Learn","https://zapier.com/learn",["Email to task creation","Form submission routing","Social media scheduling","E-commerce order processing"],["Technology & Software","Marketing & Advertising","Retail & E-commerce"]],
+  ["UiPath","uipath.com","RPA & Intelligent Automation",4,"https://uipath.com","UiPath Academy","https://academy.uipath.com",["Invoice data extraction","HR onboarding automation","Compliance reporting","Customer data migration"],["Finance & Banking","Healthcare","Manufacturing","Consulting & Professional Services"]],
+  ["Automation Anywhere","automationanywhere.com","RPA & Intelligent Automation",4,"https://automationanywhere.com","Automation Anywhere University","https://university.automationanywhere.com",["Accounts payable automation","Supply chain processing","Regulatory compliance","Customer service automation"],["Finance & Banking","Healthcare","Manufacturing","Retail & E-commerce"]],
+  ["Microsoft Power Automate","powerautomate.microsoft.com","Workflow Automation",6,"https://powerautomate.microsoft.com","Microsoft Learn","https://learn.microsoft.com/en-us/training/powerplatform/power-automate",["Approval workflows","SharePoint document routing","Teams notification automation","Excel data processing"],["Technology & Software","Finance & Banking","Healthcare","Education & Training"]],
+  ["n8n","n8n.io","Workflow Automation",5,"https://n8n.io","n8n Courses","https://courses.n8n.io",["API integration workflows","Data pipeline automation","Internal tool building","Security-sensitive automations"],["Technology & Software","Finance & Banking","Healthcare"]],
+  ["Workato","workato.com","Workflow Automation",5,"https://workato.com","Workato Academy","https://academy.workato.com",["ERP to CRM integration","Employee lifecycle automation","Financial reconciliation","Supply chain orchestration"],["Technology & Software","Finance & Banking","Manufacturing"]],
+  ["Celonis","celonis.com","Process Intelligence",4,"https://celonis.com","Celonis Academy","https://academy.celonis.com",["Process bottleneck identification","Compliance deviation detection","ERP process optimisation","Automation opportunity discovery"],["Manufacturing","Finance & Banking","Consulting & Professional Services"]],
+  ["Asana","asana.com","Project & Programme Management",8,"https://asana.com","Asana Academy","https://academy.asana.com",["Project planning and tracking","Cross-team dependency management","OKR tracking","Resource workload balancing"],["Technology & Software","Marketing & Advertising","Consulting & Professional Services"]],
+  ["Monday.com","monday.com","Project & Programme Management",8,"https://monday.com","monday.com Academy","https://monday.com/p/academy",["Project portfolio management","Client delivery tracking","Marketing campaign management","Sales pipeline management"],["Technology & Software","Marketing & Advertising","Consulting & Professional Services"]],
+  ["Notion AI","notion.so","Knowledge & Document Management",8,"https://notion.so","Notion Academy","https://www.notion.com/help/notion-academy",["Meeting documentation","SOP creation and management","Project wikis","AI-assisted content drafting"],["Technology & Software","Consulting & Professional Services","Education & Training"]],
+  ["ClickUp","clickup.com","Project & Programme Management",7,"https://clickup.com","ClickUp University","https://university.clickup.com",["Task and sprint management","Time tracking and reporting","Goal and OKR management","Document collaboration"],["Technology & Software","Marketing & Advertising","Consulting & Professional Services"]],
+  ["Smartsheet","smartsheet.com","Project & Programme Management",7,"https://smartsheet.com","Smartsheet University","https://help.smartsheet.com/learning-track",["Resource capacity planning","Programme-level reporting","Construction project tracking","Compliance workflow management"],["Construction","Manufacturing","Consulting & Professional Services"]],
+  ["Tableau","tableau.com","Data & Analytics",6,"https://tableau.com","Tableau Learning","https://www.tableau.com/learn/training",["Executive dashboards","Operational performance monitoring","Sales pipeline analytics","Supply chain visibility"],["Finance & Banking","Healthcare","Retail & E-commerce","Manufacturing"]],
+  ["Microsoft Power BI","powerbi.microsoft.com","Data & Analytics",6,"https://powerbi.microsoft.com","Microsoft Learn","https://learn.microsoft.com/en-us/training/powerplatform/power-bi",["Financial performance reporting","Sales and marketing dashboards","Operations KPI tracking","HR people analytics"],["Finance & Banking","Technology & Software","Healthcare","Manufacturing"]],
+  ["Alteryx","alteryx.com","Data & Analytics",5,"https://alteryx.com","Alteryx Academy","https://community.alteryx.com/t5/Academy/ct-p/academy",["Data blending and preparation","Predictive analytics","Spatial analysis","Automated reporting pipelines"],["Finance & Banking","Retail & E-commerce","Healthcare","Manufacturing"]],
+  ["Salesforce","salesforce.com","Sales & CRM Automation",5,"https://salesforce.com","Salesforce Trailhead","https://trailhead.salesforce.com",["Sales pipeline management","Customer service automation","Marketing campaign orchestration","Revenue forecasting"],["Technology & Software","Finance & Banking","Healthcare","Retail & E-commerce"]],
+  ["HubSpot","hubspot.com","Sales & CRM Automation",7,"https://hubspot.com","HubSpot Academy","https://academy.hubspot.com",["Inbound marketing automation","Sales sequence automation","Customer support ticketing","Revenue attribution reporting"],["Technology & Software","Marketing & Advertising","Consulting & Professional Services","Retail & E-commerce"]],
+  ["ServiceNow","servicenow.com","RPA & Intelligent Automation",3,"https://servicenow.com","ServiceNow Now Learning","https://nowlearning.servicenow.com",["IT service management","HR case management","Facilities management","Compliance workflows"],["Technology & Software","Finance & Banking","Healthcare","Government"]],
+  ["Airtable","airtable.com","Workflow Automation",7,"https://airtable.com","Airtable Learning","https://www.airtable.com/lp/resources/learn",["Content calendar management","Product roadmap tracking","Inventory management","Client project databases"],["Marketing & Advertising","Technology & Software","Media & Entertainment","Retail & E-commerce"]],
+  ["Jira","atlassian.com","Project & Programme Management",6,"https://atlassian.com/software/jira","Atlassian University","https://university.atlassian.com",["Sprint planning and tracking","Bug and issue management","Release management","Agile ceremony facilitation"],["Technology & Software","Consulting & Professional Services"]],
+  ["Otter.ai","otter.ai","Meeting & Communication Intelligence",9,"https://otter.ai","Otter Help Center","https://help.otter.ai",["Executive meeting summaries","Sales call documentation","Interview transcription","Team standup capture"],["Technology & Software","Consulting & Professional Services","Education & Training"]],
+  ["Gong","gong.io","Sales & CRM Automation",6,"https://gong.io","Gong Academy","https://academy.gong.io",["Sales call coaching","Deal risk detection","Competitive intelligence","Forecast accuracy improvement"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Fireflies.ai","fireflies.ai","Meeting & Communication Intelligence",9,"https://fireflies.ai","Fireflies Guide","https://guide.fireflies.ai",["Meeting action item extraction","Sales call analysis","Team knowledge capture","Cross-meeting search and recall"],["Technology & Software","Consulting & Professional Services"]],
+  ["Loom AI","loom.com","Meeting & Communication Intelligence",9,"https://loom.com","Loom Resources","https://www.loom.com/resources",["Async team updates","Product feedback walkthroughs","Client demos","Training video creation"],["Technology & Software","Education & Training","Consulting & Professional Services"]],
+  ["Clay","clay.com","Sales & CRM Automation",5,"https://clay.com","Clay University","https://www.clay.com/university",["Lead enrichment automation","Personalised outreach at scale","CRM data hygiene","Account-based marketing"],["Technology & Software","Consulting & Professional Services","Marketing & Advertising"]],
+  ["Zendesk AI","zendesk.com","Customer Operations",6,"https://zendesk.com","Zendesk Training","https://training.zendesk.com",["AI-powered ticket triage","Automated first responses","Agent assist suggestions","CSAT prediction"],["Technology & Software","Retail & E-commerce","Finance & Banking"]],
+  ["Intercom","intercom.com","Customer Operations",7,"https://intercom.com","Intercom Academy","https://academy.intercom.com",["AI chatbot deployment","Proactive customer messaging","In-app onboarding flows","Support ticket deflection"],["Technology & Software","Retail & E-commerce","Finance & Banking"]],
+  ["Perplexity AI","perplexity.ai","AI Research & Intelligence",9,"https://perplexity.ai","Perplexity Resources","https://www.perplexity.ai/hub",["Competitive landscape research","Market analysis","Fact-checking with citations","Technical documentation lookup"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Granola","granola.so","Meeting & Communication Intelligence",9,"https://granola.so","Granola Resources","https://granola.so",["Executive meeting summaries","Client call documentation","Action item tracking","Interview notes"],["Technology & Software","Consulting & Professional Services","Finance & Banking"]],
+  ["Blue Prism","blueprism.com","RPA & Intelligent Automation",3,"https://blueprism.com","SS&C Blue Prism University","https://university.blueprism.com",["Regulatory reporting automation","KYC and AML processing","Claims processing","Trade reconciliation"],["Finance & Banking","Healthcare","Insurance","Government"]],
+  ["Wrike","wrike.com","Project & Programme Management",7,"https://wrike.com","Wrike Help Center","https://help.wrike.com",["Marketing campaign management","Creative project workflows","Resource capacity planning","Client project delivery"],["Marketing & Advertising","Consulting & Professional Services","Technology & Software"]],
+  ["Lattice","lattice.com","HR & People Operations",7,"https://lattice.com","Lattice Resources","https://lattice.com/library",["Performance review automation","OKR tracking and alignment","Employee engagement measurement","Compensation benchmarking"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Rippling","rippling.com","HR & People Operations",7,"https://rippling.com","Rippling Resources","https://www.rippling.com/resources",["Employee onboarding automation","Payroll processing","Device and app provisioning","Benefits administration"],["Technology & Software","Finance & Banking","Retail & E-commerce"]],
+  ["Workday","workday.com","HR & People Operations",4,"https://workday.com","Workday Learning","https://www.workday.com/en-us/services/training.html",["Workforce planning","Financial planning and analysis","Talent acquisition management","Time and attendance tracking"],["Finance & Banking","Healthcare","Manufacturing","Technology & Software"]],
+  ["DataRobot","datarobot.com","Data & Analytics",4,"https://datarobot.com","DataRobot University","https://university.datarobot.com",["Predictive churn modelling","Demand forecasting","Risk scoring","Anomaly detection"],["Finance & Banking","Healthcare","Retail & E-commerce","Manufacturing"]],
+  ["Outreach","outreach.io","Sales & CRM Automation",6,"https://outreach.io","Outreach University","https://university.outreach.io",["Sales sequence automation","Pipeline management","Meeting scheduling","Revenue forecasting"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Freshdesk","freshdesk.com","Customer Operations",7,"https://freshdesk.com","Freshworks Academy","https://freshworks.com/academy",["Ticket auto-categorisation","AI-suggested responses","SLA management automation","Customer self-service portal"],["Technology & Software","Retail & E-commerce","Finance & Banking"]],
+  ["Guru","getguru.com","Knowledge & Document Management",8,"https://getguru.com","Guru Resources","https://www.getguru.com/resources",["Sales enablement content delivery","Support agent knowledge assist","Onboarding knowledge management","Policy and process documentation"],["Technology & Software","Finance & Banking","Retail & E-commerce"]],
+  ["Confluence","atlassian.com","Knowledge & Document Management",7,"https://www.atlassian.com/software/confluence","Atlassian University","https://university.atlassian.com",["Engineering documentation","Project runbooks","Company policy management","Meeting notes and decisions"],["Technology & Software","Consulting & Professional Services","Finance & Banking"]],
+  ["Coda AI","coda.io","Knowledge & Document Management",6,"https://coda.io","Coda Resources","https://coda.io/resources",["Product roadmap management","Team ritual automation","Client reporting","Operational playbooks"],["Technology & Software","Consulting & Professional Services","Media & Entertainment"]],
+  ["Process Street","process.st","Process Intelligence",8,"https://process.st","Process Street Resources","https://www.process.st/resources",["Employee onboarding checklists","Client onboarding workflows","Compliance audit trails","Recurring operational procedures"],["Technology & Software","Finance & Banking","Healthcare","Consulting & Professional Services"]],
+  ["Signavio","signavio.com","Process Intelligence",4,"https://signavio.com","SAP Learning","https://learning.sap.com",["End-to-end process mapping","SAP transformation planning","Process governance and compliance","Operational excellence programmes"],["Manufacturing","Finance & Banking","Consulting & Professional Services"]],
+  ["Lucidchart","lucidchart.com","Process Intelligence",8,"https://lucidchart.com","Lucid Training","https://lucid.co/training",["Process flow mapping","System architecture diagrams","Org chart creation","BPMN process modelling"],["Technology & Software","Consulting & Professional Services","Manufacturing"]],
+  ["Miro","miro.com","Meeting & Communication Intelligence",8,"https://miro.com","Miro Academy","https://academy.miro.com",["Strategy and planning workshops","Agile retrospectives","Customer journey mapping","System design sessions"],["Technology & Software","Consulting & Professional Services","Marketing & Advertising"]],
+  ["Gainsight","gainsight.com","Customer Operations",5,"https://gainsight.com","Gainsight University","https://university.gainsight.com",["Customer health scoring","Churn risk prediction","Renewal workflow automation","Customer success playbooks"],["Technology & Software","Finance & Banking"]],
+  ["Boomi","boomi.com","Workflow Automation",4,"https://boomi.com","Boomi Community","https://community.boomi.com",["ERP to cloud integration","B2B EDI automation","Master data management","API management"],["Manufacturing","Finance & Banking","Healthcare","Retail & E-commerce"]],
+  ["Nintex","nintex.com","Workflow Automation",5,"https://nintex.com","Nintex Learning","https://www.nintex.com/learning",["SharePoint workflow automation","Contract document generation","Approval process management","Compliance process automation"],["Finance & Banking","Government","Healthcare","Manufacturing"]],
+  ["Seismic","seismic.com","Sales & CRM Automation",6,"https://seismic.com","Seismic Resources","https://seismic.com/resources",["Sales content management","Personalised proposal generation","Sales training and coaching","Content performance analytics"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Domo","domo.com","Data & Analytics",6,"https://domo.com","Domo University","https://www.domo.com/university",["Executive reporting dashboards","Cross-departmental KPI monitoring","Data democratisation","Embedded analytics"],["Finance & Banking","Retail & E-commerce","Healthcare","Manufacturing"]],
+  ["Amplitude","amplitude.com","Data & Analytics",6,"https://amplitude.com","Amplitude Academy","https://academy.amplitude.com",["Feature adoption analysis","User journey mapping","Cohort retention analysis","A/B test analysis"],["Technology & Software","Retail & E-commerce","Media & Entertainment"]],
+  ["Glean","glean.com","Knowledge & Document Management",8,"https://glean.com","Glean Resources","https://www.glean.com/resources",["Enterprise knowledge search","AI-assisted onboarding","Sales intelligence retrieval","Compliance document discovery"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Coupa","coupa.com","Process Intelligence",5,"https://coupa.com","Coupa Resources","https://www.coupa.com/resources",["Purchase order automation","Invoice processing and matching","Expense management","Supplier risk management"],["Manufacturing","Finance & Banking","Retail & E-commerce","Healthcare"]],
+  ["Moveworks","moveworks.com","RPA & Intelligent Automation",7,"https://moveworks.com","Moveworks Resources","https://www.moveworks.com/resources",["IT helpdesk automation","HR query resolution","Software access provisioning","Password reset automation"],["Technology & Software","Finance & Banking","Healthcare","Manufacturing"]],
+  ["Webex AI","webex.com","Meeting & Communication Intelligence",8,"https://webex.com","Cisco Webex Help","https://help.webex.com",["Hybrid meeting facilitation","Real-time meeting transcription","Post-meeting summaries","AI noise cancellation"],["Technology & Software","Finance & Banking","Government","Healthcare"]],
+  ["Microsoft 365 Copilot","microsoft.com","AI Research & Intelligence",8,"https://microsoft.com/en-us/microsoft-365/copilot","Microsoft Learn","https://learn.microsoft.com/en-us/copilot/microsoft-365",["Meeting summary generation","Email drafting and refinement","Document generation from prompts","Data analysis in Excel"],["Technology & Software","Finance & Banking","Healthcare","Government"]],
+  ["Zoom AI Companion","zoom.us","Meeting & Communication Intelligence",9,"https://zoom.us/ai-companion","Zoom Learning Center","https://learn.zoom.us",["Automatic meeting summaries","Action item tracking","In-meeting question answering","Chat thread summarisation"],["Technology & Software","Education & Training","Healthcare","Finance & Banking"]],
+  ["Planful","planful.com","Data & Analytics",5,"https://planful.com","Planful Resources","https://planful.com/resources",["Annual budget planning","Rolling forecast automation","Financial consolidation","Board reporting packages"],["Finance & Banking","Technology & Software","Manufacturing","Retail & E-commerce"]],
+  ["Anaplan","anaplan.com","Data & Analytics",4,"https://anaplan.com","Anaplan Academy","https://academy.anaplan.com",["Integrated financial planning","Sales capacity planning","Supply chain optimisation","Workforce planning"],["Finance & Banking","Manufacturing","Retail & E-commerce","Technology & Software"]],
+  ["Typeform","typeform.com","Workflow Automation",9,"https://typeform.com","Typeform Resources","https://www.typeform.com/resources",["Customer feedback surveys","Lead generation forms","Job application workflows","Event registration"],["Marketing & Advertising","Technology & Software","HR & People Operations"]],
+  ["Anthropic Claude","claude.ai","AI Research & Intelligence",9,"https://claude.ai","Anthropic Docs","https://docs.anthropic.com",["Strategic document analysis","Long-form report generation","Complex research synthesis","Business process documentation"],["Consulting & Professional Services","Finance & Banking","Technology & Software","Education & Training"]],
+  ["ChatGPT Enterprise","openai.com","AI Research & Intelligence",8,"https://openai.com/enterprise","OpenAI Docs","https://platform.openai.com/docs",["Enterprise content generation","Data analysis","Custom GPT deployment","Secure document review"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Gemini for Workspace","workspace.google.com","AI Research & Intelligence",9,"https://workspace.google.com","Google Workspace Learning Center","https://support.google.com/a/users",["Email drafting in Gmail","Document summarisation in Drive","Data analysis in Sheets","Meeting summaries in Meet"],["Technology & Software","Education & Training","Consulting & Professional Services"]],
+  ["Pendo","pendo.io","Customer Operations",6,"https://pendo.io","Pendo Academy","https://www.pendo.io/pendo-learn",["In-app user onboarding","Feature adoption campaigns","NPS survey deployment","Product usage analytics"],["Technology & Software","Finance & Banking","Healthcare"]],
+  ["Writer","writer.com","AI Research & Intelligence",8,"https://writer.com","Writer Resources","https://writer.com/resources",["On-brand content generation","Marketing copy at scale","Internal communications","Knowledge base article creation"],["Marketing & Advertising","Technology & Software","Finance & Banking"]],
+  ["Templafy","templafy.com","Knowledge & Document Management",7,"https://templafy.com","Templafy Resources","https://www.templafy.com/resources",["Contract template management","Presentation automation","Document compliance enforcement","Brand governance"],["Finance & Banking","Legal Services","Consulting & Professional Services","Technology & Software"]],
+  ["Workfusion","workfusion.com","RPA & Intelligent Automation",3,"https://workfusion.com","WorkFusion Resources","https://workfusion.com/resources",["KYC and AML automation","Sanctions screening","Trade surveillance","Regulatory reporting"],["Finance & Banking","Insurance"]],
+  ["Thoughtspot","thoughtspot.com","Data & Analytics",7,"https://thoughtspot.com","ThoughtSpot Training","https://training.thoughtspot.com",["Self-service analytics","Executive data Q&A","Embedded customer analytics","Operational metric monitoring"],["Finance & Banking","Retail & E-commerce","Healthcare"]],
+  ["Copado","copado.com","Workflow Automation",4,"https://copado.com","Copado University","https://university.copado.com",["Salesforce CI/CD automation","Release compliance management","Automated testing","Multi-org deployment"],["Technology & Software","Finance & Banking"]],
+  ["Drift","drift.com","Sales & CRM Automation",7,"https://drift.com","Drift Learning","https://www.drift.com/learn",["Website lead qualification","Instant meeting booking","Account-based marketing chat","AI-powered sales conversations"],["Technology & Software","Consulting & Professional Services"]],
+  ["Mixpanel","mixpanel.com","Data & Analytics",6,"https://mixpanel.com","Mixpanel Resources","https://mixpanel.com/resources",["Conversion funnel analysis","User segmentation","Retention cohort analysis","Growth experiment tracking"],["Technology & Software","Retail & E-commerce","Media & Entertainment"]],
+  ["Lever","lever.co","HR & People Operations",7,"https://lever.co","Lever Resources","https://www.lever.co/resources",["Candidate pipeline management","Interview scheduling automation","Offer letter workflows","Diversity hiring tracking"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Greenhouse","greenhouse.io","HR & People Operations",6,"https://greenhouse.io","Greenhouse Resources","https://www.greenhouse.com/resources",["Structured interview management","Hiring pipeline analytics","Offer management","DEIB reporting"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Medallia","medallia.com","Customer Operations",4,"https://medallia.com","Medallia Resources","https://www.medallia.com/resources",["Voice of customer programmes","Employee experience measurement","Real-time CX alerting","Predictive customer analytics"],["Finance & Banking","Healthcare","Retail & E-commerce","Technology & Software"]],
+  ["Highspot","highspot.com","Sales & CRM Automation",6,"https://highspot.com","Highspot Resources","https://www.highspot.com/resources",["Sales content management","Rep onboarding and coaching","Meeting preparation","Content effectiveness measurement"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Pipedream","pipedream.com","Workflow Automation",4,"https://pipedream.com","Pipedream Docs","https://pipedream.com/docs",["API integration pipelines","Event-driven automation","Internal tooling automation","Data transformation workflows"],["Technology & Software"]],
+  ["Kofax","kofax.com","RPA & Intelligent Automation",4,"https://kofax.com","Kofax Learning","https://www.kofax.com/learn",["Invoice data capture","KYC document processing","Claims document handling","Contract data extraction"],["Finance & Banking","Insurance","Healthcare","Government"]],
+  ["Tray.io","tray.io","Workflow Automation",5,"https://tray.io","Tray.io Resources","https://tray.io/resources",["Complex multi-step integrations","Enterprise data orchestration","Customer lifecycle automation","Revenue operations workflows"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]],
+  ["Sprinklr","sprinklr.com","Customer Operations",5,"https://sprinklr.com","Sprinklr Resources","https://www.sprinklr.com/resources",["Social media management at scale","Omnichannel customer service","Market intelligence monitoring","Influencer campaign management"],["Marketing & Advertising","Retail & E-commerce","Finance & Banking"]],
+  ["Chorus.ai","chorus.ai","Sales & CRM Automation",7,"https://www.zoominfo.com/products/chorus","ZoomInfo University","https://university.zoominfo.com",["Call recording and analysis","Sales coaching at scale","Competitive intelligence capture","Deal risk detection"],["Technology & Software","Finance & Banking","Consulting & Professional Services"]]
 ];
+
+const CATEGORY_COPY = {
+  "Workflow Automation":["Connects apps, APIs, and operational systems so teams can replace repetitive handoffs with dependable automated workflows.","Workflow Foundations","Automation Builder","Advanced Integration"],
+  "RPA & Intelligent Automation":["Automates rules-based and document-heavy work across enterprise systems, often with governance, controls, and AI-assisted routing.","RPA Foundations","Bot Builder","Advanced Automation"],
+  "Project & Programme Management":["Keeps teams aligned on projects, portfolios, goals, dependencies, and delivery progress with automation-assisted coordination.","Product Foundations","Workflow Management","Admin and Reporting"],
+  "Data & Analytics":["Turns scattered operational data into repeatable reporting, dashboards, analytics workflows, and decision-ready insights.","Analytics Foundations","Dashboard Builder","Advanced Analytics"],
+  "Knowledge & Document Management":["Centralises documents, knowledge, templates, and collaboration so teams can find, govern, and reuse information faster.","Knowledge Foundations","Workspace Builder","Admin and Governance"],
+  "Meeting & Communication Intelligence":["Captures, summarises, searches, and improves meetings or asynchronous communication so decisions become easier to action.","Getting Started","Team Workflows","Advanced Collaboration"],
+  "Sales & CRM Automation":["Automates prospecting, pipeline management, customer engagement, enablement, and revenue workflows across go-to-market teams.","CRM Foundations","Sales Automation","Advanced Revenue Ops"],
+  "HR & People Operations":["Automates employee lifecycle work across hiring, onboarding, performance, payroll, workforce planning, and people operations.","People Ops Foundations","Workflow Configuration","Admin and Reporting"],
+  "Customer Operations":["Improves customer support, success, CX, and lifecycle operations with automation, AI assist, routing, and analytics.","Support Foundations","Automation Setup","Admin and Insights"],
+  "Process Intelligence":["Helps teams model, mine, optimise, and govern business processes so automation investment targets the highest-value work.","Process Foundations","Process Optimisation","Advanced Governance"],
+  "AI Research & Intelligence":["Uses AI assistants and research copilots to analyse information, generate outputs, summarise context, and speed up knowledge work.","AI Foundations","Prompting and Workflows","Advanced Business Use"]
+};
+
+function getEaseLabel(score){
+  if(score>=9)return"Anyone can use it day one";
+  if(score>=8)return"Easy to pick up";
+  if(score>=7)return"Some configuration needed";
+  if(score>=6)return"Familiarity helps";
+  if(score>=5)return"Technical or domain context helps";
+  if(score>=4)return"Training required";
+  return"Specialist implementation required";
+}
+
+function getEaseParams(score){
+  if(score>=9)return{learningCurve:"Instant - productive within minutes",setupComplexity:"Sign up and go",technicalSkill:"No technical skills required",timeToValue:"Same day"};
+  if(score>=8)return{learningCurve:"Easy - hours to get started",setupComplexity:"Quick setup, minimal config",technicalSkill:"Any business user",timeToValue:"1-3 days"};
+  if(score>=6)return{learningCurve:"Accessible - days to basic competency",setupComplexity:"Self-service with some configuration",technicalSkill:"Business user with digital literacy",timeToValue:"1-2 weeks"};
+  if(score>=4)return{learningCurve:"Moderate - weeks to proficiency",setupComplexity:"Significant configuration needed",technicalSkill:"Technical business analyst or IT",timeToValue:"2-8 weeks"};
+  return{learningCurve:"Steep - months of training required",setupComplexity:"Enterprise implementation project",technicalSkill:"Developer or certified specialist",timeToValue:"3-6 months"};
+}
+
+function buildCertifications(name, provider, url, category){
+  const copy = CATEGORY_COPY[category] || CATEGORY_COPY["Workflow Automation"];
+  return [
+    {title:`${name} ${copy[1]}`,provider,url,type:"Free",duration:"2-6 hours",level:"Beginner"},
+    {title:`${name} ${copy[2]}`,provider,url,type:"Free",duration:"4-10 hours",level:"Intermediate"},
+    {title:`${name} ${copy[3]}`,provider,url,type:"Free",duration:"6-15 hours",level:"Advanced"}
+  ];
+}
+
+function buildEmbeddedTools(){
+  return TOOL_ROWS.map((row,index)=>{
+    const [name,domain,category,ease,url,provider,learnUrl,useCases,industry] = row;
+    const copy = CATEGORY_COPY[category] || CATEGORY_COPY["Workflow Automation"];
+    return {
+      id:index+1,
+      name,
+      domain,
+      tagline:`${name} for ${category.toLowerCase()}`,
+      problem:copy[0],
+      useCases,
+      url,
+      ease,
+      easeLabel:getEaseLabel(ease),
+      industry,
+      businessArea:category,
+      category,
+      date:"2026-04-21",
+      logoUrl:`https://logo.clearbit.com/${domain}`,
+      certifications:buildCertifications(name,provider,learnUrl,category),
+      youtubeQuery:`${name} official tutorial automation features updates insights`,
+      easeParams:getEaseParams(ease)
+    };
+  });
+}
+
+const EMBEDDED_TOOLS = buildEmbeddedTools();
 const SUPABASE_URL  = 'https://vxlhqjnqrdtpjpoyrrdf.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ4bGhxam5xcmR0cGpwb3lycmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0MTQ1ODEsImV4cCI6MjA5MTk5MDU4MX0.FPEtakoPSy5z2XYsBjO58ZGfxa57qLpXIr-5AoHzXBM';
 const YOUTUBE_API_KEY = 'AIzaSyBVHe8FymeuSqRkhFlYOLc2iV7sbYv05q0';
@@ -1516,7 +1533,7 @@ function getCachedYouTube(toolId){
 function setCachedYouTube(toolId, videos){
   try{localStorage.setItem(youtubeCacheKey(toolId), JSON.stringify({savedAt: Date.now(),videos}))}catch{}
 }
-function buildYouTubeQuery(tool){return [tool.name,'automation tutorial','latest features','updates','insights'].join(' ')}
+function buildYouTubeQuery(tool){return tool.youtubeQuery || [tool.name,'automation tutorial','latest features','updates','insights'].join(' ')}
 function normalizeYouTubeItems(items = []){
   return items.map(item => {
     const snippet = item.snippet || {};
