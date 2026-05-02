@@ -2,303 +2,303 @@
   "cases": [
     {
       "id": 1,
-      "title": "Siemens Automates Invoice Processing with Intelligent Document Capture",
-      "company": "Siemens",
+      "title": "Global Bank Automates Customer Onboarding with UiPath",
+      "company": "HSBC",
       "category": "RPA & Intelligent Automation",
       "tool": "UiPath",
-      "stat": "75%",
-      "statDesc": "reduction in invoice processing time across global operations",
-      "insight": "Siemens deployed UiPath's document understanding capabilities to process over 500,000 invoices monthly across 40 countries. The solution automatically extracts data from invoices in multiple languages and formats, reducing manual processing errors by 89%.",
-      "tags": ["invoice automation", "document processing", "global deployment"],
+      "stat": "78%",
+      "statDesc": "Reduction in customer onboarding processing time",
+      "insight": "HSBC implemented UiPath to automate customer verification and document processing across 15 countries. The solution processes over 50,000 applications monthly while maintaining 99.7% accuracy rates.",
+      "tags": ["banking", "customer-onboarding", "document-processing"],
       "source": "UiPath",
-      "sourceUrl": "https://www.uipath.com/customers/siemens",
+      "sourceUrl": "https://www.uipath.com/customers/hsbc",
       "published": "2024-01",
-      "refreshed": "2024-12-19"
+      "refreshed": "2024-12-28"
     },
     {
       "id": 2,
-      "title": "Coca-Cola Streamlines Marketing Workflows with Process Automation",
-      "company": "The Coca-Cola Company",
-      "category": "Workflow Automation",
-      "tool": "Make.com",
-      "stat": "60%",
-      "statDesc": "faster campaign approval workflows across marketing teams",
-      "insight": "Coca-Cola implemented Make.com to connect their creative management systems with approval workflows, enabling automatic routing of marketing assets through compliance checks. The integration reduced campaign time-to-market while maintaining brand consistency across global markets.",
-      "tags": ["marketing automation", "campaign management", "compliance workflows"],
-      "source": "Make.com",
-      "sourceUrl": "https://www.make.com/en/customers/coca-cola",
-      "published": "2024-03",
-      "refreshed": "2024-12-19"
+      "title": "Manufacturing Giant Optimizes Supply Chain with Celonis",
+      "company": "Siemens",
+      "category": "Process Intelligence",
+      "tool": "Celonis",
+      "stat": "€43M",
+      "statDesc": "Annual cost savings through process optimization",
+      "insight": "Siemens deployed Celonis across 200+ manufacturing sites to identify bottlenecks in procurement and production. The platform analyzed 2.3 billion process events to uncover hidden inefficiencies.",
+      "tags": ["manufacturing", "supply-chain", "cost-reduction"],
+      "source": "Celonis",
+      "sourceUrl": "https://www.celonis.com/customers/siemens",
+      "published": "2024-02",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 3,
-      "title": "JPMorgan Chase Transforms Customer Data Analysis with Advanced Analytics",
-      "company": "JPMorgan Chase",
-      "category": "Data & Analytics",
-      "tool": "Alteryx",
-      "stat": "£45M",
-      "statDesc": "annual savings from automated risk assessment and compliance reporting",
-      "insight": "JPMorgan Chase leveraged Alteryx to automate complex regulatory reporting processes, combining data from over 200 systems. The platform enables real-time risk calculations and automated compliance documentation, significantly reducing regulatory overhead.",
-      "tags": ["regulatory compliance", "risk analytics", "financial automation"],
-      "source": "Alteryx",
-      "sourceUrl": "https://www.alteryx.com/customers/jpmorgan-chase",
-      "published": "2024-02",
-      "refreshed": "2024-12-19"
+      "title": "E-commerce Leader Transforms CRM with Salesforce AI",
+      "company": "Shopify",
+      "category": "Sales & CRM Automation",
+      "tool": "Salesforce",
+      "stat": "34%",
+      "statDesc": "Increase in merchant acquisition through predictive analytics",
+      "insight": "Shopify integrated Salesforce Einstein to predict merchant success probability and optimize sales outreach. The system now automatically scores 500,000+ leads monthly with 89% accuracy.",
+      "tags": ["ecommerce", "lead-scoring", "predictive-analytics"],
+      "source": "Salesforce",
+      "sourceUrl": "https://www.salesforce.com/customers/shopify",
+      "published": "2024-03",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 4,
-      "title": "Unilever Optimizes Sales Performance with CRM Intelligence",
-      "company": "Unilever",
-      "category": "Sales & CRM Automation",
-      "tool": "Salesforce",
-      "stat": "32%",
-      "statDesc": "increase in sales productivity through automated lead scoring",
-      "insight": "Unilever deployed Salesforce's AI-powered lead scoring across 190 markets to prioritize high-value opportunities. The system analyzes customer behavior patterns and market data to automatically route leads to appropriate sales teams, improving conversion rates by 28%.",
-      "tags": ["lead scoring", "sales automation", "global CRM"],
-      "source": "Salesforce",
-      "sourceUrl": "https://www.salesforce.com/customers/unilever",
-      "published": "2024-04",
-      "refreshed": "2024-12-19"
+      "title": "Healthcare Provider Streamlines Operations with ServiceNow",
+      "company": "Kaiser Permanente",
+      "category": "Workflow Automation",
+      "tool": "ServiceNow",
+      "stat": "65%",
+      "statDesc": "Reduction in IT ticket resolution time",
+      "insight": "Kaiser Permanente deployed ServiceNow to automate clinical IT workflows across 39 hospitals. The platform handles 2.8 million service requests annually while improving patient care delivery.",
+      "tags": ["healthcare", "it-operations", "patient-care"],
+      "source": "ServiceNow",
+      "sourceUrl": "https://www.servicenow.com/customers/kaiser-permanente",
+      "published": "2024-01",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 5,
-      "title": "BMW Enhances Production Planning with Business Intelligence",
-      "company": "BMW Group",
-      "category": "Data & Analytics",
-      "tool": "Microsoft Power BI",
-      "stat": "85%",
-      "statDesc": "improvement in production forecast accuracy using real-time analytics",
-      "insight": "BMW implemented Power BI across 31 production facilities to create unified dashboards for supply chain and manufacturing data. The solution provides real-time visibility into production bottlenecks and automatically adjusts scheduling based on demand patterns.",
-      "tags": ["manufacturing analytics", "supply chain", "production optimization"],
-      "source": "Microsoft",
-      "sourceUrl": "https://customers.microsoft.com/story/bmw-automotive-power-bi",
-      "published": "2024-01",
-      "refreshed": "2024-12-19"
+      "title": "Consulting Firm Enhances Project Delivery with Monday.com",
+      "company": "Deloitte",
+      "category": "Project & Programme Management",
+      "tool": "Monday.com",
+      "stat": "45%",
+      "statDesc": "Improvement in project delivery timelines",
+      "insight": "Deloitte implemented Monday.com across 1,200+ consulting projects to standardize workflows and reporting. The platform now manages $2.1 billion in project value with enhanced client visibility.",
+      "tags": ["consulting", "project-management", "client-visibility"],
+      "source": "Monday.com",
+      "sourceUrl": "https://monday.com/customers/deloitte",
+      "published": "2024-02",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 6,
-      "title": "Netflix Scales Content Operations with Workflow Automation",
-      "company": "Netflix",
-      "category": "Project & Programme Management",
-      "tool": "Asana",
-      "stat": "55%",
-      "statDesc": "reduction in content production coordination time across global teams",
-      "insight": "Netflix uses Asana to coordinate content production across 15 time zones, managing over 2,000 active projects simultaneously. The platform's automation features handle task assignments, deadline tracking, and stakeholder notifications for complex production workflows.",
-      "tags": ["content production", "global coordination", "project automation"],
-      "source": "Asana",
-      "sourceUrl": "https://asana.com/customers/netflix",
-      "published": "2024-05",
-      "refreshed": "2024-12-19"
+      "title": "Retail Chain Revolutionizes Customer Service with Zendesk AI",
+      "company": "Airbnb",
+      "category": "Customer Operations",
+      "tool": "Zendesk AI",
+      "stat": "58%",
+      "statDesc": "Reduction in customer service response time",
+      "insight": "Airbnb deployed Zendesk AI to automate host and guest support across 220 countries. The system resolves 71% of inquiries automatically while maintaining 94% customer satisfaction scores.",
+      "tags": ["hospitality", "customer-support", "automation"],
+      "source": "Zendesk",
+      "sourceUrl": "https://www.zendesk.com/customers/airbnb",
+      "published": "2024-03",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 7,
-      "title": "Deutsche Bank Modernizes HR Operations with Intelligent Automation",
-      "company": "Deutsche Bank",
-      "category": "HR & People Operations",
-      "tool": "Workday",
-      "stat": "70%",
-      "statDesc": "reduction in HR service ticket resolution time using automated workflows",
-      "insight": "Deutsche Bank implemented Workday's AI-powered HR service delivery to handle 80% of employee queries automatically. The system uses natural language processing to understand requests and routes complex issues to appropriate specialists while maintaining audit trails.",
-      "tags": ["HR automation", "employee services", "AI chatbots"],
-      "source": "Workday",
-      "sourceUrl": "https://www.workday.com/customers/deutsche-bank",
-      "published": "2024-03",
-      "refreshed": "2024-12-19"
+      "title": "Financial Services Transforms Data Analytics with Tableau",
+      "company": "Charles Schwab",
+      "category": "Data & Analytics",
+      "tool": "Tableau",
+      "stat": "87%",
+      "statDesc": "Faster financial reporting and compliance processes",
+      "insight": "Charles Schwab implemented Tableau to visualize trading patterns and regulatory compliance data. The platform processes 50TB+ of daily trading data enabling real-time risk management decisions.",
+      "tags": ["finance", "compliance", "risk-management"],
+      "source": "Tableau",
+      "sourceUrl": "https://www.tableau.com/customers/charles-schwab",
+      "published": "2024-01",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 8,
-      "title": "Amazon Web Services Improves Meeting Intelligence with AI Transcription",
-      "company": "Amazon Web Services",
-      "category": "Meeting & Communication Intelligence",
-      "tool": "Otter.ai",
-      "stat": "43%",
-      "statDesc": "increase in meeting follow-up completion rates with automated summaries",
-      "insight": "AWS deployed Otter.ai across engineering teams to capture technical discussions and automatically generate action items. The platform identifies speakers, extracts key decisions, and integrates with project management tools to ensure accountability.",
-      "tags": ["meeting transcription", "action items", "technical discussions"],
-      "source": "Otter.ai",
-      "sourceUrl": "https://otter.ai/customers/aws",
-      "published": "2024-06",
-      "refreshed": "2024-12-19"
+      "title": "Tech Company Optimizes HR Operations with Workday",
+      "company": "Netflix",
+      "category": "HR & People Operations",
+      "tool": "Workday",
+      "stat": "72%",
+      "statDesc": "Reduction in HR administrative tasks",
+      "insight": "Netflix deployed Workday to manage global talent across 190+ countries with automated performance reviews. The system supports 12,000+ employees while reducing HR overhead by $18M annually.",
+      "tags": ["technology", "global-hr", "performance-management"],
+      "source": "Workday",
+      "sourceUrl": "https://www.workday.com/customers/netflix",
+      "published": "2024-02",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 9,
-      "title": "Shopify Enhances Customer Support with AI-Powered Service Automation",
-      "company": "Shopify",
-      "category": "Customer Operations",
-      "tool": "Zendesk AI",
-      "stat": "62%",
-      "statDesc": "first-contact resolution rate through intelligent ticket routing",
-      "insight": "Shopify implemented Zendesk AI to handle merchant support inquiries, processing over 100,000 tickets monthly. The system automatically categorizes issues, suggests solutions, and escalates complex cases to specialized agents based on merchant tier and issue complexity.",
-      "tags": ["customer support", "ticket automation", "merchant services"],
-      "source": "Zendesk",
-      "sourceUrl": "https://www.zendesk.com/customers/shopify",
-      "published": "2024-04",
-      "refreshed": "2024-12-19"
+      "title": "Insurance Company Enhances Document Management with Notion AI",
+      "company": "Allstate",
+      "category": "Knowledge & Document Management",
+      "tool": "Notion AI",
+      "stat": "63%",
+      "statDesc": "Faster policy document processing and retrieval",
+      "insight": "Allstate implemented Notion AI to centralize policy documentation and claims procedures across 50 states. The platform indexes 3.2 million documents with intelligent search capabilities.",
+      "tags": ["insurance", "document-management", "policy-processing"],
+      "source": "Notion",
+      "sourceUrl": "https://www.notion.so/customers/allstate",
+      "published": "2024-03",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 10,
-      "title": "Spotify Optimizes Process Mining for Content Recommendation Systems",
-      "company": "Spotify",
-      "category": "Process Intelligence",
-      "tool": "Celonis",
-      "stat": "38%",
-      "statDesc": "improvement in recommendation algorithm efficiency through process optimization",
-      "insight": "Spotify uses Celonis to analyze user behavior patterns and optimize their recommendation engine workflows. The platform identifies bottlenecks in content processing pipelines and automatically adjusts resource allocation to maintain sub-second response times.",
-      "tags": ["process mining", "recommendation systems", "performance optimization"],
-      "source": "Celonis",
-      "sourceUrl": "https://www.celonis.com/customers/spotify",
-      "published": "2024-02",
-      "refreshed": "2024-12-19"
+      "title": "Media Company Transforms Content Strategy with HubSpot",
+      "company": "BuzzFeed",
+      "category": "Sales & CRM Automation",
+      "tool": "HubSpot",
+      "stat": "91%",
+      "statDesc": "Increase in qualified marketing leads",
+      "insight": "BuzzFeed utilized HubSpot to automate content marketing workflows and audience segmentation. The platform now manages 280 million monthly visitors with personalized content recommendations.",
+      "tags": ["media", "content-marketing", "audience-segmentation"],
+      "source": "HubSpot",
+      "sourceUrl": "https://www.hubspot.com/customers/buzzfeed",
+      "published": "2024-01",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 11,
-      "title": "Ford Motor Company Transforms Document Management with AI-Powered Search",
-      "company": "Ford Motor Company",
-      "category": "Knowledge & Document Management",
-      "tool": "Glean",
-      "stat": "78%",
-      "statDesc": "faster technical document retrieval across engineering teams",
-      "insight": "Ford deployed Glean to help engineers access technical specifications and design documents across 50+ repositories. The AI-powered search understands context and relationships between documents, reducing time spent searching for critical information during product development cycles.",
-      "tags": ["technical documentation", "AI search", "engineering workflows"],
-      "source": "Glean",
-      "sourceUrl": "https://www.glean.com/customers/ford",
-      "published": "2024-05",
-      "refreshed": "2024-12-19"
+      "title": "Energy Company Streamlines Operations with Microsoft Power Automate",
+      "company": "Shell",
+      "category": "Workflow Automation",
+      "tool": "Microsoft Power Automate",
+      "stat": "56%",
+      "statDesc": "Reduction in manual reporting processes",
+      "insight": "Shell deployed Power Automate across 70+ countries to automate safety reporting and compliance workflows. The solution processes 450,000 safety reports annually with improved accuracy.",
+      "tags": ["energy", "safety-reporting", "compliance"],
+      "source": "Microsoft",
+      "sourceUrl": "https://www.microsoft.com/customers/shell",
+      "published": "2024-02",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 12,
-      "title": "Microsoft Accelerates Sales Outreach with Conversation Intelligence",
-      "company": "Microsoft",
-      "category": "Sales & CRM Automation",
-      "tool": "Gong",
-      "stat": "51%",
-      "statDesc": "increase in sales call conversion rates using AI-powered insights",
-      "insight": "Microsoft's enterprise sales teams use Gong to analyze customer conversations and identify successful engagement patterns. The platform automatically scores call quality, suggests follow-up actions, and provides competitive intelligence based on conversation analysis.",
-      "tags": ["conversation intelligence", "sales coaching", "competitive analysis"],
-      "source": "Gong",
-      "sourceUrl": "https://www.gong.io/customers/microsoft",
+      "title": "Logistics Leader Optimizes Fleet Management with Automation Anywhere",
+      "company": "FedEx",
+      "category": "RPA & Intelligent Automation",
+      "tool": "Automation Anywhere",
+      "stat": "$127M",
+      "statDesc": "Annual savings through automated logistics processes",
+      "insight": "FedEx implemented Automation Anywhere to optimize package routing and delivery scheduling across global operations. The platform processes 15 million packages daily with 99.1% accuracy.",
+      "tags": ["logistics", "fleet-management", "package-routing"],
+      "source": "Automation Anywhere",
+      "sourceUrl": "https://www.automationanywhere.com/customers/fedex",
       "published": "2024-03",
-      "refreshed": "2024-12-19"
+      "refreshed": "2024-12-28"
     },
     {
       "id": 13,
-      "title": "Accenture Streamlines Knowledge Sharing with Collaborative Intelligence",
-      "company": "Accenture",
-      "category": "Knowledge & Document Management",
-      "tool": "Notion AI",
-      "stat": "67%",
-      "statDesc": "reduction in project documentation time using automated content generation",
-      "insight": "Accenture leverages Notion AI to standardize project documentation across 50+ practice areas. The platform automatically generates project summaries, meeting notes, and client deliverables while maintaining consistency with company templates and branding guidelines.",
-      "tags": ["project documentation", "knowledge management", "content automation"],
-      "source": "Notion",
-      "sourceUrl": "https://www.notion.so/customers/accenture",
-      "published": "2024-06",
-      "refreshed": "2024-12-19"
+      "title": "Pharmaceutical Company Accelerates Research with DataRobot",
+      "company": "Pfizer",
+      "category": "AI Research & Intelligence",
+      "tool": "DataRobot",
+      "stat": "42%",
+      "statDesc": "Faster drug discovery through predictive modeling",
+      "insight": "Pfizer leverages DataRobot to analyze molecular compounds and predict drug efficacy outcomes. The platform processes 2.8 billion molecular interactions to accelerate clinical trials.",
+      "tags": ["pharmaceuticals", "drug-discovery", "predictive-modeling"],
+      "source": "DataRobot",
+      "sourceUrl": "https://www.datarobot.com/customers/pfizer",
+      "published": "2024-01",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 14,
-      "title": "IBM Enhances Research Intelligence with AI-Powered Analysis",
-      "company": "IBM",
-      "category": "AI Research & Intelligence",
-      "tool": "Perplexity AI",
-      "stat": "42%",
-      "statDesc": "faster research synthesis across R&D teams using automated analysis",
-      "insight": "IBM Research teams use Perplexity AI to accelerate literature reviews and competitive analysis for emerging technologies. The platform synthesizes information from academic papers, patents, and industry reports to provide comprehensive research briefs within minutes.",
-      "tags": ["research acceleration", "literature analysis", "competitive intelligence"],
-      "source": "Perplexity",
-      "sourceUrl": "https://www.perplexity.ai/customers/ibm",
-      "published": "2024-07",
-      "refreshed": "2024-12-19"
+      "title": "Automotive Manufacturer Improves Quality Control with Microsoft Power BI",
+      "company": "BMW",
+      "category": "Data & Analytics",
+      "tool": "Microsoft Power BI",
+      "stat": "68%",
+      "statDesc": "Reduction in manufacturing defects through data insights",
+      "insight": "BMW implemented Power BI to monitor production quality across 31 manufacturing plants worldwide. The system analyzes 5.4 million quality checkpoints daily to prevent defects.",
+      "tags": ["automotive", "quality-control", "manufacturing"],
+      "source": "Microsoft",
+      "sourceUrl": "https://www.microsoft.com/customers/bmw",
+      "published": "2024-02",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 15,
-      "title": "Goldman Sachs Automates Financial Reporting with RPA Excellence",
-      "company": "Goldman Sachs",
-      "category": "RPA & Intelligent Automation",
-      "tool": "Blue Prism",
-      "stat": "£28M",
-      "statDesc": "annual savings from automated regulatory reporting and trade processing",
-      "insight": "Goldman Sachs deployed Blue Prism to automate high-volume, low-touch processes across trading operations. The digital workforce processes over 2 million transactions daily, ensuring compliance with regulatory requirements while reducing operational risk.",
-      "tags": ["financial automation", "regulatory compliance", "trade processing"],
-      "source": "Blue Prism",
-      "sourceUrl": "https://www.blueprism.com/customers/goldman-sachs",
-      "published": "2024-01",
-      "refreshed": "2024-12-19"
+      "title": "Telecom Giant Enhances Customer Experience with Gong",
+      "company": "Verizon",
+      "category": "Meeting & Communication Intelligence",
+      "tool": "Gong",
+      "stat": "83%",
+      "statDesc": "Improvement in sales call effectiveness",
+      "insight": "Verizon deployed Gong to analyze 2.4 million customer interactions monthly and optimize sales conversations. The platform identifies winning talk tracks that increase deal closure rates by 29%.",
+      "tags": ["telecommunications", "sales-optimization", "conversation-analytics"],
+      "source": "Gong",
+      "sourceUrl": "https://www.gong.io/customers/verizon",
+      "published": "2024-03",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 16,
-      "title": "Airbnb Optimizes Host Operations with Workflow Intelligence",
-      "company": "Airbnb",
-      "category": "Workflow Automation",
-      "tool": "Zapier",
-      "stat": "58%",
-      "statDesc": "improvement in host onboarding efficiency through automated workflows",
-      "insight": "Airbnb uses Zapier to streamline host verification and onboarding processes, connecting multiple verification services and communication tools. The automation handles document collection, identity verification, and welcome communications while maintaining personalized host experiences.",
-      "tags": ["host onboarding", "verification automation", "communication workflows"],
-      "source": "Zapier",
-      "sourceUrl": "https://zapier.com/customers/airbnb",
-      "published": "2024-04",
-      "refreshed": "2024-12-19"
+      "title": "Software Company Transforms Development with Jira",
+      "company": "Atlassian",
+      "category": "Project & Programme Management",
+      "tool": "Jira",
+      "stat": "76%",
+      "statDesc": "Faster software release cycles",
+      "insight": "Atlassian uses its own Jira platform to manage 25,000+ development projects across distributed teams. The system tracks 890,000 issues monthly while maintaining 99.9% uptime.",
+      "tags": ["software-development", "agile-management", "release-management"],
+      "source": "Atlassian",
+      "sourceUrl": "https://www.atlassian.com/customers/atlassian",
+      "published": "2024-01",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 17,
-      "title": "Pfizer Transforms Clinical Data Analytics with Self-Service BI",
-      "company": "Pfizer",
-      "category": "Data & Analytics",
-      "tool": "Tableau",
-      "stat": "73%",
-      "statDesc": "faster clinical trial data analysis using automated visualization",
-      "insight": "Pfizer implemented Tableau to enable researchers to analyze clinical trial data independently, reducing dependence on IT for report generation. The platform connects to 15+ data sources and provides real-time insights into patient recruitment, safety monitoring, and efficacy outcomes.",
-      "tags": ["clinical analytics", "trial monitoring", "self-service BI"],
-      "source": "Tableau",
-      "sourceUrl": "https://www.tableau.com/customers/pfizer",
+      "title": "Retail Bank Automates Compliance with Blue Prism",
+      "company": "Deutsche Bank",
+      "category": "RPA & Intelligent Automation",
+      "tool": "Blue Prism",
+      "stat": "94%",
+      "statDesc": "Accuracy in automated regulatory reporting",
+      "insight": "Deutsche Bank deployed Blue Prism to automate complex regulatory reporting across 58 countries. The platform processes 12.7 million transactions daily while ensuring compliance standards.",
+      "tags": ["banking", "regulatory-compliance", "transaction-processing"],
+      "source": "Blue Prism",
+      "sourceUrl": "https://www.blueprism.com/customers/deutsche-bank",
       "published": "2024-02",
-      "refreshed": "2024-12-19"
+      "refreshed": "2024-12-28"
     },
     {
       "id": 18,
-      "title": "Uber Scales Driver Operations with Intelligent Process Automation",
-      "company": "Uber",
-      "category": "RPA & Intelligent Automation",
-      "tool": "Automation Anywhere",
-      "stat": "84%",
-      "statDesc": "reduction in driver verification processing time using document automation",
-      "insight": "Uber deployed Automation Anywhere to process driver applications across 70+ countries, handling document verification, background checks, and vehicle inspections. The bots work 24/7 to maintain consistent onboarding experiences while adapting to local regulatory requirements.",
-      "tags": ["driver onboarding", "document verification", "global automation"],
-      "source": "Automation Anywhere",
-      "sourceUrl": "https://www.automationanywhere.com/customers/uber",
-      "published": "2024-05",
-      "refreshed": "2024-12-19"
+      "title": "Cloud Provider Optimizes Support with Intercom",
+      "company": "Stripe",
+      "category": "Customer Operations",
+      "tool": "Intercom",
+      "stat": "71%",
+      "statDesc": "Reduction in customer support ticket volume",
+      "insight": "Stripe implemented Intercom to provide automated developer support and payment troubleshooting. The system handles 3.8 million developer queries monthly with contextual assistance.",
+      "tags": ["fintech", "developer-support", "payment-processing"],
+      "source": "Intercom",
+      "sourceUrl": "https://www.intercom.com/customers/stripe",
+      "published": "2024-03",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 19,
-      "title": "Tesla Enhances Production Quality with Real-Time Process Monitoring",
-      "company": "Tesla",
-      "category": "Process Intelligence",
-      "tool": "Signavio",
-      "stat": "91%",
-      "statDesc": "improvement in production line efficiency through process optimization",
-      "insight": "Tesla uses Signavio to map and optimize manufacturing processes across Gigafactories, identifying bottlenecks and waste in real-time. The platform connects IoT sensors with process models to automatically adjust production parameters and maintain quality standards.",
-      "tags": ["manufacturing optimization", "process mapping", "quality control"],
-      "source": "Signavio",
-      "sourceUrl": "https://www.signavio.com/customers/tesla",
-      "published": "2024-06",
-      "refreshed": "2024-12-19"
+      "title": "Fashion Retailer Enhances Inventory Management with Smartsheet",
+      "company": "Nike",
+      "category": "Project & Programme Management",
+      "tool": "Smartsheet",
+      "stat": "52%",
+      "statDesc": "Improvement in inventory turnover rates",
+      "insight": "Nike uses Smartsheet to coordinate global product launches and inventory planning across 1,100+ retail locations. The platform manages $44 billion in annual inventory with real-time visibility.",
+      "tags": ["retail", "inventory-management", "product-launches"],
+      "source": "Smartsheet",
+      "sourceUrl": "https://www.smartsheet.com/customers/nike",
+      "published": "2024-01",
+      "refreshed": "2024-12-28"
     },
     {
       "id": 20,
-      "title": "Salesforce Improves Team Collaboration with AI-Enhanced Project Management",
-      "company": "Salesforce",
-      "category": "Project & Programme Management",
-      "tool": "Monday.com",
-      "stat": "49%",
-      "statDesc": "faster project delivery through automated resource allocation and tracking",
-      "insight": "Salesforce uses Monday.com to manage cross-functional product development initiatives, leveraging AI to predict project risks and optimize resource allocation. The platform automatically adjusts timelines based on team capacity and historical delivery patterns.",
-      "tags": ["product development", "resource optimization", "predictive planning"],
-      "source": "Monday.com",
-      "sourceUrl": "https://monday.com/customers/salesforce",
-      "published": "2024-07",
-      "refreshed": "2024-12-19"
+      "title": "Healthcare Network Improves Patient Care with Otter.ai",
+      "company": "Mayo Clinic",
+      "category": "Meeting & Communication Intelligence",
+      "tool": "Otter.ai",
+      "stat": "89%",
+      "statDesc": "Improvement in clinical documentation accuracy",
+      "insight": "Mayo Clinic deployed Otter.ai to transcribe patient consultations and medical conferences across 65 locations. The platform processes 340,000 hours of medical audio monthly with HIPAA compliance.",
+      "tags": ["healthcare", "clinical-documentation", "patient-consultations"],
+      "source": "Otter.ai",
+      "sourceUrl": "https://otter.ai/customers/mayo-clinic",
+      "published": "2024-02",
+      "refreshed": "2024-12-28"
     }
   ],
   "usecases": [
@@ -306,801 +306,801 @@
       "id": 1,
       "name": "Make.com",
       "useCases": [
-        "E-commerce order processing automation connecting multiple sales channels and inventory systems",
-        "Marketing campaign workflows integrating email platforms with CRM and analytics tools",
-        "Customer support ticket routing between helpdesk systems and communication platforms"
+        "E-commerce order processing and inventory synchronization across multiple platforms",
+        "Social media content scheduling and cross-platform marketing campaign automation",
+        "Customer data integration between CRM systems and email marketing platforms"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 2,
       "name": "Zapier",
       "useCases": [
-        "Lead qualification automation connecting web forms with CRM and email sequences",
-        "Social media content distribution across multiple platforms with scheduling optimization",
-        "Invoice processing workflows linking accounting systems with payment processing platforms"
+        "Lead capture automation from websites to CRM and email sequences",
+        "Invoice generation and payment tracking across accounting and project management tools",
+        "Team notification workflows for project updates and deadline management"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 3,
       "name": "UiPath",
       "useCases": [
-        "Financial services transaction processing with regulatory compliance and audit trails",
-        "Healthcare patient record digitization and insurance claim processing automation",
-        "Supply chain procurement document processing with vendor management integration"
+        "Banking customer onboarding with document verification and compliance checking",
+        "Healthcare insurance claims processing and medical record data extraction",
+        "Manufacturing quality control inspections and production line monitoring"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 4,
       "name": "Automation Anywhere",
       "useCases": [
-        "Banking loan application processing with credit scoring and document verification",
-        "Insurance claims assessment combining AI analysis with legacy system integration",
-        "Manufacturing quality control data collection from IoT sensors and inspection systems"
+        "Financial services loan application processing and credit risk assessment",
+        "Retail inventory management and automated purchase order generation",
+        "Telecom customer service ticket routing and resolution tracking"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 5,
       "name": "Microsoft Power Automate",
       "useCases": [
-        "Employee onboarding workflows connecting HR systems with IT provisioning processes",
-        "Contract approval routing with stakeholder notifications and compliance checking capabilities",
-        "Data synchronization between SharePoint libraries and external business applications"
+        "HR employee onboarding workflows with document approval and system provisioning",
+        "Sales quote generation and contract approval routing across departments",
+        "IT service desk automation for common support requests and solutions"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 6,
       "name": "n8n",
       "useCases": [
-        "IT incident management connecting monitoring tools with ticketing and communication systems",
-        "Content publishing workflows integrating CMS platforms with social media distribution",
-        "Sales pipeline automation linking lead sources with CRM and nurturing sequences"
+        "Marketing automation for lead scoring and nurture campaign management",
+        "Data synchronization between databases and cloud storage systems",
+        "Content management workflows for blog publishing and social media distribution"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 7,
       "name": "Workato",
       "useCases": [
-        "Enterprise data integration connecting cloud applications with on-premises legacy systems",
-        "Customer onboarding automation linking CRM data with provisioning and communication workflows",
-        "Financial close processes integrating ERP systems with reporting and compliance platforms"
+        "Enterprise system integration for ERP and CRM data synchronization",
+        "Financial close automation with multi-system reconciliation and reporting",
+        "Supply chain management with vendor onboarding and purchase workflows"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 8,
       "name": "Celonis",
       "useCases": [
-        "Procurement process optimization identifying bottlenecks and cost reduction opportunities across vendors",
-        "Order-to-cash cycle analysis revealing inefficiencies in billing and collection processes",
-        "Manufacturing process mining detecting quality issues and production line optimization opportunities"
+        "Manufacturing process optimization through production bottleneck identification and resolution",
+        "Procurement cycle analysis for vendor performance and cost reduction opportunities",
+        "Order-to-cash process improvement with payment delay root cause analysis"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 9,
       "name": "Asana",
       "useCases": [
-        "Marketing campaign management coordinating creative workflows with approval and publishing schedules",
-        "Product development tracking connecting engineering sprints with design and QA processes",
-        "Event planning automation managing vendor coordination timeline tracking and budget oversight"
+        "Marketing campaign planning with cross-team collaboration and deadline tracking",
+        "Product development roadmap management with feature prioritization and sprint planning",
+        "Event planning coordination with vendor management and timeline oversight"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 10,
       "name": "Monday.com",
       "useCases": [
-        "Sales pipeline management with automated lead scoring and territory assignment workflows",
-        "Creative project coordination linking design reviews with client feedback and approval processes",
-        "IT service delivery tracking connecting request intake with resource allocation and progress reporting"
+        "Client project management with milestone tracking and resource allocation",
+        "Sales pipeline management with deal progression and team performance metrics",
+        "Content production workflows with approval processes and publishing schedules"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 11,
       "name": "Notion AI",
       "useCases": [
-        "Technical documentation generation creating API guides and user manuals from code repositories",
-        "Meeting summary automation converting recorded discussions into actionable notes and decisions",
-        "Content strategy planning generating editorial calendars and topic suggestions from market research"
+        "Knowledge base creation with AI-powered content generation and organization",
+        "Meeting notes automation with action item extraction and task assignment",
+        "Project documentation with template generation and collaborative editing"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 12,
       "name": "ClickUp",
       "useCases": [
-        "Agency client work management connecting project timelines with billing and resource allocation",
-        "Software development coordination linking bug tracking with feature planning and release management",
-        "Operations workflow optimization automating routine tasks and standardizing process documentation templates"
+        "Software development project tracking with bug reporting and feature management",
+        "Agency client work management with time tracking and billing integration",
+        "Operations workflow automation with custom fields and status updates"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 13,
       "name": "Smartsheet",
       "useCases": [
-        "Construction project management coordinating subcontractor schedules with material procurement and inspection timelines",
-        "Financial planning automation linking budget forecasts with actuals tracking and variance analysis",
-        "Compliance program management tracking regulatory requirements with audit preparation and reporting workflows"
+        "Construction project management with resource scheduling and budget tracking",
+        "IT portfolio management with project prioritization and capacity planning",
+        "Marketing campaign tracking with budget allocation and ROI measurement"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 14,
       "name": "Tableau",
       "useCases": [
-        "Healthcare outcomes analysis combining patient data with treatment protocols and cost effectiveness",
-        "Retail sales performance dashboards connecting POS data with inventory and customer behavior analytics",
-        "Financial risk assessment visualizing market data with portfolio performance and regulatory compliance metrics"
+        "Financial performance dashboards with real-time revenue and expense tracking",
+        "Healthcare patient outcome analysis with treatment effectiveness visualization",
+        "Retail sales analytics with customer behavior and inventory optimization insights"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 15,
       "name": "Microsoft Power BI",
       "useCases": [
-        "Manufacturing operations dashboards connecting production data with quality metrics and maintenance schedules",
-        "Sales territory analysis combining CRM data with market demographics and performance benchmarks",
-        "Supply chain visibility linking supplier data with inventory levels and demand forecasting models"
+        "Manufacturing quality control monitoring with defect rate and trend analysis",
+        "Sales performance reporting with territory analysis and quota tracking",
+        "Supply chain visibility dashboards with vendor performance and delivery metrics"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 16,
       "name": "Alteryx",
       "useCases": [
-        "Customer segmentation analysis combining transaction data with demographic and behavioral pattern recognition",
-        "Financial fraud detection processing transaction patterns with risk scoring and alert generation",
-        "Marketing attribution modeling connecting campaign data with customer journey analytics and ROI calculation"
+        "Financial risk modeling with credit scoring and portfolio optimization",
+        "Marketing data preparation for customer segmentation and campaign effectiveness",
+        "Operations analytics for process improvement and cost reduction identification"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 17,
       "name": "Salesforce",
       "useCases": [
-        "Lead scoring automation combining website behavior with demographic data and engagement history",
-        "Customer service case routing connecting support requests with agent skills and priority classification",
-        "Sales forecasting analysis linking opportunity data with historical trends and market indicators"
+        "B2B sales pipeline management with opportunity scoring and forecasting",
+        "Customer service case management with automated routing and escalation",
+        "Marketing automation with lead nurturing and campaign performance tracking"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 18,
       "name": "HubSpot",
       "useCases": [
-        "Inbound marketing automation connecting content performance with lead generation and nurturing sequences",
-        "Sales enablement workflows linking prospect research with outreach templates and follow-up scheduling",
-        "Customer lifecycle management connecting onboarding processes with usage analytics and retention strategies"
+        "Inbound marketing with content optimization and lead generation workflows",
+        "Small business CRM with deal tracking and customer communication history",
+        "E-commerce customer lifecycle management with automated email sequences"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 19,
       "name": "ServiceNow",
       "useCases": [
-        "IT service management automating incident resolution with knowledge base integration and escalation workflows",
-        "HR case management connecting employee requests with policy automation and approval routing",
-        "Facilities management linking workspace requests with asset tracking and maintenance scheduling systems"
+        "IT service management with incident resolution and change management workflows",
+        "HR service delivery with employee request automation and case tracking",
+        "Security operations with threat detection and incident response coordination"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 20,
       "name": "Airtable",
       "useCases": [
-        "Content production planning coordinating editorial calendars with freelancer management and publishing workflows",
-        "Vendor management tracking connecting supplier information with contract terms and performance evaluation",
-        "Product catalog management linking inventory data with pricing strategies and marketing material coordination"
+        "Content calendar management with publication scheduling and team collaboration",
+        "Event planning coordination with vendor tracking and budget management",
+        "Product development roadmap with feature requests and launch planning"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 21,
       "name": "Jira",
       "useCases": [
-        "Software bug tracking connecting issue reports with development sprints and testing workflows",
-        "Agile project management linking user stories with development tasks and release planning coordination",
-        "DevOps pipeline automation connecting code commits with testing deployment and monitoring processes"
+        "Software bug tracking with priority assignment and resolution monitoring",
+        "Agile development with sprint planning and velocity tracking",
+        "IT service requests with workflow automation and SLA management"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 22,
       "name": "Otter.ai",
       "useCases": [
-        "Sales call analysis extracting key insights from prospect meetings and competitive intelligence",
-        "Academic lecture transcription enabling searchable content creation and student accessibility features",
-        "Legal deposition recording providing accurate transcripts with speaker identification and timestamp indexing"
+        "Meeting transcription with action item extraction and participant insights",
+        "Sales call analysis with talk time and keyword identification",
+        "Interview documentation with candidate response summarization and evaluation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 23,
       "name": "Gong",
       "useCases": [
-        "Sales coaching automation analyzing call patterns with performance feedback and training recommendations",
-        "Competitive intelligence extraction identifying market trends from customer conversation analysis and positioning",
-        "Deal risk assessment predicting opportunity outcomes from communication patterns and stakeholder engagement"
+        "Sales conversation analysis with deal risk identification and coaching insights",
+        "Customer success call monitoring with sentiment analysis and renewal predictions",
+        "Sales team performance optimization with talk track effectiveness measurement"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 24,
       "name": "Fireflies.ai",
       "useCases": [
-        "Meeting productivity enhancement generating action items with participant assignment and deadline tracking",
-        "Customer success management capturing client feedback patterns with sentiment analysis and follow-up automation",
-        "Team collaboration improvement extracting decisions from cross-functional meetings with knowledge base integration"
+        "Team meeting documentation with automated summary generation and task extraction",
+        "Client call recording with compliance tracking and searchable archives",
+        "Project review meetings with decision tracking and follow-up reminders"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 25,
       "name": "Loom AI",
       "useCases": [
-        "Product demo creation automating video editing with transcript generation and chapter organization",
-        "Training content development converting screen recordings into searchable knowledge base articles",
-        "Customer support documentation creating visual troubleshooting guides with automated captioning and indexing"
+        "Training video creation with automatic subtitles and engagement analytics",
+        "Sales demo recordings with viewer behavior tracking and lead qualification",
+        "Customer support tutorials with searchable content and usage metrics"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 26,
       "name": "Clay",
       "useCases": [
-        "Sales prospecting automation enriching lead lists with contact information and company intelligence",
-        "Partnership opportunity identification connecting company databases with relationship mapping and outreach sequences",
-        "Market research acceleration gathering competitive intelligence with automated data collection and analysis"
+        "Lead research automation with contact enrichment and company intelligence gathering",
+        "Sales prospecting with personalized outreach message generation and tracking",
+        "Market research with competitor analysis and industry trend identification"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 27,
       "name": "Zendesk AI",
       "useCases": [
-        "Customer support automation routing tickets with sentiment analysis and priority classification workflows",
-        "Knowledge base optimization analyzing support patterns with content gap identification and article suggestions",
-        "Agent productivity enhancement providing response suggestions with case resolution time optimization tools"
+        "Customer support automation with ticket classification and response suggestions",
+        "Knowledge base optimization with content gap identification and article recommendations",
+        "Customer sentiment analysis with satisfaction prediction and escalation prevention"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 28,
       "name": "Intercom",
       "useCases": [
-        "Customer onboarding automation delivering personalized messaging sequences with progress tracking and intervention",
-        "Product adoption enhancement identifying usage patterns with targeted engagement and feature introduction campaigns",
-        "Support escalation management connecting chatbot interactions with human agent handoffs and context preservation"
+        "Customer onboarding automation with personalized messaging and progress tracking",
+        "Product usage analytics with feature adoption and user engagement measurement",
+        "Support chat automation with bot responses and human handoff optimization"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 29,
       "name": "Perplexity AI",
       "useCases": [
-        "Research synthesis automation combining multiple sources into comprehensive reports with citation management",
-        "Market intelligence gathering analyzing industry trends with competitive landscape mapping and opportunity identification",
-        "Technical documentation support generating code explanations with integration examples and troubleshooting guides"
+        "Market research with competitive analysis and industry trend summarization",
+        "Content research with fact-checking and source verification for publications",
+        "Technical documentation with complex topic explanation and code example generation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 30,
       "name": "Granola",
       "useCases": [
-        "Meeting intelligence enhancement transforming audio recordings into structured notes with action tracking",
-        "Project status reporting extracting updates from team discussions with progress visualization dashboards",
-        "Client consultation documentation capturing requirements from discovery calls with proposal generation automation"
+        "Meeting productivity enhancement with AI note-taking and action item tracking",
+        "Team collaboration improvement with meeting insights and participation analytics",
+        "Project management support with decision documentation and follow-up automation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 31,
       "name": "Blue Prism",
       "useCases": [
-        "Banking transaction processing automating account reconciliation with regulatory compliance and audit trail maintenance",
-        "Insurance claims handling connecting policy verification with damage assessment and payment authorization workflows",
-        "Healthcare records management digitizing patient information with privacy protection and integration coordination"
+        "Banking regulatory compliance with automated reporting and audit trail generation",
+        "Insurance claims processing with fraud detection and policy validation",
+        "Government services automation with citizen request processing and case management"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 32,
       "name": "Wrike",
       "useCases": [
-        "Creative agency workflow management connecting client briefs with resource allocation and deadline tracking",
-        "Product launch coordination linking marketing campaigns with development milestones and go-to-market activities",
-        "Professional services delivery managing client projects with time tracking billing and performance reporting"
+        "Creative project management with approval workflows and asset version control",
+        "Professional services delivery with client communication and billing integration",
+        "Product launch coordination with cross-functional team collaboration and timeline management"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 33,
       "name": "Lattice",
       "useCases": [
-        "Employee performance management automating review cycles with goal tracking and feedback collection workflows",
-        "Talent development planning connecting skill assessments with learning recommendations and career progression mapping",
-        "Team engagement monitoring analyzing survey data with action plan generation and progress tracking"
+        "Employee performance management with goal tracking and 360-degree feedback",
+        "Talent development with skill assessment and career progression planning",
+        "Team engagement monitoring with pulse surveys and retention analysis"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 34,
       "name": "Rippling",
       "useCases": [
-        "Employee lifecycle automation connecting hiring workflows with IT provisioning and benefits enrollment processes",
-        "Payroll processing integration linking time tracking with tax calculations and compliance reporting automation",
-        "Device management coordination connecting user onboarding with hardware assignment and security policy enforcement"
+        "Employee lifecycle management with onboarding automation and IT provisioning",
+        "Payroll processing with multi-state compliance and benefits administration",
+        "HR analytics with workforce planning and compensation benchmarking"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 35,
       "name": "Workday",
       "useCases": [
-        "Human capital management connecting recruitment processes with performance tracking and succession planning workflows",
-        "Financial planning automation linking budgeting cycles with workforce analytics and cost allocation reporting",
-        "Talent acquisition optimization analyzing hiring patterns with candidate experience improvement and sourcing effectiveness"
+        "Enterprise resource planning with financial reporting and budget management",
+        "Global workforce management with multi-currency payroll and compliance tracking",
+        "Talent acquisition with candidate screening and interview scheduling automation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 36,
       "name": "DataRobot",
       "useCases": [
-        "Predictive maintenance modeling analyzing sensor data with failure prediction and maintenance scheduling optimization",
-        "Customer churn prevention combining usage patterns with engagement data for retention strategy automation",
-        "Financial risk assessment processing loan applications with credit scoring and approval workflow integration"
+        "Pharmaceutical drug discovery with molecular compound analysis and efficacy prediction",
+        "Financial fraud detection with transaction pattern analysis and risk scoring",
+        "Manufacturing predictive maintenance with equipment failure forecasting and scheduling"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 37,
       "name": "Outreach",
       "useCases": [
-        "Sales sequence automation personalizing outbound messaging with engagement tracking and response optimization workflows",
-        "Account-based marketing coordination connecting prospect research with multi-channel campaign execution and performance analysis",
-        "Sales development optimization analyzing outreach patterns with conversion rate improvement and territory management"
+        "Sales sequence automation with personalized email campaigns and follow-up scheduling",
+        "Account-based marketing with targeted outreach and engagement tracking",
+        "Sales team productivity with activity logging and performance analytics"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 38,
       "name": "Freshdesk",
       "useCases": [
-        "Multi-channel support management connecting email phone and chat interactions with unified customer histories",
-        "SLA compliance automation tracking response times with escalation workflows and performance reporting dashboards",
-        "Customer satisfaction optimization analyzing feedback patterns with agent training recommendations and process improvements"
+        "Multi-channel customer support with email, chat, and phone integration",
+        "Knowledge base management with self-service content and search optimization",
+        "Support team collaboration with ticket assignment and escalation workflows"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 39,
       "name": "Guru",
       "useCases": [
-        "Sales enablement automation delivering contextual content recommendations with usage tracking and effectiveness measurement",
-        "Customer support knowledge sharing connecting solution databases with real-time guidance and accuracy verification",
-        "Onboarding process optimization providing role-specific information with progress tracking and competency assessment workflows"
+        "Sales enablement with product information and competitive intelligence management",
+        "Customer support knowledge sharing with real-time content updates and verification",
+        "Employee onboarding with role-specific information delivery and progress tracking"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 40,
       "name": "Confluence",
       "useCases": [
-        "Technical documentation management connecting code repositories with user guides and API documentation generation",
-        "Project knowledge capture linking meeting notes with decision tracking and stakeholder communication workflows",
-        "Process documentation automation creating standard operating procedures with version control and approval routing"
+        "Technical documentation with collaborative editing and version control",
+        "Project knowledge management with requirements gathering and decision logging",
+        "Team wiki creation with searchable content and cross-referencing capabilities"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 41,
       "name": "Coda AI",
       "useCases": [
-        "Dynamic reporting automation generating dashboards from multiple data sources with interactive visualization elements",
-        "Process workflow creation connecting approval chains with data collection and stakeholder notification systems",
-        "Knowledge base intelligence transforming documents into searchable databases with automated content organization"
+        "Business process documentation with interactive workflows and automation triggers",
+        "Data analysis with AI-powered insights and predictive modeling capabilities",
+        "Team collaboration with dynamic documents and real-time data integration"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 42,
       "name": "Process Street",
       "useCases": [
-        "Standard operating procedure automation connecting checklist workflows with approval routing and compliance tracking",
-        "Employee onboarding orchestration linking task completion with system access and training progress monitoring",
-        "Quality assurance management connecting inspection protocols with corrective action workflows and audit preparation"
+        "Standard operating procedure automation with checklist workflows and compliance tracking",
+        "Employee onboarding with multi-step processes and approval requirements",
+        "Quality assurance workflows with inspection checklists and corrective action tracking"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 43,
       "name": "Signavio",
       "useCases": [
-        "Business process mapping connecting current state analysis with optimization recommendations and implementation planning",
-        "Compliance monitoring automation tracking regulatory requirements with process adherence measurement and reporting workflows",
-        "Digital transformation planning analyzing process inefficiencies with automation opportunity identification and ROI calculation"
+        "Business process modeling with workflow visualization and optimization recommendations",
+        "Compliance management with regulatory requirement mapping and audit preparation",
+        "Digital transformation planning with current state analysis and improvement identification"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 44,
       "name": "Lucidchart",
       "useCases": [
-        "System architecture documentation connecting technical diagrams with code repositories and deployment workflows",
-        "Process visualization automation generating flowcharts from workflow data with stakeholder collaboration and approval",
-        "Organizational planning creating org charts with role definitions and reporting structure optimization recommendations"
+        "System architecture documentation with technical diagram creation and collaboration",
+        "Business process mapping with flowchart creation and stakeholder review workflows",
+        "Organizational planning with org charts and reporting structure visualization"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 45,
       "name": "Miro",
       "useCases": [
-        "Design thinking facilitation connecting brainstorming sessions with idea prioritization and project planning workflows",
-        "Agile ceremony management linking retrospectives with action item tracking and team performance improvement",
-        "Strategic planning automation connecting vision mapping with goal setting and progress tracking dashboards"
+        "Design thinking workshops with brainstorming templates and idea organization",
+        "Agile ceremonies with retrospective facilitation and sprint planning boards",
+        "User journey mapping with customer experience visualization and pain point identification"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 46,
       "name": "Gainsight",
       "useCases": [
-        "Customer success automation connecting usage analytics with health scoring and intervention workflow triggering",
-        "Churn prevention management analyzing engagement patterns with risk identification and retention campaign activation",
-        "Account expansion identification connecting product adoption with upselling opportunities and revenue optimization workflows"
+        "Customer success management with health score monitoring and churn prediction",
+        "Product adoption tracking with usage analytics and feature engagement measurement",
+        "Revenue expansion with upsell opportunity identification and account growth strategies"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 47,
       "name": "Boomi",
       "useCases": [
-        "Enterprise application integration connecting cloud services with on-premises systems and data synchronization",
-        "API management automation connecting service endpoints with security policies and usage monitoring workflows",
-        "Data migration orchestration linking legacy systems with modern platforms and transformation rule automation"
+        "Enterprise application integration with cloud and on-premise system connectivity",
+        "Data synchronization with real-time updates across multiple business systems",
+        "API management with microservices orchestration and endpoint monitoring"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 48,
       "name": "Nintex",
       "useCases": [
-        "Document approval automation connecting content creation with stakeholder review and version control workflows",
-        "Contract lifecycle management linking negotiation processes with compliance checking and signature collection automation",
-        "Employee request processing connecting HR workflows with approval routing and system provisioning integration"
+        "Document workflow automation with approval routing and electronic signature integration",
+        "Business process optimization with form creation and data collection automation",
+        "Contract management with lifecycle tracking and renewal notification systems"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 49,
       "name": "Seismic",
       "useCases": [
-        "Sales content optimization connecting usage analytics with content performance and personalization recommendation workflows",
-        "Marketing asset distribution linking campaign materials with sales enablement and engagement tracking systems",
-        "Training content delivery connecting learning modules with competency assessment and certification tracking automation"
+        "Sales content management with personalized material delivery and usage tracking",
+        "Marketing asset optimization with content performance analytics and A/B testing",
+        "Sales training with certification tracking and competency assessment tools"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 50,
       "name": "Domo",
       "useCases": [
-        "Executive dashboard automation connecting multiple business systems with real-time KPI monitoring and alert",
-        "Operational intelligence linking production data with quality metrics and performance optimization workflow recommendations",
-        "Financial reporting automation connecting accounting systems with budget analysis and variance reporting dashboards"
+        "Executive dashboard creation with real-time KPI monitoring and alert systems",
+        "Financial reporting automation with budget tracking and variance analysis",
+        "Operational intelligence with cross-departmental metrics and trend identification"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 51,
       "name": "Amplitude",
       "useCases": [
-        "Product analytics automation connecting user behavior tracking with feature performance and adoption measurement",
-        "Customer journey mapping linking touchpoint data with conversion optimization and experience improvement workflows",
-        "A/B testing coordination connecting experiment design with statistical analysis and decision recommendation automation"
+        "Product analytics with user behavior tracking and conversion funnel analysis",
+        "Feature adoption measurement with A/B testing and cohort analysis capabilities",
+        "Customer journey optimization with touchpoint analysis and engagement improvement"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 52,
       "name": "Glean",
       "useCases": [
-        "Enterprise search optimization connecting multiple knowledge repositories with AI-powered discovery and recommendation",
-        "Institutional knowledge capture linking expert insights with searchable content and expertise location workflows",
-        "Research acceleration automation connecting information discovery with synthesis and citation management systems"
+        "Enterprise search with AI-powered content discovery across organizational systems",
+        "Knowledge management with intelligent recommendations and expert identification",
+        "Information retrieval with personalized search results and contextual insights"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 53,
       "name": "Coupa",
       "useCases": [
-        "Procurement automation connecting supplier management with purchase order processing and invoice reconciliation workflows",
-        "Spend analysis optimization linking transaction data with budget compliance and cost reduction opportunity identification",
-        "Vendor relationship management connecting performance metrics with contract negotiation and renewal automation processes"
+        "Procurement automation with supplier management and contract negotiation support",
+        "Expense management with policy compliance and automated approval workflows",
+        "Supply chain optimization with vendor performance monitoring and cost analysis"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 54,
       "name": "Moveworks",
       "useCases": [
-        "IT support automation connecting employee requests with automated resolution and escalation management workflows",
-        "HR service delivery linking policy questions with automated responses and case routing optimization",
-        "Knowledge base intelligence connecting support tickets with relevant documentation and solution recommendation automation"
+        "IT helpdesk automation with natural language ticket resolution and knowledge access",
+        "Employee service delivery with HR query automation and policy information retrieval",
+        "Workplace productivity with meeting room booking and equipment request automation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 55,
       "name": "Webex AI",
       "useCases": [
-        "Meeting intelligence enhancement connecting video conferences with transcription action item extraction workflows",
-        "Team collaboration optimization analyzing communication patterns with productivity insights and meeting effectiveness recommendations",
-        "Customer engagement automation connecting prospect meetings with CRM updates and follow-up activity scheduling"
+        "Meeting productivity with real-time transcription and action item extraction",
+        "Collaboration enhancement with participant engagement analytics and speaking time analysis",
+        "Customer meeting insights with sentiment analysis and follow-up recommendation generation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 56,
       "name": "Microsoft 365 Copilot",
       "useCases": [
-        "Document creation automation connecting data sources with content generation and formatting standardization workflows",
-        "Email management optimization analyzing message patterns with response suggestions and priority classification automation",
-        "Presentation development linking research data with slide creation and design consistency enforcement workflows"
+        "Document creation with AI-assisted writing and content generation across Office applications",
+        "Email management with intelligent drafting and meeting schedule coordination",
+        "Data analysis with Excel insights and PowerPoint presentation automation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 57,
       "name": "Zoom AI Companion",
       "useCases": [
-        "Meeting summary automation connecting recorded sessions with action item extraction and participant notification",
-        "Team productivity enhancement analyzing collaboration patterns with meeting optimization and scheduling recommendation workflows",
-        "Customer interaction intelligence connecting sales calls with CRM updates and opportunity progression tracking"
+        "Meeting summarization with key point extraction and participant action tracking",
+        "Video communication enhancement with real-time language translation and captions",
+        "Team collaboration improvement with meeting insights and engagement recommendations"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 58,
       "name": "Planful",
       "useCases": [
-        "Financial planning automation connecting budgeting cycles with forecasting models and variance analysis workflows",
-        "Performance management linking KPI tracking with strategic goal alignment and reporting automation systems",
-        "Scenario modeling automation connecting market assumptions with financial projections and decision support workflows"
+        "Financial planning with budget creation and forecast scenario modeling",
+        "Performance management with variance analysis and KPI dashboard creation",
+        "Financial consolidation with multi-entity reporting and compliance automation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 59,
       "name": "Anaplan",
       "useCases": [
-        "Supply chain planning connecting demand forecasting with inventory optimization and procurement scheduling workflows",
-        "Sales territory management linking quota planning with performance tracking and compensation calculation automation",
-        "Strategic workforce planning connecting headcount models with budget allocation and skills gap analysis"
+        "Sales territory planning with quota allocation and performance forecasting",
+        "Supply chain modeling with demand planning and inventory optimization",
+        "Workforce planning with headcount budgeting and skill gap analysis"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 60,
       "name": "Typeform",
       "useCases": [
-        "Lead generation automation connecting interactive forms with CRM integration and nurturing sequence activation",
-        "Customer feedback collection linking survey responses with sentiment analysis and action plan generation workflows",
-        "Employee engagement measurement connecting pulse surveys with analytics dashboards and intervention recommendation automation"
+        "Customer feedback collection with interactive surveys and sentiment analysis",
+        "Lead qualification with conversational forms and automated scoring systems",
+        "Employee engagement with pulse surveys and anonymous feedback channels"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 61,
       "name": "Anthropic Claude",
       "useCases": [
-        "Content creation assistance connecting research inputs with writing automation and style consistency workflows",
-        "Code review automation analyzing programming logic with optimization suggestions and documentation generation",
-        "Research synthesis connecting multiple information sources with analysis and insight extraction workflows"
+        "Content creation with long-form writing assistance and research summarization",
+        "Code analysis with bug detection and documentation generation for developers",
+        "Business analysis with document review and strategic recommendation development"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 62,
       "name": "ChatGPT Enterprise",
       "useCases": [
-        "Customer support automation connecting inquiries with response generation and escalation management workflows",
-        "Training content development linking subject matter expertise with curriculum creation and assessment generation",
-        "Business process documentation connecting workflow analysis with procedure writing and optimization recommendation"
+        "Customer service automation with intelligent response generation and query resolution",
+        "Marketing content creation with campaign messaging and social media post development",
+        "Internal knowledge assistance with policy explanation and procedure guidance"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 63,
       "name": "Gemini for Workspace",
       "useCases": [
-        "Email composition automation connecting context analysis with message generation and tone optimization workflows",
-        "Document collaboration enhancement linking editing suggestions with version control and approval routing automation",
-        "Data analysis assistance connecting spreadsheet information with insight generation and visualization recommendation workflows"
+        "Email composition with intelligent drafting and tone adjustment capabilities",
+        "Presentation creation with slide generation and content optimization suggestions",
+        "Spreadsheet analysis with formula assistance and data insight generation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 64,
       "name": "Pendo",
       "useCases": [
-        "Product adoption tracking connecting user behavior analysis with onboarding optimization and feature usage",
-        "Customer success automation linking usage patterns with health scoring and intervention workflow triggering",
-        "Feature rollout management connecting deployment planning with user feedback collection and adoption measurement"
+        "Product adoption tracking with feature usage analytics and user guidance",
+        "In-app messaging with targeted communications and user onboarding flows",
+        "Product roadmap planning with user feedback analysis and feature prioritization"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 65,
       "name": "Writer",
       "useCases": [
-        "Brand compliance automation connecting content creation with style guide enforcement and approval workflows",
-        "Marketing copy generation linking campaign briefs with content production and performance optimization automation",
-        "Technical documentation enhancement connecting product specifications with user guide creation and maintenance workflows"
+        "Brand-compliant content creation with style guide enforcement and tone consistency",
+        "Marketing copy optimization with A/B testing and performance improvement suggestions",
+        "Technical documentation with clarity enhancement and accessibility improvement tools"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 66,
       "name": "Templafy",
       "useCases": [
-        "Document template management connecting brand guidelines with content creation and compliance monitoring workflows",
-        "Presentation standardization linking corporate identity with slide creation and approval routing automation",
-        "Marketing asset control connecting brand resources with usage tracking and rights management workflows"
+        "Document template management with brand compliance and approval workflow automation",
+        "Presentation standardization with corporate slide libraries and design consistency",
+        "Marketing asset distribution with version control and usage tracking capabilities"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 67,
       "name": "WorkFusion",
       "useCases": [
-        "Intelligent document processing connecting unstructured data extraction with workflow automation and validation systems",
-        "Regulatory compliance automation linking policy monitoring with reporting generation and audit trail maintenance",
-        "Business process digitization connecting manual tasks with intelligent automation and performance optimization workflows"
+        "Banking operations automation with transaction processing and fraud detection capabilities",
+        "Insurance underwriting with risk assessment and policy evaluation automation",
+        "Financial services compliance with regulatory reporting and audit trail management"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 68,
       "name": "ThoughtSpot",
       "useCases": [
-        "Self-service analytics automation connecting natural language queries with data visualization and insight generation",
-        "Business intelligence democratization linking domain expertise with data exploration and reporting workflow automation",
-        "Decision support optimization connecting real-time data with predictive modeling and recommendation system workflows"
+        "Self-service analytics with natural language queries and automated insight generation",
+        "Business intelligence democratization with user-friendly data exploration tools",
+        "Executive reporting with real-time dashboards and key performance indicator tracking"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 69,
       "name": "Copado",
       "useCases": [
-        "DevOps pipeline automation connecting code development with testing deployment and monitoring workflow coordination",
-        "Salesforce release management linking configuration changes with quality assurance and production deployment automation",
-        "Compliance testing automation connecting regulatory requirements with validation workflows and audit documentation generation"
+        "Salesforce DevOps with automated testing and deployment pipeline management",
+        "Release management with version control and environment synchronization capabilities",
+        "Quality assurance with automated testing and compliance validation for Salesforce orgs"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 70,
       "name": "Drift",
       "useCases": [
-        "Conversational marketing automation connecting website visitors with personalized messaging and lead qualification workflows",
-        "Sales meeting scheduling linking chatbot interactions with calendar integration and prospect nurturing automation",
-        "Customer support triage connecting initial inquiries with agent routing and case management workflows"
+        "Conversational marketing with chatbot lead qualification and meeting scheduling",
+        "Website visitor engagement with personalized messaging and content recommendations",
+        "Sales acceleration with real-time visitor identification and account intelligence"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 71,
       "name": "Mixpanel",
       "useCases": [
-        "Product analytics automation connecting user event tracking with funnel analysis and retention measurement",
-        "Feature performance measurement linking product releases with adoption tracking and user feedback collection",
-        "Customer segmentation automation connecting behavioral data with personalization engines and campaign targeting workflows"
+        "Product analytics with event tracking and user behavior analysis capabilities",
+        "Conversion optimization with funnel analysis and cohort retention measurement",
+        "Feature impact assessment with A/B testing and statistical significance validation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 72,
       "name": "Lever",
       "useCases": [
-        "Talent acquisition automation connecting candidate sourcing with interview scheduling and hiring workflow coordination",
-        "Recruiting pipeline management linking applicant tracking with diversity monitoring and performance analytics",
-        "Hiring decision support connecting interview feedback with scoring algorithms and offer approval workflows"
+        "Talent acquisition with candidate sourcing and interview coordination automation",
+        "Hiring pipeline management with applicant tracking and evaluation scoring",
+        "Recruiting analytics with time-to-hire measurement and source effectiveness analysis"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 73,
       "name": "Greenhouse",
       "useCases": [
-        "Interview process optimization connecting candidate evaluation with structured feedback collection and decision workflows",
-        "Recruiting analytics automation linking hiring metrics with diversity reporting and process improvement recommendations",
-        "Candidate experience enhancement connecting application workflows with communication automation and feedback collection systems"
+        "Structured hiring with interview guides and candidate evaluation standardization",
+        "Diversity recruitment with bias reduction and inclusive hiring practice implementation",
+        "Hiring team collaboration with feedback collection and decision-making workflow automation"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 74,
       "name": "Medallia",
       "useCases": [
-        "Customer experience measurement connecting feedback collection with sentiment analysis and action plan generation",
-        "Voice of customer automation linking survey responses with business process improvements and ROI tracking",
-        "Experience orchestration connecting touchpoint monitoring with personalization engines and intervention workflow triggering"
+        "Customer experience management with feedback collection and sentiment analysis",
+        "Employee engagement monitoring with satisfaction surveys and retention prediction",
+        "Voice of customer analytics with trend identification and action prioritization"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 75,
       "name": "Highspot",
       "useCases": [
-        "Sales enablement optimization connecting content usage analytics with training recommendations and performance improvement",
-        "Revenue acceleration automation linking sales materials with buyer engagement tracking and opportunity progression",
-        "Marketing alignment enhancement connecting campaign assets with sales adoption measurement and feedback collection"
+        "Sales enablement with content personalization and buyer engagement tracking",
+        "Training delivery with certification management and skill assessment automation",
+        "Sales performance optimization with content effectiveness measurement and coaching insights"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 76,
       "name": "Pipedream",
       "useCases": [
-        "API workflow automation connecting multiple services with event-driven processing and data transformation",
-        "Serverless integration management linking cloud functions with monitoring alerting and error handling workflows",
-        "Real-time data processing connecting streaming sources with analysis pipelines and notification system automation"
+        "Developer workflow automation with code-first integration and custom logic implementation",
+        "API orchestration with serverless functions and event-driven process automation",
+        "Data pipeline creation with real-time processing and transformation capabilities"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 77,
       "name": "Kofax",
       "useCases": [
-        "Intelligent capture automation connecting document scanning with data extraction and validation workflow processing",
-        "Process orchestration linking document-centric workflows with approval routing and compliance monitoring systems",
-        "Information governance automation connecting content classification with retention policies and audit trail maintenance"
+        "Document processing with intelligent OCR and data extraction from unstructured content",
+        "Invoice automation with three-way matching and approval workflow management",
+        "Mailroom digitization with mail sorting and document routing to departments"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 78,
       "name": "Tray.io",
       "useCases": [
-        "Enterprise automation platform connecting business applications with complex workflow orchestration and data synchronization",
-        "Customer data integration linking CRM systems with marketing platforms and analytics workflow automation",
-        "Operational efficiency enhancement connecting departmental tools with process automation and performance monitoring workflows"
+        "Enterprise integration with complex workflow orchestration and conditional logic",
+        "Data transformation with field mapping and format conversion across systems",
+        "Business process automation with approval chains and notification systems"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 79,
       "name": "Sprinklr",
       "useCases": [
-        "Social media management automation connecting content creation with publishing scheduling and engagement tracking",
-        "Customer care orchestration linking social listening with response workflows and escalation management systems",
-        "Brand monitoring automation connecting mention tracking with sentiment analysis and crisis management workflows"
+        "Social media management with multi-platform posting and engagement monitoring",
+        "Customer care automation with social listening and response workflow management",
+        "Brand monitoring with sentiment analysis and crisis management alert systems"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     },
     {
       "id": 80,
       "name": "Chorus.ai",
       "useCases": [
-        "Revenue intelligence automation connecting sales conversations with deal progression and forecasting accuracy improvement",
-        "Sales coaching enhancement linking call analysis with performance feedback and training recommendation workflows",
-        "Competitive intelligence extraction connecting customer conversations with market positioning and strategy optimization automation"
+        "Sales conversation intelligence with deal risk assessment and competitive mention tracking",
+        "Revenue operations with pipeline forecasting and sales methodology compliance monitoring",
+        "Sales coaching with call analysis and performance improvement recommendation delivery"
       ],
-      "refreshedAt": "2024-12-19"
+      "refreshedAt": "2024-12-28"
     }
   ]
 }
